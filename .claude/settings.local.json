@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm run dev:*)",
+      "Bash(copy \"c:\\Users\\papcy\\Desktop\\pharmacy-pos\\public\\App Icon.png\" \"c:\\Users\\papcy\\Desktop\\medsoftware\\public\\logo.png\")",
+      "Bash(npm install:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(taskkill //F //PID 4108)",
+      "Bash(taskkill:*)",
+      "Bash(dir:*)",
+      "Bash(copy \"c:\\Users\\papcy\\Pictures\\Screenshots\\Screenshot 2025-11-24 010137.png\" \"c:\\Users\\papcy\\Desktop\\medsoftware\\public\\screenshots\\screen1.png\")",
+      "Bash(copy \"c:\\Users\\papcy\\Pictures\\Screenshots\\Screenshot 2025-11-24 010253.png\" \"c:\\Users\\papcy\\Desktop\\medsoftware\\public\\screenshots\\screen2.png\")",
+      "Bash(copy:*)",
+      "Bash(copy \"c:\\Users\\papcy\\Pictures\\Screenshots\\Screenshot 2025-11-24 010635.png\" \"c:\\Users\\papcy\\Desktop\\medsoftware\\public\\screenshots\\screen4.png\")",
+      "Bash(copy \"c:\\Users\\papcy\\Pictures\\Screenshots\\Screenshot 2025-11-24 010654.png\" \"c:\\Users\\papcy\\Desktop\\medsoftware\\public\\screenshots\\screen5.png\")",
+      "Bash(cmd /c:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

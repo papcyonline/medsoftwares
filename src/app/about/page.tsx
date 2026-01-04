@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const values = [
@@ -46,8 +45,8 @@ const values = [
 ];
 
 const stats = [
-  { value: '2,500+', label: 'Healthcare Facilities' },
-  { value: '45+', label: 'Countries Served' },
+  { value: '25+', label: 'Healthcare Facilities' },
+  { value: '12', label: 'Countries Served' },
   { value: '10M+', label: 'Monthly Transactions' },
   { value: '24/7', label: 'Customer Support' },
 ];
@@ -58,36 +57,42 @@ const team = [
     role: 'Founder & CEO',
     bio: 'Visionary leader driving innovation in healthcare technology solutions.',
     initials: 'CB',
+    image: '/team/charles-bah.jpg',
   },
   {
-    name: 'Junior Fonte',
+    name: 'Djonga Olivier',
     role: 'CTO',
     bio: 'Software architect with expertise in healthcare information systems.',
-    initials: 'JF',
+    initials: 'DO',
+    image: '/team/djonga-olivier.jpg',
   },
   {
     name: 'Steve Nya',
     role: 'Developer',
     bio: 'Full-stack developer building robust and scalable software solutions.',
     initials: 'SN',
+    image: '/team/steve-nya.jpg',
   },
   {
     name: 'Faith Yaje',
     role: 'Financial Secretary',
     bio: 'Managing financial operations and ensuring fiscal responsibility.',
     initials: 'FY',
+    image: '/team/faith-yaje.jpg',
   },
   {
     name: 'Sonita Bah',
     role: 'Marketer',
-    bio: 'Connecting our solutions with healthcare facilities across Africa.',
+    bio: 'Connecting our solutions with healthcare facilities worldwide.',
     initials: 'SB',
+    image: '/team/sonita-bah.jpg',
   },
   {
     name: 'Marbel Nfor',
     role: 'Program Manager',
     bio: 'Coordinating projects and ensuring successful client implementations.',
     initials: 'MN',
+    image: '/team/marbel-nfor.jpg',
   },
   {
     name: 'Ivo Tume',
@@ -99,9 +104,7 @@ const team = [
 
 export default function AboutPage() {
   return (
-    <>
-      <Header />
-      <main>
+    <main>
         {/* Hero Section */}
         <section className="pt-32 pb-20 md:pt-40 md:pb-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-5xl mx-auto text-center">
@@ -112,7 +115,7 @@ export default function AboutPage() {
               Transforming Healthcare Through Technology
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We&apos;re on a mission to make world-class healthcare management software accessible to every pharmacy and hospital, starting from Africa.
+              MedSoftware is a product of <a href="https://papcy.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-800 hover:text-[#166534] transition-colors underline decoration-dotted underline-offset-2">Papcy</a> - an AI-focused technology company building intelligent solutions for healthcare worldwide.
             </p>
           </div>
         </section>
@@ -127,16 +130,16 @@ export default function AboutPage() {
                 </h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
                   <p>
-                    MedSoftware was founded in 2019 with a simple observation: pharmacies and hospitals in Africa were struggling with outdated, expensive, or non-existent management systems.
+                    <a href="https://papcy.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-800 hover:text-[#166534] transition-colors underline decoration-dotted underline-offset-2">Papcy</a> is an AI-focused technology company that designs and builds AI-powered web apps, mobile apps, and custom intelligent tools. We help businesses adopt, integrate, and scale AI through end-to-end solutions—strategy, development, and deployment.
                   </p>
                   <p>
-                    Our founder, having worked in healthcare administration for over 15 years, saw firsthand how the lack of proper technology led to medication errors, inventory losses, and poor patient experiences.
+                    MedSoftware was born from a simple observation: pharmacies and hospitals globally were struggling with outdated, expensive, or non-existent management systems. We saw how the lack of proper technology led to medication errors, inventory losses, and poor patient experiences.
                   </p>
                   <p>
-                    We set out to build software that was not only powerful and reliable but also affordable and designed specifically for the African healthcare context - with support for local payment methods, multiple currencies, and languages.
+                    Leveraging our expertise in AI and software development, we built MedSoftware to be not only powerful and reliable but also intelligent and affordable—designed for diverse healthcare contexts with support for local payment methods, multiple currencies, and languages.
                   </p>
                   <p>
-                    Today, MedSoftware powers thousands of pharmacies and hospitals across 45+ countries, processing millions of transactions every month.
+                    Today, MedSoftware powers pharmacies and hospitals across 12 countries, processing transactions every month with AI-driven insights and automation.
                   </p>
                 </div>
               </div>
@@ -205,9 +208,21 @@ export default function AboutPage() {
                   key={index}
                   className="text-center group"
                 >
-                  <div className="w-24 h-24 bg-gradient-to-br from-[#166534] to-green-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {member.initials}
-                  </div>
+                  {member.image ? (
+                    <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 ring-4 ring-[#166534]/20">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={96}
+                        height={96}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-24 h-24 bg-gradient-to-br from-[#166534] to-green-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      {member.initials}
+                    </div>
+                  )}
                   <h3 className="text-lg font-bold text-gray-900 mb-1">{member.name}</h3>
                   <p className="text-[#166534] font-medium text-sm mb-2">{member.role}</p>
                   <p className="text-gray-600 text-sm">{member.bio}</p>
@@ -235,7 +250,7 @@ export default function AboutPage() {
                 <ArrowOutwardIcon className="w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
               <Link
-                href="/pricing"
+                href="/pharmapos"
                 className="inline-flex items-center gap-2 px-8 py-4 text-white text-lg font-semibold rounded-full border-2 border-white/30 hover:bg-white/10 transition-all duration-200"
               >
                 View Our Products
@@ -245,7 +260,6 @@ export default function AboutPage() {
         </section>
 
         <Footer />
-      </main>
-    </>
+    </main>
   );
 }

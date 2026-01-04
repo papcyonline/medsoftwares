@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     'pharmacy software updates',
     'healthcare technology news',
     'PharmaPOS updates',
-    'Hospix updates',
+    'HospitalOS updates',
     'African healthcare technology',
     'pharmacy management news',
     'hospital management updates',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: 'News & Media | MedSoftware',
     description: 'Stay updated with the latest news from MedSoftware. Product updates, company announcements, and industry insights.',
     type: 'website',
-    url: 'https://medsoftware.com/news',
+    url: 'https://medsoftwares.com/news',
     siteName: 'MedSoftware',
     images: [
       {
@@ -35,6 +35,6 @@ export const metadata: Metadata = {
     images: ['/og-news.jpg'],
   },
   alternates: {
-    canonical: 'https://medsoftware.com/news',
+    canonical: 'https://medsoftwares.com/news',
   },
 };

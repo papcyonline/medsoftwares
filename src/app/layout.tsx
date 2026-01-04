@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://medsoftware.com'),
+  metadataBase: new URL('https://medsoftwares.com'),
   title: {
     default: "MedSoftware - Pharmacy & Hospital Management Software",
     template: "%s | MedSoftware",
   },
-  description: "MedSoftware provides powerful, affordable pharmacy and hospital management solutions for healthcare facilities across Africa. PharmaPOS for pharmacies, Hospix for hospitals.",
+  description: "MedSoftware provides powerful, affordable pharmacy and hospital management solutions for healthcare facilities worldwide. PharmaPOS for pharmacies, HospitalOS for hospitals.",
   keywords: [
     "pharmacy management software",
     "hospital management system",
     "PharmaPOS",
-    "Hospix",
-    "healthcare software Africa",
+    "HospitalOS",
+    "healthcare software",
     "pharmacy POS system",
-    "medical software Ghana",
+    "medical software",
     "inventory management pharmacy",
     "patient management system",
     "NHIS integration",
@@ -33,10 +34,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://medsoftware.com",
+    url: "https://medsoftwares.com",
     siteName: "MedSoftware",
     title: "MedSoftware - Pharmacy & Hospital Management Software",
-    description: "Powerful, affordable pharmacy and hospital management solutions for healthcare facilities across Africa.",
+    description: "Powerful, affordable pharmacy and hospital management solutions for healthcare facilities worldwide.",
     images: [
       {
         url: "/og-image.jpg",
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "MedSoftware - Pharmacy & Hospital Management Software",
-    description: "Powerful, affordable pharmacy and hospital management solutions for healthcare facilities across Africa.",
+    description: "Powerful, affordable pharmacy and hospital management solutions for healthcare facilities worldwide.",
     images: ["/og-image.jpg"],
     creator: "@medsoftware",
   },
@@ -68,7 +69,7 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   alternates: {
-    canonical: "https://medsoftware.com",
+    canonical: "https://medsoftwares.com",
   },
 };
 
@@ -86,6 +87,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className="font-sans antialiased">
+        <Header />
         {children}
       </body>
     </html>

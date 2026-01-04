@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useState, useEffect, useCallback } from 'react';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import Footer from '@/components/Footer';
 
 const testimonials = [
   // Row 1 - Left to Right
@@ -229,50 +230,78 @@ const testimonials = [
   },
 ];
 
-const screenshots = [
+const pharmaPOSScreenshots = [
   {
     src: '/screenshots/dashboard.png',
     title: 'Real-Time Dashboard',
     description: 'Sales trends, inventory value, revenue charts, and business insights at a glance.',
-    color: 'from-[#166534] to-green-700',
   },
   {
     src: '/screenshots/sales.png',
     title: 'Sales & Credit Tracking',
     description: 'Track transactions, manage credit sales, and monitor payment status in real-time.',
-    color: 'from-blue-500 to-blue-700',
   },
   {
     src: '/screenshots/inventory.png',
     title: 'Smart Inventory',
     description: 'Track stock levels, batch numbers, expiry dates with automatic low-stock alerts.',
-    color: 'from-amber-500 to-amber-700',
   },
   {
     src: '/screenshots/reports.png',
     title: 'Detailed Reports',
     description: 'Comprehensive profit analysis, transaction history, and exportable reports.',
-    color: 'from-purple-500 to-purple-700',
   },
   {
     src: '/screenshots/mobilemoney.png',
     title: 'Mobile Money Integration',
     description: 'Accept MTN, Vodafone, Airtel, M-Pesa, Orange Money, Wave, and more.',
-    color: 'from-yellow-500 to-orange-600',
   },
   {
     src: '/screenshots/currency.png',
     title: 'Multi-Currency Support',
-    description: 'Support for GHS, NGN, KES, TZS, UGX, ZAR, CFA and more African currencies.',
-    color: 'from-emerald-500 to-teal-700',
+    description: 'Support for USD, EUR, GBP, GHS, NGN, KES, TZS, UGX, ZAR, CFA and more.',
   },
   {
     src: '/screenshots/language.png',
     title: 'Multi-Language Support',
     description: 'Available in English, French, Arabic, Swahili, Portuguese, and Hausa.',
-    color: 'from-indigo-500 to-pink-600',
   },
 ];
+
+const hospitalOSScreenshots = [
+  {
+    src: '/screenshots/hospitalos/admin-dashboard.png',
+    title: 'Admin Dashboard',
+    description: 'Real-time hospital metrics, department workload, revenue analytics, and bed occupancy.',
+  },
+  {
+    src: '/screenshots/hospitalos/patients.png',
+    title: 'Patient Management',
+    description: 'Comprehensive patient records, visit history, vitals tracking, and medical history.',
+  },
+  {
+    src: '/screenshots/hospitalos/laboratory.png',
+    title: 'Laboratory Module',
+    description: 'Manage test orders, sample tracking, results entry, and automated reporting.',
+  },
+  {
+    src: '/screenshots/hospitalos/analytics.png',
+    title: 'Analytics & Reports',
+    description: 'Department performance, revenue trends, patient statistics, and custom reports.',
+  },
+  {
+    src: '/screenshots/hospitalos/user-management.png',
+    title: 'User & Role Management',
+    description: '11+ user roles with granular permissions for doctors, nurses, lab techs, and staff.',
+  },
+];
+
+type ProductType = 'pharmapos' | 'hospitalos';
+
+const productScreenshots = {
+  pharmapos: pharmaPOSScreenshots,
+  hospitalos: hospitalOSScreenshots,
+};
 
 const faqs = [
   {
@@ -313,19 +342,31 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [activeProduct, setActiveProduct] = useState<ProductType>('pharmapos');
+
+  const activeScreenshots = productScreenshots[activeProduct];
 
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % screenshots.length);
-  }, []);
+    setCurrentSlide((prev) => (prev + 1) % activeScreenshots.length);
+  }, [activeScreenshots.length]);
 
   const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev - 1 + screenshots.length) % screenshots.length);
-  }, []);
+    setCurrentSlide((prev) => (prev - 1 + activeScreenshots.length) % activeScreenshots.length);
+  }, [activeScreenshots.length]);
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 5000);
+  };
+
+  const switchProduct = (product: ProductType) => {
+    if (product !== activeProduct) {
+      setActiveProduct(product);
+      setCurrentSlide(0);
+      setIsAutoPlaying(false);
+      setTimeout(() => setIsAutoPlaying(true), 1000);
+    }
   };
 
   useEffect(() => {
@@ -334,71 +375,426 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [isAutoPlaying, nextSlide]);
 
+  // JSON-LD Structured Data
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'MedSoftware',
+    url: 'https://medsoftwares.com',
+    logo: 'https://medsoftwares.com/logo.png',
+    description: 'Healthcare software solutions for pharmacies and hospitals worldwide.',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '21 Chartfield Drive, Kirby-Le-Soken',
+      addressLocality: 'Frinton-On-Sea',
+      addressRegion: 'England',
+      postalCode: 'CO13 0DR',
+      addressCountry: 'United Kingdom',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+9715677266520',
+      contactType: 'sales',
+      email: 'info@medsoftwares.com',
+      availableLanguage: ['English', 'French'],
+    },
+    sameAs: [
+      'https://facebook.com/medsoftwares',
+      'https://twitter.com/medsoftwares',
+      'https://linkedin.com/company/medsoftwares',
+    ],
+  };
+
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'MedSoftware',
+    url: 'https://medsoftwares.com',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://medsoftwares.com/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+
+  const softwareJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'MedSoftware Suite',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Windows, macOS',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      description: 'Contact for pricing',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '250',
+      bestRating: '5',
+      worstRating: '1',
+    },
+  };
+
   return (
     <main>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+      />
+
       {/* Hero Section */}
-      <section className="min-h-[80vh] md:min-h-screen flex items-center justify-center bg-[#166534] pt-20 md:pt-24 pb-40 md:pb-72 relative overflow-hidden">
+      <section className="min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-[#166534] to-green-700 pt-24 md:pt-32 pb-20 md:pb-32 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 md:top-20 left-5 md:left-10 w-40 md:w-72 h-40 md:h-72 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 md:bottom-20 right-5 md:right-10 w-52 md:w-96 h-52 md:h-96 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-white rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
 
-        <div className="text-center max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold text-white tracking-tight mb-4 md:mb-6">
-            Manage Your Pharmacy
-            <span className="block text-green-200">Smarter, Not Harder</span>
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-green-100 max-w-3xl mx-auto px-2 mb-8 md:mb-10">
-            Transform your healthcare operations with intelligent software that automates inventory, boosts sales, and delivers real-time insights.
-          </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold text-white tracking-tight mb-6">
+              Healthcare Management
+              <span className="block text-green-200">Made Simple</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto mb-8">
+              Complete software solutions for pharmacies and hospitals worldwide. One-time purchase, lifetime value.
+            </p>
+          </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* Product Cards */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* PharmaPOS Card */}
+            <div className="group bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#166534] to-green-700 rounded-2xl flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                </div>
+                <div>
+                  <h2 className="text-3xl font-heading font-extrabold text-gray-900">PharmaPOS</h2>
+                  <p className="text-sm text-gray-600 font-medium">Pharmacy Management System</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Complete POS solution for pharmacies. Manage inventory, process sales, track prescriptions, and integrate mobile money payments.
+              </p>
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Point of Sale & Inventory
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Mobile Money Integration
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Multi-Branch Support
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Reports & Analytics
+                </div>
+              </div>
+              <div className="flex justify-center pt-6 border-t border-gray-200">
+                <a
+                  href="/pharmapos"
+                  className="group/btn inline-flex items-center gap-2 px-8 py-3 bg-[#166534] text-white font-semibold rounded-full hover:bg-[#14532d] transition-all duration-200"
+                >
+                  Learn More
+                  <ArrowOutwardIcon className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                </a>
+              </div>
+            </div>
+
+            {/* HospitalOS Card */}
+            <div className="group bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#166534] to-green-700 rounded-2xl flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <div>
+                  <h2 className="text-3xl font-heading font-extrabold text-gray-900">HospitalOS</h2>
+                  <p className="text-sm text-gray-600 font-medium">Hospital Management System</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Complete operating system for hospitals. Manage 25+ departments, from OPD to ICU, with real-time patient flow tracking.
+              </p>
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  25+ Integrated Modules
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Patient Queue Management
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Lab & Radiology Integration
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  11+ User Roles & Permissions
+                </div>
+              </div>
+              <div className="flex justify-center pt-6 border-t border-gray-200">
+                <a
+                  href="/hospitalos"
+                  className="group/btn inline-flex items-center gap-2 px-8 py-3 bg-[#166534] text-white font-semibold rounded-full hover:bg-[#14532d] transition-all duration-200"
+                >
+                  Learn More
+                  <ArrowOutwardIcon className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center mt-12">
+            <p className="text-green-100 mb-4 text-lg">Not sure which solution you need?</p>
             <a
-              href="#demo"
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-[#166534] text-base md:text-lg font-bold rounded-full shadow-lg shadow-black/20 hover:bg-green-50 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+              href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#166534] font-bold rounded-full shadow-lg hover:bg-green-50 hover:-translate-y-0.5 transition-all duration-200"
             >
-              Book a Demo
-              <ArrowOutwardIcon className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
-            <a
-              href="#features"
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-transparent text-white text-base md:text-lg font-semibold rounded-full border-2 border-white/30 hover:bg-white/10 hover:border-white/50 transition-all duration-200"
-            >
-              Learn More
-              <ArrowOutwardIcon className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              Talk to Our Team
+              <ArrowOutwardIcon className="w-5 h-5" />
             </a>
           </div>
         </div>
       </section>
 
-      {/* Floating Hero Image - 70% in hero, 30% below */}
-      <div className="relative z-20 -mt-32 md:-mt-56 mb-10 md:mb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <div className="relative rounded-lg md:rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/hero image.png"
-              alt="MedSoftware Dashboard"
-              width={800}
-              height={450}
-              className="w-full h-auto"
-              priority
-            />
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl md:text-5xl font-heading font-extrabold text-[#166534] mb-2">25+</div>
+              <div className="text-gray-600 font-medium">Healthcare Facilities</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-heading font-extrabold text-[#166534] mb-2">12</div>
+              <div className="text-gray-600 font-medium">Countries Served</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-heading font-extrabold text-[#166534] mb-2">98%</div>
+              <div className="text-gray-600 font-medium">Customer Satisfaction</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-heading font-extrabold text-[#166534] mb-2">24/7</div>
+              <div className="text-gray-600 font-medium">Support Available</div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-gray-900 mb-6">
+              Why Healthcare Providers Choose Us
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Trusted by thousands of pharmacies and hospitals worldwide.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
+              <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Windows & Mac</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Runs seamlessly on both Windows and Mac computers. Choose your preferred platform.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
+              <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Easy Installation</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Quick setup in minutes. Simple installation process with step-by-step guidance.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
+              <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Offline & Online</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Works offline without internet and syncs when online. Uninterrupted operations guaranteed.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
+              <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Built for Global Healthcare</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Multi-currency, mobile money integration, and support for 6+ languages to serve diverse markets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Integrations & Payments Section */}
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-8 md:mb-10">
+            <p className="text-sm md:text-base text-gray-500 font-medium uppercase tracking-wider">
+              Integrated Payment Solutions
+            </p>
+          </div>
+
+          {/* Payment Logos - Scrolling on mobile, static on desktop */}
+          <div className="relative overflow-hidden">
+            {/* Gradient overlays for mobile scroll */}
+            <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none md:hidden"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none md:hidden"></div>
+
+            <div className="flex items-center justify-start md:justify-center gap-8 md:gap-12 lg:gap-16 overflow-x-auto md:overflow-visible pb-4 md:pb-0 scrollbar-hide">
+              {/* MTN Mobile Money */}
+              <div className="flex-shrink-0 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-[#FFCC00] rounded-2xl flex items-center justify-center">
+                  <span className="text-black font-bold text-lg md:text-xl">MTN</span>
+                </div>
+                <span className="text-xs text-gray-500 whitespace-nowrap">MTN MoMo</span>
+              </div>
+
+              {/* Vodafone Cash */}
+              <div className="flex-shrink-0 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-[#E60000] rounded-2xl flex items-center justify-center">
+                  <span className="text-white font-bold text-sm md:text-base">Vodafone</span>
+                </div>
+                <span className="text-xs text-gray-500 whitespace-nowrap">Vodafone Cash</span>
+              </div>
+
+              {/* AirtelTigo */}
+              <div className="flex-shrink-0 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-[#FF0000] rounded-2xl flex items-center justify-center">
+                  <span className="text-white font-bold text-sm md:text-base">Airtel</span>
+                </div>
+                <span className="text-xs text-gray-500 whitespace-nowrap">AirtelTigo</span>
+              </div>
+
+              {/* M-Pesa */}
+              <div className="flex-shrink-0 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-[#00A650] rounded-2xl flex items-center justify-center">
+                  <span className="text-white font-bold text-sm md:text-base">M-PESA</span>
+                </div>
+                <span className="text-xs text-gray-500 whitespace-nowrap">M-Pesa</span>
+              </div>
+
+              {/* Visa */}
+              <div className="flex-shrink-0 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-[#1A1F71] rounded-2xl flex items-center justify-center">
+                  <span className="text-white font-bold text-lg md:text-xl italic">VISA</span>
+                </div>
+                <span className="text-xs text-gray-500 whitespace-nowrap">Visa Card</span>
+              </div>
+
+              {/* Mastercard */}
+              <div className="flex-shrink-0 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#EB001B] to-[#F79E1B] rounded-2xl flex items-center justify-center">
+                  <div className="flex">
+                    <div className="w-5 h-5 md:w-6 md:h-6 bg-[#EB001B] rounded-full -mr-2"></div>
+                    <div className="w-5 h-5 md:w-6 md:h-6 bg-[#F79E1B] rounded-full opacity-80"></div>
+                  </div>
+                </div>
+                <span className="text-xs text-gray-500 whitespace-nowrap">Mastercard</span>
+              </div>
+
+              {/* Bank Transfer */}
+              <div className="flex-shrink-0 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-gray-800 rounded-2xl flex items-center justify-center">
+                  <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21m-3.75 3H21" />
+                  </svg>
+                </div>
+                <span className="text-xs text-gray-500 whitespace-nowrap">Bank Transfer</span>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-center text-sm text-gray-400 mt-6 md:mt-8">
+            And many more payment methods across Africa
+          </p>
+        </div>
+      </section>
 
       {/* What It Can Do Section */}
       <section id="features" className="py-16 md:py-32 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-20">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-extrabold text-gray-900 mb-4 md:mb-6">
-              What Our Software Can Do
+              Powerful Features for Every Healthcare Need
             </h2>
             <p className="text-base md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto px-2">
-              A complete pharmacy management solution built for African healthcare providers.
+              From pharmacy management to complete hospital operations, we have you covered.
             </p>
           </div>
 
@@ -457,12 +853,12 @@ export default function Home() {
               <p className="text-sm md:text-base text-gray-600 leading-relaxed">Track stock levels, expiry dates, batch numbers, and get low-stock alerts.</p>
             </div>
 
-            {/* Feature 4 - Prescriptions */}
+            {/* Feature 4 - Patient Management */}
             <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-green-100 transition-all duration-300 cursor-pointer overflow-hidden">
               <div className="flex items-start justify-between mb-4 md:mb-6">
                 <div className="w-12 h-12 md:w-14 md:h-14 bg-green-50 rounded-xl md:rounded-2xl flex items-center justify-center group-hover:bg-green-100 transition-colors duration-300">
                   <svg className="w-6 h-6 md:w-7 md:h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </div>
                 <div className="w-8 h-8 md:w-10 md:h-10 bg-[#166534] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -471,16 +867,16 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">Prescriptions</h3>
-              <p className="text-sm md:text-base text-gray-600 leading-relaxed">Manage prescriptions, patient records, drug interactions, and NHIS integration.</p>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">Patient Management</h3>
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed">Comprehensive patient records, visit history, vitals tracking, and NHIS integration.</p>
             </div>
 
-            {/* Feature 5 - Credit Sales */}
+            {/* Feature 5 - Lab & Radiology */}
             <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-green-100 transition-all duration-300 cursor-pointer overflow-hidden">
               <div className="flex items-start justify-between mb-4 md:mb-6">
                 <div className="w-12 h-12 md:w-14 md:h-14 bg-green-50 rounded-xl md:rounded-2xl flex items-center justify-center group-hover:bg-green-100 transition-colors duration-300">
                   <svg className="w-6 h-6 md:w-7 md:h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
                   </svg>
                 </div>
                 <div className="w-8 h-8 md:w-10 md:h-10 bg-[#166534] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -489,8 +885,8 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">Credit Sales</h3>
-              <p className="text-sm md:text-base text-gray-600 leading-relaxed">Track customer credit accounts, payment status, and outstanding balances.</p>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">Lab & Radiology</h3>
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed">Integrated lab tests, imaging requests, results tracking, and report generation.</p>
             </div>
 
             {/* Feature 6 - Reports */}
@@ -551,421 +947,142 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Workflow Section */}
-      <section className="py-16 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-green-50/50 overflow-hidden">
+      {/* Before vs After Comparison Section */}
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10 md:mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 bg-[#166534]/10 text-[#166534] text-xs md:text-sm font-semibold rounded-full mb-3 md:mb-4">
-              Seamless Integration
+              The Difference
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-extrabold text-gray-900 mb-4 md:mb-6">
-              How It All Connects
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-gray-900 mb-4 md:mb-6">
+              Before &amp; After MedSoftware
             </h2>
-            <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto px-2">
-              Four roles, one unified system. Watch how data flows seamlessly across your pharmacy.
+            <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
+              See how healthcare facilities transform their operations with our solutions.
             </p>
           </div>
 
-          {/* Desktop Workflow */}
-          <div className="hidden lg:block">
-            <div className="relative max-w-6xl mx-auto">
-              {/* Central Connection Hub with Logo - Higher z-index to be in front of lines */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 bg-[#166534]/5 rounded-full flex items-center justify-center" style={{zIndex: 5}}>
-                <div className="w-28 h-28 bg-[#166534]/10 rounded-full flex items-center justify-center">
-                  <div className="w-20 h-20 bg-white rounded-full shadow-lg shadow-[#166534]/20 flex items-center justify-center p-2">
-                    <Image
-                      src="/logo.png"
-                      alt="MedSoftware"
-                      width={60}
-                      height={60}
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+            {/* Before Card */}
+            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 border-2 border-red-100 relative overflow-hidden">
+              <div className="absolute top-4 right-4 md:top-6 md:right-6">
+                <span className="px-3 py-1 bg-red-100 text-red-600 text-xs font-bold rounded-full">BEFORE</span>
               </div>
-
-              {/* Connection Lines SVG with Animated Lights - Next.js Style */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{zIndex: 0}} viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet">
-                <defs>
-                  {/* Gradient for lines */}
-                  <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#e5e7eb" />
-                    <stop offset="100%" stopColor="#d1d5db" />
-                  </linearGradient>
-
-                  {/* Glow filters for animated dots */}
-                  <filter id="glow-amber" x="-100%" y="-100%" width="300%" height="300%">
-                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                    <feMerge>
-                      <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                  </filter>
-                  <filter id="glow-blue" x="-100%" y="-100%" width="300%" height="300%">
-                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                    <feMerge>
-                      <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                  </filter>
-                  <filter id="glow-green" x="-100%" y="-100%" width="300%" height="300%">
-                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                    <feMerge>
-                      <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                  </filter>
-                  <filter id="glow-purple" x="-100%" y="-100%" width="300%" height="300%">
-                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                    <feMerge>
-                      <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                  </filter>
-                </defs>
-
-                {/* Path definitions - 4 SEPARATE lines from logo */}
-                {/* Store Keeper: from center, go UP-LEFT diagonally a bit, then bend LEFT */}
-                <path id="path-storekeeper" d="M 500 300 L 420 200 L 180 200" fill="none" stroke="#e5e7eb" strokeWidth="1.5" />
-                {/* Pharmacist: from center, go UP-RIGHT diagonally a bit, then bend RIGHT */}
-                <path id="path-pharmacist" d="M 500 300 L 580 200 L 820 200" fill="none" stroke="#e5e7eb" strokeWidth="1.5" />
-                {/* Cashier: from center, go DOWN-LEFT diagonally a bit, then bend LEFT */}
-                <path id="path-cashier" d="M 500 300 L 420 400 L 180 400" fill="none" stroke="#e5e7eb" strokeWidth="1.5" />
-                {/* Admin: from center, go DOWN-RIGHT diagonally a bit, then bend RIGHT */}
-                <path id="path-admin" d="M 500 300 L 580 400 L 820 400" fill="none" stroke="#e5e7eb" strokeWidth="1.5" />
-
-                {/* Animated dot - Store Keeper (Amber) */}
-                <circle r="5" fill="#f59e0b" filter="url(#glow-amber)">
-                  <animateMotion dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1">
-                    <mpath href="#path-storekeeper" />
-                  </animateMotion>
-                  <animate attributeName="opacity" values="0;1;1;0" dur="2.5s" repeatCount="indefinite" />
-                </circle>
-                {/* Trail effect */}
-                <circle r="3" fill="#fbbf24" opacity="0.6">
-                  <animateMotion dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="0.1s">
-                    <mpath href="#path-storekeeper" />
-                  </animateMotion>
-                  <animate attributeName="opacity" values="0;0.6;0.6;0" dur="2.5s" repeatCount="indefinite" begin="0.1s" />
-                </circle>
-
-                {/* Animated dot - Pharmacist (Blue) */}
-                <circle r="5" fill="#3b82f6" filter="url(#glow-blue)">
-                  <animateMotion dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="0.6s">
-                    <mpath href="#path-pharmacist" />
-                  </animateMotion>
-                  <animate attributeName="opacity" values="0;1;1;0" dur="2.5s" repeatCount="indefinite" begin="0.6s" />
-                </circle>
-                {/* Trail effect */}
-                <circle r="3" fill="#60a5fa" opacity="0.6">
-                  <animateMotion dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="0.7s">
-                    <mpath href="#path-pharmacist" />
-                  </animateMotion>
-                  <animate attributeName="opacity" values="0;0.6;0.6;0" dur="2.5s" repeatCount="indefinite" begin="0.7s" />
-                </circle>
-
-                {/* Animated dot - Cashier (Green) */}
-                <circle r="5" fill="#22c55e" filter="url(#glow-green)">
-                  <animateMotion dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="1.2s">
-                    <mpath href="#path-cashier" />
-                  </animateMotion>
-                  <animate attributeName="opacity" values="0;1;1;0" dur="2.5s" repeatCount="indefinite" begin="1.2s" />
-                </circle>
-                {/* Trail effect */}
-                <circle r="3" fill="#4ade80" opacity="0.6">
-                  <animateMotion dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="1.3s">
-                    <mpath href="#path-cashier" />
-                  </animateMotion>
-                  <animate attributeName="opacity" values="0;0.6;0.6;0" dur="2.5s" repeatCount="indefinite" begin="1.3s" />
-                </circle>
-
-                {/* Animated dot - Admin (Purple) */}
-                <circle r="5" fill="#8b5cf6" filter="url(#glow-purple)">
-                  <animateMotion dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="1.8s">
-                    <mpath href="#path-admin" />
-                  </animateMotion>
-                  <animate attributeName="opacity" values="0;1;1;0" dur="2.5s" repeatCount="indefinite" begin="1.8s" />
-                </circle>
-                {/* Trail effect */}
-                <circle r="3" fill="#a78bfa" opacity="0.6">
-                  <animateMotion dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="1.9s">
-                    <mpath href="#path-admin" />
-                  </animateMotion>
-                  <animate attributeName="opacity" values="0;0.6;0.6;0" dur="2.5s" repeatCount="indefinite" begin="1.9s" />
-                </circle>
-
-                {/* Return path animations - from center back to cards */}
-                {/* Return to Store Keeper */}
-                <circle r="4" fill="#166534">
-                  <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="2s" keyPoints="1;0" keyTimes="0;1">
-                    <mpath href="#path-storekeeper" />
-                  </animateMotion>
-                  <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3s" repeatCount="indefinite" begin="2s" />
-                </circle>
-
-                {/* Return to Pharmacist */}
-                <circle r="4" fill="#166534">
-                  <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="2.5s" keyPoints="1;0" keyTimes="0;1">
-                    <mpath href="#path-pharmacist" />
-                  </animateMotion>
-                  <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3s" repeatCount="indefinite" begin="2.5s" />
-                </circle>
-
-                {/* Return to Cashier */}
-                <circle r="4" fill="#166534">
-                  <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="3s" keyPoints="1;0" keyTimes="0;1">
-                    <mpath href="#path-cashier" />
-                  </animateMotion>
-                  <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3s" repeatCount="indefinite" begin="3s" />
-                </circle>
-
-                {/* Return to Admin */}
-                <circle r="4" fill="#166534">
-                  <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="3.5s" keyPoints="1;0" keyTimes="0;1">
-                    <mpath href="#path-admin" />
-                  </animateMotion>
-                  <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3s" repeatCount="indefinite" begin="3.5s" />
-                </circle>
-              </svg>
-
-              {/* Workflow Cards Grid */}
-              <div className="grid grid-cols-2 gap-x-64 gap-y-12 relative" style={{zIndex: 1}}>
-
-                {/* Store Keeper - Top Left */}
-                <div className="flex justify-start">
-                  <div className="group relative bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-amber-200 max-w-xs">
-                    <div className="absolute -top-5 -left-5 w-14 h-14 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 shadow-lg shadow-amber-500/30 group-hover:scale-110 transition-transform">
-                      <div className="w-full h-full rounded-full overflow-hidden">
-                        <Image
-                          src="/storekeeper.jpg"
-                          alt="Store Keeper"
-                          width={56}
-                          height={56}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4 mb-4 mt-2">
-                      <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-50 rounded-2xl flex items-center justify-center overflow-hidden">
-                        <svg className="w-8 h-8 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900">Store Keeper</h3>
-                        <span className="text-xs text-amber-600 font-medium">Inventory Manager</span>
-                      </div>
-                    </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">Manages stock levels, receives deliveries, and releases inventory to the pharmacy floor.</p>
-                    <div className="mt-4 flex items-center gap-2 text-amber-600">
-                      <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
-                      <span className="text-xs font-medium">Releases stock to Pharmacist</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Pharmacist - Top Right */}
-                <div className="flex justify-end">
-                  <div className="group relative bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-blue-200 max-w-xs">
-                    <div className="absolute -top-5 -right-5 w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 p-0.5 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
-                      <div className="w-full h-full rounded-full overflow-hidden">
-                        <Image
-                          src="/pharmacist.jpg"
-                          alt="Pharmacist"
-                          width={56}
-                          height={56}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4 mb-4 mt-2">
-                      <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl flex items-center justify-center overflow-hidden">
-                        <svg className="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900">Pharmacist</h3>
-                        <span className="text-xs text-blue-600 font-medium">Customer Service</span>
-                      </div>
-                    </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">Serves customers, processes prescriptions, and prepares medication orders for checkout.</p>
-                    <div className="mt-4 flex items-center gap-2 text-blue-600">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                      <span className="text-xs font-medium">Sends sales to Cashier</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Cashier - Bottom Left */}
-                <div className="flex justify-start">
-                  <div className="group relative bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-green-200 max-w-xs">
-                    <div className="absolute -bottom-5 -left-5 w-14 h-14 rounded-full bg-gradient-to-br from-green-400 to-green-600 p-0.5 shadow-lg shadow-green-500/30 group-hover:scale-110 transition-transform">
-                      <div className="w-full h-full rounded-full overflow-hidden">
-                        <Image
-                          src="/cashier.jpg"
-                          alt="Cashier"
-                          width={56}
-                          height={56}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-50 rounded-2xl flex items-center justify-center overflow-hidden">
-                        <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900">Cashier</h3>
-                        <span className="text-xs text-green-600 font-medium">Payment Handler</span>
-                      </div>
-                    </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">Processes payments, handles mobile money transactions, and prints customer receipts.</p>
-                    <div className="mt-4 flex items-center gap-2 text-green-600">
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                      <span className="text-xs font-medium">Completes transactions</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Admin - Bottom Right */}
-                <div className="flex justify-end">
-                  <div className="group relative bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-purple-200 max-w-xs">
-                    <div className="absolute -bottom-5 -right-5 w-14 h-14 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 p-0.5 shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">
-                      <div className="w-full h-full rounded-full overflow-hidden">
-                        <Image
-                          src="/admin.jpg"
-                          alt="Admin"
-                          width={56}
-                          height={56}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-50 rounded-2xl flex items-center justify-center overflow-hidden">
-                        <svg className="w-8 h-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900">Admin</h3>
-                        <span className="text-xs text-purple-600 font-medium">System Oversight</span>
-                      </div>
-                    </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">Monitors all activities, views comprehensive reports, and manages system settings.</p>
-                    <div className="mt-4 flex items-center gap-2 text-purple-600">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                      <span className="text-xs font-medium">Real-time monitoring</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
               </div>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">Manual Methods</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-gray-600">Paper records prone to loss and errors</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-gray-600">Hours spent counting inventory manually</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-gray-600">Expired medications discovered too late</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-gray-600">No visibility into sales or profit margins</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-gray-600">Credit customers hard to track</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-gray-600">Staff errors and potential theft undetected</span>
+                </li>
+              </ul>
+            </div>
 
+            {/* After Card */}
+            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 border-2 border-green-200 relative overflow-hidden shadow-lg shadow-green-100/50">
+              <div className="absolute top-4 right-4 md:top-6 md:right-6">
+                <span className="px-3 py-1 bg-green-100 text-[#166534] text-xs font-bold rounded-full">AFTER</span>
+              </div>
+              <div className="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">With MedSoftware</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#166534] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-600">Digital records with automatic cloud backup</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#166534] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-600">Real-time inventory tracking with barcode scanning</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#166534] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-600">Automatic expiry alerts 90, 60, 30 days ahead</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#166534] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-600">Complete sales reports and profit analytics</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#166534] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-600">Credit management with payment reminders</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#166534] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-600">User roles with audit trail for every action</span>
+                </li>
+              </ul>
             </div>
           </div>
 
-          {/* Mobile Workflow */}
-          <div className="lg:hidden">
-            <div className="relative">
-              {/* Vertical Timeline Line */}
-              <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-amber-400 via-blue-400 via-green-400 to-purple-400"></div>
-
-              <div className="space-y-6 sm:space-y-8">
-                {/* Store Keeper */}
-                <div className="relative flex gap-4 sm:gap-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 shadow-lg shadow-amber-500/30 flex-shrink-0 z-10">
-                    <div className="w-full h-full rounded-full overflow-hidden">
-                      <Image
-                        src="/storekeeper.jpg"
-                        alt="Store Keeper"
-                        width={64}
-                        height={64}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 shadow-lg border border-gray-100 flex-1">
-                    <h3 className="text-base sm:text-lg font-bold text-gray-900">Store Keeper</h3>
-                    <p className="text-gray-600 text-xs sm:text-sm mt-1">Manages inventory and releases stock to pharmacy</p>
-                    <div className="mt-2 sm:mt-3 flex items-center gap-2 text-amber-600">
-                      <div className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-pulse"></div>
-                      <span className="text-xs font-medium">Releases stock</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Pharmacist */}
-                <div className="relative flex gap-4 sm:gap-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 p-0.5 shadow-lg shadow-blue-500/30 flex-shrink-0 z-10">
-                    <div className="w-full h-full rounded-full overflow-hidden">
-                      <Image
-                        src="/pharmacist.jpg"
-                        alt="Pharmacist"
-                        width={64}
-                        height={64}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 shadow-lg border border-gray-100 flex-1">
-                    <h3 className="text-base sm:text-lg font-bold text-gray-900">Pharmacist</h3>
-                    <p className="text-gray-600 text-xs sm:text-sm mt-1">Serves customers and prepares medication orders</p>
-                    <div className="mt-2 sm:mt-3 flex items-center gap-2 text-blue-600">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse"></div>
-                      <span className="text-xs font-medium">Sends to cashier</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Cashier */}
-                <div className="relative flex gap-4 sm:gap-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600 p-0.5 shadow-lg shadow-green-500/30 flex-shrink-0 z-10">
-                    <div className="w-full h-full rounded-full overflow-hidden">
-                      <Image
-                        src="/cashier.jpg"
-                        alt="Cashier"
-                        width={64}
-                        height={64}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 shadow-lg border border-gray-100 flex-1">
-                    <h3 className="text-base sm:text-lg font-bold text-gray-900">Cashier</h3>
-                    <p className="text-gray-600 text-xs sm:text-sm mt-1">Processes payments and prints receipts</p>
-                    <div className="mt-2 sm:mt-3 flex items-center gap-2 text-green-600">
-                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
-                      <span className="text-xs font-medium">Completes payment</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Admin */}
-                <div className="relative flex gap-4 sm:gap-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 p-0.5 shadow-lg shadow-purple-500/30 flex-shrink-0 z-10">
-                    <div className="w-full h-full rounded-full overflow-hidden">
-                      <Image
-                        src="/admin.jpg"
-                        alt="Admin"
-                        width={64}
-                        height={64}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 shadow-lg border border-gray-100 flex-1">
-                    <h3 className="text-base sm:text-lg font-bold text-gray-900">Admin</h3>
-                    <p className="text-gray-600 text-xs sm:text-sm mt-1">Monitors all activities and views reports</p>
-                    <div className="mt-2 sm:mt-3 flex items-center gap-2 text-purple-600">
-                      <div className="w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse"></div>
-                      <span className="text-xs font-medium">Real-time oversight</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          {/* Results Stats */}
+          <div className="mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 text-center border border-gray-100">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold text-[#166534] mb-1">60%</div>
+              <p className="text-xs md:text-sm text-gray-600">Faster Checkout</p>
+            </div>
+            <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 text-center border border-gray-100">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold text-[#166534] mb-1">80%</div>
+              <p className="text-xs md:text-sm text-gray-600">Less Inventory Loss</p>
+            </div>
+            <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 text-center border border-gray-100">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold text-[#166534] mb-1">5hrs</div>
+              <p className="text-xs md:text-sm text-gray-600">Saved Per Week</p>
+            </div>
+            <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 text-center border border-gray-100">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold text-[#166534] mb-1">100%</div>
+              <p className="text-xs md:text-sm text-gray-600">Transaction Accuracy</p>
             </div>
           </div>
         </div>
@@ -981,9 +1098,43 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-4 md:mb-6">
               Powerful Yet Simple
             </h2>
-            <p className="text-base md:text-xl text-green-100 max-w-2xl mx-auto px-4">
-              A clean, intuitive interface designed for busy pharmacy professionals.
+            <p className="text-base md:text-xl text-green-100 max-w-2xl mx-auto px-4 mb-8">
+              Clean, intuitive interfaces designed for busy healthcare professionals.
             </p>
+
+            {/* Product Tabs */}
+            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full p-1.5">
+              <button
+                onClick={() => switchProduct('pharmapos')}
+                className={`px-4 py-2 md:px-6 md:py-2.5 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${
+                  activeProduct === 'pharmapos'
+                    ? 'bg-white text-[#166534] shadow-lg'
+                    : 'text-white/80 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                  PharmaPOS
+                </span>
+              </button>
+              <button
+                onClick={() => switchProduct('hospitalos')}
+                className={`px-4 py-2 md:px-6 md:py-2.5 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${
+                  activeProduct === 'hospitalos'
+                    ? 'bg-white text-[#166534] shadow-lg'
+                    : 'text-white/80 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                  HospitalOS
+                </span>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -995,14 +1146,14 @@ export default function Home() {
 
           {/* Carousel Container */}
           <div className="relative h-[280px] sm:h-[350px] md:h-[500px] lg:h-[600px]">
-            {screenshots.map((slide, index) => {
-              const isPrev = index === (currentSlide - 1 + screenshots.length) % screenshots.length;
-              const isNext = index === (currentSlide + 1) % screenshots.length;
+            {activeScreenshots.map((slide, index) => {
+              const isPrev = index === (currentSlide - 1 + activeScreenshots.length) % activeScreenshots.length;
+              const isNext = index === (currentSlide + 1) % activeScreenshots.length;
               const isCurrent = index === currentSlide;
 
               return (
                 <div
-                  key={index}
+                  key={`${activeProduct}-${index}`}
                   className={`absolute inset-0 transition-all duration-700 ease-in-out ${
                     isCurrent
                       ? 'opacity-100 scale-100 z-[5]'
@@ -1016,29 +1167,52 @@ export default function Home() {
                   <div className="h-full flex items-center justify-center px-8 sm:px-12 md:px-16 lg:px-20">
                     <div className="relative w-full max-w-6xl">
                       {/* Browser Frame */}
-                      <div className="relative rounded-lg md:rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
-                        {/* Browser Header */}
-                        <div className="bg-white/90 backdrop-blur-sm px-2 py-2 md:px-4 md:py-3 flex items-center gap-2 md:gap-3 border-b border-gray-200">
-                          <div className="flex gap-1 md:gap-2">
-                            <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-red-400"></div>
-                            <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-yellow-400"></div>
-                            <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-green-400"></div>
-                          </div>
-                          <div className="flex-1 flex justify-center">
-                            <div className="bg-gray-100 rounded px-2 py-0.5 md:rounded-lg md:px-4 md:py-1 text-xs md:text-sm text-gray-600 font-medium">
-                              PharmaPOS
+                      <div className={`relative rounded-lg md:rounded-2xl overflow-hidden shadow-2xl shadow-black/50 ${
+                        activeProduct === 'hospitalos' ? 'flex' : ''
+                      }`}>
+                        {/* HospitalOS Sidebar */}
+                        {activeProduct === 'hospitalos' && (
+                          <div className="hidden md:flex w-12 lg:w-14 bg-[#1e293b] flex-col items-center py-3 gap-2">
+                            <div className="w-8 h-8 lg:w-10 lg:h-10 bg-white/10 rounded-lg"></div>
+                            <div className="flex-1 flex flex-col gap-2 mt-2">
+                              {[...Array(5)].map((_, i) => (
+                                <div key={i} className="w-6 h-6 lg:w-8 lg:h-8 bg-white/5 rounded-lg mx-auto"></div>
+                              ))}
                             </div>
                           </div>
-                        </div>
-                        {/* Screenshot */}
-                        <div className="relative aspect-[16/9] bg-gray-100">
-                          <Image
-                            src={slide.src}
-                            alt={slide.title}
-                            fill
-                            className="object-cover object-top"
-                            priority={index === 0}
-                          />
+                        )}
+                        <div className="flex-1">
+                          {/* Browser Header */}
+                          <div className={`px-2 py-2 md:px-4 md:py-3 flex items-center gap-2 md:gap-3 border-b ${
+                            activeProduct === 'hospitalos'
+                              ? 'bg-[#1e293b] border-slate-700'
+                              : 'bg-white/90 backdrop-blur-sm border-gray-200'
+                          }`}>
+                            <div className="flex gap-1 md:gap-2">
+                              <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-red-400"></div>
+                              <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-yellow-400"></div>
+                              <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-green-400"></div>
+                            </div>
+                            <div className="flex-1 flex justify-center">
+                              <div className={`rounded px-2 py-0.5 md:rounded-lg md:px-4 md:py-1 text-xs md:text-sm font-medium ${
+                                activeProduct === 'hospitalos'
+                                  ? 'bg-slate-700 text-slate-300'
+                                  : 'bg-gray-100 text-gray-600'
+                              }`}>
+                                {activeProduct === 'pharmapos' ? 'PharmaPOS' : 'HospitalOS'}
+                              </div>
+                            </div>
+                          </div>
+                          {/* Screenshot */}
+                          <div className="relative aspect-[16/9] bg-gray-100">
+                            <Image
+                              src={slide.src}
+                              alt={slide.title}
+                              fill
+                              className="object-cover object-top"
+                              priority={index === 0}
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1070,9 +1244,9 @@ export default function Home() {
 
           {/* Dot Indicators */}
           <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 md:gap-2">
-            {screenshots.map((_, index) => (
+            {activeScreenshots.map((_, index) => (
               <button
-                key={index}
+                key={`${activeProduct}-dot-${index}`}
                 onClick={() => goToSlide(index)}
                 className={`transition-all duration-300 rounded-full ${
                   index === currentSlide
@@ -1097,7 +1271,7 @@ export default function Home() {
               What Our Customers Say
             </h2>
             <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto px-2">
-              Join thousands of pharmacies across the globe who trust PharmaPOS to run their business.
+              Join thousands of healthcare facilities across the globe who trust our software to run their operations.
             </p>
           </div>
         </div>
@@ -1246,11 +1420,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 md:mt-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 p-6 md:p-10 bg-gradient-to-r from-[#166534] to-green-700 rounded-2xl md:rounded-3xl">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-1 md:mb-2">2,500+</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-1 md:mb-2">25+</div>
               <div className="text-green-200 text-xs md:text-sm font-medium">Active Pharmacies</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-1 md:mb-2">45+</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-1 md:mb-2">12</div>
               <div className="text-green-200 text-xs md:text-sm font-medium">Countries Worldwide</div>
             </div>
             <div className="text-center">
@@ -1370,7 +1544,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-green-200 text-sm">Email us</p>
-                    <a href="mailto:hello@medsoftware.com" className="text-white font-semibold hover:underline">hello@medsoftware.com</a>
+                    <a href="mailto:info@medsoftwares.com" className="text-white font-semibold hover:underline">info@medsoftwares.com</a>
                   </div>
                 </div>
 
@@ -1382,7 +1556,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-green-200 text-sm">Call us</p>
-                    <a href="tel:+233200000000" className="text-white font-semibold hover:underline">+233 20 000 0000</a>
+                    <a href="tel:+9715677266520" className="text-white font-semibold hover:underline">+971 567 726 6520</a>
                   </div>
                 </div>
 
@@ -1395,7 +1569,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-green-200 text-sm">Visit us</p>
-                    <p className="text-white font-semibold">Accra, Ghana</p>
+                    <p className="text-white font-semibold">Frinton-On-Sea, England</p>
                   </div>
                 </div>
               </div>
@@ -1488,132 +1662,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-50 text-gray-900">
-        {/* Main Footer */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
-            {/* Brand Column */}
-            <div className="col-span-2 md:col-span-4 lg:col-span-2">
-              <div className="flex items-center gap-2.5 mb-4">
-                <Image
-                  src="/logo.png"
-                  alt="MedSoftware Logo"
-                  width={40}
-                  height={40}
-                />
-                <span className="text-xl font-heading font-extrabold tracking-tight text-gray-900">
-                  MedSoftware
-                </span>
-              </div>
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 max-w-sm">
-                Empowering pharmacies worldwide with intelligent software solutions. Streamline operations, boost sales, and deliver better healthcare.
-              </p>
-              {/* Social Links */}
-              <div className="flex items-center gap-3">
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-gray-200 hover:bg-[#166534] text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200"
-                  aria-label="Facebook"
-                >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-gray-200 hover:bg-[#166534] text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200"
-                  aria-label="Twitter"
-                >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-gray-200 hover:bg-[#166534] text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200"
-                  aria-label="LinkedIn"
-                >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-gray-200 hover:bg-[#166534] text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200"
-                  aria-label="Instagram"
-                >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-gray-200 hover:bg-[#166534] text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200"
-                  aria-label="YouTube"
-                >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            {/* Products */}
-            <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-4">Products</h4>
-              <ul className="space-y-3">
-                <li><a href="/pharmapos" className="text-gray-600 hover:text-[#166534] transition-colors text-sm">PharmaPOS</a></li>
-                <li><a href="/hospix" className="text-gray-600 hover:text-[#166534] transition-colors text-sm">Hospix (HMS)</a></li>
-                <li><a href="#features" className="text-gray-600 hover:text-[#166534] transition-colors text-sm">Features</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#166534] transition-colors text-sm">Pricing</a></li>
-              </ul>
-            </div>
-
-            {/* Company */}
-            <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-4">Company</h4>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-gray-600 hover:text-[#166534] transition-colors text-sm">About Us</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#166534] transition-colors text-sm">Careers</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#166534] transition-colors text-sm">Blog</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#166534] transition-colors text-sm">Press</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#166534] transition-colors text-sm">Partners</a></li>
-              </ul>
-            </div>
-
-            {/* Support */}
-            <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-4">Support</h4>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-gray-600 hover:text-[#166534] transition-colors text-sm">Help Center</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#166534] transition-colors text-sm">Documentation</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#166534] transition-colors text-sm">Video Tutorials</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#166534] transition-colors text-sm">Contact Support</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#166534] transition-colors text-sm">System Status</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Footer */}
-        <div className="border-t border-gray-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <p className="text-gray-500 text-sm text-center md:text-left">
-                &copy; {new Date().getFullYear()} MedSoftware. All rights reserved.
-              </p>
-              <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-                <a href="#" className="text-gray-500 hover:text-[#166534] transition-colors text-sm">Privacy Policy</a>
-                <a href="#" className="text-gray-500 hover:text-[#166534] transition-colors text-sm">Terms of Service</a>
-                <a href="#" className="text-gray-500 hover:text-[#166534] transition-colors text-sm">Cookie Policy</a>
-                <a href="#" className="text-gray-500 hover:text-[#166534] transition-colors text-sm">GDPR</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-
+      <Footer />
     </main>
   );
 }

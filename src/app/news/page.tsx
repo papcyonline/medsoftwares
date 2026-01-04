@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const categories = [
@@ -23,7 +22,7 @@ const newsArticles = [
     category: 'product',
     date: '2024-12-01',
     readTime: '4 min read',
-    image: '/screenshots/dashboard.png',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
     featured: true,
   },
   {
@@ -34,7 +33,7 @@ const newsArticles = [
     category: 'company',
     date: '2024-11-15',
     readTime: '3 min read',
-    image: '/screenshots/sales.png',
+    image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80',
     featured: true,
   },
   {
@@ -45,7 +44,7 @@ const newsArticles = [
     category: 'industry',
     date: '2024-11-01',
     readTime: '8 min read',
-    image: '/screenshots/inventory.png',
+    image: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?w=800&q=80',
     featured: false,
   },
   {
@@ -56,18 +55,18 @@ const newsArticles = [
     category: 'press',
     date: '2024-10-20',
     readTime: '3 min read',
-    image: '/screenshots/reports.png',
+    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80',
     featured: false,
   },
   {
     id: 5,
-    slug: 'hospix-laboratory-module',
-    title: 'New Hospix Laboratory Module Streamlines Test Management',
+    slug: 'hospitalos-laboratory-module',
+    title: 'New HospitalOS Laboratory Module Streamlines Test Management',
     excerpt: 'The new laboratory module allows hospitals to manage test orders, track samples, and deliver results electronically to physicians and patients.',
     category: 'product',
     date: '2024-10-10',
     readTime: '5 min read',
-    image: '/screenshots/mobilemoney.png',
+    image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80',
     featured: false,
   },
   {
@@ -78,7 +77,7 @@ const newsArticles = [
     category: 'industry',
     date: '2024-09-25',
     readTime: '6 min read',
-    image: '/screenshots/currency.png',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
     featured: false,
   },
   {
@@ -89,7 +88,7 @@ const newsArticles = [
     category: 'company',
     date: '2024-09-15',
     readTime: '5 min read',
-    image: '/hero image.png',
+    image: 'https://images.unsplash.com/photo-1576602976047-174e57a47881?w=800&q=80',
     featured: false,
   },
   {
@@ -100,7 +99,117 @@ const newsArticles = [
     category: 'industry',
     date: '2024-09-01',
     readTime: '7 min read',
-    image: '/Mockup.png',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80',
+    featured: false,
+  },
+  {
+    id: 9,
+    slug: 'pharmacy-inventory-management-best-practices',
+    title: '10 Pharmacy Inventory Management Best Practices to Reduce Waste and Boost Profits',
+    excerpt: 'Master drug inventory control with proven strategies for stock optimization, expiry tracking, and automated reordering that leading African pharmacies use to maximize profitability.',
+    category: 'industry',
+    date: '2024-08-20',
+    readTime: '9 min read',
+    image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80',
+    featured: false,
+  },
+  {
+    id: 10,
+    slug: 'hospital-management-system-benefits',
+    title: 'Why Every Hospital Needs a Modern Hospital Management System in 2025',
+    excerpt: 'Discover how integrated HMS solutions streamline patient care, reduce administrative burden, and improve healthcare outcomes across clinical departments.',
+    category: 'industry',
+    date: '2024-08-15',
+    readTime: '8 min read',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80',
+    featured: false,
+  },
+  {
+    id: 11,
+    slug: 'emr-implementation-guide-africa',
+    title: 'Complete Guide to EMR Implementation for African Healthcare Facilities',
+    excerpt: 'Step-by-step electronic medical records implementation guide covering system selection, data migration, staff training, and compliance requirements for hospitals and clinics.',
+    category: 'industry',
+    date: '2024-08-01',
+    readTime: '12 min read',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+    featured: false,
+  },
+  {
+    id: 12,
+    slug: 'patient-queue-management-system',
+    title: 'How Smart Patient Queue Management Systems Reduce Wait Times by 60%',
+    excerpt: 'Learn how digital queue management and appointment scheduling software transforms patient flow, improves satisfaction scores, and optimizes staff efficiency in busy healthcare settings.',
+    category: 'product',
+    date: '2024-07-25',
+    readTime: '6 min read',
+    image: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&q=80',
+    featured: false,
+  },
+  {
+    id: 13,
+    slug: 'pharmacy-pos-automation-guide',
+    title: 'Pharmacy POS Automation: From Manual Sales to Digital Excellence',
+    excerpt: 'Transform your pharmacy operations with point-of-sale automation featuring barcode scanning, mobile money integration, credit sales tracking, and real-time reporting.',
+    category: 'product',
+    date: '2024-07-15',
+    readTime: '7 min read',
+    image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80',
+    featured: false,
+  },
+  {
+    id: 14,
+    slug: 'healthcare-compliance-regulations-africa',
+    title: 'Healthcare Compliance and Regulations: What African Providers Must Know',
+    excerpt: 'Navigate pharmaceutical regulations, patient data protection laws, and insurance compliance requirements across Ghana, Nigeria, Kenya, and other African markets.',
+    category: 'industry',
+    date: '2024-07-01',
+    readTime: '10 min read',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    featured: false,
+  },
+  {
+    id: 15,
+    slug: 'multi-branch-pharmacy-management',
+    title: 'Multi-Branch Pharmacy Management: Centralized Control for Growing Chains',
+    excerpt: 'Scale your pharmacy business with multi-location inventory sync, centralized reporting, inter-branch transfers, and unified customer management across all outlets.',
+    category: 'product',
+    date: '2024-06-20',
+    readTime: '8 min read',
+    image: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=800&q=80',
+    featured: false,
+  },
+  {
+    id: 16,
+    slug: 'laboratory-information-system-hospitals',
+    title: 'Laboratory Information Systems: Streamlining Diagnostics in Modern Hospitals',
+    excerpt: 'Optimize lab operations with sample tracking, automated result delivery, quality control monitoring, and seamless integration with hospital electronic medical records.',
+    category: 'product',
+    date: '2024-06-10',
+    readTime: '7 min read',
+    image: 'https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=800&q=80',
+    featured: false,
+  },
+  {
+    id: 17,
+    slug: 'telemedicine-integration-hospital-software',
+    title: 'Telemedicine Integration: Expanding Healthcare Access Through Technology',
+    excerpt: 'Implement virtual consultations, remote patient monitoring, and telehealth services that connect patients with providers across distances while maintaining quality care.',
+    category: 'industry',
+    date: '2024-05-28',
+    readTime: '9 min read',
+    image: 'https://images.unsplash.com/photo-1609904603780-25fc8f238cb9?w=800&q=80',
+    featured: false,
+  },
+  {
+    id: 18,
+    slug: 'healthcare-analytics-reporting-dashboards',
+    title: 'Healthcare Analytics: Data-Driven Decisions for Better Patient Outcomes',
+    excerpt: 'Leverage business intelligence dashboards, predictive analytics, and real-time reporting to optimize operations, track KPIs, and improve clinical decision-making.',
+    category: 'industry',
+    date: '2024-05-15',
+    readTime: '8 min read',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
     featured: false,
   },
 ];
@@ -162,9 +271,7 @@ export default function NewsPage() {
   };
 
   return (
-    <>
-      <Header />
-      <main>
+    <main>
         {/* Hero Section */}
         <section className="pt-32 pb-16 md:pt-40 md:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-5xl mx-auto text-center">
@@ -380,7 +487,6 @@ export default function NewsPage() {
         </section>
 
         <Footer />
-      </main>
-    </>
+    </main>
   );
 }

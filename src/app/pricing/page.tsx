@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const pharmaPOSPackages = [
@@ -59,7 +58,7 @@ const pharmaPOSPackages = [
   },
 ];
 
-const hospixPackages = [
+const hospitalOSPackages = [
   {
     name: 'Clinic',
     description: 'For small clinics and health centers.',
@@ -191,15 +190,13 @@ const faqs = [
 ];
 
 export default function PricingPage() {
-  const [activeProduct, setActiveProduct] = useState<'pharmapos' | 'hospix'>('pharmapos');
+  const [activeProduct, setActiveProduct] = useState<'pharmapos' | 'hospitalos'>('pharmapos');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const packages = activeProduct === 'pharmapos' ? pharmaPOSPackages : hospixPackages;
+  const packages = activeProduct === 'pharmapos' ? pharmaPOSPackages : hospitalOSPackages;
 
   return (
-    <>
-      <Header />
-      <main>
+    <main>
         {/* Hero Section */}
         <section className="pt-32 pb-16 md:pt-40 md:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-5xl mx-auto text-center">
@@ -231,14 +228,14 @@ export default function PricingPage() {
                   PharmaPOS
                 </button>
                 <button
-                  onClick={() => setActiveProduct('hospix')}
+                  onClick={() => setActiveProduct('hospitalos')}
                   className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 ${
-                    activeProduct === 'hospix'
+                    activeProduct === 'hospitalos'
                       ? 'bg-blue-600 text-white shadow-md'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
-                  Hospix
+                  HospitalOS
                 </button>
               </div>
             </div>
@@ -474,7 +471,7 @@ export default function PricingPage() {
                 href="/contact"
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-[#166534] text-lg font-bold rounded-full shadow-lg hover:bg-green-50 hover:-translate-y-0.5 transition-all duration-200"
               >
-                Request a Demo
+                Book a Free Demo
                 <ArrowOutwardIcon className="w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
               <a
@@ -488,7 +485,6 @@ export default function PricingPage() {
         </section>
 
         <Footer />
-      </main>
-    </>
+    </main>
   );
 }

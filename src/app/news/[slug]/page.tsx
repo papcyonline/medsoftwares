@@ -3,7 +3,6 @@
 import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 // This would typically come from a CMS or database
@@ -18,7 +17,7 @@ const newsArticles = [
     readTime: '4 min read',
     author: 'Charles Bah',
     authorRole: 'CEO',
-    image: '/screenshots/dashboard.png',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
     content: `
       <p>We are thrilled to announce the release of PharmaPOS 3.0, our most significant update yet. This release represents months of development work and direct feedback from our customers across Africa.</p>
 
@@ -51,7 +50,7 @@ const newsArticles = [
     readTime: '3 min read',
     author: 'Charles Bah',
     authorRole: 'CEO',
-    image: '/screenshots/sales.png',
+    image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80',
     content: `
       <p>Today marks a significant milestone in MedSoftware's journey. We are officially expanding our operations to East Africa, starting with Kenya, Tanzania, and Uganda.</p>
 
@@ -84,7 +83,7 @@ const newsArticles = [
     readTime: '8 min read',
     author: 'Junior Fonte',
     authorRole: 'CTO',
-    image: '/screenshots/inventory.png',
+    image: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?w=800&q=80',
     content: `
       <p>The African pharmacy sector is undergoing a remarkable transformation. Our 2024 report, based on surveys of over 500 pharmacies across 15 countries, reveals key trends shaping the industry.</p>
 
@@ -123,7 +122,7 @@ const newsArticles = [
     readTime: '3 min read',
     author: 'Marbel Nfor',
     authorRole: 'Program Manager',
-    image: '/screenshots/reports.png',
+    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80',
     content: `
       <p>MedSoftware is proud to announce a strategic partnership with the National Health Insurance Authority (NHIA) of Ghana to streamline insurance claims processing for pharmacies.</p>
 
@@ -148,17 +147,17 @@ const newsArticles = [
   },
   {
     id: 5,
-    slug: 'hospix-laboratory-module',
-    title: 'New Hospix Laboratory Module Streamlines Test Management',
+    slug: 'hospitalos-laboratory-module',
+    title: 'New HospitalOS Laboratory Module Streamlines Test Management',
     excerpt: 'The new laboratory module allows hospitals to manage test orders, track samples, and deliver results electronically to physicians and patients.',
     category: 'product',
     date: '2024-10-10',
     readTime: '5 min read',
     author: 'Steve Nya',
     authorRole: 'Developer',
-    image: '/screenshots/mobilemoney.png',
+    image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80',
     content: `
-      <p>We're excited to introduce the new Laboratory Module for Hospix, our hospital management system. This module brings modern laboratory information management to hospitals of all sizes.</p>
+      <p>We're excited to introduce the new Laboratory Module for HospitalOS, our hospital management system. This module brings modern laboratory information management to hospitals of all sizes.</p>
 
       <h2>Key Features</h2>
       <p>The Laboratory Module includes:</p>
@@ -171,7 +170,7 @@ const newsArticles = [
       </ul>
 
       <h2>Integration with Existing Systems</h2>
-      <p>The module integrates seamlessly with existing Hospix modules, including:</p>
+      <p>The module integrates seamlessly with existing HospitalOS modules, including:</p>
       <ul>
         <li>Patient Management - automatic patient data sync</li>
         <li>Billing - automatic charge capture for tests</li>
@@ -180,7 +179,7 @@ const newsArticles = [
       </ul>
 
       <h2>Pricing</h2>
-      <p>The Laboratory Module is available as an add-on to existing Hospix installations or included in new Hospital and Enterprise packages.</p>
+      <p>The Laboratory Module is available as an add-on to existing HospitalOS installations or included in new Hospital and Enterprise packages.</p>
     `,
   },
   {
@@ -193,7 +192,7 @@ const newsArticles = [
     readTime: '6 min read',
     author: 'Faith Yaje',
     authorRole: 'Financial Secretary',
-    image: '/screenshots/currency.png',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
     content: `
       <p>Mobile money has revolutionized payments across Africa. In healthcare, it offers unique advantages that can transform how facilities operate and serve patients.</p>
 
@@ -218,7 +217,7 @@ const newsArticles = [
       </ol>
 
       <h2>Case Study: Accra General Hospital</h2>
-      <p>After implementing mobile money through Hospix, Accra General Hospital saw a 45% reduction in payment collection time and a 23% increase in on-time payments.</p>
+      <p>After implementing mobile money through HospitalOS, Accra General Hospital saw a 45% reduction in payment collection time and a 23% increase in on-time payments.</p>
     `,
   },
   {
@@ -231,7 +230,7 @@ const newsArticles = [
     readTime: '5 min read',
     author: 'Sonita Bah',
     authorRole: 'Marketer',
-    image: '/hero image.png',
+    image: 'https://images.unsplash.com/photo-1576602976047-174e57a47881?w=800&q=80',
     content: `
       <p>Accra Central Pharmacy has been serving the community for over 20 years. When owner Kofi Mensah decided to modernize his operations with PharmaPOS, the results exceeded all expectations.</p>
 
@@ -270,7 +269,7 @@ const newsArticles = [
     readTime: '7 min read',
     author: 'Junior Fonte',
     authorRole: 'CTO',
-    image: '/Mockup.png',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80',
     content: `
       <p>As healthcare facilities digitize their operations, data security becomes increasingly critical. Patient data is sensitive and must be protected from unauthorized access, theft, and breaches.</p>
 
@@ -296,6 +295,1452 @@ const newsArticles = [
 
       <h2>MedSoftware's Security Approach</h2>
       <p>All MedSoftware products include enterprise-grade security features including encryption, role-based access, audit logging, and regular security updates.</p>
+    `,
+  },
+  {
+    id: 9,
+    slug: 'pharmacy-inventory-management-best-practices',
+    title: '10 Pharmacy Inventory Management Best Practices to Reduce Waste and Boost Profits',
+    excerpt: 'Master drug inventory control with proven strategies for stock optimization, expiry tracking, and automated reordering that leading African pharmacies use to maximize profitability.',
+    category: 'industry',
+    date: '2024-08-20',
+    readTime: '9 min read',
+    author: 'Faith Yaje',
+    authorRole: 'Financial Secretary',
+    image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80',
+    content: `
+      <p>Effective pharmacy inventory management is the cornerstone of a profitable pharmaceutical business. Poor inventory control leads to expired medications, stockouts, lost sales, and reduced customer trust. This comprehensive guide covers the essential strategies that successful pharmacies across Africa use to optimize their drug inventory and maximize profitability.</p>
+
+      <h2>1. Implement ABC Analysis for Drug Classification</h2>
+      <p>Not all medications require the same level of attention. ABC analysis categorizes your inventory based on value and turnover:</p>
+      <ul>
+        <li><strong>A-items (High value):</strong> 20% of items representing 80% of revenue - require tight control and frequent monitoring</li>
+        <li><strong>B-items (Medium value):</strong> 30% of items representing 15% of revenue - moderate monitoring</li>
+        <li><strong>C-items (Low value):</strong> 50% of items representing 5% of revenue - basic controls sufficient</li>
+      </ul>
+      <p>PharmaPOS automatically classifies your inventory using ABC analysis, helping you focus attention where it matters most.</p>
+
+      <h2>2. Master Expiry Date Management</h2>
+      <p>Drug expiration represents one of the largest sources of pharmacy losses. Implement these strategies:</p>
+      <ul>
+        <li>FEFO (First Expired, First Out) inventory rotation</li>
+        <li>Automated expiry alerts 90, 60, and 30 days before expiration</li>
+        <li>Dedicated near-expiry promotions to move aging stock</li>
+        <li>Return agreements with suppliers for slow-moving items</li>
+      </ul>
+
+      <h2>3. Set Optimal Reorder Points</h2>
+      <p>Calculate reorder points using this formula: <strong>Reorder Point = (Average Daily Sales × Lead Time) + Safety Stock</strong></p>
+      <p>Modern pharmacy management software like PharmaPOS calculates this automatically based on your historical sales data and supplier lead times.</p>
+
+      <h2>4. Leverage Demand Forecasting</h2>
+      <p>Predict future demand using:</p>
+      <ul>
+        <li>Historical sales patterns and seasonality</li>
+        <li>Disease outbreak trends in your region</li>
+        <li>Upcoming promotions or marketing campaigns</li>
+        <li>Weather patterns affecting health conditions</li>
+      </ul>
+
+      <h2>5. Conduct Regular Stock Audits</h2>
+      <p>Physical inventory counts verify system accuracy. Best practices include:</p>
+      <ul>
+        <li>Full inventory count quarterly</li>
+        <li>Cycle counting of A-items weekly</li>
+        <li>Random spot checks for controlled substances</li>
+        <li>Variance investigation for discrepancies over 2%</li>
+      </ul>
+
+      <h2>6. Optimize Supplier Relationships</h2>
+      <p>Strong supplier partnerships improve inventory efficiency:</p>
+      <ul>
+        <li>Negotiate consignment arrangements for slow-movers</li>
+        <li>Establish return policies for near-expiry products</li>
+        <li>Request shorter lead times for fast-moving items</li>
+        <li>Consolidate orders to achieve volume discounts</li>
+      </ul>
+
+      <h2>7. Use Barcode Scanning Technology</h2>
+      <p>Barcode scanning eliminates manual entry errors and speeds up all inventory operations. Benefits include:</p>
+      <ul>
+        <li>99.9% accuracy vs. 96% for manual entry</li>
+        <li>50% faster stock receiving and counting</li>
+        <li>Automatic lot and expiry tracking</li>
+        <li>Real-time inventory updates at point of sale</li>
+      </ul>
+
+      <h2>8. Implement Shelf Management</h2>
+      <p>Organize your pharmacy for efficiency:</p>
+      <ul>
+        <li>Store fast-movers at convenient heights</li>
+        <li>Group related products together</li>
+        <li>Label shelves with product locations</li>
+        <li>Maintain clean, organized storage areas</li>
+      </ul>
+
+      <h2>9. Monitor Key Performance Indicators</h2>
+      <p>Track these essential pharmacy inventory KPIs:</p>
+      <ul>
+        <li><strong>Inventory Turnover Ratio:</strong> Target 8-12 turns per year</li>
+        <li><strong>Stockout Rate:</strong> Keep below 2%</li>
+        <li><strong>Expiry Rate:</strong> Target under 1% of inventory value</li>
+        <li><strong>Gross Margin Return on Investment (GMROI):</strong> Higher is better</li>
+      </ul>
+
+      <h2>10. Automate with Pharmacy Management Software</h2>
+      <p>Manual inventory management is unsustainable for modern pharmacies. A comprehensive pharmacy POS system like PharmaPOS automates:</p>
+      <ul>
+        <li>Real-time stock level tracking</li>
+        <li>Automatic reorder suggestions</li>
+        <li>Expiry date monitoring and alerts</li>
+        <li>Sales trend analysis and forecasting</li>
+        <li>Supplier order management</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Implementing these pharmacy inventory management best practices can reduce waste by up to 30% and improve profitability by 15-25%. The key is consistency and leveraging technology to automate routine tasks while focusing your expertise on strategic decisions.</p>
+    `,
+  },
+  {
+    id: 10,
+    slug: 'hospital-management-system-benefits',
+    title: 'Why Every Hospital Needs a Modern Hospital Management System in 2025',
+    excerpt: 'Discover how integrated HMS solutions streamline patient care, reduce administrative burden, and improve healthcare outcomes across clinical departments.',
+    category: 'industry',
+    date: '2024-08-15',
+    readTime: '8 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80',
+    content: `
+      <p>The healthcare landscape in Africa is evolving rapidly. Patient expectations are rising, regulatory requirements are becoming stricter, and the pressure to deliver quality care while controlling costs has never been greater. A modern Hospital Management System (HMS) is no longer a luxury—it's a necessity for any healthcare facility serious about success in 2025 and beyond.</p>
+
+      <h2>What is a Hospital Management System?</h2>
+      <p>A Hospital Management System is integrated software that manages all aspects of hospital operations, from patient registration and appointment scheduling to billing, inventory, and clinical documentation. Modern HMS solutions like HospitalOS connect every department in a single, unified platform.</p>
+
+      <h2>Key Benefits of Implementing an HMS</h2>
+
+      <h3>1. Streamlined Patient Registration and Records</h3>
+      <p>Gone are the days of paper files and manual record-keeping. Digital patient records enable:</p>
+      <ul>
+        <li>Instant access to complete patient history</li>
+        <li>Elimination of duplicate records</li>
+        <li>Secure sharing of information between departments</li>
+        <li>Reduced registration time from 15 minutes to under 3 minutes</li>
+      </ul>
+
+      <h3>2. Improved Clinical Decision Making</h3>
+      <p>Electronic Medical Records (EMR) provide clinicians with:</p>
+      <ul>
+        <li>Drug interaction and allergy alerts</li>
+        <li>Lab result integration and trending</li>
+        <li>Evidence-based clinical decision support</li>
+        <li>Complete medication history</li>
+      </ul>
+
+      <h3>3. Enhanced Revenue Cycle Management</h3>
+      <p>Automated billing processes improve financial performance:</p>
+      <ul>
+        <li>Automatic charge capture for all services</li>
+        <li>Insurance claim verification and submission</li>
+        <li>Reduced claim denials through proper coding</li>
+        <li>Real-time revenue tracking and reporting</li>
+      </ul>
+
+      <h3>4. Efficient Inventory and Supply Chain Management</h3>
+      <p>Hospital supplies represent a significant expense. HMS features include:</p>
+      <ul>
+        <li>Automated reorder point management</li>
+        <li>Department-wise consumption tracking</li>
+        <li>Expiry management for medications and supplies</li>
+        <li>Vendor management and purchase order automation</li>
+      </ul>
+
+      <h3>5. Better Resource Utilization</h3>
+      <p>Optimize your most valuable assets:</p>
+      <ul>
+        <li>Bed management and occupancy tracking</li>
+        <li>Operating theater scheduling</li>
+        <li>Equipment utilization monitoring</li>
+        <li>Staff scheduling and workload balancing</li>
+      </ul>
+
+      <h2>Departmental Integration</h2>
+      <p>A comprehensive HMS connects all hospital departments:</p>
+      <ul>
+        <li><strong>Outpatient Department (OPD):</strong> Appointment scheduling, queue management, consultations</li>
+        <li><strong>Inpatient Department (IPD):</strong> Admissions, bed management, nursing documentation</li>
+        <li><strong>Emergency:</strong> Triage, rapid registration, priority-based care</li>
+        <li><strong>Laboratory:</strong> Test ordering, sample tracking, result delivery</li>
+        <li><strong>Radiology:</strong> Imaging orders, PACS integration, report generation</li>
+        <li><strong>Pharmacy:</strong> Prescription management, dispensing, stock control</li>
+        <li><strong>Billing:</strong> Service charges, insurance claims, payment collection</li>
+      </ul>
+
+      <h2>ROI of Hospital Management Systems</h2>
+      <p>Healthcare facilities implementing HMS typically see:</p>
+      <ul>
+        <li>20-30% reduction in administrative costs</li>
+        <li>40% decrease in patient wait times</li>
+        <li>25% improvement in bed utilization</li>
+        <li>15% increase in revenue through reduced leakage</li>
+        <li>50% reduction in medical record retrieval time</li>
+      </ul>
+
+      <h2>Choosing the Right HMS</h2>
+      <p>When evaluating hospital management systems, consider:</p>
+      <ul>
+        <li>Scalability to grow with your facility</li>
+        <li>Local support and training availability</li>
+        <li>Integration with existing equipment and systems</li>
+        <li>Compliance with local healthcare regulations</li>
+        <li>Mobile access for physicians and administrators</li>
+        <li>Total cost of ownership including implementation and support</li>
+      </ul>
+
+      <h2>Why HospitalOS?</h2>
+      <p>HospitalOS is purpose-built for African healthcare facilities, offering:</p>
+      <ul>
+        <li>NHIS and insurance integration for multiple countries</li>
+        <li>Mobile money payment support</li>
+        <li>Offline-capable operation for unreliable connectivity</li>
+        <li>Local language support</li>
+        <li>On-ground implementation and training teams</li>
+      </ul>
+
+      <p>The future of healthcare is digital. Don't let your facility fall behind. Contact us to learn how HospitalOS can transform your hospital operations.</p>
+    `,
+  },
+  {
+    id: 11,
+    slug: 'emr-implementation-guide-africa',
+    title: 'Complete Guide to EMR Implementation for African Healthcare Facilities',
+    excerpt: 'Step-by-step electronic medical records implementation guide covering system selection, data migration, staff training, and compliance requirements for hospitals and clinics.',
+    category: 'industry',
+    date: '2024-08-01',
+    readTime: '12 min read',
+    author: 'Junior Fonte',
+    authorRole: 'CTO',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+    content: `
+      <p>Implementing an Electronic Medical Records (EMR) system is one of the most significant technology investments a healthcare facility can make. When done correctly, EMR implementation transforms patient care, improves efficiency, and positions your facility for long-term success. This comprehensive guide walks you through every step of the journey.</p>
+
+      <h2>Phase 1: Planning and Preparation (Weeks 1-4)</h2>
+
+      <h3>Establish Your Implementation Team</h3>
+      <p>Success starts with the right people. Your core team should include:</p>
+      <ul>
+        <li><strong>Executive Sponsor:</strong> Senior leader with authority to make decisions</li>
+        <li><strong>Project Manager:</strong> Dedicated resource to coordinate all activities</li>
+        <li><strong>Clinical Champion:</strong> Respected physician who advocates for the system</li>
+        <li><strong>IT Lead:</strong> Technical expert for infrastructure and integration</li>
+        <li><strong>Department Representatives:</strong> Users from each major department</li>
+      </ul>
+
+      <h3>Define Your Goals and Requirements</h3>
+      <p>Document what you want to achieve:</p>
+      <ul>
+        <li>Eliminate paper records within 12 months</li>
+        <li>Reduce patient registration time by 50%</li>
+        <li>Enable electronic prescribing</li>
+        <li>Integrate with laboratory and radiology systems</li>
+        <li>Meet regulatory compliance requirements</li>
+      </ul>
+
+      <h3>Assess Current Infrastructure</h3>
+      <p>Evaluate your technical readiness:</p>
+      <ul>
+        <li>Network capacity and reliability</li>
+        <li>Computer hardware availability</li>
+        <li>Internet connectivity (with backup options)</li>
+        <li>Power backup systems</li>
+        <li>Physical security for servers and workstations</li>
+      </ul>
+
+      <h2>Phase 2: System Selection (Weeks 5-8)</h2>
+
+      <h3>Evaluate EMR Vendors</h3>
+      <p>Key criteria for African healthcare facilities:</p>
+      <ul>
+        <li><strong>Local Presence:</strong> Does the vendor have support teams in your country?</li>
+        <li><strong>Offline Capability:</strong> Can the system work without constant internet?</li>
+        <li><strong>Scalability:</strong> Will it grow with your facility?</li>
+        <li><strong>Integration:</strong> Does it connect with your existing systems?</li>
+        <li><strong>Compliance:</strong> Does it meet local regulatory requirements?</li>
+        <li><strong>Total Cost:</strong> Consider licensing, implementation, training, and ongoing support</li>
+      </ul>
+
+      <h3>Request Demonstrations</h3>
+      <p>Involve end users in evaluating systems. Have vendors demonstrate:</p>
+      <ul>
+        <li>Patient registration workflows</li>
+        <li>Clinical documentation</li>
+        <li>Prescription and medication management</li>
+        <li>Laboratory and radiology integration</li>
+        <li>Billing and insurance claims</li>
+        <li>Reporting and analytics</li>
+      </ul>
+
+      <h2>Phase 3: Data Migration (Weeks 9-12)</h2>
+
+      <h3>Audit Existing Records</h3>
+      <p>Before migrating data, understand what you have:</p>
+      <ul>
+        <li>Number of active patient records</li>
+        <li>Data quality and completeness</li>
+        <li>Historical records that need conversion</li>
+        <li>Data in multiple systems that need consolidation</li>
+      </ul>
+
+      <h3>Data Cleaning and Standardization</h3>
+      <p>Clean data before migration:</p>
+      <ul>
+        <li>Remove duplicate patient records</li>
+        <li>Standardize naming conventions</li>
+        <li>Validate contact information</li>
+        <li>Map existing codes to new system standards</li>
+      </ul>
+
+      <h3>Migration Strategy</h3>
+      <p>Choose your approach:</p>
+      <ul>
+        <li><strong>Big Bang:</strong> Migrate all data at once (higher risk, faster)</li>
+        <li><strong>Phased:</strong> Migrate department by department (lower risk, slower)</li>
+        <li><strong>Parallel:</strong> Run both systems simultaneously during transition</li>
+      </ul>
+
+      <h2>Phase 4: Staff Training (Weeks 13-16)</h2>
+
+      <h3>Develop Training Programs</h3>
+      <p>Different roles need different training:</p>
+      <ul>
+        <li><strong>Physicians:</strong> Clinical documentation, e-prescribing, order entry</li>
+        <li><strong>Nurses:</strong> Patient care documentation, medication administration</li>
+        <li><strong>Registration Staff:</strong> Patient registration, appointment scheduling</li>
+        <li><strong>Billing Staff:</strong> Charge capture, claims submission, payment posting</li>
+        <li><strong>IT Staff:</strong> System administration, troubleshooting, security</li>
+      </ul>
+
+      <h3>Training Best Practices</h3>
+      <ul>
+        <li>Hands-on practice in a training environment</li>
+        <li>Role-based training modules</li>
+        <li>Super user programs for peer support</li>
+        <li>Quick reference guides and job aids</li>
+        <li>Ongoing training for new features and staff</li>
+      </ul>
+
+      <h2>Phase 5: Go-Live and Support (Weeks 17-20)</h2>
+
+      <h3>Go-Live Strategy</h3>
+      <p>Plan for a smooth transition:</p>
+      <ul>
+        <li>Choose a go-live date with lower patient volumes</li>
+        <li>Have extra support staff available</li>
+        <li>Establish command center for issue resolution</li>
+        <li>Communicate extensively with all stakeholders</li>
+        <li>Have rollback plan if critical issues arise</li>
+      </ul>
+
+      <h3>Post-Go-Live Support</h3>
+      <p>The first weeks are critical:</p>
+      <ul>
+        <li>Floor support from vendor and super users</li>
+        <li>Daily huddles to address issues</li>
+        <li>Track and resolve help desk tickets quickly</li>
+        <li>Monitor system performance</li>
+        <li>Collect user feedback for improvements</li>
+      </ul>
+
+      <h2>Common Implementation Challenges</h2>
+      <ul>
+        <li><strong>Resistance to change:</strong> Address through training and communication</li>
+        <li><strong>Data quality issues:</strong> Invest in data cleaning before migration</li>
+        <li><strong>Infrastructure gaps:</strong> Ensure reliable power and connectivity</li>
+        <li><strong>Scope creep:</strong> Stick to core requirements for initial implementation</li>
+        <li><strong>Underestimating training needs:</strong> Budget adequate time and resources</li>
+      </ul>
+
+      <h2>Measuring Success</h2>
+      <p>Track these metrics to evaluate your implementation:</p>
+      <ul>
+        <li>User adoption rates</li>
+        <li>Patient registration time</li>
+        <li>Documentation completeness</li>
+        <li>Order turnaround times</li>
+        <li>Claim denial rates</li>
+        <li>User satisfaction scores</li>
+      </ul>
+
+      <p>Ready to begin your EMR journey? Contact MedSoftware for a consultation on how HospitalOS can meet your facility's needs.</p>
+    `,
+  },
+  {
+    id: 12,
+    slug: 'patient-queue-management-system',
+    title: 'How Smart Patient Queue Management Systems Reduce Wait Times by 60%',
+    excerpt: 'Learn how digital queue management and appointment scheduling software transforms patient flow, improves satisfaction scores, and optimizes staff efficiency in busy healthcare settings.',
+    category: 'product',
+    date: '2024-07-25',
+    readTime: '6 min read',
+    author: 'Ivo Tume',
+    authorRole: 'Customer Success Lead',
+    image: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&q=80',
+    content: `
+      <p>Long wait times are the number one complaint patients have about healthcare facilities. In busy outpatient departments, patients may wait hours to see a doctor, leading to frustration, poor satisfaction scores, and even patients leaving without being seen. Smart queue management systems are transforming this experience across African healthcare facilities.</p>
+
+      <h2>The True Cost of Long Wait Times</h2>
+      <p>Patient wait times impact your facility in multiple ways:</p>
+      <ul>
+        <li><strong>Patient Satisfaction:</strong> 70% of patients cite wait times as their primary frustration</li>
+        <li><strong>Revenue Loss:</strong> Patients who leave without being seen represent lost revenue</li>
+        <li><strong>Staff Stress:</strong> Managing frustrated patients adds burden to staff</li>
+        <li><strong>Reputation:</strong> Negative word-of-mouth affects new patient acquisition</li>
+        <li><strong>Outcomes:</strong> Delayed care can worsen health conditions</li>
+      </ul>
+
+      <h2>How Digital Queue Management Works</h2>
+
+      <h3>1. Smart Check-In</h3>
+      <p>Patients can check in through multiple channels:</p>
+      <ul>
+        <li>Self-service kiosks in the facility</li>
+        <li>Mobile app before arrival</li>
+        <li>Reception desk with quick registration</li>
+        <li>Automated check-in via SMS for appointments</li>
+      </ul>
+
+      <h3>2. Intelligent Queue Assignment</h3>
+      <p>The system automatically assigns patients to appropriate queues based on:</p>
+      <ul>
+        <li>Appointment type and department</li>
+        <li>Provider availability</li>
+        <li>Priority level (urgent vs. routine)</li>
+        <li>Patient history and needs</li>
+      </ul>
+
+      <h3>3. Real-Time Visibility</h3>
+      <p>Everyone stays informed:</p>
+      <ul>
+        <li>Digital displays show queue status and estimated wait times</li>
+        <li>SMS notifications alert patients when their turn approaches</li>
+        <li>Staff dashboards show current queue status and bottlenecks</li>
+        <li>Management reports track performance metrics</li>
+      </ul>
+
+      <h3>4. Dynamic Load Balancing</h3>
+      <p>Smart systems automatically balance patient load:</p>
+      <ul>
+        <li>Redirect patients to less busy providers</li>
+        <li>Alert staff when queues exceed thresholds</li>
+        <li>Suggest appointment times with shorter expected waits</li>
+        <li>Optimize provider schedules based on demand patterns</li>
+      </ul>
+
+      <h2>Key Features of HospitalOS Queue Management</h2>
+      <ul>
+        <li><strong>Multi-Department Support:</strong> Separate queues for OPD, pharmacy, lab, and radiology</li>
+        <li><strong>Priority Handling:</strong> Fast-track for emergencies, elderly, and VIP patients</li>
+        <li><strong>Appointment Integration:</strong> Scheduled patients automatically added to queues</li>
+        <li><strong>Vitals Capture:</strong> Triage nurses record vitals directly in queue</li>
+        <li><strong>Provider Assignment:</strong> Automatic or manual assignment to doctors</li>
+        <li><strong>Wait Time Analytics:</strong> Track and optimize average wait times</li>
+      </ul>
+
+      <h2>Implementation Best Practices</h2>
+
+      <h3>Before Go-Live</h3>
+      <ul>
+        <li>Map current patient flow and identify bottlenecks</li>
+        <li>Define queue categories and priority rules</li>
+        <li>Train all front-desk and clinical staff</li>
+        <li>Install digital displays in waiting areas</li>
+        <li>Test thoroughly with simulated patient flows</li>
+      </ul>
+
+      <h3>During Rollout</h3>
+      <ul>
+        <li>Start with one department before expanding</li>
+        <li>Have support staff available to assist patients</li>
+        <li>Gather feedback from patients and staff</li>
+        <li>Fine-tune queue rules based on actual performance</li>
+      </ul>
+
+      <h2>Measurable Results</h2>
+      <p>Facilities using HospitalOS queue management report:</p>
+      <ul>
+        <li><strong>60% reduction</strong> in average patient wait time</li>
+        <li><strong>40% decrease</strong> in patients leaving without being seen</li>
+        <li><strong>25% improvement</strong> in patient satisfaction scores</li>
+        <li><strong>30% increase</strong> in daily patient throughput</li>
+        <li><strong>20% reduction</strong> in front-desk staffing needs</li>
+      </ul>
+
+      <h2>Case Study: Tema General Hospital</h2>
+      <p>Before implementing digital queue management, Tema General Hospital's OPD saw average wait times of 2.5 hours. Patients frequently left frustrated, and staff spent significant time managing complaints.</p>
+      <p>After implementing HospitalOS queue management:</p>
+      <ul>
+        <li>Average wait time reduced to 45 minutes</li>
+        <li>Patient satisfaction increased from 3.2 to 4.6 out of 5</li>
+        <li>Daily patient capacity increased by 35%</li>
+        <li>Staff reported significantly lower stress levels</li>
+      </ul>
+
+      <p>Transform your patient experience with smart queue management. Contact us to schedule a demonstration of HospitalOS queue management features.</p>
+    `,
+  },
+  {
+    id: 13,
+    slug: 'pharmacy-pos-automation-guide',
+    title: 'Pharmacy POS Automation: From Manual Sales to Digital Excellence',
+    excerpt: 'Transform your pharmacy operations with point-of-sale automation featuring barcode scanning, mobile money integration, credit sales tracking, and real-time reporting.',
+    category: 'product',
+    date: '2024-07-15',
+    readTime: '7 min read',
+    author: 'Steve Nya',
+    authorRole: 'Developer',
+    image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80',
+    content: `
+      <p>The traditional pharmacy model—handwritten receipts, manual inventory counts, and cash-only transactions—is rapidly becoming obsolete. Modern pharmacy POS (Point of Sale) systems automate routine tasks, reduce errors, and provide insights that help pharmacy owners make better business decisions. Here's how automation transforms every aspect of pharmacy operations.</p>
+
+      <h2>The Evolution of Pharmacy Sales</h2>
+      <p>Compare the traditional vs. automated approach:</p>
+
+      <h3>Traditional Process</h3>
+      <ol>
+        <li>Customer requests medication</li>
+        <li>Staff searches shelves manually</li>
+        <li>Price looked up in paper catalog</li>
+        <li>Total calculated by hand or calculator</li>
+        <li>Cash payment received, change counted</li>
+        <li>Handwritten receipt provided</li>
+        <li>Sale recorded in paper ledger later</li>
+        <li>Inventory updated manually (if at all)</li>
+      </ol>
+
+      <h3>Automated Process</h3>
+      <ol>
+        <li>Product scanned or searched in system</li>
+        <li>Price, stock level, and expiry shown instantly</li>
+        <li>System suggests alternatives if out of stock</li>
+        <li>Total calculated automatically with any discounts</li>
+        <li>Payment via cash, card, or mobile money</li>
+        <li>Professional receipt printed automatically</li>
+        <li>Inventory updated in real-time</li>
+        <li>Sale data available instantly for reporting</li>
+      </ol>
+
+      <h2>Key Automation Features</h2>
+
+      <h3>Barcode Scanning</h3>
+      <p>Barcode technology revolutionizes pharmacy operations:</p>
+      <ul>
+        <li>Scan products in under 1 second vs. 15-30 seconds for manual entry</li>
+        <li>Eliminate pricing errors from misread product names</li>
+        <li>Automatic batch and expiry tracking</li>
+        <li>Enable self-checkout options for future growth</li>
+      </ul>
+
+      <h3>Mobile Money Integration</h3>
+      <p>In Africa, mobile money is essential. PharmaPOS integrates with:</p>
+      <ul>
+        <li>MTN Mobile Money</li>
+        <li>Vodafone Cash</li>
+        <li>AirtelTigo Money</li>
+        <li>M-Pesa</li>
+        <li>Orange Money</li>
+        <li>Wave</li>
+      </ul>
+      <p>Benefits include instant payment confirmation, reduced cash handling risks, and automatic reconciliation.</p>
+
+      <h3>Credit Sales Management</h3>
+      <p>Many pharmacies extend credit to regular customers. Automated credit tracking provides:</p>
+      <ul>
+        <li>Customer credit limits and balances</li>
+        <li>Automatic payment reminders via SMS</li>
+        <li>Credit history and payment patterns</li>
+        <li>Aging reports for overdue accounts</li>
+        <li>Block sales when credit limit exceeded</li>
+      </ul>
+
+      <h3>Multi-Unit Pricing</h3>
+      <p>Medications come in various units. Smart POS handles:</p>
+      <ul>
+        <li>Sale by tablet, strip, pack, or carton</li>
+        <li>Automatic unit conversion for inventory</li>
+        <li>Different prices per unit type</li>
+        <li>Breaking packs for partial sales</li>
+      </ul>
+
+      <h2>Real-Time Reporting and Analytics</h2>
+      <p>Automated POS systems generate instant reports:</p>
+
+      <h3>Sales Reports</h3>
+      <ul>
+        <li>Daily, weekly, monthly sales summaries</li>
+        <li>Sales by product, category, or supplier</li>
+        <li>Hourly sales patterns for staffing optimization</li>
+        <li>Comparison with previous periods</li>
+      </ul>
+
+      <h3>Inventory Reports</h3>
+      <ul>
+        <li>Current stock levels and values</li>
+        <li>Fast and slow-moving products</li>
+        <li>Expiring inventory alerts</li>
+        <li>Stock discrepancy reports</li>
+      </ul>
+
+      <h3>Financial Reports</h3>
+      <ul>
+        <li>Profit margins by product and category</li>
+        <li>Payment method breakdown</li>
+        <li>Outstanding credit balances</li>
+        <li>Cash flow summaries</li>
+      </ul>
+
+      <h2>Implementation Tips</h2>
+
+      <h3>Getting Started</h3>
+      <ol>
+        <li><strong>Inventory Entry:</strong> Enter all products with barcodes, prices, and starting quantities</li>
+        <li><strong>Staff Training:</strong> Train cashiers on basic sales operations first</li>
+        <li><strong>Parallel Operation:</strong> Run alongside paper system for 1-2 weeks</li>
+        <li><strong>Full Transition:</strong> Switch completely once comfortable</li>
+      </ol>
+
+      <h3>Best Practices</h3>
+      <ul>
+        <li>End-of-day reconciliation to catch errors early</li>
+        <li>Regular backup of sales data</li>
+        <li>Periodic physical inventory counts to verify accuracy</li>
+        <li>Review reports weekly to identify trends</li>
+      </ul>
+
+      <h2>ROI of Pharmacy POS Automation</h2>
+      <p>Typical results within the first year:</p>
+      <ul>
+        <li><strong>15% increase in sales</strong> from faster service and better stock availability</li>
+        <li><strong>20% reduction in theft and shrinkage</strong> from better tracking</li>
+        <li><strong>30% decrease in expired inventory</strong> from proactive alerts</li>
+        <li><strong>50% reduction in accounting time</strong> from automated records</li>
+        <li><strong>25% improvement in credit collections</strong> from automated reminders</li>
+      </ul>
+
+      <p>Ready to automate your pharmacy? PharmaPOS offers a complete solution designed for African pharmacies. Contact us for a free demonstration.</p>
+    `,
+  },
+  {
+    id: 14,
+    slug: 'healthcare-compliance-regulations-africa',
+    title: 'Healthcare Compliance and Regulations: What African Providers Must Know',
+    excerpt: 'Navigate pharmaceutical regulations, patient data protection laws, and insurance compliance requirements across Ghana, Nigeria, Kenya, and other African markets.',
+    category: 'industry',
+    date: '2024-07-01',
+    readTime: '10 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    content: `
+      <p>Healthcare compliance in Africa is becoming increasingly complex as governments strengthen regulations to protect patients and ensure quality care. Understanding and meeting these requirements is essential for pharmacies, hospitals, and clinics operating across the continent. This guide covers the key regulatory requirements and how technology can help you stay compliant.</p>
+
+      <h2>Pharmaceutical Licensing and Registration</h2>
+
+      <h3>Ghana (Pharmacy Council Ghana & FDA Ghana)</h3>
+      <ul>
+        <li>All pharmacies must be registered with the Pharmacy Council</li>
+        <li>Pharmacist-in-charge must be present during operating hours</li>
+        <li>Annual license renewal required</li>
+        <li>All medications must be FDA Ghana registered</li>
+        <li>Controlled substances require special permits</li>
+      </ul>
+
+      <h3>Nigeria (Pharmacists Council of Nigeria & NAFDAC)</h3>
+      <ul>
+        <li>Premises registration with PCN mandatory</li>
+        <li>Products must be NAFDAC registered</li>
+        <li>Wholesale distribution licenses separate from retail</li>
+        <li>Anti-counterfeit measures required for certain drugs</li>
+        <li>State-level requirements may apply</li>
+      </ul>
+
+      <h3>Kenya (Pharmacy and Poisons Board)</h3>
+      <ul>
+        <li>Practice license required for all pharmaceutical premises</li>
+        <li>Superintendent pharmacist registration</li>
+        <li>Good Distribution Practice (GDP) compliance</li>
+        <li>Product registration and import permits</li>
+        <li>Reporting requirements for pharmacovigilance</li>
+      </ul>
+
+      <h2>Patient Data Protection</h2>
+      <p>Data protection regulations are strengthening across Africa:</p>
+
+      <h3>Key Requirements</h3>
+      <ul>
+        <li><strong>Consent:</strong> Patients must consent to data collection and use</li>
+        <li><strong>Purpose Limitation:</strong> Data used only for stated healthcare purposes</li>
+        <li><strong>Data Security:</strong> Technical measures to prevent unauthorized access</li>
+        <li><strong>Breach Notification:</strong> Report data breaches to authorities and affected patients</li>
+        <li><strong>Patient Rights:</strong> Access, correction, and deletion of personal data</li>
+      </ul>
+
+      <h3>Country-Specific Laws</h3>
+      <ul>
+        <li><strong>Ghana:</strong> Data Protection Act 2012</li>
+        <li><strong>Nigeria:</strong> Nigeria Data Protection Regulation (NDPR) 2019</li>
+        <li><strong>Kenya:</strong> Data Protection Act 2019</li>
+        <li><strong>South Africa:</strong> Protection of Personal Information Act (POPIA)</li>
+      </ul>
+
+      <h2>Insurance and Claims Compliance</h2>
+
+      <h3>National Health Insurance Schemes</h3>
+      <p>Many African countries have national insurance programs with specific requirements:</p>
+
+      <h4>Ghana NHIS</h4>
+      <ul>
+        <li>Facility credentialing and accreditation</li>
+        <li>Specific claim submission formats</li>
+        <li>Drug tariff adherence</li>
+        <li>Quarterly audits and reviews</li>
+        <li>Documentation requirements for all claims</li>
+      </ul>
+
+      <h4>Nigeria NHIS</h4>
+      <ul>
+        <li>Health Maintenance Organization (HMO) partnerships</li>
+        <li>Capitation and fee-for-service models</li>
+        <li>Treatment protocols and drug lists</li>
+        <li>Claims documentation standards</li>
+      </ul>
+
+      <h2>Controlled Substance Regulations</h2>
+      <p>Handling controlled substances requires strict compliance:</p>
+      <ul>
+        <li>Special licenses and permits</li>
+        <li>Secure storage requirements (locked cabinets)</li>
+        <li>Detailed record-keeping of all transactions</li>
+        <li>Regular reporting to authorities</li>
+        <li>Prescription verification procedures</li>
+        <li>Periodic inspections and audits</li>
+      </ul>
+
+      <h2>How Technology Supports Compliance</h2>
+      <p>Modern healthcare software like PharmaPOS and HospitalOS includes built-in compliance features:</p>
+
+      <h3>Audit Trails</h3>
+      <ul>
+        <li>Complete record of all system actions</li>
+        <li>User identification for every transaction</li>
+        <li>Timestamp and details preserved</li>
+        <li>Tamper-proof logging</li>
+      </ul>
+
+      <h3>Access Controls</h3>
+      <ul>
+        <li>Role-based permissions</li>
+        <li>Controlled substance access restrictions</li>
+        <li>Password policies and session management</li>
+        <li>Multi-factor authentication options</li>
+      </ul>
+
+      <h3>Reporting and Documentation</h3>
+      <ul>
+        <li>Automated regulatory reports</li>
+        <li>Insurance claim formatting</li>
+        <li>Controlled substance tracking</li>
+        <li>Expiry and recall management</li>
+      </ul>
+
+      <h3>Data Security</h3>
+      <ul>
+        <li>Encryption of sensitive data</li>
+        <li>Secure backup and recovery</li>
+        <li>Network security features</li>
+        <li>Regular security updates</li>
+      </ul>
+
+      <h2>Preparing for Audits</h2>
+      <p>Regular audits are a reality in healthcare. Be prepared with:</p>
+      <ul>
+        <li>Up-to-date licenses and registrations</li>
+        <li>Complete transaction records</li>
+        <li>Staff training documentation</li>
+        <li>Standard operating procedures</li>
+        <li>Equipment maintenance records</li>
+        <li>Complaint and incident logs</li>
+      </ul>
+
+      <h2>Staying Current</h2>
+      <p>Regulations change frequently. Stay informed through:</p>
+      <ul>
+        <li>Professional association memberships</li>
+        <li>Regulatory authority communications</li>
+        <li>Industry conferences and training</li>
+        <li>Software vendor updates</li>
+      </ul>
+
+      <p>MedSoftware monitors regulatory changes across African markets and updates our software to help you maintain compliance. Contact us to learn how we can support your compliance needs.</p>
+    `,
+  },
+  {
+    id: 15,
+    slug: 'multi-branch-pharmacy-management',
+    title: 'Multi-Branch Pharmacy Management: Centralized Control for Growing Chains',
+    excerpt: 'Scale your pharmacy business with multi-location inventory sync, centralized reporting, inter-branch transfers, and unified customer management across all outlets.',
+    category: 'product',
+    date: '2024-06-20',
+    readTime: '8 min read',
+    author: 'Sonita Bah',
+    authorRole: 'Marketer',
+    image: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=800&q=80',
+    content: `
+      <p>Growing from a single pharmacy to a multi-branch chain is an exciting milestone, but it comes with significant operational challenges. How do you maintain inventory accuracy across locations? How do you ensure consistent pricing and customer experience? How do you get a unified view of business performance? The answer lies in centralized multi-branch pharmacy management software.</p>
+
+      <h2>Challenges of Multi-Location Pharmacy Operations</h2>
+      <p>Pharmacy chains face unique challenges:</p>
+      <ul>
+        <li><strong>Inventory Fragmentation:</strong> Stock may be available at one branch but not where needed</li>
+        <li><strong>Pricing Inconsistency:</strong> Different prices at different locations confuse customers</li>
+        <li><strong>Reporting Complexity:</strong> Consolidating data from multiple systems is time-consuming</li>
+        <li><strong>Customer Data Silos:</strong> Customer history not accessible across branches</li>
+        <li><strong>Management Oversight:</strong> Difficult to monitor performance remotely</li>
+        <li><strong>Stock Transfers:</strong> Moving inventory between branches is error-prone</li>
+      </ul>
+
+      <h2>The Centralized Management Solution</h2>
+
+      <h3>Unified Product Catalog</h3>
+      <p>Maintain a single source of truth for all product information:</p>
+      <ul>
+        <li>Centralized product database shared across all branches</li>
+        <li>Consistent pricing with optional location-based adjustments</li>
+        <li>Standardized product categories and descriptions</li>
+        <li>Central control of discounts and promotions</li>
+      </ul>
+
+      <h3>Real-Time Inventory Visibility</h3>
+      <p>See stock levels across your entire network:</p>
+      <ul>
+        <li>Dashboard showing inventory at all locations</li>
+        <li>Automatic low-stock alerts by branch</li>
+        <li>Network-wide expiry tracking</li>
+        <li>Consolidated inventory valuation reports</li>
+      </ul>
+
+      <h3>Inter-Branch Stock Transfers</h3>
+      <p>Optimize inventory across locations:</p>
+      <ul>
+        <li>Request stock from other branches</li>
+        <li>Approve or reject transfer requests</li>
+        <li>Track stock in transit</li>
+        <li>Automatic inventory adjustments on receipt</li>
+        <li>Transfer history and reporting</li>
+      </ul>
+
+      <h3>Unified Customer Database</h3>
+      <p>Provide seamless customer experience:</p>
+      <ul>
+        <li>Customer profiles accessible at all branches</li>
+        <li>Purchase history across locations</li>
+        <li>Credit balances and limits network-wide</li>
+        <li>Loyalty programs that work everywhere</li>
+        <li>Prescription history for any branch</li>
+      </ul>
+
+      <h3>Centralized Reporting</h3>
+      <p>Get the insights you need to manage your business:</p>
+      <ul>
+        <li>Consolidated sales reports across all branches</li>
+        <li>Branch-by-branch performance comparison</li>
+        <li>Network-wide inventory reports</li>
+        <li>Staff performance metrics</li>
+        <li>Financial consolidation for accounting</li>
+      </ul>
+
+      <h2>PharmaPOS Multi-Branch Features</h2>
+
+      <h3>Head Office Dashboard</h3>
+      <p>A single view of your entire operation:</p>
+      <ul>
+        <li>Real-time sales ticker from all branches</li>
+        <li>KPI summary cards (sales, margins, inventory)</li>
+        <li>Alert notifications requiring attention</li>
+        <li>Quick access to any branch's details</li>
+      </ul>
+
+      <h3>Branch Management</h3>
+      <p>Control each location while maintaining standards:</p>
+      <ul>
+        <li>Add new branches easily</li>
+        <li>Assign staff to specific branches</li>
+        <li>Set branch-specific configurations</li>
+        <li>Monitor branch activity in real-time</li>
+      </ul>
+
+      <h3>Role-Based Access</h3>
+      <p>Different access levels for different roles:</p>
+      <ul>
+        <li><strong>Owner/CEO:</strong> Full access to all branches and reports</li>
+        <li><strong>Regional Manager:</strong> Access to assigned branches only</li>
+        <li><strong>Branch Manager:</strong> Full access to own branch</li>
+        <li><strong>Cashier:</strong> Sales operations only</li>
+      </ul>
+
+      <h2>Implementation Approach</h2>
+
+      <h3>Phase 1: Setup (Week 1-2)</h3>
+      <ul>
+        <li>Configure head office and branch structure</li>
+        <li>Set up unified product catalog</li>
+        <li>Define pricing rules and policies</li>
+        <li>Create user accounts and roles</li>
+      </ul>
+
+      <h3>Phase 2: Branch Rollout (Week 3-6)</h3>
+      <ul>
+        <li>Deploy to branches one at a time</li>
+        <li>Migrate existing inventory data</li>
+        <li>Train branch staff</li>
+        <li>Verify data accuracy</li>
+      </ul>
+
+      <h3>Phase 3: Optimization (Ongoing)</h3>
+      <ul>
+        <li>Fine-tune reorder points per branch</li>
+        <li>Optimize transfer workflows</li>
+        <li>Customize reports for management needs</li>
+        <li>Expand features as needed</li>
+      </ul>
+
+      <h2>Success Metrics</h2>
+      <p>Multi-branch pharmacy chains using PharmaPOS report:</p>
+      <ul>
+        <li><strong>40% reduction</strong> in stockouts through better visibility</li>
+        <li><strong>25% decrease</strong> in excess inventory through transfers</li>
+        <li><strong>60% time savings</strong> in monthly reporting</li>
+        <li><strong>15% improvement</strong> in customer retention</li>
+        <li><strong>30% reduction</strong> in management travel for oversight</li>
+      </ul>
+
+      <h2>Scaling Your Business</h2>
+      <p>With centralized management in place, expansion becomes easier:</p>
+      <ul>
+        <li>New branch setup in hours, not weeks</li>
+        <li>Instant access to network-wide product catalog</li>
+        <li>Immediate visibility in consolidated reports</li>
+        <li>Proven processes that scale</li>
+      </ul>
+
+      <p>Ready to take your pharmacy chain to the next level? Contact MedSoftware to learn how PharmaPOS Premium can support your growth.</p>
+    `,
+  },
+  {
+    id: 16,
+    slug: 'laboratory-information-system-hospitals',
+    title: 'Laboratory Information Systems: Streamlining Diagnostics in Modern Hospitals',
+    excerpt: 'Optimize lab operations with sample tracking, automated result delivery, quality control monitoring, and seamless integration with hospital electronic medical records.',
+    category: 'product',
+    date: '2024-06-10',
+    readTime: '7 min read',
+    author: 'Steve Nya',
+    authorRole: 'Developer',
+    image: 'https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=800&q=80',
+    content: `
+      <p>The laboratory is the diagnostic heart of any hospital. Accurate, timely test results are essential for clinical decision-making, patient safety, and operational efficiency. A Laboratory Information System (LIS) transforms how labs operate, from sample collection to result delivery. Here's how modern LIS technology is revolutionizing hospital diagnostics.</p>
+
+      <h2>What is a Laboratory Information System?</h2>
+      <p>An LIS is specialized software that manages all aspects of laboratory operations:</p>
+      <ul>
+        <li>Test ordering and requisition management</li>
+        <li>Sample collection and tracking</li>
+        <li>Analyzer integration and result capture</li>
+        <li>Quality control and validation</li>
+        <li>Result reporting and delivery</li>
+        <li>Billing and workload management</li>
+      </ul>
+
+      <h2>Key Benefits of LIS Implementation</h2>
+
+      <h3>1. Faster Turnaround Times</h3>
+      <p>Automation dramatically speeds up the testing process:</p>
+      <ul>
+        <li>Electronic orders eliminate manual transcription</li>
+        <li>Barcode tracking reduces sample identification time</li>
+        <li>Automated result capture from analyzers</li>
+        <li>Instant electronic result delivery to physicians</li>
+      </ul>
+      <p>Typical improvement: 40-60% reduction in turnaround time.</p>
+
+      <h3>2. Improved Accuracy</h3>
+      <p>Reduce errors throughout the testing process:</p>
+      <ul>
+        <li>Positive patient identification with barcodes</li>
+        <li>Elimination of manual result transcription</li>
+        <li>Automatic delta checks against previous results</li>
+        <li>Critical value alerts for abnormal findings</li>
+      </ul>
+
+      <h3>3. Enhanced Quality Control</h3>
+      <p>Built-in QC features ensure reliable results:</p>
+      <ul>
+        <li>Levey-Jennings charts for QC tracking</li>
+        <li>Westgard rules for QC failure detection</li>
+        <li>Automatic result hold when QC fails</li>
+        <li>Complete QC history and trending</li>
+      </ul>
+
+      <h3>4. Better Resource Utilization</h3>
+      <p>Optimize lab operations:</p>
+      <ul>
+        <li>Workload distribution across technologists</li>
+        <li>Analyzer utilization tracking</li>
+        <li>Reagent inventory management</li>
+        <li>Productivity reporting</li>
+      </ul>
+
+      <h2>HospitalOS Laboratory Module Features</h2>
+
+      <h3>Order Management</h3>
+      <ul>
+        <li>Electronic order entry from any department</li>
+        <li>Order sets for common test combinations</li>
+        <li>Specimen collection instructions</li>
+        <li>Order priority handling (STAT, Routine)</li>
+        <li>Add-on test capability</li>
+      </ul>
+
+      <h3>Sample Tracking</h3>
+      <ul>
+        <li>Unique barcode for every sample</li>
+        <li>Collection timestamp recording</li>
+        <li>Sample location tracking (collection → lab → analyzer)</li>
+        <li>Sample status visibility for clinicians</li>
+        <li>Specimen rejection workflow</li>
+      </ul>
+
+      <h3>Result Processing</h3>
+      <ul>
+        <li>Bi-directional analyzer interfaces</li>
+        <li>Manual result entry where needed</li>
+        <li>Reference range flagging</li>
+        <li>Previous result comparison</li>
+        <li>Technologist verification workflow</li>
+      </ul>
+
+      <h3>Result Delivery</h3>
+      <ul>
+        <li>Automatic posting to patient EMR</li>
+        <li>Critical value notification to physicians</li>
+        <li>Printable reports for patients</li>
+        <li>SMS notification option</li>
+        <li>Historical result access</li>
+      </ul>
+
+      <h2>Integration with Hospital Systems</h2>
+      <p>A modern LIS doesn't operate in isolation:</p>
+
+      <h3>EMR Integration</h3>
+      <ul>
+        <li>Orders flow automatically from EMR to LIS</li>
+        <li>Results flow back to patient chart</li>
+        <li>Cumulative result views</li>
+        <li>Graphical trending of serial results</li>
+      </ul>
+
+      <h3>Billing Integration</h3>
+      <ul>
+        <li>Automatic charge capture for tests performed</li>
+        <li>Insurance eligibility checking</li>
+        <li>Test pricing management</li>
+        <li>Revenue reporting</li>
+      </ul>
+
+      <h3>Pharmacy Integration</h3>
+      <ul>
+        <li>Drug level monitoring alerts</li>
+        <li>Antibiotic susceptibility reporting</li>
+        <li>Therapeutic drug monitoring</li>
+      </ul>
+
+      <h2>Implementation Considerations</h2>
+
+      <h3>Pre-Implementation</h3>
+      <ul>
+        <li>Document current workflows and pain points</li>
+        <li>Inventory all analyzers requiring interface</li>
+        <li>Define test catalog and reference ranges</li>
+        <li>Plan user training schedule</li>
+      </ul>
+
+      <h3>Go-Live Support</h3>
+      <ul>
+        <li>Extended vendor support during transition</li>
+        <li>Parallel operation period</li>
+        <li>Rapid issue resolution process</li>
+        <li>User feedback collection</li>
+      </ul>
+
+      <h2>ROI of Laboratory Information Systems</h2>
+      <p>Investment in LIS technology delivers measurable returns:</p>
+      <ul>
+        <li><strong>50% reduction</strong> in result turnaround time</li>
+        <li><strong>75% decrease</strong> in transcription errors</li>
+        <li><strong>30% improvement</strong> in technologist productivity</li>
+        <li><strong>20% reduction</strong> in repeat/recollection rates</li>
+        <li><strong>100% capture</strong> of billable tests</li>
+      </ul>
+
+      <p>Ready to modernize your hospital laboratory? Contact MedSoftware to learn about the HospitalOS Laboratory Module and how it can transform your diagnostic services.</p>
+    `,
+  },
+  {
+    id: 17,
+    slug: 'telemedicine-integration-hospital-software',
+    title: 'Telemedicine Integration: Expanding Healthcare Access Through Technology',
+    excerpt: 'Implement virtual consultations, remote patient monitoring, and telehealth services that connect patients with providers across distances while maintaining quality care.',
+    category: 'industry',
+    date: '2024-05-28',
+    readTime: '9 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1609904603780-25fc8f238cb9?w=800&q=80',
+    content: `
+      <p>The COVID-19 pandemic accelerated telemedicine adoption worldwide, and Africa is no exception. What was once considered a futuristic concept is now an essential component of healthcare delivery. Telemedicine expands access to care, improves convenience for patients, and creates new revenue opportunities for healthcare providers. Here's how to successfully integrate telemedicine into your healthcare facility.</p>
+
+      <h2>Why Telemedicine Matters for Africa</h2>
+      <p>Africa faces unique healthcare challenges that telemedicine can address:</p>
+      <ul>
+        <li><strong>Geographic Barriers:</strong> Rural populations may be hours from the nearest doctor</li>
+        <li><strong>Specialist Shortage:</strong> Few specialists concentrated in major cities</li>
+        <li><strong>Cost of Travel:</strong> Transportation costs prevent many from seeking care</li>
+        <li><strong>Time Constraints:</strong> Taking time off work for healthcare visits is difficult</li>
+        <li><strong>Disease Outbreaks:</strong> Need to provide care while minimizing infection spread</li>
+      </ul>
+
+      <h2>Types of Telemedicine Services</h2>
+
+      <h3>1. Video Consultations</h3>
+      <p>Real-time video appointments between patients and providers:</p>
+      <ul>
+        <li>Follow-up visits for chronic conditions</li>
+        <li>Mental health counseling</li>
+        <li>Initial assessments for non-emergency complaints</li>
+        <li>Specialist consultations for remote facilities</li>
+      </ul>
+
+      <h3>2. Store-and-Forward</h3>
+      <p>Asynchronous sharing of patient information:</p>
+      <ul>
+        <li>Dermatology image review</li>
+        <li>Radiology interpretation</li>
+        <li>Pathology consultations</li>
+        <li>Second opinion requests</li>
+      </ul>
+
+      <h3>3. Remote Patient Monitoring</h3>
+      <p>Continuous monitoring of patients at home:</p>
+      <ul>
+        <li>Blood pressure monitoring for hypertension</li>
+        <li>Glucose monitoring for diabetes</li>
+        <li>Heart rate and ECG for cardiac patients</li>
+        <li>Weight monitoring for heart failure</li>
+      </ul>
+
+      <h3>4. Mobile Health (mHealth)</h3>
+      <p>Healthcare delivery via mobile devices:</p>
+      <ul>
+        <li>Appointment reminders and scheduling</li>
+        <li>Medication adherence support</li>
+        <li>Health education content</li>
+        <li>Symptom checkers and triage</li>
+      </ul>
+
+      <h2>Technology Requirements</h2>
+
+      <h3>For Healthcare Facilities</h3>
+      <ul>
+        <li>Reliable internet connectivity</li>
+        <li>Video conferencing capability</li>
+        <li>Integrated scheduling system</li>
+        <li>Electronic medical records</li>
+        <li>Secure messaging platform</li>
+        <li>Digital payment processing</li>
+      </ul>
+
+      <h3>For Patients</h3>
+      <ul>
+        <li>Smartphone with camera (most common)</li>
+        <li>Internet or mobile data connection</li>
+        <li>Patient portal or app access</li>
+        <li>Mobile money for payments</li>
+      </ul>
+
+      <h2>Integration with Hospital Systems</h2>
+      <p>Telemedicine works best when integrated with your HMS:</p>
+
+      <h3>Scheduling Integration</h3>
+      <ul>
+        <li>Telemedicine appointments in same scheduling system</li>
+        <li>Provider availability management</li>
+        <li>Automatic reminders to patients</li>
+        <li>No-show tracking and follow-up</li>
+      </ul>
+
+      <h3>EMR Integration</h3>
+      <ul>
+        <li>Access patient history during video consultation</li>
+        <li>Document telemedicine visits in patient record</li>
+        <li>Order tests and prescriptions electronically</li>
+        <li>Share results through patient portal</li>
+      </ul>
+
+      <h3>Billing Integration</h3>
+      <ul>
+        <li>Capture telemedicine visit charges</li>
+        <li>Apply appropriate consultation codes</li>
+        <li>Process payments online</li>
+        <li>Generate receipts electronically</li>
+      </ul>
+
+      <h2>Implementation Best Practices</h2>
+
+      <h3>Start with the Right Use Cases</h3>
+      <p>Begin with services well-suited to telemedicine:</p>
+      <ul>
+        <li>Chronic disease follow-ups</li>
+        <li>Mental health consultations</li>
+        <li>Post-surgical follow-ups</li>
+        <li>Prescription renewals</li>
+        <li>Medical certificate requests</li>
+      </ul>
+
+      <h3>Train Your Staff</h3>
+      <p>Successful telemedicine requires new skills:</p>
+      <ul>
+        <li>Technical platform operation</li>
+        <li>Virtual bedside manner</li>
+        <li>Documentation requirements</li>
+        <li>When to refer for in-person care</li>
+      </ul>
+
+      <h3>Educate Your Patients</h3>
+      <ul>
+        <li>Promote telemedicine availability</li>
+        <li>Provide clear instructions for connecting</li>
+        <li>Set expectations for virtual visits</li>
+        <li>Offer technical support</li>
+      </ul>
+
+      <h2>Overcoming Challenges</h2>
+
+      <h3>Connectivity Issues</h3>
+      <ul>
+        <li>Offer audio-only option when video fails</li>
+        <li>Provide low-bandwidth alternatives</li>
+        <li>Allow asynchronous communication options</li>
+      </ul>
+
+      <h3>Patient Adoption</h3>
+      <ul>
+        <li>Start with tech-comfortable patients</li>
+        <li>Provide in-person support for first visit</li>
+        <li>Demonstrate value through convenience</li>
+      </ul>
+
+      <h3>Regulatory Compliance</h3>
+      <ul>
+        <li>Follow local telemedicine guidelines</li>
+        <li>Maintain proper documentation</li>
+        <li>Ensure data privacy and security</li>
+        <li>Verify prescribing regulations</li>
+      </ul>
+
+      <h2>Measuring Success</h2>
+      <p>Track these metrics for your telemedicine program:</p>
+      <ul>
+        <li>Number of telemedicine visits per month</li>
+        <li>Patient satisfaction scores</li>
+        <li>No-show rates vs. in-person</li>
+        <li>Revenue from telemedicine services</li>
+        <li>Geographic reach of patient base</li>
+      </ul>
+
+      <p>Ready to expand your reach with telemedicine? Contact MedSoftware to learn how HospitalOS can support your virtual care initiative.</p>
+    `,
+  },
+  {
+    id: 18,
+    slug: 'healthcare-analytics-reporting-dashboards',
+    title: 'Healthcare Analytics: Data-Driven Decisions for Better Patient Outcomes',
+    excerpt: 'Leverage business intelligence dashboards, predictive analytics, and real-time reporting to optimize operations, track KPIs, and improve clinical decision-making.',
+    category: 'industry',
+    date: '2024-05-15',
+    readTime: '8 min read',
+    author: 'Junior Fonte',
+    authorRole: 'CTO',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    content: `
+      <p>Healthcare generates massive amounts of data every day—patient records, lab results, billing transactions, inventory movements, and more. Yet most healthcare facilities barely scratch the surface of what this data can tell them. Healthcare analytics transforms raw data into actionable insights that improve patient outcomes, optimize operations, and drive financial performance.</p>
+
+      <h2>What is Healthcare Analytics?</h2>
+      <p>Healthcare analytics uses data analysis techniques to:</p>
+      <ul>
+        <li>Understand past performance (descriptive analytics)</li>
+        <li>Explain why things happened (diagnostic analytics)</li>
+        <li>Predict what will happen (predictive analytics)</li>
+        <li>Recommend actions to take (prescriptive analytics)</li>
+      </ul>
+
+      <h2>Key Areas for Healthcare Analytics</h2>
+
+      <h3>1. Clinical Analytics</h3>
+      <p>Improve patient care through data:</p>
+      <ul>
+        <li><strong>Treatment Outcomes:</strong> Track success rates by condition and treatment protocol</li>
+        <li><strong>Readmission Rates:</strong> Identify factors leading to preventable readmissions</li>
+        <li><strong>Infection Rates:</strong> Monitor hospital-acquired infections</li>
+        <li><strong>Medication Errors:</strong> Track and reduce prescribing and dispensing errors</li>
+        <li><strong>Length of Stay:</strong> Analyze factors affecting hospitalization duration</li>
+      </ul>
+
+      <h3>2. Operational Analytics</h3>
+      <p>Optimize facility operations:</p>
+      <ul>
+        <li><strong>Patient Flow:</strong> Identify bottlenecks in patient journey</li>
+        <li><strong>Wait Times:</strong> Track and reduce delays at each touchpoint</li>
+        <li><strong>Resource Utilization:</strong> Monitor bed, OR, and equipment usage</li>
+        <li><strong>Staff Productivity:</strong> Analyze workload distribution and efficiency</li>
+        <li><strong>Appointment Patterns:</strong> Optimize scheduling based on demand</li>
+      </ul>
+
+      <h3>3. Financial Analytics</h3>
+      <p>Drive financial performance:</p>
+      <ul>
+        <li><strong>Revenue Cycle:</strong> Track from service delivery to payment collection</li>
+        <li><strong>Claim Denials:</strong> Analyze reasons and reduce denial rates</li>
+        <li><strong>Service Profitability:</strong> Identify most and least profitable services</li>
+        <li><strong>Cost per Patient:</strong> Understand true cost of care delivery</li>
+        <li><strong>Payer Mix:</strong> Analyze payment sources and trends</li>
+      </ul>
+
+      <h3>4. Inventory Analytics</h3>
+      <p>Optimize supply chain:</p>
+      <ul>
+        <li><strong>Stock Turnover:</strong> Identify slow-moving and fast-moving items</li>
+        <li><strong>Expiry Tracking:</strong> Minimize waste from expired products</li>
+        <li><strong>Demand Forecasting:</strong> Predict future needs based on patterns</li>
+        <li><strong>Supplier Performance:</strong> Track delivery times and quality</li>
+      </ul>
+
+      <h2>Essential Healthcare KPIs</h2>
+
+      <h3>Clinical KPIs</h3>
+      <ul>
+        <li>Patient satisfaction scores</li>
+        <li>Average length of stay</li>
+        <li>Readmission rate (30-day)</li>
+        <li>Mortality rate</li>
+        <li>Infection rates</li>
+      </ul>
+
+      <h3>Operational KPIs</h3>
+      <ul>
+        <li>Bed occupancy rate</li>
+        <li>Average wait time</li>
+        <li>Appointment no-show rate</li>
+        <li>Staff-to-patient ratio</li>
+        <li>Equipment utilization</li>
+      </ul>
+
+      <h3>Financial KPIs</h3>
+      <ul>
+        <li>Net revenue per patient</li>
+        <li>Operating margin</li>
+        <li>Days in accounts receivable</li>
+        <li>Claim denial rate</li>
+        <li>Cost per discharge</li>
+      </ul>
+
+      <h2>Analytics Tools in MedSoftware Products</h2>
+
+      <h3>Real-Time Dashboards</h3>
+      <p>PharmaPOS and HospitalOS include built-in dashboards showing:</p>
+      <ul>
+        <li>Today's sales and revenue</li>
+        <li>Current inventory levels</li>
+        <li>Outstanding receivables</li>
+        <li>Active patients and appointments</li>
+        <li>Key alerts requiring attention</li>
+      </ul>
+
+      <h3>Standard Reports</h3>
+      <p>Pre-built reports for common needs:</p>
+      <ul>
+        <li>Daily, weekly, monthly sales summaries</li>
+        <li>Inventory valuation and movement</li>
+        <li>Patient visit statistics</li>
+        <li>Revenue by department or service</li>
+        <li>Staff performance metrics</li>
+      </ul>
+
+      <h3>Custom Report Builder</h3>
+      <p>Create reports tailored to your needs:</p>
+      <ul>
+        <li>Select data fields to include</li>
+        <li>Apply filters and date ranges</li>
+        <li>Choose visualization types</li>
+        <li>Schedule automatic generation</li>
+        <li>Export to Excel or PDF</li>
+      </ul>
+
+      <h2>Getting Started with Analytics</h2>
+
+      <h3>Step 1: Ensure Data Quality</h3>
+      <p>Analytics is only as good as your data:</p>
+      <ul>
+        <li>Standardize data entry practices</li>
+        <li>Complete required fields consistently</li>
+        <li>Regular data validation and cleanup</li>
+        <li>Train staff on data importance</li>
+      </ul>
+
+      <h3>Step 2: Identify Key Questions</h3>
+      <p>Focus on questions that matter:</p>
+      <ul>
+        <li>What are our busiest times?</li>
+        <li>Which products are most profitable?</li>
+        <li>Why are patients waiting so long?</li>
+        <li>Where is revenue leaking?</li>
+      </ul>
+
+      <h3>Step 3: Start Simple</h3>
+      <ul>
+        <li>Begin with a few key metrics</li>
+        <li>Review regularly (daily or weekly)</li>
+        <li>Take action based on findings</li>
+        <li>Expand as you build capability</li>
+      </ul>
+
+      <h3>Step 4: Build Analytics Culture</h3>
+      <ul>
+        <li>Share metrics with relevant staff</li>
+        <li>Celebrate data-driven improvements</li>
+        <li>Encourage questions and exploration</li>
+        <li>Invest in training</li>
+      </ul>
+
+      <h2>The Future of Healthcare Analytics</h2>
+      <p>Emerging trends to watch:</p>
+      <ul>
+        <li><strong>AI and Machine Learning:</strong> Automated pattern detection and prediction</li>
+        <li><strong>Natural Language Processing:</strong> Insights from clinical notes</li>
+        <li><strong>Real-Time Analytics:</strong> Instant alerts and recommendations</li>
+        <li><strong>Population Health:</strong> Community-level health trends</li>
+      </ul>
+
+      <p>Ready to unlock the power of your healthcare data? Contact MedSoftware to learn how our analytics capabilities can drive better decisions at your facility.</p>
     `,
   },
 ];
@@ -347,9 +1792,7 @@ export default function NewsArticlePage() {
 
   if (!article) {
     return (
-      <>
-        <Header />
-        <main className="min-h-screen flex items-center justify-center">
+      <main className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Article Not Found</h1>
             <p className="text-gray-600 mb-8">The article you're looking for doesn't exist.</p>
@@ -360,9 +1803,8 @@ export default function NewsArticlePage() {
               Back to News
             </Link>
           </div>
-        </main>
         <Footer />
-      </>
+      </main>
     );
   }
 
@@ -372,9 +1814,7 @@ export default function NewsArticlePage() {
     .slice(0, 3);
 
   return (
-    <>
-      <Header />
-      <main>
+    <main>
         {/* Hero Section */}
         <section className="pt-32 pb-8 md:pt-40 md:pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-4xl mx-auto">
@@ -452,7 +1892,7 @@ export default function NewsArticlePage() {
                 <span className="font-semibold text-gray-900">Share this article</span>
                 <div className="flex items-center gap-3">
                   <a
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(`https://medsoftware.com/news/${article.slug}`)}`}
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(`https://medsoftwares.com/news/${article.slug}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-100 hover:bg-[#166534] text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-colors"
@@ -462,7 +1902,7 @@ export default function NewsArticlePage() {
                     </svg>
                   </a>
                   <a
-                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://medsoftware.com/news/${article.slug}`)}`}
+                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://medsoftwares.com/news/${article.slug}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-100 hover:bg-[#166534] text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-colors"
@@ -472,7 +1912,7 @@ export default function NewsArticlePage() {
                     </svg>
                   </a>
                   <a
-                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://medsoftware.com/news/${article.slug}`)}`}
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://medsoftwares.com/news/${article.slug}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-100 hover:bg-[#166534] text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-colors"
@@ -541,7 +1981,6 @@ export default function NewsArticlePage() {
         </section>
 
         <Footer />
-      </main>
-    </>
+    </main>
   );
 }

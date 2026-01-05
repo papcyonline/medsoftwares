@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useState, useEffect, useCallback } from 'react';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Footer from '@/components/Footer';
+import DemoForm from '@/components/DemoForm';
 
 const testimonials = [
   // Row 1 - Left to Right
@@ -1576,88 +1577,7 @@ export default function Home() {
             </div>
 
             {/* Right - Demo Form */}
-            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 shadow-2xl">
-              <h3 className="text-xl md:text-2xl font-heading font-bold text-gray-900 mb-2">Book a Free Demo</h3>
-              <p className="text-gray-600 text-sm md:text-base mb-6">Fill out the form and we&apos;ll get back to you within 24 hours.</p>
-
-              <form className="space-y-4 md:space-y-5">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1.5">First Name</label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      placeholder="John"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/20 outline-none transition-all text-sm md:text-base"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1.5">Last Name</label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      placeholder="Doe"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/20 outline-none transition-all text-sm md:text-base"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    placeholder="john@pharmacy.com"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/20 outline-none transition-all text-sm md:text-base"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1.5">Phone Number</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    placeholder="+233 20 000 0000"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/20 outline-none transition-all text-sm md:text-base"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="pharmacyName" className="block text-sm font-medium text-gray-700 mb-1.5">Pharmacy Name</label>
-                  <input
-                    type="text"
-                    id="pharmacyName"
-                    placeholder="Your Pharmacy Ltd."
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/20 outline-none transition-all text-sm md:text-base"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1.5">Message (Optional)</label>
-                  <textarea
-                    id="message"
-                    rows={3}
-                    placeholder="Tell us about your pharmacy and what you're looking for..."
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/20 outline-none transition-all resize-none text-sm md:text-base"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[#166534] text-white font-bold rounded-xl shadow-lg shadow-green-900/20 hover:bg-[#14532d] hover:shadow-xl transition-all duration-200 group"
-                >
-                  Book My Free Demo
-                  <ArrowOutwardIcon className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </button>
-
-                <p className="text-center text-xs text-gray-500">
-                  By submitting, you agree to our{' '}
-                  <a href="#" className="text-[#166534] hover:underline">Privacy Policy</a>
-                  {' '}and{' '}
-                  <a href="#" className="text-[#166534] hover:underline">Terms of Service</a>.
-                </p>
-              </form>
-            </div>
+            <DemoForm />
           </div>
         </div>
       </section>

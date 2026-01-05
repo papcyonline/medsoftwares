@@ -127,12 +127,12 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image
                 src="/logo.png"
-                alt="MedSoftware Logo"
+                alt="MedSoftwares Logo"
                 width={36}
                 height={36}
               />
               <span className="text-lg font-heading font-bold text-gray-900">
-                MedSoftware
+                MedSoftwares
               </span>
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed mb-5">
@@ -200,12 +200,12 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image
                 src="/logo.png"
-                alt="MedSoftware Logo"
+                alt="MedSoftwares Logo"
                 width={36}
                 height={36}
               />
               <span className="text-lg font-heading font-bold text-gray-900">
-                MedSoftware
+                MedSoftwares
               </span>
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed mb-5">

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: 'PharmaPOS - Complete Pharmacy Management Software',
     description: 'Streamline your pharmacy operations with PharmaPOS. Features POS, inventory, prescriptions, drug interactions, controlled substances, insurance claims, and mobile money payments.',
     url: 'https://medsoftwares.com/pharmapos',
-    siteName: 'MedSoftware',
+    siteName: 'MedSoftwares',
     images: [
       {
         url: '/og/pharmapos.png',

@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Documentation',
-  description: 'MedSoftware documentation hub - Learn how to use PharmaPOS and HospitalOS with comprehensive guides and tutorials.',
+  description: 'MedSoftwares documentation hub - Learn how to use PharmaPOS and HospitalOS with comprehensive guides and tutorials.',
 };
 
 const docCategories = [
@@ -57,7 +57,7 @@ export default function DocsPage() {
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Documentation</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Everything you need to get started with MedSoftware products. Choose a product below to explore guides, tutorials, and reference documentation.
+              Everything you need to get started with MedSoftwares products. Choose a product below to explore guides, tutorials, and reference documentation.
             </p>
           </div>
 

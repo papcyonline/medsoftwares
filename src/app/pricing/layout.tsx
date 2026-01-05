@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     title: 'Pricing - PharmaPOS & HospitalOS | Affordable Healthcare Software',
     description: 'One-time purchase, lifetime updates. View pricing for PharmaPOS and HospitalOS. No monthly fees.',
     url: 'https://medsoftwares.com/pricing',
-    siteName: 'MedSoftware',
+    siteName: 'MedSoftwares',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'MedSoftware Pricing - Affordable Healthcare Solutions',
+        alt: 'MedSoftwares Pricing - Affordable Healthcare Solutions',
       },
     ],
     locale: 'en_US',

@@ -373,7 +373,7 @@ export default function SettingsPage() {
                 </li>
               </ul>
               <p className="text-sm text-gray-500 mt-4">
-                Contact MedSoftware support for license upgrades or renewals.
+                Contact MedSoftwares support for license upgrades or renewals.
               </p>
             </div>
           </section>

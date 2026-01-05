@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
 
     // Send email to your team
     const { data, error } = await resend.emails.send({
-      from: 'MedSoftware <noreply@medsoftwares.com>',
+      from: 'MedSoftwares <noreply@medsoftwares.com>',
       to: ['info@medsoftwares.com'],
       replyTo: email,
       subject: emailSubject,
@@ -89,7 +89,7 @@ export async function POST(request: NextRequest) {
 
             <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid #e5e7eb;">
               <p style="color: #9ca3af; font-size: 12px; margin: 0;">
-                This email was sent from the MedSoftware website contact form.
+                This email was sent from the MedSoftwares website contact form.
               </p>
             </div>
           </div>
@@ -107,11 +107,11 @@ export async function POST(request: NextRequest) {
 
     // Send confirmation email to the user
     await resend.emails.send({
-      from: 'MedSoftware <noreply@medsoftwares.com>',
+      from: 'MedSoftwares <noreply@medsoftwares.com>',
       to: [email],
       subject: formType === 'demo'
-        ? 'Thank you for your demo request - MedSoftware'
-        : 'Thank you for contacting MedSoftware',
+        ? 'Thank you for your demo request - MedSoftwares'
+        : 'Thank you for contacting MedSoftwares',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: linear-gradient(135deg, #166534 0%, #14532d 100%); padding: 30px; border-radius: 12px 12px 0 0; text-align: center;">
@@ -137,7 +137,7 @@ export async function POST(request: NextRequest) {
 
             <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid #e5e7eb;">
               <p style="color: #6b7280; font-size: 14px; margin: 0;">Best regards,</p>
-              <p style="color: #111827; font-size: 16px; font-weight: 600; margin: 4px 0 0 0;">The MedSoftware Team</p>
+              <p style="color: #111827; font-size: 16px; font-weight: 600; margin: 4px 0 0 0;">The MedSoftwares Team</p>
               <p style="color: #6b7280; font-size: 14px; margin: 4px 0 0 0;">
                 <a href="https://medsoftwares.com" style="color: #166534;">medsoftwares.com</a> |
                 <a href="mailto:info@medsoftwares.com" style="color: #166534;">info@medsoftwares.com</a>

@@ -2,7 +2,7 @@ export default function StructuredData() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'MedSoftware',
+    name: 'MedSoftwares',
     alternateName: 'Medsoftwares',
     url: 'https://medsoftwares.com',
     logo: 'https://medsoftwares.com/logo.png',
@@ -46,7 +46,7 @@ export default function StructuredData() {
     url: 'https://medsoftwares.com/pharmapos',
     provider: {
       '@type': 'Organization',
-      name: 'MedSoftware',
+      name: 'MedSoftwares',
       url: 'https://medsoftwares.com',
     },
     offers: {
@@ -75,7 +75,7 @@ export default function StructuredData() {
     url: 'https://medsoftwares.com/hospitalos',
     provider: {
       '@type': 'Organization',
-      name: 'MedSoftware',
+      name: 'MedSoftwares',
       url: 'https://medsoftwares.com',
     },
     offers: {
@@ -97,12 +97,12 @@ export default function StructuredData() {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'MedSoftware',
+    name: 'MedSoftwares',
     url: 'https://medsoftwares.com',
     description: 'Pharmacy and Hospital Management Software Solutions',
     publisher: {
       '@type': 'Organization',
-      name: 'MedSoftware',
+      name: 'MedSoftwares',
     },
   };
 

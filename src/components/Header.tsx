@@ -210,8 +210,8 @@ export default function Header() {
         >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <Image src="/logo.png" alt="MedSoftware" width={40} height={40} className="transition-transform duration-300 group-hover:scale-110" priority />
-            <span className="text-xl font-heading font-extrabold text-gray-900 tracking-tight">MedSoftware</span>
+            <Image src="/logo.png" alt="MedSoftwares" width={40} height={40} className="transition-transform duration-300 group-hover:scale-110" priority />
+            <span className="text-xl font-heading font-extrabold text-gray-900 tracking-tight">MedSoftwares</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -456,8 +456,8 @@ export default function Header() {
       >
         <div className="flex items-center justify-between p-4 border-b border-gray-100">
           <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-            <Image src="/logo.png" alt="MedSoftware" width={32} height={32} />
-            <span className="text-lg font-heading font-extrabold text-gray-900">MedSoftware</span>
+            <Image src="/logo.png" alt="MedSoftwares" width={32} height={32} />
+            <span className="text-lg font-heading font-extrabold text-gray-900">MedSoftwares</span>
           </Link>
           <button onClick={() => setIsMobileMenuOpen(false)} className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">

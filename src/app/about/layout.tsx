@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About Us - Our Mission to Transform Healthcare in Africa',
-  description: 'Learn about MedSoftware, the team behind PharmaPOS and HospitalOS. We are dedicated to providing affordable, powerful healthcare management solutions for pharmacies and hospitals across Africa.',
+  description: 'Learn about MedSoftwares, the team behind PharmaPOS and HospitalOS. We are dedicated to providing affordable, powerful healthcare management solutions for pharmacies and hospitals across Africa.',
   keywords: [
-    'about MedSoftware',
+    'about MedSoftwares',
     'healthcare software company',
     'pharmacy software developers',
     'hospital software company',
@@ -14,16 +14,16 @@ export const metadata: Metadata = {
     'healthcare IT solutions',
   ],
   openGraph: {
-    title: 'About MedSoftware - Transforming Healthcare Technology',
+    title: 'About MedSoftwares - Transforming Healthcare Technology',
     description: 'Meet the team behind PharmaPOS and HospitalOS. Dedicated to providing affordable healthcare management solutions across Africa.',
     url: 'https://medsoftwares.com/about',
-    siteName: 'MedSoftware',
+    siteName: 'MedSoftwares',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'About MedSoftware - Healthcare Technology Company',
+        alt: 'About MedSoftwares - Healthcare Technology Company',
       },
     ],
     locale: 'en_US',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About MedSoftware - Transforming Healthcare Technology',
+    title: 'About MedSoftwares - Transforming Healthcare Technology',
     description: 'Meet the team behind PharmaPOS and HospitalOS.',
     images: ['/og-image.jpg'],
   },

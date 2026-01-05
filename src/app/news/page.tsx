@@ -28,7 +28,7 @@ const newsArticles = [
   {
     id: 2,
     slug: 'expansion-east-africa',
-    title: 'MedSoftware Expands Operations to East Africa',
+    title: 'MedSoftwares Expands Operations to East Africa',
     excerpt: 'We are excited to announce our expansion into Kenya, Tanzania, and Uganda, bringing world-class pharmacy management solutions to more healthcare facilities.',
     category: 'company',
     date: '2024-11-15',
@@ -50,7 +50,7 @@ const newsArticles = [
   {
     id: 4,
     slug: 'partnership-nhis-ghana',
-    title: 'MedSoftware Partners with NHIS Ghana for Seamless Insurance Claims',
+    title: 'MedSoftwares Partners with NHIS Ghana for Seamless Insurance Claims',
     excerpt: 'Our new partnership enables pharmacies to process National Health Insurance Scheme claims directly through PharmaPOS, reducing paperwork and delays.',
     category: 'press',
     date: '2024-10-20',
@@ -217,19 +217,19 @@ const newsArticles = [
 const pressReleases = [
   {
     date: '2024-12-01',
-    title: 'MedSoftware Announces PharmaPOS 3.0 with AI Features',
+    title: 'MedSoftwares Announces PharmaPOS 3.0 with AI Features',
   },
   {
     date: '2024-11-15',
-    title: 'MedSoftware Expands to East African Markets',
+    title: 'MedSoftwares Expands to East African Markets',
   },
   {
     date: '2024-10-20',
-    title: 'MedSoftware and NHIS Ghana Announce Partnership',
+    title: 'MedSoftwares and NHIS Ghana Announce Partnership',
   },
   {
     date: '2024-08-01',
-    title: 'MedSoftware Reaches 2,500 Customer Milestone',
+    title: 'MedSoftwares Reaches 2,500 Customer Milestone',
   },
 ];
 
@@ -279,7 +279,7 @@ export default function NewsPage() {
               News & Media
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold text-gray-900 mb-6">
-              Latest Updates from MedSoftware
+              Latest Updates from MedSoftwares
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Stay informed about product updates, company news, industry insights, and how we&apos;re transforming healthcare technology across Africa.

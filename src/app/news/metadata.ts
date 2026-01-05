@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'News & Media | MedSoftware - Healthcare Technology Updates',
-  description: 'Stay updated with the latest news from MedSoftware. Read about product updates, company announcements, industry insights, and how we are transforming healthcare technology across Africa.',
+  title: 'News & Media | MedSoftwares - Healthcare Technology Updates',
+  description: 'Stay updated with the latest news from MedSoftwares. Read about product updates, company announcements, industry insights, and how we are transforming healthcare technology across Africa.',
   keywords: [
-    'MedSoftware news',
+    'MedSoftwares news',
     'pharmacy software updates',
     'healthcare technology news',
     'PharmaPOS updates',
@@ -14,24 +14,24 @@ export const metadata: Metadata = {
     'hospital management updates',
   ],
   openGraph: {
-    title: 'News & Media | MedSoftware',
-    description: 'Stay updated with the latest news from MedSoftware. Product updates, company announcements, and industry insights.',
+    title: 'News & Media | MedSoftwares',
+    description: 'Stay updated with the latest news from MedSoftwares. Product updates, company announcements, and industry insights.',
     type: 'website',
     url: 'https://medsoftwares.com/news',
-    siteName: 'MedSoftware',
+    siteName: 'MedSoftwares',
     images: [
       {
         url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'MedSoftware News & Media',
+        alt: 'MedSoftwares News & Media',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'News & Media | MedSoftware',
-    description: 'Stay updated with the latest news from MedSoftware.',
+    title: 'News & Media | MedSoftwares',
+    description: 'Stay updated with the latest news from MedSoftwares.',
     images: ['/og.png'],
   },
   alternates: {

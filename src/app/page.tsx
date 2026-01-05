@@ -380,7 +380,7 @@ export default function Home() {
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'MedSoftware',
+    name: 'MedSoftwares',
     url: 'https://medsoftwares.com',
     logo: 'https://medsoftwares.com/logo.png',
     description: 'Healthcare software solutions for pharmacies and hospitals worldwide.',
@@ -409,7 +409,7 @@ export default function Home() {
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'MedSoftware',
+    name: 'MedSoftwares',
     url: 'https://medsoftwares.com',
     potentialAction: {
       '@type': 'SearchAction',
@@ -434,7 +434,7 @@ export default function Home() {
   const softwareJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'MedSoftware Suite',
+    name: 'MedSoftwares Suite',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Windows, macOS',
     offers: {
@@ -956,7 +956,7 @@ export default function Home() {
               The Difference
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-gray-900 mb-4 md:mb-6">
-              Before &amp; After MedSoftware
+              Before &amp; After MedSoftwares
             </h2>
             <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
               See how healthcare facilities transform their operations with our solutions.
@@ -1025,7 +1025,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">With MedSoftware</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">With MedSoftwares</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-[#166534] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

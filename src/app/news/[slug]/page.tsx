@@ -43,7 +43,7 @@ const newsArticles = [
   {
     id: 2,
     slug: 'expansion-east-africa',
-    title: 'MedSoftware Expands Operations to East Africa',
+    title: 'MedSoftwares Expands Operations to East Africa',
     excerpt: 'We are excited to announce our expansion into Kenya, Tanzania, and Uganda, bringing world-class pharmacy management solutions to more healthcare facilities.',
     category: 'company',
     date: '2024-11-15',
@@ -52,7 +52,7 @@ const newsArticles = [
     authorRole: 'CEO',
     image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80',
     content: `
-      <p>Today marks a significant milestone in MedSoftware's journey. We are officially expanding our operations to East Africa, starting with Kenya, Tanzania, and Uganda.</p>
+      <p>Today marks a significant milestone in MedSoftwares' journey. We are officially expanding our operations to East Africa, starting with Kenya, Tanzania, and Uganda.</p>
 
       <h2>Why East Africa?</h2>
       <p>East Africa represents one of the fastest-growing healthcare markets on the continent. With a combined population of over 150 million people and rapidly improving healthcare infrastructure, the region is primed for digital transformation.</p>
@@ -115,7 +115,7 @@ const newsArticles = [
   {
     id: 4,
     slug: 'partnership-nhis-ghana',
-    title: 'MedSoftware Partners with NHIS Ghana for Seamless Insurance Claims',
+    title: 'MedSoftwares Partners with NHIS Ghana for Seamless Insurance Claims',
     excerpt: 'Our new partnership enables pharmacies to process National Health Insurance Scheme claims directly through PharmaPOS, reducing paperwork and delays.',
     category: 'press',
     date: '2024-10-20',
@@ -124,7 +124,7 @@ const newsArticles = [
     authorRole: 'Program Manager',
     image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80',
     content: `
-      <p>MedSoftware is proud to announce a strategic partnership with the National Health Insurance Authority (NHIA) of Ghana to streamline insurance claims processing for pharmacies.</p>
+      <p>MedSoftwares is proud to announce a strategic partnership with the National Health Insurance Authority (NHIA) of Ghana to streamline insurance claims processing for pharmacies.</p>
 
       <h2>What This Means for Pharmacies</h2>
       <p>Starting January 2025, PharmaPOS users in Ghana will be able to:</p>
@@ -293,8 +293,8 @@ const newsArticles = [
         <li><strong>Physical security:</strong> Secure servers and workstations</li>
       </ol>
 
-      <h2>MedSoftware's Security Approach</h2>
-      <p>All MedSoftware products include enterprise-grade security features including encryption, role-based access, audit logging, and regular security updates.</p>
+      <h2>MedSoftwares' Security Approach</h2>
+      <p>All MedSoftwares products include enterprise-grade security features including encryption, role-based access, audit logging, and regular security updates.</p>
     `,
   },
   {
@@ -672,7 +672,7 @@ const newsArticles = [
         <li>User satisfaction scores</li>
       </ul>
 
-      <p>Ready to begin your EMR journey? Contact MedSoftware for a consultation on how HospitalOS can meet your facility's needs.</p>
+      <p>Ready to begin your EMR journey? Contact MedSoftwares for a consultation on how HospitalOS can meet your facility's needs.</p>
     `,
   },
   {
@@ -1081,7 +1081,7 @@ const newsArticles = [
         <li>Software vendor updates</li>
       </ul>
 
-      <p>MedSoftware monitors regulatory changes across African markets and updates our software to help you maintain compliance. Contact us to learn how we can support your compliance needs.</p>
+      <p>MedSoftwares monitors regulatory changes across African markets and updates our software to help you maintain compliance. Contact us to learn how we can support your compliance needs.</p>
     `,
   },
   {
@@ -1233,7 +1233,7 @@ const newsArticles = [
         <li>Proven processes that scale</li>
       </ul>
 
-      <p>Ready to take your pharmacy chain to the next level? Contact MedSoftware to learn how PharmaPOS Premium can support your growth.</p>
+      <p>Ready to take your pharmacy chain to the next level? Contact MedSoftwares to learn how PharmaPOS Premium can support your growth.</p>
     `,
   },
   {
@@ -1392,7 +1392,7 @@ const newsArticles = [
         <li><strong>100% capture</strong> of billable tests</li>
       </ul>
 
-      <p>Ready to modernize your hospital laboratory? Contact MedSoftware to learn about the HospitalOS Laboratory Module and how it can transform your diagnostic services.</p>
+      <p>Ready to modernize your hospital laboratory? Contact MedSoftwares to learn about the HospitalOS Laboratory Module and how it can transform your diagnostic services.</p>
     `,
   },
   {
@@ -1567,7 +1567,7 @@ const newsArticles = [
         <li>Geographic reach of patient base</li>
       </ul>
 
-      <p>Ready to expand your reach with telemedicine? Contact MedSoftware to learn how HospitalOS can support your virtual care initiative.</p>
+      <p>Ready to expand your reach with telemedicine? Contact MedSoftwares to learn how HospitalOS can support your virtual care initiative.</p>
     `,
   },
   {
@@ -1663,7 +1663,7 @@ const newsArticles = [
         <li>Cost per discharge</li>
       </ul>
 
-      <h2>Analytics Tools in MedSoftware Products</h2>
+      <h2>Analytics Tools in MedSoftwares Products</h2>
 
       <h3>Real-Time Dashboards</h3>
       <p>PharmaPOS and HospitalOS include built-in dashboards showing:</p>
@@ -1740,7 +1740,7 @@ const newsArticles = [
         <li><strong>Population Health:</strong> Community-level health trends</li>
       </ul>
 
-      <p>Ready to unlock the power of your healthcare data? Contact MedSoftware to learn how our analytics capabilities can drive better decisions at your facility.</p>
+      <p>Ready to unlock the power of your healthcare data? Contact MedSoftwares to learn how our analytics capabilities can drive better decisions at your facility.</p>
     `,
   },
 ];

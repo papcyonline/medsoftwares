@@ -9,10 +9,10 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 export const metadata: Metadata = {
   metadataBase: new URL('https://medsoftwares.com'),
   title: {
-    default: "MedSoftware - Pharmacy & Hospital Management Software",
-    template: "%s | MedSoftware",
+    default: "MedSoftwares - Pharmacy & Hospital Management Software",
+    template: "%s | MedSoftwares",
   },
-  description: "MedSoftware provides powerful, affordable pharmacy and hospital management solutions for healthcare facilities worldwide. PharmaPOS for pharmacies, HospitalOS for hospitals.",
+  description: "MedSoftwares provides powerful, affordable pharmacy and hospital management solutions for healthcare facilities worldwide. PharmaPOS for pharmacies, HospitalOS for hospitals.",
   keywords: [
     "pharmacy management software",
     "hospital management system",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     "mobile money pharmacy",
     "healthcare technology",
   ],
-  authors: [{ name: "MedSoftware" }],
-  creator: "MedSoftware",
-  publisher: "MedSoftware",
+  authors: [{ name: "MedSoftwares" }],
+  creator: "MedSoftwares",
+  publisher: "MedSoftwares",
   formatDetection: {
     email: false,
     address: false,
@@ -39,21 +39,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://medsoftwares.com",
-    siteName: "MedSoftware",
-    title: "MedSoftware - Pharmacy & Hospital Management Software",
+    siteName: "MedSoftwares",
+    title: "MedSoftwares - Pharmacy & Hospital Management Software",
     description: "Powerful, affordable pharmacy and hospital management solutions for healthcare facilities worldwide.",
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "MedSoftware - Healthcare Management Made Simple",
+        alt: "MedSoftwares - Healthcare Management Made Simple",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MedSoftware - Pharmacy & Hospital Management Software",
+    title: "MedSoftwares - Pharmacy & Hospital Management Software",
     description: "Powerful, affordable pharmacy and hospital management solutions for healthcare facilities worldwide.",
     images: ["/og.png"],
     creator: "@medsoftwares",

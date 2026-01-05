@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
-  description: 'MedSoftware terms of service - Read our terms and conditions for using our software and services.',
+  description: 'MedSoftwares terms of service - Read our terms and conditions for using our software and services.',
 };
 
 export default function TermsPage() {
@@ -21,14 +21,14 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-900 mb-4">1. Agreement to Terms</h2>
               <p className="text-gray-600 mb-4">
-                By accessing or using MedSoftware&apos;s products and services, including PharmaPOS and HospitalOS, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
+                By accessing or using MedSoftwares&apos;s products and services, including PharmaPOS and HospitalOS, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-900 mb-4">2. Description of Services</h2>
               <p className="text-gray-600 mb-4">
-                MedSoftware provides healthcare management software solutions including:
+                MedSoftwares provides healthcare management software solutions including:
               </p>
               <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
                 <li><strong>PharmaPOS:</strong> Pharmacy point-of-sale and management system</li>
@@ -52,7 +52,7 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-900 mb-4">4. License and Restrictions</h2>
               <p className="text-gray-600 mb-4">
-                Upon purchase or subscription, MedSoftware grants you a limited, non-exclusive, non-transferable license to use our software according to your selected plan. You may not:
+                Upon purchase or subscription, MedSoftwares grants you a limited, non-exclusive, non-transferable license to use our software according to your selected plan. You may not:
               </p>
               <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
                 <li>Copy, modify, or distribute the software</li>
@@ -86,7 +86,7 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-900 mb-4">8. Limitation of Liability</h2>
               <p className="text-gray-600 mb-4">
-                To the maximum extent permitted by law, MedSoftware shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our services.
+                To the maximum extent permitted by law, MedSoftwares shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our services.
               </p>
             </section>
 

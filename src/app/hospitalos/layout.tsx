@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: 'HospitalOS - Complete Hospital Management System',
     description: 'Manage your entire hospital with HospitalOS. 25+ integrated modules for OPD, IPD, Emergency, Lab, Radiology, Pharmacy, Billing, HR, and specialized departments.',
     url: 'https://medsoftwares.com/hospitalos',
-    siteName: 'MedSoftware',
+    siteName: 'MedSoftwares',
     images: [
       {
         url: '/og/hospitalos.png',

@@ -115,7 +115,7 @@ export default function AboutPage() {
               Transforming Healthcare Through Technology
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              MedSoftware is a product of <a href="https://papcy.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-800 hover:text-[#166534] transition-colors underline decoration-dotted underline-offset-2">Papcy</a> - an AI-focused technology company building intelligent solutions for healthcare worldwide.
+              MedSoftwares is a product of <a href="https://papcy.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-800 hover:text-[#166534] transition-colors underline decoration-dotted underline-offset-2">Papcy</a> - an AI-focused technology company building intelligent solutions for healthcare worldwide.
             </p>
           </div>
         </section>
@@ -133,13 +133,13 @@ export default function AboutPage() {
                     <a href="https://papcy.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-800 hover:text-[#166534] transition-colors underline decoration-dotted underline-offset-2">Papcy</a> is an AI-focused technology company that designs and builds AI-powered web apps, mobile apps, and custom intelligent tools. We help businesses adopt, integrate, and scale AI through end-to-end solutions—strategy, development, and deployment.
                   </p>
                   <p>
-                    MedSoftware was born from a simple observation: pharmacies and hospitals globally were struggling with outdated, expensive, or non-existent management systems. We saw how the lack of proper technology led to medication errors, inventory losses, and poor patient experiences.
+                    MedSoftwares was born from a simple observation: pharmacies and hospitals globally were struggling with outdated, expensive, or non-existent management systems. We saw how the lack of proper technology led to medication errors, inventory losses, and poor patient experiences.
                   </p>
                   <p>
-                    Leveraging our expertise in AI and software development, we built MedSoftware to be not only powerful and reliable but also intelligent and affordable—designed for diverse healthcare contexts with support for local payment methods, multiple currencies, and languages.
+                    Leveraging our expertise in AI and software development, we built MedSoftwares to be not only powerful and reliable but also intelligent and affordable—designed for diverse healthcare contexts with support for local payment methods, multiple currencies, and languages.
                   </p>
                   <p>
-                    Today, MedSoftware powers pharmacies and hospitals across 12 countries, processing transactions every month with AI-driven insights and automation.
+                    Today, MedSoftwares powers pharmacies and hospitals across 12 countries, processing transactions every month with AI-driven insights and automation.
                   </p>
                 </div>
               </div>

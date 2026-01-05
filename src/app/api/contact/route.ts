@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     // Send email to your team
     const { data, error } = await resend.emails.send({
       from: 'MedSoftwares <noreply@medsoftwares.com>',
-      to: ['info@medsoftwares.com'],
+      to: ['rhingndah@gmail.com'],
       replyTo: email,
       subject: emailSubject,
       html: `

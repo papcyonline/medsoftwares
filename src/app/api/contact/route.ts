@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     // Send email to your team
     await sgMail.send({
       from: 'MedSoftwares <contact@medsoftwares.com>',
-      to: 'rhingndah@gmail.com',
+      to: 'contact@medsoftwares.com',
       replyTo: email,
       subject: emailSubject,
       html: `

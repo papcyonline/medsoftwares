@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
 
     // Send email to your team
     await sgMail.send({
-      from: 'MedSoftwares <info@medsoftwares.com>',
+      from: 'MedSoftwares <contact@medsoftwares.com>',
       to: 'rhingndah@gmail.com',
       replyTo: email,
       subject: emailSubject,
@@ -99,7 +99,7 @@ export async function POST(request: NextRequest) {
 
     // Send confirmation email to the user
     await sgMail.send({
-      from: 'MedSoftwares <info@medsoftwares.com>',
+      from: 'MedSoftwares <contact@medsoftwares.com>',
       to: email,
       subject: formType === 'demo'
         ? 'Thank you for your demo request - MedSoftwares'
@@ -132,7 +132,7 @@ export async function POST(request: NextRequest) {
               <p style="color: #111827; font-size: 16px; font-weight: 600; margin: 4px 0 0 0;">The MedSoftwares Team</p>
               <p style="color: #6b7280; font-size: 14px; margin: 4px 0 0 0;">
                 <a href="https://medsoftwares.com" style="color: #166534;">medsoftwares.com</a> |
-                <a href="mailto:info@medsoftwares.com" style="color: #166534;">info@medsoftwares.com</a>
+                <a href="mailto:contact@medsoftwares.com" style="color: #166534;">contact@medsoftwares.com</a>
               </p>
             </div>
           </div>

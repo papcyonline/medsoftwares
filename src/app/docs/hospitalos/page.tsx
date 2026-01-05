@@ -1,72 +1,78 @@
-import { Metadata } from 'next';
+'use client';
+
 import Link from 'next/link';
 import Footer from '@/components/Footer';
-
-export const metadata: Metadata = {
-  title: 'HospitalOS Documentation',
-  description: 'Complete documentation for HospitalOS - Hospital Management System. Learn about all modules including OPD, IPD, Emergency, Laboratory, Pharmacy, and more.',
-};
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import EmergencyIcon from '@mui/icons-material/Emergency';
+import HotelIcon from '@mui/icons-material/Hotel';
+import BiotechIcon from '@mui/icons-material/Biotech';
+import RadiologyIcon from '@mui/icons-material/MonitorHeart';
+import MedicationIcon from '@mui/icons-material/Medication';
+import PaymentsIcon from '@mui/icons-material/Payments';
+import GroupsIcon from '@mui/icons-material/Groups';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
 const modules = [
   {
     title: 'Getting Started',
     description: 'Installation, setup, and first steps with HospitalOS',
     href: '/docs/hospitalos/getting-started',
-    icon: '🚀',
+    icon: <RocketLaunchIcon className="w-6 h-6" />,
   },
   {
     title: 'Reception & OPD',
     description: 'Patient registration, appointments, queue management, and outpatient workflow',
     href: '/docs/hospitalos/opd',
-    icon: '🏥',
+    icon: <LocalHospitalIcon className="w-6 h-6" />,
   },
   {
     title: 'Emergency Department',
     description: 'Triage system, emergency care, and critical patient management',
     href: '/docs/hospitalos/emergency',
-    icon: '🚑',
+    icon: <EmergencyIcon className="w-6 h-6" />,
   },
   {
     title: 'Inpatient (IPD)',
     description: 'Admissions, ward management, nursing care, and discharge',
     href: '/docs/hospitalos/ipd',
-    icon: '🛏️',
+    icon: <HotelIcon className="w-6 h-6" />,
   },
   {
     title: 'Laboratory',
     description: 'Lab requests, sample collection, test results, and reporting',
     href: '/docs/hospitalos/laboratory',
-    icon: '🔬',
+    icon: <BiotechIcon className="w-6 h-6" />,
   },
   {
     title: 'Radiology',
     description: 'Imaging requests, scheduling, and radiology reports',
     href: '/docs/hospitalos/radiology',
-    icon: '📷',
+    icon: <RadiologyIcon className="w-6 h-6" />,
   },
   {
     title: 'Pharmacy & Dispensary',
     description: 'Drug inventory, prescriptions, dispensing, and stock management',
     href: '/docs/hospitalos/pharmacy',
-    icon: '💊',
+    icon: <MedicationIcon className="w-6 h-6" />,
   },
   {
     title: 'Billing & Cashier',
     description: 'Patient billing, payments, receipts, and financial management',
     href: '/docs/hospitalos/billing',
-    icon: '💰',
+    icon: <PaymentsIcon className="w-6 h-6" />,
   },
   {
     title: 'Human Resources',
     description: 'Staff management, attendance, payroll, and leave management',
     href: '/docs/hospitalos/hr',
-    icon: '👥',
+    icon: <GroupsIcon className="w-6 h-6" />,
   },
   {
     title: 'User Roles',
     description: 'Understanding user roles, permissions, and access control',
     href: '/docs/hospitalos/roles',
-    icon: '🔐',
+    icon: <AdminPanelSettingsIcon className="w-6 h-6" />,
   },
 ];
 
@@ -121,7 +127,7 @@ export default function HospitalOSDocsPage() {
                 href={module.href}
                 className="group bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-[#166534]/30 transition-all"
               >
-                <div className="text-3xl mb-3">{module.icon}</div>
+                <div className="w-10 h-10 bg-[#166534]/10 rounded-lg flex items-center justify-center text-[#166534] mb-3">{module.icon}</div>
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#166534] transition-colors mb-2">
                   {module.title}
                 </h3>

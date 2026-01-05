@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import FloatingContact from "@/components/FloatingContact";
+import CookiesBanner from "@/components/CookiesBanner";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://medsoftwares.com'),
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "EoIATOlVhBXQEgfBrt9dAFYhNP1tb1WSPmwE8W1JqA8",
   },
   alternates: {
     canonical: "https://medsoftwares.com",
@@ -91,6 +92,7 @@ export default function RootLayout({
         <Header />
         {children}
         <FloatingContact />
+        <CookiesBanner />
       </body>
     </html>
   );

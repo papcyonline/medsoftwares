@@ -1405,7 +1405,7 @@ const newsArticles = [
     readTime: '9 min read',
     author: 'Charles Bah',
     authorRole: 'CEO',
-    image: 'https://images.unsplash.com/photo-1609904603780-25fc8f238cb9?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
     content: `
       <p>The COVID-19 pandemic accelerated telemedicine adoption worldwide, and Africa is no exception. What was once considered a futuristic concept is now an essential component of healthcare delivery. Telemedicine expands access to care, improves convenience for patients, and creates new revenue opportunities for healthcare providers. Here's how to successfully integrate telemedicine into your healthcare facility.</p>
 

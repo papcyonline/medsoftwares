@@ -198,7 +198,7 @@ const newsArticles = [
     category: 'industry',
     date: '2024-05-28',
     readTime: '9 min read',
-    image: 'https://images.unsplash.com/photo-1609904603780-25fc8f238cb9?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
     featured: false,
   },
   {

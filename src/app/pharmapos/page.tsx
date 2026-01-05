@@ -295,7 +295,7 @@ export default function PharmaPOSPage() {
               <div className="relative hidden lg:block">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
                   <Image
-                    src="/hero image.png"
+                    src="/hero-image.png"
                     alt="PharmaPOS Dashboard showing sales analytics and inventory overview"
                     width={800}
                     height={500}

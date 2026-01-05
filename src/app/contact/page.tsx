@@ -9,7 +9,7 @@ const contactMethods = [
   {
     title: 'General Inquiries',
     description: 'Get in touch with us for any questions.',
-    email: 'contact@medsoftwares.com',
+    email: 'it@medsoftwares.com',
     phone: '+971 567 726 6520',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

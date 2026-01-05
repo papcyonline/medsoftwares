@@ -15,6 +15,7 @@ const footerSections: FooterSection[] = [
     links: [
       { label: 'Overview', href: '/pharmapos' },
       { label: 'Features', href: '/pharmapos#features' },
+      { label: 'Documentation', href: '/docs/pharmapos' },
       { label: 'Request Demo', href: '/contact' },
     ],
   },
@@ -24,6 +25,7 @@ const footerSections: FooterSection[] = [
       { label: 'Overview', href: '/hospitalos' },
       { label: 'Features', href: '/hospitalos#features' },
       { label: 'Modules', href: '/hospitalos#modules' },
+      { label: 'Documentation', href: '/docs/hospitalos' },
       { label: 'Request Demo', href: '/contact' },
     ],
   },
@@ -33,15 +35,12 @@ const footerSections: FooterSection[] = [
       { label: 'About Us', href: '/about' },
       { label: 'News', href: '/news' },
       { label: 'Contact', href: '/contact' },
-      { label: 'Privacy Policy', href: '/privacy' },
-      { label: 'Terms of Service', href: '/terms' },
     ],
   },
   {
     title: 'Support',
     links: [
       { label: 'Documentation', href: '/docs' },
-      { label: 'HospitalOS Guide', href: '/docs/hospitalos' },
       { label: 'Contact Support', href: '/contact' },
       { label: 'WhatsApp', href: 'https://wa.me/9715677266520', external: true },
     ],
@@ -170,12 +169,23 @@ export default function Footer() {
               <ul className="space-y-3">
                 {section.links.map((link, index) => (
                   <li key={index}>
-                    <Link
-                      href={link.href}
-                      className="text-gray-600 hover:text-[#166534] transition-colors text-sm"
-                    >
-                      {link.label}
-                    </Link>
+                    {link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:text-[#166534] transition-colors text-sm"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-gray-600 hover:text-[#166534] transition-colors text-sm"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

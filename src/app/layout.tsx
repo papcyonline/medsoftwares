@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import FloatingContact from "@/components/FloatingContact";
 import CookiesBanner from "@/components/CookiesBanner";
 import StructuredData from "@/components/StructuredData";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://medsoftwares.com'),
@@ -43,10 +44,10 @@ export const metadata: Metadata = {
     description: "Powerful, affordable pharmacy and hospital management solutions for healthcare facilities worldwide.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "MedSoftware - Healthcare Management Solutions",
+        alt: "MedSoftware - Healthcare Management Made Simple",
       },
     ],
   },
@@ -54,8 +55,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MedSoftware - Pharmacy & Hospital Management Software",
     description: "Powerful, affordable pharmacy and hospital management solutions for healthcare facilities worldwide.",
-    images: ["/og-image.jpg"],
-    creator: "@medsoftware",
+    images: ["/og.png"],
+    creator: "@medsoftwares",
   },
   robots: {
     index: true,
@@ -91,6 +92,7 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body className="font-sans antialiased">
+        <GoogleAnalytics />
         <Header />
         {children}
         <FloatingContact />

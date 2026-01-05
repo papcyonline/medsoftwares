@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 export default function DemoForm() {
@@ -180,9 +181,9 @@ export default function DemoForm() {
 
         <p className="text-center text-xs text-gray-500">
           By submitting, you agree to our{' '}
-          <a href="#" className="text-[#166534] hover:underline">Privacy Policy</a>
+          <Link href="/privacy" className="text-[#166534] hover:underline">Privacy Policy</Link>
           {' '}and{' '}
-          <a href="#" className="text-[#166534] hover:underline">Terms of Service</a>.
+          <Link href="/terms" className="text-[#166534] hover:underline">Terms of Service</Link>.
         </p>
       </form>
     </div>

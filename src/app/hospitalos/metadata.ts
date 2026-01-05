@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     siteName: 'MedSoftware',
     images: [
       {
-        url: '/og/hospitalos.png',
+        url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'HospitalOS - Hospital Management System Dashboard',
+        alt: 'HospitalOS - Hospital Management System',
       },
     ],
     locale: 'en_US',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'HospitalOS - Complete Hospital Management System',
     description: 'Manage your entire hospital with HospitalOS. 25+ integrated modules for all departments.',
-    images: ['/og/hospitalos.png'],
+    images: ['/og.png'],
   },
   robots: {
     index: true,

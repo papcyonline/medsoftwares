@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'MedSoftware',
     images: [
       {
-        url: '/og-news.jpg',
+        url: '/og.png',
         width: 1200,
         height: 630,
         alt: 'MedSoftware News & Media',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'News & Media | MedSoftware',
     description: 'Stay updated with the latest news from MedSoftware.',
-    images: ['/og-news.jpg'],
+    images: ['/og.png'],
   },
   alternates: {
     canonical: 'https://medsoftwares.com/news',

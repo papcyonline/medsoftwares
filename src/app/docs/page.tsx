@@ -41,7 +41,9 @@ const docCategories = [
       { name: 'Point of Sale', href: '/docs/pharmapos/pos' },
       { name: 'Inventory Management', href: '/docs/pharmapos/inventory' },
       { name: 'Prescriptions', href: '/docs/pharmapos/prescriptions' },
-      { name: 'Reports', href: '/docs/pharmapos/reports' },
+      { name: 'Reports & Analytics', href: '/docs/pharmapos/reports' },
+      { name: 'Purchases & Suppliers', href: '/docs/pharmapos/purchases' },
+      { name: 'Customers & Credit', href: '/docs/pharmapos/customers' },
     ],
   },
 ];

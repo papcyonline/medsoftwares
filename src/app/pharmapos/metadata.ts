@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     siteName: 'MedSoftware',
     images: [
       {
-        url: '/og/pharmapos.png',
+        url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'PharmaPOS - Pharmacy Management Software Dashboard',
+        alt: 'PharmaPOS - Pharmacy Management Software',
       },
     ],
     locale: 'en_US',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'PharmaPOS - Complete Pharmacy Management Software',
     description: 'Streamline your pharmacy operations with PharmaPOS. POS, inventory, prescriptions, and more.',
-    images: ['/og/pharmapos.png'],
+    images: ['/og.png'],
   },
   robots: {
     index: true,

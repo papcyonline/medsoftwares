@@ -141,10 +141,13 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch (error: unknown) {
     console.error('SendGrid error:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    const errorDetails = (error as { response?: { body?: unknown } })?.response?.body;
+    console.error('Error details:', JSON.stringify(errorDetails, null, 2));
     return NextResponse.json(
-      { error: 'Failed to send email' },
+      { error: 'Failed to send email', details: errorMessage },
       { status: 500 }
     );
   }

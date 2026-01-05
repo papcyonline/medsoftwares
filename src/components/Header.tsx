@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import LanguageSelector from './LanguageSelector';
 
 type Feature = {
   icon: React.ReactNode;
@@ -540,14 +541,17 @@ export default function Header() {
 
         {/* Mobile Menu Footer */}
         <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-100 bg-white safe-area-inset-bottom">
-          <Link
-            href="/contact"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="flex items-center justify-center gap-2 w-full px-5 py-3.5 bg-[#166534] text-white text-base font-semibold rounded-xl shadow-lg shadow-green-900/20 hover:bg-[#14532d] transition-all"
-          >
-            Book a Demo
-            <ArrowOutwardIcon className="w-5 h-5" />
-          </Link>
+          <div className="flex items-center justify-between gap-3">
+            <LanguageSelector />
+            <Link
+              href="/contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.5 bg-[#166534] text-white text-base font-semibold rounded-xl shadow-lg shadow-green-900/20 hover:bg-[#14532d] transition-all"
+            >
+              Book a Demo
+              <ArrowOutwardIcon className="w-5 h-5" />
+            </Link>
+          </div>
         </div>
       </div>
     </>

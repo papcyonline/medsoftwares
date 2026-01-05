@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
+import FloatingContact from "@/components/FloatingContact";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://medsoftwares.com'),
@@ -89,6 +90,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <Header />
         {children}
+        <FloatingContact />
       </body>
     </html>
   );

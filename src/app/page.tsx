@@ -396,7 +396,7 @@ export default function Home() {
       '@type': 'ContactPoint',
       telephone: '+9715677266520',
       contactType: 'sales',
-      email: 'info@medsoftwares.com',
+      email: 'contact@medsoftwares.com',
       availableLanguage: ['English', 'French'],
     },
     sameAs: [
@@ -1545,7 +1545,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-green-200 text-sm">Email us</p>
-                    <a href="mailto:info@medsoftwares.com" className="text-white font-semibold hover:underline">info@medsoftwares.com</a>
+                    <a href="mailto:contact@medsoftwares.com" className="text-white font-semibold hover:underline">contact@medsoftwares.com</a>
                   </div>
                 </div>
 

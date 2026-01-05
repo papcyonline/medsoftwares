@@ -52,7 +52,7 @@ export const contactPageJsonLd = {
   mainEntity: {
     '@type': 'Organization',
     name: 'MedSoftwares',
-    email: 'info@medsoftwares.com',
+    email: 'contact@medsoftwares.com',
     telephone: '+9715677266520',
     address: {
       '@type': 'PostalAddress',

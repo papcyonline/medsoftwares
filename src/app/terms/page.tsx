@@ -110,7 +110,7 @@ export default function TermsPage() {
                 If you have any questions about these Terms of Service, please contact us at:
               </p>
               <p className="text-gray-600">
-                Email: <a href="mailto:info@medsoftwares.com" className="text-[#166534] hover:underline">info@medsoftwares.com</a>
+                Email: <a href="mailto:contact@medsoftwares.com" className="text-[#166534] hover:underline">contact@medsoftwares.com</a>
               </p>
             </section>
           </div>

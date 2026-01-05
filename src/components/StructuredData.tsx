@@ -19,7 +19,7 @@ export default function StructuredData() {
       '@type': 'ContactPoint',
       telephone: '+971-567-726-6520',
       contactType: 'sales',
-      email: 'info@medsoftwares.com',
+      email: 'contact@medsoftwares.com',
       availableLanguage: ['English'],
     },
     sameAs: [

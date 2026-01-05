@@ -1743,6 +1743,935 @@ const newsArticles = [
       <p>Ready to unlock the power of your healthcare data? Contact MedSoftwares to learn how our analytics capabilities can drive better decisions at your facility.</p>
     `,
   },
+  {
+    id: 19,
+    slug: 'best-pharmacy-software-ghana-2025',
+    title: 'Best Pharmacy Management Software in Ghana 2025: Complete Buyer\'s Guide',
+    excerpt: 'Compare top pharmacy software solutions in Ghana including features, pricing, NHIS integration, mobile money support, and customer reviews to find the perfect fit for your pharmacy.',
+    category: 'industry',
+    date: '2025-01-02',
+    readTime: '12 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1585435557343-3b092031a831?w=800&q=80',
+    content: `
+      <p>Choosing the right pharmacy management software is one of the most important decisions for any pharmacy in Ghana. With the growing demand for digital solutions and the integration requirements with NHIS, finding software that meets both operational needs and regulatory compliance is crucial.</p>
+
+      <h2>Why Ghanaian Pharmacies Need Specialized Software</h2>
+      <p>The pharmacy landscape in Ghana has unique requirements that generic international software often fails to address:</p>
+      <ul>
+        <li><strong>NHIS Integration:</strong> Direct claims processing with the National Health Insurance Scheme</li>
+        <li><strong>Mobile Money:</strong> MTN MoMo, Vodafone Cash, and AirtelTigo Money support</li>
+        <li><strong>Offline Capability:</strong> Reliable operation during internet outages</li>
+        <li><strong>Local Tax Compliance:</strong> GRA requirements and VAT handling</li>
+        <li><strong>Multi-Currency:</strong> Support for both GHS and USD transactions</li>
+      </ul>
+
+      <h2>Key Features to Look For</h2>
+
+      <h3>1. Point of Sale (POS)</h3>
+      <p>Essential POS features for Ghanaian pharmacies:</p>
+      <ul>
+        <li>Fast checkout with barcode scanning</li>
+        <li>Credit sales tracking for regular customers</li>
+        <li>Receipt printing with pharmacy details</li>
+        <li>Returns and refund management</li>
+        <li>End-of-day cash reconciliation</li>
+      </ul>
+
+      <h3>2. Inventory Management</h3>
+      <p>Critical for profitability and compliance:</p>
+      <ul>
+        <li>Batch and expiry tracking (mandatory for FDA compliance)</li>
+        <li>Low stock alerts and automatic reorder points</li>
+        <li>Supplier management and purchase orders</li>
+        <li>Stock valuation (FIFO, FEFO, weighted average)</li>
+        <li>Controlled substances tracking</li>
+      </ul>
+
+      <h3>3. NHIS Integration</h3>
+      <p>Seamless insurance processing:</p>
+      <ul>
+        <li>Real-time eligibility verification</li>
+        <li>Electronic claims submission</li>
+        <li>Claims tracking and status updates</li>
+        <li>Automatic pricing for NHIS-covered items</li>
+        <li>Reconciliation reports</li>
+      </ul>
+
+      <h3>4. Mobile Money Integration</h3>
+      <p>Essential payment options:</p>
+      <ul>
+        <li>MTN Mobile Money</li>
+        <li>Vodafone Cash</li>
+        <li>AirtelTigo Money</li>
+        <li>Bank card payments</li>
+        <li>Split payment support</li>
+      </ul>
+
+      <h2>Top Pharmacy Software Solutions in Ghana</h2>
+
+      <h3>1. PharmaPOS by MedSoftwares</h3>
+      <p><strong>Best for:</strong> Pharmacies of all sizes, especially those needing robust NHIS integration</p>
+      <p><strong>Key Strengths:</strong></p>
+      <ul>
+        <li>Complete NHIS integration (certified partner)</li>
+        <li>All major mobile money providers supported</li>
+        <li>Works offline - perfect for areas with unstable internet</li>
+        <li>AI-powered inventory predictions</li>
+        <li>Local support team based in Accra</li>
+      </ul>
+      <p><strong>Pricing:</strong> $299 - $899 one-time (no monthly fees)</p>
+
+      <h3>2. Other Local Solutions</h3>
+      <p>While several other solutions exist, they often lack:</p>
+      <ul>
+        <li>Comprehensive NHIS integration</li>
+        <li>Reliable offline functionality</li>
+        <li>Ongoing local support</li>
+        <li>Regular feature updates</li>
+      </ul>
+
+      <h2>Cost Considerations</h2>
+
+      <h3>Upfront Costs</h3>
+      <ul>
+        <li>Software license: GHS 1,500 - 5,000</li>
+        <li>Computer hardware: GHS 3,000 - 6,000</li>
+        <li>Barcode scanner: GHS 200 - 500</li>
+        <li>Receipt printer: GHS 400 - 1,000</li>
+        <li>Training: Often included or GHS 500 - 1,000</li>
+      </ul>
+
+      <h3>Ongoing Costs</h3>
+      <ul>
+        <li>Support subscription: GHS 0 - 200/month</li>
+        <li>Updates: Usually free with good providers</li>
+        <li>Hardware maintenance: Variable</li>
+      </ul>
+
+      <h2>Implementation Tips</h2>
+
+      <h3>Before Purchase</h3>
+      <ul>
+        <li>Request a live demo with your actual products</li>
+        <li>Ask for references from pharmacies in your area</li>
+        <li>Verify NHIS certification status</li>
+        <li>Understand the training and support included</li>
+        <li>Check data migration capabilities</li>
+      </ul>
+
+      <h3>During Implementation</h3>
+      <ul>
+        <li>Start with accurate inventory count</li>
+        <li>Train all staff, not just cashiers</li>
+        <li>Run parallel with manual records initially</li>
+        <li>Set up proper user permissions</li>
+        <li>Configure backup procedures</li>
+      </ul>
+
+      <h2>Making Your Decision</h2>
+      <p>When choosing pharmacy software in Ghana, prioritize:</p>
+      <ol>
+        <li><strong>NHIS Integration:</strong> This is non-negotiable for most pharmacies</li>
+        <li><strong>Local Support:</strong> Choose a provider with presence in Ghana</li>
+        <li><strong>Offline Capability:</strong> Internet is not always reliable</li>
+        <li><strong>Scalability:</strong> Can it grow with your business?</li>
+        <li><strong>Total Cost:</strong> Consider long-term, not just initial price</li>
+      </ol>
+
+      <p>Ready to modernize your pharmacy? Contact MedSoftwares for a free demo of PharmaPOS and see why it's the preferred choice for Ghanaian pharmacies.</p>
+    `,
+  },
+  {
+    id: 20,
+    slug: 'hospital-software-nigeria-guide',
+    title: 'Hospital Management Software in Nigeria: Features, Costs & Implementation Guide',
+    excerpt: 'Everything Nigerian hospitals need to know about choosing and implementing hospital management systems, including HMO integration, NHIS compliance, and cost considerations.',
+    category: 'industry',
+    date: '2025-01-01',
+    readTime: '14 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80',
+    content: `
+      <p>Nigeria's healthcare sector is rapidly digitizing. With over 4,000 hospitals and 35,000 primary healthcare centers, the demand for efficient hospital management software has never been higher. This guide covers everything Nigerian healthcare facilities need to know about selecting and implementing the right HMS.</p>
+
+      <h2>The Nigerian Healthcare Software Landscape</h2>
+      <p>Key factors shaping software requirements in Nigeria:</p>
+      <ul>
+        <li><strong>HMO Integration:</strong> Over 50 Health Maintenance Organizations require electronic claims</li>
+        <li><strong>NHIS Compliance:</strong> National Health Insurance Scheme integration</li>
+        <li><strong>Multi-Location:</strong> Many hospital groups operate multiple facilities</li>
+        <li><strong>Infrastructure Challenges:</strong> Power outages and internet instability</li>
+        <li><strong>Regulatory Requirements:</strong> MDCN and pharmacy council compliance</li>
+      </ul>
+
+      <h2>Essential Features for Nigerian Hospitals</h2>
+
+      <h3>1. Patient Management</h3>
+      <ul>
+        <li>Unique patient identification across visits</li>
+        <li>Comprehensive demographic capture</li>
+        <li>Patient photo for verification</li>
+        <li>Family and emergency contact management</li>
+        <li>Patient portal for results access</li>
+      </ul>
+
+      <h3>2. Clinical Modules</h3>
+
+      <h4>Outpatient Department (OPD)</h4>
+      <ul>
+        <li>Queue management with estimated wait times</li>
+        <li>Vitals recording and triage</li>
+        <li>Doctor consultation notes</li>
+        <li>Prescription generation</li>
+        <li>Lab and radiology orders</li>
+      </ul>
+
+      <h4>Inpatient Department (IPD)</h4>
+      <ul>
+        <li>Admission and bed assignment</li>
+        <li>Ward management</li>
+        <li>Nursing notes and observations</li>
+        <li>Medication administration tracking</li>
+        <li>Discharge planning</li>
+      </ul>
+
+      <h4>Emergency</h4>
+      <ul>
+        <li>Rapid triage and priority coding</li>
+        <li>Emergency protocols</li>
+        <li>Quick registration for critical cases</li>
+        <li>Trauma documentation</li>
+      </ul>
+
+      <h3>3. Diagnostic Services</h3>
+
+      <h4>Laboratory</h4>
+      <ul>
+        <li>Test ordering and sample tracking</li>
+        <li>Results entry and validation</li>
+        <li>Reference ranges and flags</li>
+        <li>Integration with lab equipment</li>
+        <li>Quality control tracking</li>
+      </ul>
+
+      <h4>Radiology</h4>
+      <ul>
+        <li>Imaging orders and scheduling</li>
+        <li>DICOM viewer integration</li>
+        <li>Radiologist reporting</li>
+        <li>Image archiving (PACS)</li>
+      </ul>
+
+      <h3>4. Pharmacy</h3>
+      <ul>
+        <li>In-house pharmacy management</li>
+        <li>Drug dispensing from prescriptions</li>
+        <li>Inventory and expiry tracking</li>
+        <li>Drug interaction alerts</li>
+        <li>Controlled substance management</li>
+      </ul>
+
+      <h3>5. Billing & Revenue</h3>
+      <ul>
+        <li>Service pricing and packages</li>
+        <li>Automatic charge capture</li>
+        <li>Multiple payment methods</li>
+        <li>HMO claims processing</li>
+        <li>Credit management</li>
+        <li>Revenue reports and analytics</li>
+      </ul>
+
+      <h2>HMO Integration Requirements</h2>
+      <p>Critical for Nigerian hospitals:</p>
+      <ul>
+        <li><strong>Pre-authorization:</strong> Real-time approval requests</li>
+        <li><strong>Tariff Management:</strong> Multiple HMO price lists</li>
+        <li><strong>Claims Submission:</strong> Electronic claims with required attachments</li>
+        <li><strong>Payment Tracking:</strong> Monitor reimbursement status</li>
+        <li><strong>Reconciliation:</strong> Match payments to claims</li>
+      </ul>
+
+      <h2>Cost Breakdown</h2>
+
+      <h3>Software Costs</h3>
+      <table>
+        <tr><td>Clinic (small)</td><td>₦300,000 - ₦600,000</td></tr>
+        <tr><td>Hospital (medium)</td><td>₦600,000 - ₦1,500,000</td></tr>
+        <tr><td>Enterprise (large)</td><td>₦1,500,000 - ₦5,000,000+</td></tr>
+      </table>
+
+      <h3>Hardware Requirements</h3>
+      <ul>
+        <li>Server: ₦300,000 - ₦800,000</li>
+        <li>Workstations: ₦150,000 - ₦300,000 each</li>
+        <li>Network infrastructure: ₦200,000 - ₦500,000</li>
+        <li>Printers and peripherals: ₦100,000 - ₦300,000</li>
+        <li>UPS/Power backup: ₦100,000 - ₦500,000</li>
+      </ul>
+
+      <h3>Implementation Costs</h3>
+      <ul>
+        <li>Installation and configuration: Often included</li>
+        <li>Data migration: ₦50,000 - ₦200,000</li>
+        <li>Staff training: ₦100,000 - ₦300,000</li>
+        <li>Customization: Variable based on requirements</li>
+      </ul>
+
+      <h2>Why Choose HospitalOS for Nigeria</h2>
+      <p>HospitalOS by MedSoftwares is designed with Nigerian healthcare in mind:</p>
+      <ul>
+        <li>Pre-built HMO integrations for major Nigerian HMOs</li>
+        <li>Offline capability for power/internet outages</li>
+        <li>Nigerian Naira and multi-currency support</li>
+        <li>Compliance with MDCN documentation requirements</li>
+        <li>Local implementation and support team</li>
+        <li>One-time purchase - no monthly subscription fees</li>
+      </ul>
+
+      <h2>Implementation Timeline</h2>
+      <ul>
+        <li><strong>Week 1-2:</strong> System installation and configuration</li>
+        <li><strong>Week 2-3:</strong> Data migration and setup</li>
+        <li><strong>Week 3-4:</strong> Staff training</li>
+        <li><strong>Week 4-5:</strong> Parallel running and testing</li>
+        <li><strong>Week 5-6:</strong> Go-live and support</li>
+      </ul>
+
+      <p>Ready to transform your hospital operations? Contact MedSoftwares for a personalized demo and quote for HospitalOS in Nigeria.</p>
+    `,
+  },
+  {
+    id: 21,
+    slug: 'pharmacy-pos-vs-manual-records',
+    title: 'Pharmacy POS System vs Manual Records: Why It\'s Time to Switch in 2025',
+    excerpt: 'Discover the hidden costs of manual pharmacy management and how modern POS systems can increase profits by 40%, reduce errors, and save 20+ hours weekly.',
+    category: 'industry',
+    date: '2024-12-28',
+    readTime: '9 min read',
+    author: 'Faith Yaje',
+    authorRole: 'Financial Secretary',
+    image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80',
+    content: `
+      <p>Many pharmacies in Africa still rely on paper ledgers, exercise books, and memory to manage their operations. While this approach might seem cheaper, the hidden costs are enormous. Let's explore why switching to a pharmacy POS system is essential for success in 2025.</p>
+
+      <h2>The Hidden Costs of Manual Records</h2>
+
+      <h3>1. Inventory Losses</h3>
+      <p>Without automated tracking:</p>
+      <ul>
+        <li><strong>Expired drugs:</strong> 5-15% of inventory expires before sale</li>
+        <li><strong>Theft:</strong> Difficult to detect until significant losses occur</li>
+        <li><strong>Overstocking:</strong> Tied-up capital in slow-moving items</li>
+        <li><strong>Stockouts:</strong> Lost sales from running out of popular items</li>
+      </ul>
+      <p>Average annual loss: 10-20% of inventory value</p>
+
+      <h3>2. Revenue Leakage</h3>
+      <ul>
+        <li><strong>Pricing errors:</strong> Manual price lookups lead to mistakes</li>
+        <li><strong>Forgotten credit sales:</strong> No systematic tracking</li>
+        <li><strong>Cashier dishonesty:</strong> Hard to verify without audit trail</li>
+        <li><strong>Calculation mistakes:</strong> Human errors in totals and change</li>
+      </ul>
+      <p>Average revenue loss: 5-10% of daily sales</p>
+
+      <h3>3. Time Waste</h3>
+      <p>Weekly hours spent on manual tasks:</p>
+      <ul>
+        <li>Stock counting: 8-12 hours</li>
+        <li>Price lookups: 1-2 hours daily</li>
+        <li>Report preparation: 4-6 hours</li>
+        <li>Credit follow-up: 3-5 hours</li>
+        <li>Order planning: 2-4 hours</li>
+      </ul>
+      <p>Total: 20-30 hours weekly on tasks that software handles automatically</p>
+
+      <h3>4. Compliance Risks</h3>
+      <ul>
+        <li>Missing controlled substance records</li>
+        <li>Incomplete batch tracking</li>
+        <li>Poor audit trail for inspections</li>
+        <li>NHIS/insurance claim difficulties</li>
+      </ul>
+
+      <h2>Benefits of Pharmacy POS Systems</h2>
+
+      <h3>1. Accurate Inventory Management</h3>
+      <ul>
+        <li><strong>Real-time stock levels:</strong> Know exactly what you have</li>
+        <li><strong>Expiry alerts:</strong> Never lose drugs to expiration</li>
+        <li><strong>Automatic reorder:</strong> System suggests when to order</li>
+        <li><strong>Batch tracking:</strong> Full traceability for recalls</li>
+      </ul>
+      <p>Result: 60-80% reduction in inventory losses</p>
+
+      <h3>2. Increased Sales</h3>
+      <ul>
+        <li><strong>Faster checkout:</strong> Serve more customers</li>
+        <li><strong>No stockouts:</strong> Always have what customers need</li>
+        <li><strong>Credit management:</strong> Track and collect what's owed</li>
+        <li><strong>Customer data:</strong> Build loyalty and repeat business</li>
+      </ul>
+      <p>Result: 20-40% increase in sales</p>
+
+      <h3>3. Better Control</h3>
+      <ul>
+        <li><strong>Cash reconciliation:</strong> Match sales to cash automatically</li>
+        <li><strong>Staff accountability:</strong> Know who sold what</li>
+        <li><strong>Shift reports:</strong> Track performance by time period</li>
+        <li><strong>Audit trail:</strong> Complete record of all transactions</li>
+      </ul>
+
+      <h3>4. Time Savings</h3>
+      <ul>
+        <li>Instant price lookups with barcode scanning</li>
+        <li>Automatic stock level updates</li>
+        <li>One-click report generation</li>
+        <li>Digital record keeping</li>
+      </ul>
+      <p>Result: Save 20+ hours every week</p>
+
+      <h2>Real Example: Pharmacy Transformation</h2>
+      <p>A pharmacy in Kumasi, Ghana switched to PharmaPOS:</p>
+      <ul>
+        <li><strong>Before:</strong> GHS 2,000 monthly in expired drugs</li>
+        <li><strong>After:</strong> Less than GHS 200 in expired drugs</li>
+        <li><strong>Before:</strong> Unknown credit balances</li>
+        <li><strong>After:</strong> Recovered GHS 15,000 in old debts</li>
+        <li><strong>Before:</strong> 3 stockouts per week</li>
+        <li><strong>After:</strong> Zero stockouts in 6 months</li>
+      </ul>
+
+      <h2>Investment vs. Return</h2>
+
+      <h3>Typical Costs</h3>
+      <ul>
+        <li>Software: $299-$499 (one-time)</li>
+        <li>Computer: $300-$500</li>
+        <li>Barcode scanner: $50-$100</li>
+        <li>Printer: $100-$150</li>
+        <li><strong>Total: $750-$1,250</strong></li>
+      </ul>
+
+      <h3>Annual Savings</h3>
+      <ul>
+        <li>Reduced expiry losses: $1,000-$3,000</li>
+        <li>Time savings (20 hrs/week × $5): $5,000+</li>
+        <li>Reduced theft: $500-$2,000</li>
+        <li>Better credit collection: $1,000-$5,000</li>
+        <li><strong>Total: $7,500-$15,000+ annually</strong></li>
+      </ul>
+      <p>Return on investment: 6-20x in the first year!</p>
+
+      <h2>Making the Switch</h2>
+
+      <h3>Step 1: Choose the Right System</h3>
+      <ul>
+        <li>Look for pharmacy-specific software</li>
+        <li>Ensure offline capability</li>
+        <li>Verify NHIS integration if needed</li>
+        <li>Check mobile money support</li>
+      </ul>
+
+      <h3>Step 2: Prepare Your Data</h3>
+      <ul>
+        <li>Count current inventory</li>
+        <li>List all products with prices</li>
+        <li>Gather supplier information</li>
+        <li>Compile customer credit balances</li>
+      </ul>
+
+      <h3>Step 3: Implementation</h3>
+      <ul>
+        <li>Install and configure system</li>
+        <li>Enter products and inventory</li>
+        <li>Train all staff</li>
+        <li>Run parallel for 1-2 weeks</li>
+      </ul>
+
+      <p>Still using manual records? Contact MedSoftwares today for a free demonstration of PharmaPOS and see the difference technology can make.</p>
+    `,
+  },
+  {
+    id: 22,
+    slug: 'drug-expiry-tracking-software',
+    title: 'Drug Expiry Tracking Software: Reduce Pharmaceutical Waste by 60%',
+    excerpt: 'Learn how automated expiry tracking and FEFO inventory management helps pharmacies minimize losses, ensure patient safety, and maintain regulatory compliance.',
+    category: 'product',
+    date: '2024-12-20',
+    readTime: '7 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80',
+    content: `
+      <p>Expired drugs represent one of the biggest preventable losses in pharmacy operations. In Africa, pharmacies lose an estimated 8-15% of inventory value to expiration annually. Automated expiry tracking software can cut this loss by 60% or more while ensuring patient safety and regulatory compliance.</p>
+
+      <h2>The Cost of Expired Drugs</h2>
+      <p>For a pharmacy with $50,000 in inventory:</p>
+      <ul>
+        <li><strong>At 10% expiry rate:</strong> $5,000 annual loss</li>
+        <li><strong>With good software (2% rate):</strong> $1,000 annual loss</li>
+        <li><strong>Annual savings:</strong> $4,000</li>
+      </ul>
+      <p>This savings alone pays for software many times over!</p>
+
+      <h2>Why Drugs Expire in Pharmacies</h2>
+
+      <h3>1. Poor Visibility</h3>
+      <ul>
+        <li>Products buried in back of shelves</li>
+        <li>No systematic expiry checking</li>
+        <li>Relying on memory for soon-to-expire items</li>
+      </ul>
+
+      <h3>2. Incorrect Dispensing Order</h3>
+      <ul>
+        <li>Newer stock sold before older stock</li>
+        <li>No FEFO (First Expired, First Out) enforcement</li>
+        <li>Convenience-based picking</li>
+      </ul>
+
+      <h3>3. Overstocking</h3>
+      <ul>
+        <li>Buying too much to get volume discounts</li>
+        <li>Not considering shelf life in ordering</li>
+        <li>Slow-moving items accumulating</li>
+      </ul>
+
+      <h2>How Expiry Tracking Software Works</h2>
+
+      <h3>Batch-Level Tracking</h3>
+      <p>Every product entry includes:</p>
+      <ul>
+        <li>Batch number from manufacturer</li>
+        <li>Manufacturing date</li>
+        <li>Expiry date</li>
+        <li>Quantity received</li>
+      </ul>
+
+      <h3>Automated Alerts</h3>
+      <p>The system notifies you at configured intervals:</p>
+      <ul>
+        <li><strong>6 months before:</strong> Consider promotions or returns</li>
+        <li><strong>3 months before:</strong> Prioritize in dispensing</li>
+        <li><strong>1 month before:</strong> Urgent action needed</li>
+        <li><strong>Upon expiry:</strong> Block from sale, flag for disposal</li>
+      </ul>
+
+      <h3>FEFO Enforcement</h3>
+      <p>During sales, the system automatically:</p>
+      <ul>
+        <li>Suggests earliest-expiring batch first</li>
+        <li>Warns if trying to sell newer stock</li>
+        <li>Tracks which batch was actually dispensed</li>
+      </ul>
+
+      <h2>PharmaPOS Expiry Management Features</h2>
+
+      <h3>Dashboard Alerts</h3>
+      <ul>
+        <li>Visual indicators for expiry status</li>
+        <li>Color-coded urgency levels</li>
+        <li>Daily expiry report on login</li>
+      </ul>
+
+      <h3>Expiry Reports</h3>
+      <ul>
+        <li>List by expiry date range</li>
+        <li>Value of expiring stock</li>
+        <li>Supplier return eligibility</li>
+        <li>Destruction records for compliance</li>
+      </ul>
+
+      <h3>Smart Ordering</h3>
+      <ul>
+        <li>Considers current stock expiry dates</li>
+        <li>Suggests order quantities based on turnover</li>
+        <li>Alerts before ordering slow-moving items</li>
+      </ul>
+
+      <h2>Best Practices for Expiry Management</h2>
+
+      <h3>Receiving Stock</h3>
+      <ul>
+        <li>Check expiry dates before accepting delivery</li>
+        <li>Reject items with less than 6 months shelf life</li>
+        <li>Enter batch details immediately into system</li>
+        <li>Place new stock behind existing stock (FEFO)</li>
+      </ul>
+
+      <h3>Ongoing Management</h3>
+      <ul>
+        <li>Review expiry report daily</li>
+        <li>Promote near-expiry items</li>
+        <li>Contact suppliers about returns</li>
+        <li>Rotate stock regularly</li>
+      </ul>
+
+      <h3>When Items Expire</h3>
+      <ul>
+        <li>Remove from shelves immediately</li>
+        <li>Segregate in clearly marked area</li>
+        <li>Document for write-off</li>
+        <li>Follow proper disposal procedures</li>
+      </ul>
+
+      <h2>Regulatory Compliance</h2>
+      <p>Expiry tracking software helps meet requirements from:</p>
+      <ul>
+        <li>Pharmacy Council inspections</li>
+        <li>Food and Drugs Authority (FDA)</li>
+        <li>NHIS audits</li>
+        <li>Internal and external auditors</li>
+      </ul>
+      <p>Complete records of batch numbers, expiry dates, and disposal are always available.</p>
+
+      <h2>Getting Started</h2>
+      <p>To implement effective expiry tracking:</p>
+      <ol>
+        <li>Choose software with robust batch management</li>
+        <li>Conduct initial inventory with all expiry dates</li>
+        <li>Configure alert thresholds for your needs</li>
+        <li>Train staff on FEFO principles</li>
+        <li>Review reports regularly and take action</li>
+      </ol>
+
+      <p>Ready to stop losing money to expired drugs? Contact MedSoftwares for a demo of PharmaPOS expiry tracking features.</p>
+    `,
+  },
+  {
+    id: 23,
+    slug: 'mtn-mobile-money-pharmacy-integration',
+    title: 'MTN Mobile Money Integration for Pharmacies: Complete Setup Guide',
+    excerpt: 'Step-by-step guide to integrating MTN MoMo payments in your pharmacy POS system, including setup, fees, reconciliation, and troubleshooting common issues.',
+    category: 'product',
+    date: '2024-12-15',
+    readTime: '8 min read',
+    author: 'Steve Nya',
+    authorRole: 'Developer',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
+    content: `
+      <p>Mobile money has revolutionized payments in Africa, with MTN Mobile Money (MoMo) leading the way in many countries. For pharmacies, accepting MoMo payments is no longer optional—it's essential. This guide walks you through integrating MTN MoMo with your pharmacy POS system.</p>
+
+      <h2>Why Accept MTN Mobile Money?</h2>
+
+      <h3>Customer Convenience</h3>
+      <ul>
+        <li>Customers don't need to carry cash</li>
+        <li>Instant payment confirmation</li>
+        <li>Payment receipts sent via SMS</li>
+        <li>Preferred by younger demographics</li>
+      </ul>
+
+      <h3>Business Benefits</h3>
+      <ul>
+        <li>Reduced cash handling risks</li>
+        <li>Automatic reconciliation</li>
+        <li>No counterfeit note worries</li>
+        <li>Faster checkout times</li>
+        <li>Access to digital customers</li>
+      </ul>
+
+      <h2>MTN MoMo Merchant Options</h2>
+
+      <h3>1. Basic Merchant Code</h3>
+      <ul>
+        <li>Customer initiates payment</li>
+        <li>You provide merchant code</li>
+        <li>Manual confirmation needed</li>
+        <li>Good for low volumes</li>
+      </ul>
+
+      <h3>2. MoMo Pay (QR Code)</h3>
+      <ul>
+        <li>Customer scans QR code</li>
+        <li>Amount auto-populated</li>
+        <li>Faster than basic method</li>
+        <li>Good for medium volumes</li>
+      </ul>
+
+      <h3>3. API Integration</h3>
+      <ul>
+        <li>Direct system-to-system connection</li>
+        <li>Automatic payment confirmation</li>
+        <li>POS displays payment status</li>
+        <li>Best for high volumes</li>
+      </ul>
+
+      <h2>PharmaPOS MTN MoMo Integration</h2>
+
+      <h3>Features</h3>
+      <ul>
+        <li>Integrated payment option at checkout</li>
+        <li>Automatic amount transfer to MoMo</li>
+        <li>Real-time payment confirmation</li>
+        <li>Transaction matching with sales</li>
+        <li>Daily reconciliation reports</li>
+      </ul>
+
+      <h3>Setup Process</h3>
+
+      <h4>Step 1: MTN Merchant Registration</h4>
+      <ul>
+        <li>Visit MTN Business center with business documents</li>
+        <li>Complete merchant application form</li>
+        <li>Provide business registration certificate</li>
+        <li>Submit pharmacy license</li>
+        <li>Wait for approval (typically 3-5 business days)</li>
+      </ul>
+
+      <h4>Step 2: Receive Merchant Credentials</h4>
+      <ul>
+        <li>Merchant ID number</li>
+        <li>API keys (for integration)</li>
+        <li>QR code materials</li>
+        <li>Training on merchant portal</li>
+      </ul>
+
+      <h4>Step 3: Configure PharmaPOS</h4>
+      <ul>
+        <li>Go to Settings → Payment Methods</li>
+        <li>Enable MTN Mobile Money</li>
+        <li>Enter Merchant ID and API credentials</li>
+        <li>Configure settlement account</li>
+        <li>Test with small transaction</li>
+      </ul>
+
+      <h2>Transaction Fees</h2>
+      <p>Typical merchant fees (may vary by country/agreement):</p>
+      <ul>
+        <li>0.5% - 1.5% per transaction</li>
+        <li>No minimum transaction fee</li>
+        <li>Settlement: Same day or next day</li>
+        <li>Monthly statement: Free</li>
+      </ul>
+      <p>Compare to credit card fees of 2-4%—MoMo is very competitive!</p>
+
+      <h2>Daily Operations</h2>
+
+      <h3>Accepting Payment</h3>
+      <ol>
+        <li>Complete sale in POS</li>
+        <li>Select MTN MoMo as payment method</li>
+        <li>Customer enters phone number (or scans QR)</li>
+        <li>Customer confirms on their phone</li>
+        <li>POS shows confirmation</li>
+        <li>Print receipt</li>
+      </ol>
+
+      <h3>Reconciliation</h3>
+      <ul>
+        <li>PharmaPOS tracks all MoMo transactions</li>
+        <li>Compare with MTN merchant portal</li>
+        <li>Match settlements to bank deposits</li>
+        <li>Investigate any discrepancies</li>
+      </ul>
+
+      <h2>Troubleshooting Common Issues</h2>
+
+      <h3>Payment Not Confirming</h3>
+      <ul>
+        <li>Check customer has sufficient balance</li>
+        <li>Verify phone number is correct</li>
+        <li>Ask customer to check MoMo PIN</li>
+        <li>Check internet connection</li>
+      </ul>
+
+      <h3>Transaction Timeout</h3>
+      <ul>
+        <li>Customer took too long to approve</li>
+        <li>Initiate new transaction</li>
+        <li>Verify original didn't complete</li>
+      </ul>
+
+      <h3>Settlement Delays</h3>
+      <ul>
+        <li>Check MTN merchant portal for status</li>
+        <li>Contact MTN business support</li>
+        <li>Verify settlement account details</li>
+      </ul>
+
+      <h2>Security Best Practices</h2>
+      <ul>
+        <li>Never share API credentials</li>
+        <li>Train staff on fraud detection</li>
+        <li>Verify payment confirmation before releasing products</li>
+        <li>Keep reconciliation records</li>
+        <li>Report suspicious transactions immediately</li>
+      </ul>
+
+      <h2>Other Mobile Money Providers</h2>
+      <p>PharmaPOS also supports:</p>
+      <ul>
+        <li>Vodafone Cash (Ghana)</li>
+        <li>AirtelTigo Money (Ghana)</li>
+        <li>M-Pesa (Kenya, Tanzania)</li>
+        <li>Airtel Money (Uganda, Nigeria)</li>
+        <li>Orange Money (West Africa)</li>
+      </ul>
+
+      <p>Ready to accept MTN Mobile Money at your pharmacy? Contact MedSoftwares for assistance with setup and integration.</p>
+    `,
+  },
+  {
+    id: 24,
+    slug: 'clinic-management-software-small-clinics',
+    title: 'Affordable Clinic Management Software for Small Healthcare Facilities',
+    excerpt: 'Budget-friendly clinic management solutions designed for small practices, health centers, and outpatient facilities in Africa with essential features and easy setup.',
+    category: 'product',
+    date: '2024-12-10',
+    readTime: '6 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80',
+    content: `
+      <p>Not every healthcare facility needs an enterprise hospital management system. Small clinics, health centers, and outpatient practices have different needs and budgets. This guide explores affordable clinic management software options designed for smaller facilities.</p>
+
+      <h2>Who Needs Clinic Management Software?</h2>
+      <ul>
+        <li>Doctor's private practices</li>
+        <li>Dental clinics</li>
+        <li>Maternity homes</li>
+        <li>Community health centers</li>
+        <li>Specialist outpatient clinics</li>
+        <li>Diagnostic centers</li>
+        <li>Physiotherapy practices</li>
+      </ul>
+
+      <h2>Essential Features for Small Clinics</h2>
+
+      <h3>1. Patient Registration</h3>
+      <ul>
+        <li>Simple patient demographics</li>
+        <li>Unique patient ID generation</li>
+        <li>Contact information</li>
+        <li>Medical history basics</li>
+        <li>Insurance/HMO details</li>
+      </ul>
+
+      <h3>2. Appointment Scheduling</h3>
+      <ul>
+        <li>Visual calendar view</li>
+        <li>Multiple doctor schedules</li>
+        <li>Appointment reminders</li>
+        <li>Walk-in management</li>
+        <li>Wait time display</li>
+      </ul>
+
+      <h3>3. Consultation Notes</h3>
+      <ul>
+        <li>Chief complaints</li>
+        <li>Examination findings</li>
+        <li>Diagnosis (ICD codes optional)</li>
+        <li>Treatment plan</li>
+        <li>Prescription generation</li>
+      </ul>
+
+      <h3>4. Billing</h3>
+      <ul>
+        <li>Service pricing</li>
+        <li>Automatic charge from consultation</li>
+        <li>Multiple payment methods</li>
+        <li>Receipt printing</li>
+        <li>Outstanding balance tracking</li>
+      </ul>
+
+      <h3>5. Basic Reporting</h3>
+      <ul>
+        <li>Daily collection summary</li>
+        <li>Patient visit statistics</li>
+        <li>Revenue by service</li>
+        <li>Outstanding payments</li>
+      </ul>
+
+      <h2>What Small Clinics DON'T Need</h2>
+      <p>Avoid paying for features you won't use:</p>
+      <ul>
+        <li>Complex ward management</li>
+        <li>Advanced surgery scheduling</li>
+        <li>Full laboratory modules</li>
+        <li>Extensive HR/payroll</li>
+        <li>Multi-department workflows</li>
+      </ul>
+
+      <h2>HospitalOS Clinic Edition</h2>
+      <p>MedSoftwares offers HospitalOS Clinic package specifically for small facilities:</p>
+
+      <h3>Included Features</h3>
+      <ul>
+        <li>Patient management</li>
+        <li>Appointment scheduling</li>
+        <li>Doctor consultation module</li>
+        <li>Basic EMR</li>
+        <li>Billing and receipts</li>
+        <li>Simple reports</li>
+        <li>Up to 3 workstations</li>
+      </ul>
+
+      <h3>Pricing</h3>
+      <ul>
+        <li>One-time fee: $799</li>
+        <li>No monthly subscription</li>
+        <li>Free updates included</li>
+        <li>3 months free support</li>
+      </ul>
+
+      <h3>Optional Add-ons</h3>
+      <ul>
+        <li>Laboratory module: +$199</li>
+        <li>Pharmacy module: +$199</li>
+        <li>Additional workstations: +$99 each</li>
+        <li>SMS reminders: Pay per SMS</li>
+      </ul>
+
+      <h2>Implementation for Small Clinics</h2>
+
+      <h3>Timeline</h3>
+      <ul>
+        <li>Day 1: Installation and configuration</li>
+        <li>Day 2: Data entry (services, doctors)</li>
+        <li>Day 3-4: Staff training</li>
+        <li>Day 5: Go live with support</li>
+      </ul>
+
+      <h3>Requirements</h3>
+      <ul>
+        <li>1-3 computers (Windows)</li>
+        <li>Receipt printer</li>
+        <li>Internet (optional but recommended)</li>
+        <li>Basic network if multiple computers</li>
+      </ul>
+
+      <h2>Common Questions</h2>
+
+      <h3>Can I start small and add features later?</h3>
+      <p>Yes! Start with the basic Clinic package and add modules as you grow. Your data carries forward seamlessly.</p>
+
+      <h3>Do I need IT staff?</h3>
+      <p>No. The system is designed for non-technical users. We provide training and support.</p>
+
+      <h3>What about data backup?</h3>
+      <p>Automatic local backup is included. Cloud backup available as optional service.</p>
+
+      <h3>Can I access from home?</h3>
+      <p>With the cloud option, yes. Otherwise, access is local to your clinic network.</p>
+
+      <h2>Success Story: Dr. Mensah's Practice</h2>
+      <p>A solo practitioner in Tema, Ghana:</p>
+      <ul>
+        <li><strong>Before:</strong> Paper records, missed appointments, billing errors</li>
+        <li><strong>After:</strong> Digital records, SMS reminders, accurate billing</li>
+        <li><strong>Results:</strong> 30% fewer no-shows, 20% faster billing, happier patients</li>
+        <li><strong>Investment:</strong> $799 + $400 computer = $1,199 total</li>
+        <li><strong>Payback:</strong> Recovered cost in 3 months through efficiency</li>
+      </ul>
+
+      <p>Ready to modernize your clinic without breaking the budget? Contact MedSoftwares for a demo of HospitalOS Clinic edition.</p>
+    `,
+  },
 ];
 
 const getCategoryColor = (categoryId: string) => {

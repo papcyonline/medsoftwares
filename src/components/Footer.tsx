@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import LanguageSelector from './LanguageSelector';
 
 interface FooterSection {
   title: string;
@@ -329,9 +330,11 @@ export default function Footer() {
             <p className="text-gray-500 text-sm text-center md:text-left">
               &copy; {new Date().getFullYear()} <a href="https://papcy.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#166534] transition-colors">Papcy</a>. All rights reserved.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
               <Link href="/privacy" className="text-gray-500 hover:text-[#166534] transition-colors text-sm">Privacy Policy</Link>
               <Link href="/terms" className="text-gray-500 hover:text-[#166534] transition-colors text-sm">Terms of Service</Link>
+              <div className="border-l border-gray-300 h-5 hidden md:block" />
+              <LanguageSelector />
             </div>
           </div>
         </div>

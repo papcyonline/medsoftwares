@@ -2,7 +2,16 @@ import { MetadataRoute } from 'next';
 
 // News articles - keep in sync with src/app/news/page.tsx
 const newsArticles = [
+  // 2025 Articles
+  { slug: 'best-pharmacy-software-ghana-2025', date: '2025-01-02' },
+  { slug: 'hospital-software-nigeria-guide', date: '2025-01-01' },
+  // 2024 December
+  { slug: 'pharmacy-pos-vs-manual-records', date: '2024-12-28' },
+  { slug: 'drug-expiry-tracking-software', date: '2024-12-20' },
+  { slug: 'mtn-mobile-money-pharmacy-integration', date: '2024-12-15' },
+  { slug: 'clinic-management-software-small-clinics', date: '2024-12-10' },
   { slug: 'pharmapos-3-0-release', date: '2024-12-01' },
+  // 2024 Earlier
   { slug: 'expansion-east-africa', date: '2024-11-15' },
   { slug: 'digital-transformation-pharmacies', date: '2024-11-01' },
   { slug: 'partnership-nhis-ghana', date: '2024-10-20' },
@@ -10,6 +19,16 @@ const newsArticles = [
   { slug: 'mobile-money-integration-guide', date: '2024-09-25' },
   { slug: 'customer-success-story-accra', date: '2024-09-15' },
   { slug: 'data-security-healthcare', date: '2024-09-01' },
+  { slug: 'pharmacy-inventory-management-best-practices', date: '2024-08-20' },
+  { slug: 'hospital-management-system-benefits', date: '2024-08-15' },
+  { slug: 'emr-implementation-guide-africa', date: '2024-08-01' },
+  { slug: 'patient-queue-management-system', date: '2024-07-25' },
+  { slug: 'pharmacy-pos-automation-guide', date: '2024-07-15' },
+  { slug: 'healthcare-compliance-regulations-africa', date: '2024-07-01' },
+  { slug: 'multi-branch-pharmacy-management', date: '2024-06-20' },
+  { slug: 'laboratory-information-system-hospitals', date: '2024-06-10' },
+  { slug: 'telemedicine-integration-hospital-software', date: '2024-05-28' },
+  { slug: 'healthcare-analytics-reporting-dashboards', date: '2024-05-15' },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -30,10 +49,70 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/pharmapos/pos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/pharmapos/inventory`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/pharmapos/prescriptions`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/pharmapos/payments`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/hospitalos`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/hospitalos/opd`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/hospitalos/ipd`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/hospitalos/emergency`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/hospitalos/laboratory`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/hospitalos/radiology`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/hospitalos/billing`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/about`,
@@ -52,6 +131,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/pricing`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/privacy`,

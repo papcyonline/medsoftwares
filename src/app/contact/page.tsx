@@ -4,12 +4,14 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import ObfuscatedEmail from '@/components/ObfuscatedEmail';
 
 const contactMethods = [
   {
     title: 'General Inquiries',
     description: 'Get in touch with us for any questions.',
-    email: 'it@medsoftwares.com',
+    emailUser: 'it',
+    emailDomain: 'medsoftwares.com',
     phone: '+971 567 726 6520',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -20,7 +22,8 @@ const contactMethods = [
   {
     title: 'Sales & Demos',
     description: 'Talk to our sales team about pricing and demos.',
-    email: 'contact@medsoftwares.com',
+    emailUser: 'contact',
+    emailDomain: 'medsoftwares.com',
     phone: '+971 567 726 6520',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -31,7 +34,8 @@ const contactMethods = [
   {
     title: 'Technical Support',
     description: '24/7 support for existing customers.',
-    email: 'support@medsoftwares.com',
+    emailUser: 'support',
+    emailDomain: 'medsoftwares.com',
     phone: '+971 567 726 6520',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -134,15 +138,12 @@ export default function ContactPage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{method.title}</h3>
                   <p className="text-gray-600 mb-4">{method.description}</p>
                   <div className="space-y-2">
-                    <a
-                      href={`mailto:${method.email}`}
+                    <ObfuscatedEmail
+                      user={method.emailUser}
+                      domain={method.emailDomain}
                       className="flex items-center gap-2 text-[#166534] hover:underline"
-                    >
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                      </svg>
-                      {method.email}
-                    </a>
+                      showIcon
+                    />
                     <a
                       href={`tel:${method.phone.replace(/\s/g, '')}`}
                       className="flex items-center gap-2 text-gray-600 hover:text-[#166534]"

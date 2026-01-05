@@ -33,18 +33,17 @@ const footerSections: FooterSection[] = [
       { label: 'About Us', href: '/about' },
       { label: 'News', href: '/news' },
       { label: 'Contact', href: '/contact' },
-      { label: 'Careers', href: '#' },
-      { label: 'Partners', href: '#' },
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms of Service', href: '/terms' },
     ],
   },
   {
     title: 'Support',
     links: [
-      { label: 'Help Center', href: '#' },
-      { label: 'Documentation', href: '#' },
-      { label: 'Video Tutorials', href: '#' },
-      { label: 'FAQ', href: '/#faq' },
       { label: 'Contact Support', href: '/contact' },
+      { label: 'Request Demo', href: '/contact' },
+      { label: 'FAQ', href: '/pricing#faq' },
+      { label: 'WhatsApp', href: 'https://wa.me/9715677266520', external: true },
     ],
   },
 ];
@@ -243,7 +242,9 @@ export default function Footer() {
             <p className="text-gray-600 text-sm">Follow us</p>
             <div className="flex items-center gap-3">
               <a
-                href="#"
+                href="https://facebook.com/medsoftwares"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white border border-gray-200 hover:border-[#166534] hover:bg-[#166534] text-gray-500 hover:text-white rounded-full flex items-center justify-center transition-all duration-200"
                 aria-label="Facebook"
               >
@@ -252,7 +253,9 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://x.com/medsoftwares"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white border border-gray-200 hover:border-[#166534] hover:bg-[#166534] text-gray-500 hover:text-white rounded-full flex items-center justify-center transition-all duration-200"
                 aria-label="Twitter/X"
               >
@@ -261,7 +264,9 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://linkedin.com/company/medsoftwares"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white border border-gray-200 hover:border-[#166534] hover:bg-[#166534] text-gray-500 hover:text-white rounded-full flex items-center justify-center transition-all duration-200"
                 aria-label="LinkedIn"
               >
@@ -281,7 +286,9 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://youtube.com/@medsoftwares"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white border border-gray-200 hover:border-[#FF0000] hover:bg-[#FF0000] text-gray-500 hover:text-white rounded-full flex items-center justify-center transition-all duration-200"
                 aria-label="YouTube"
               >
@@ -290,7 +297,9 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://instagram.com/medsoftwares"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white border border-gray-200 hover:border-[#E4405F] hover:bg-[#E4405F] text-gray-500 hover:text-white rounded-full flex items-center justify-center transition-all duration-200"
                 aria-label="Instagram"
               >
@@ -311,9 +320,8 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} <a href="https://papcy.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#166534] transition-colors">Papcy</a>. All rights reserved.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-6">
-              <a href="#" className="text-gray-500 hover:text-[#166534] transition-colors text-sm">Privacy Policy</a>
-              <a href="#" className="text-gray-500 hover:text-[#166534] transition-colors text-sm">Terms of Service</a>
-              <a href="#" className="text-gray-500 hover:text-[#166534] transition-colors text-sm">Cookies</a>
+              <Link href="/privacy" className="text-gray-500 hover:text-[#166534] transition-colors text-sm">Privacy Policy</Link>
+              <Link href="/terms" className="text-gray-500 hover:text-[#166534] transition-colors text-sm">Terms of Service</Link>
             </div>
           </div>
         </div>

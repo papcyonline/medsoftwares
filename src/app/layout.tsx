@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import FloatingContact from "@/components/FloatingContact";
 import CookiesBanner from "@/components/CookiesBanner";
+import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://medsoftwares.com'),
@@ -87,6 +88,7 @@ export default function RootLayout({
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <StructuredData />
       </head>
       <body className="font-sans antialiased">
         <Header />

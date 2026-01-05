@@ -40,9 +40,9 @@ const footerSections: FooterSection[] = [
   {
     title: 'Support',
     links: [
+      { label: 'Documentation', href: '/docs' },
+      { label: 'HospitalOS Guide', href: '/docs/hospitalos' },
       { label: 'Contact Support', href: '/contact' },
-      { label: 'Request Demo', href: '/contact' },
-      { label: 'FAQ', href: '/pricing#faq' },
       { label: 'WhatsApp', href: 'https://wa.me/9715677266520', external: true },
     ],
   },

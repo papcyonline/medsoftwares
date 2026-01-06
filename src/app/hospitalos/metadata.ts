@@ -83,9 +83,10 @@ export const hospitalOSJsonLd = {
   description: 'Complete hospital management system with 25+ integrated modules including EMR, OPD, IPD, Emergency Triage, Laboratory, Radiology, Pharmacy, Billing, HR & Payroll, and specialized departments.',
   offers: {
     '@type': 'Offer',
-    price: '0',
+    price: '799',
     priceCurrency: 'USD',
-    description: 'Contact for pricing',
+    description: 'Starting from $799 - Contact for pricing',
+    availability: 'https://schema.org/InStock',
   },
   featureList: [
     'OPD Management',

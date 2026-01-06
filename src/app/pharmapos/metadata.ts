@@ -77,9 +77,10 @@ export const pharmaPOSJsonLd = {
   description: 'Complete pharmacy management system with Point of Sale, inventory tracking, prescription management, drug interactions checker, controlled substances tracking, and insurance claims processing.',
   offers: {
     '@type': 'Offer',
-    price: '0',
+    price: '299',
     priceCurrency: 'USD',
-    description: 'Contact for pricing',
+    description: 'Starting from $299 - Contact for pricing',
+    availability: 'https://schema.org/InStock',
   },
   featureList: [
     'Point of Sale (POS)',

@@ -91,7 +91,7 @@ export default function StructuredData() {
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareCompany',
+    '@type': 'ProfessionalService',
     '@id': 'https://medsoftwares.com/#localbusiness',
     name: 'MedSoftwares',
     image: 'https://medsoftwares.com/logo.png',
@@ -115,13 +115,6 @@ export default function StructuredData() {
         closes: '18:00',
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '47',
-      bestRating: '5',
-      worstRating: '1',
-    },
   };
 
   const pharmaPOSSchema = {
@@ -162,7 +155,7 @@ export default function StructuredData() {
         priceCurrency: 'USD',
         description: '1 Workstation License - Perfect for single-location pharmacies',
         availability: 'https://schema.org/InStock',
-        priceValidUntil: '2025-12-31',
+        priceValidUntil: '2026-12-31',
       },
       {
         '@type': 'Offer',
@@ -171,7 +164,7 @@ export default function StructuredData() {
         priceCurrency: 'USD',
         description: 'Up to 3 Workstation Licenses - For growing pharmacies',
         availability: 'https://schema.org/InStock',
-        priceValidUntil: '2025-12-31',
+        priceValidUntil: '2026-12-31',
       },
       {
         '@type': 'Offer',
@@ -180,7 +173,7 @@ export default function StructuredData() {
         priceCurrency: 'USD',
         description: 'Up to 10 Workstation Licenses - Complete solution for pharmacy chains',
         availability: 'https://schema.org/InStock',
-        priceValidUntil: '2025-12-31',
+        priceValidUntil: '2026-12-31',
       },
     ],
     featureList: [
@@ -252,7 +245,7 @@ export default function StructuredData() {
         priceCurrency: 'USD',
         description: 'Up to 3 Workstations - For small clinics and health centers',
         availability: 'https://schema.org/InStock',
-        priceValidUntil: '2025-12-31',
+        priceValidUntil: '2026-12-31',
       },
       {
         '@type': 'Offer',
@@ -261,7 +254,7 @@ export default function StructuredData() {
         priceCurrency: 'USD',
         description: 'Up to 10 Workstations - Complete solution for hospitals',
         availability: 'https://schema.org/InStock',
-        priceValidUntil: '2025-12-31',
+        priceValidUntil: '2026-12-31',
       },
       {
         '@type': 'Offer',
@@ -270,7 +263,7 @@ export default function StructuredData() {
         priceCurrency: 'USD',
         description: 'Unlimited Workstations - For large hospitals and medical centers',
         availability: 'https://schema.org/InStock',
-        priceValidUntil: '2025-12-31',
+        priceValidUntil: '2026-12-31',
       },
     ],
     featureList: [
@@ -316,15 +309,7 @@ export default function StructuredData() {
     publisher: {
       '@id': 'https://medsoftwares.com/#organization',
     },
-    inLanguage: ['en', 'fr', 'es', 'ar', 'pt', 'zh'],
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://medsoftwares.com/docs?q={search_term_string}',
-      },
-      'query-input': 'required name=search_term_string',
-    },
+    inLanguage: 'en',
   };
 
   const faqSchema = {

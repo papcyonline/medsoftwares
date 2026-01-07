@@ -2,7 +2,47 @@ import { MetadataRoute } from 'next';
 
 // News articles - keep in sync with src/app/news/page.tsx
 const newsArticles = [
-  // 2025 Articles
+  // 2026 SEO-Optimized Articles
+  { slug: 'best-hospital-management-software-2026', date: '2026-01-07' },
+  { slug: 'free-hospital-management-software-download', date: '2026-01-06' },
+  { slug: 'best-pharmacy-management-software-2026', date: '2026-01-05' },
+  { slug: 'pharmacy-pos-system-africa-guide', date: '2026-01-04' },
+  { slug: 'hospital-software-small-hospitals-clinics', date: '2026-01-03' },
+  { slug: 'emr-ehr-software-africa-2026', date: '2026-01-02' },
+  // 2025 December Articles
+  { slug: 'cloud-vs-on-premise-hospital-software', date: '2025-12-28' },
+  { slug: 'pharmacy-inventory-software-expiry-tracking', date: '2025-12-25' },
+  { slug: 'hospital-billing-software-insurance-claims', date: '2025-12-22' },
+  { slug: 'how-to-choose-pharmacy-software', date: '2025-12-20' },
+  { slug: 'laboratory-information-management-system-2026', date: '2025-12-18' },
+  { slug: 'hospital-management-system-modules-explained', date: '2025-12-15' },
+  { slug: 'pharmacy-software-nigeria-2026', date: '2025-12-12' },
+  { slug: 'hospital-software-kenya-east-africa', date: '2025-12-10' },
+  { slug: 'patient-management-system-features', date: '2025-12-08' },
+  { slug: 'pharmacy-software-mobile-money-integration', date: '2025-12-05' },
+  { slug: 'ai-healthcare-software-2026-trends', date: '2025-12-03' },
+  { slug: 'opd-ipd-management-software-hospitals', date: '2025-12-01' },
+  // 2025 November Articles
+  { slug: 'prescription-management-software-pharmacies', date: '2025-11-28' },
+  { slug: 'hospital-revenue-cycle-management-software', date: '2025-11-25' },
+  { slug: 'controlled-substance-tracking-pharmacy-software', date: '2025-11-22' },
+  { slug: 'telemedicine-software-african-hospitals', date: '2025-11-20' },
+  { slug: 'pharmacy-chain-management-software', date: '2025-11-18' },
+  { slug: 'hospital-queue-management-system', date: '2025-11-15' },
+  { slug: 'drug-interaction-checker-software', date: '2025-11-12' },
+  { slug: 'hospital-bed-management-software', date: '2025-11-10' },
+  { slug: 'pharmacy-software-barcode-scanning', date: '2025-11-08' },
+  { slug: 'radiology-information-system-ris', date: '2025-11-05' },
+  { slug: 'pharmacy-software-credit-sales-management', date: '2025-11-02' },
+  // 2025 October Articles
+  { slug: 'hospital-appointment-scheduling-software', date: '2025-10-30' },
+  { slug: 'nhis-nhif-integration-healthcare-software', date: '2025-10-28' },
+  { slug: 'pharmacy-supplier-management-purchase-orders', date: '2025-10-25' },
+  { slug: 'hospital-hr-payroll-management-software', date: '2025-10-22' },
+  { slug: 'pharmacy-analytics-sales-reports', date: '2025-10-20' },
+  { slug: 'hospital-pharmacy-management-system', date: '2025-10-18' },
+  { slug: 'digital-health-transformation-africa-2026', date: '2025-10-15' },
+  // 2025 January Articles
   { slug: 'best-pharmacy-software-ghana-2025', date: '2025-01-02' },
   { slug: 'hospital-software-nigeria-guide', date: '2025-01-01' },
   // 2024 December

@@ -2672,6 +2672,3708 @@ const newsArticles = [
       <p>Ready to modernize your clinic without breaking the budget? Contact MedSoftwares for a demo of HospitalOS Clinic edition.</p>
     `,
   },
+  {
+    id: 25,
+    slug: 'best-hospital-management-software-2026',
+    title: 'Best Hospital Management Software 2026: Complete Guide for African Healthcare',
+    excerpt: 'Discover the top hospital management software solutions for 2026. Compare features, pricing, and find the perfect HMS for your hospital or clinic in Africa.',
+    category: 'industry',
+    date: '2026-01-07',
+    readTime: '12 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&q=80',
+    content: `
+      <p>Choosing the right hospital management software (HMS) in 2026 is critical for healthcare facilities looking to improve efficiency, patient care, and revenue. This comprehensive guide reviews the best options available for African hospitals and clinics.</p>
+
+      <h2>What is Hospital Management Software?</h2>
+      <p>Hospital Management Software is an integrated information system designed to manage all aspects of hospital operations, including:</p>
+      <ul>
+        <li>Patient registration and records</li>
+        <li>Appointment scheduling</li>
+        <li>Outpatient (OPD) and Inpatient (IPD) management</li>
+        <li>Laboratory and radiology integration</li>
+        <li>Pharmacy and inventory management</li>
+        <li>Billing and revenue cycle management</li>
+        <li>Human resources and payroll</li>
+      </ul>
+
+      <h2>Top Hospital Management Software for 2026</h2>
+
+      <h3>1. HospitalOS by MedSoftwares</h3>
+      <p>HospitalOS stands out as the leading hospital management solution designed specifically for African healthcare markets. Key advantages include:</p>
+      <ul>
+        <li><strong>Offline Capability:</strong> Works without internet, syncs when connected</li>
+        <li><strong>Local Payment Integration:</strong> MTN MoMo, M-Pesa, Airtel Money built-in</li>
+        <li><strong>NHIS/NHIF Compatible:</strong> Pre-configured for national health insurance schemes</li>
+        <li><strong>Affordable Pricing:</strong> One-time licensing with no recurring fees</li>
+        <li><strong>Local Support:</strong> Teams in Ghana, Nigeria, Kenya, and UAE</li>
+      </ul>
+
+      <h3>2. Key Features to Look For</h3>
+      <p>When evaluating hospital management software, prioritize these features:</p>
+      <ul>
+        <li><strong>Electronic Medical Records (EMR):</strong> Digital patient charts accessible across departments</li>
+        <li><strong>Queue Management:</strong> Reduce patient wait times with smart queuing</li>
+        <li><strong>Laboratory Integration:</strong> Order tests and receive results electronically</li>
+        <li><strong>Insurance Claims:</strong> Automated claim submission and tracking</li>
+        <li><strong>Reporting Dashboard:</strong> Real-time analytics on hospital performance</li>
+      </ul>
+
+      <h2>Why African Hospitals Need Specialized Software</h2>
+      <p>Generic international HMS solutions often fail in African contexts because they don't account for:</p>
+      <ul>
+        <li>Unreliable internet connectivity</li>
+        <li>Power outages and the need for offline operation</li>
+        <li>Local currency and payment methods</li>
+        <li>National health insurance integration requirements</li>
+        <li>Limited IT infrastructure and expertise</li>
+      </ul>
+
+      <h2>Implementation Best Practices</h2>
+      <ol>
+        <li><strong>Assess Your Needs:</strong> Document current workflows and pain points</li>
+        <li><strong>Budget Realistically:</strong> Include training, hardware, and support costs</li>
+        <li><strong>Plan Data Migration:</strong> Clean and prepare existing patient data</li>
+        <li><strong>Train Thoroughly:</strong> Invest in comprehensive staff training</li>
+        <li><strong>Go Live Gradually:</strong> Start with one department before full rollout</li>
+      </ol>
+
+      <h2>Cost Comparison 2026</h2>
+      <p>Hospital management software pricing varies widely:</p>
+      <ul>
+        <li><strong>Enterprise Solutions:</strong> $50,000 - $500,000+ (Oracle, SAP)</li>
+        <li><strong>Mid-Range Cloud:</strong> $500 - $2,000/month subscription</li>
+        <li><strong>HospitalOS:</strong> $2,999 - $9,999 one-time (best value for Africa)</li>
+        <li><strong>Basic Systems:</strong> $500 - $2,000 one-time</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>The best hospital management software for 2026 is one that fits your specific needs, budget, and operational context. For African hospitals, HospitalOS offers the ideal combination of features, affordability, and local support. Contact MedSoftwares today for a free demo and consultation.</p>
+    `,
+  },
+  {
+    id: 26,
+    slug: 'free-hospital-management-software-download',
+    title: 'Free Hospital Management Software Download: What You Need to Know',
+    excerpt: 'Looking for free hospital management software? Learn about free HMS options, their limitations, and when to invest in professional solutions for your healthcare facility.',
+    category: 'industry',
+    date: '2026-01-06',
+    readTime: '10 min read',
+    author: 'Junior Fonte',
+    authorRole: 'CTO',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+    content: `
+      <p>Many healthcare facilities search for free hospital management software to reduce costs. While free options exist, understanding their limitations is crucial before making a decision that affects patient care and operations.</p>
+
+      <h2>Types of Free Hospital Management Software</h2>
+
+      <h3>1. Open Source HMS</h3>
+      <p>Open source hospital management systems are free to download and modify:</p>
+      <ul>
+        <li><strong>OpenMRS:</strong> Electronic medical records focused</li>
+        <li><strong>OpenEMR:</strong> Practice management and EMR</li>
+        <li><strong>GNU Health:</strong> Comprehensive health informatics</li>
+        <li><strong>Hospital Run:</strong> Offline-first hospital information system</li>
+      </ul>
+
+      <h3>2. Freemium Models</h3>
+      <p>Some vendors offer limited free versions:</p>
+      <ul>
+        <li>Basic features at no cost</li>
+        <li>Advanced features require payment</li>
+        <li>User or patient limits on free tier</li>
+        <li>May include advertising</li>
+      </ul>
+
+      <h3>3. Trial Versions</h3>
+      <p>Full-featured software with time limits:</p>
+      <ul>
+        <li>14-30 day free trials</li>
+        <li>All features accessible</li>
+        <li>Data may not transfer after trial</li>
+        <li>Requires payment to continue</li>
+      </ul>
+
+      <h2>Hidden Costs of Free Software</h2>
+      <p>Free hospital software often comes with hidden expenses:</p>
+      <ul>
+        <li><strong>Implementation:</strong> $5,000 - $50,000 for setup and customization</li>
+        <li><strong>Training:</strong> Staff time and external consultants</li>
+        <li><strong>IT Support:</strong> Need in-house expertise or contractors</li>
+        <li><strong>Hardware:</strong> Server infrastructure requirements</li>
+        <li><strong>Updates:</strong> Manual updates and security patches</li>
+        <li><strong>Downtime:</strong> Lost revenue during technical issues</li>
+      </ul>
+
+      <h2>Limitations of Free HMS</h2>
+
+      <h3>Technical Challenges</h3>
+      <ul>
+        <li>Complex installation requiring IT expertise</li>
+        <li>Limited or no technical support</li>
+        <li>May not work offline (critical for Africa)</li>
+        <li>Integration difficulties with existing systems</li>
+        <li>Security vulnerabilities if not properly maintained</li>
+      </ul>
+
+      <h3>Functional Gaps</h3>
+      <ul>
+        <li>Missing local payment integrations (MoMo, M-Pesa)</li>
+        <li>No NHIS/NHIF claim processing</li>
+        <li>Limited reporting capabilities</li>
+        <li>No vendor accountability for bugs</li>
+        <li>Outdated user interfaces</li>
+      </ul>
+
+      <h2>When Free Software Makes Sense</h2>
+      <p>Consider free HMS if you have:</p>
+      <ul>
+        <li>Strong in-house IT team</li>
+        <li>Time for extensive customization</li>
+        <li>Simple workflow requirements</li>
+        <li>Budget for implementation services</li>
+        <li>Tolerance for technical challenges</li>
+      </ul>
+
+      <h2>When to Invest in Professional Software</h2>
+      <p>Pay for hospital management software when you need:</p>
+      <ul>
+        <li>Reliable vendor support</li>
+        <li>Guaranteed uptime and performance</li>
+        <li>Local payment and insurance integration</li>
+        <li>Regular updates and improvements</li>
+        <li>Training and implementation assistance</li>
+        <li>Compliance with local regulations</li>
+      </ul>
+
+      <h2>HospitalOS: Affordable Professional Alternative</h2>
+      <p>Instead of struggling with free software, consider HospitalOS:</p>
+      <ul>
+        <li><strong>One-time cost:</strong> From $2,999 (no recurring fees)</li>
+        <li><strong>Full support:</strong> Training, implementation, ongoing help</li>
+        <li><strong>Africa-ready:</strong> Works offline, local payments, NHIS integrated</li>
+        <li><strong>Regular updates:</strong> New features and security patches included</li>
+        <li><strong>Quick ROI:</strong> Typically pays for itself in 3-6 months</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>While free hospital management software downloads are tempting, the total cost of ownership often exceeds affordable commercial solutions. Evaluate your facility's technical capabilities, support needs, and long-term goals before choosing free software. For most African hospitals, investing in a proper HMS like HospitalOS provides better value and outcomes.</p>
+    `,
+  },
+  {
+    id: 27,
+    slug: 'best-pharmacy-management-software-2026',
+    title: 'Best Pharmacy Management Software 2026: Top Solutions for African Pharmacies',
+    excerpt: 'Compare the best pharmacy management software for 2026. Find the perfect POS and inventory system for your pharmacy in Ghana, Nigeria, Kenya, and across Africa.',
+    category: 'industry',
+    date: '2026-01-05',
+    readTime: '11 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80',
+    content: `
+      <p>Running a successful pharmacy in 2026 requires more than just stocking the right medications. Modern pharmacy management software helps you manage inventory, process sales efficiently, track prescriptions, and grow your business. This guide covers the best options for African pharmacies.</p>
+
+      <h2>What is Pharmacy Management Software?</h2>
+      <p>Pharmacy management software (PMS) is a comprehensive solution that handles:</p>
+      <ul>
+        <li>Point of Sale (POS) transactions</li>
+        <li>Inventory and stock management</li>
+        <li>Drug expiry tracking</li>
+        <li>Prescription management</li>
+        <li>Customer records and loyalty</li>
+        <li>Supplier and purchase orders</li>
+        <li>Sales reports and analytics</li>
+        <li>Insurance and NHIS claims</li>
+      </ul>
+
+      <h2>Top Pharmacy Software for Africa 2026</h2>
+
+      <h3>1. PharmaPOS by MedSoftwares</h3>
+      <p>PharmaPOS is the leading pharmacy management solution built specifically for African markets:</p>
+      <ul>
+        <li><strong>Offline Operation:</strong> Works without internet, syncs automatically</li>
+        <li><strong>Mobile Money:</strong> MTN MoMo, Vodafone Cash, M-Pesa integrated</li>
+        <li><strong>Expiry Alerts:</strong> Automatic notifications for expiring drugs</li>
+        <li><strong>NHIS Ready:</strong> Process insurance claims directly</li>
+        <li><strong>Multi-Branch:</strong> Manage multiple pharmacy locations</li>
+        <li><strong>Affordable:</strong> One-time purchase from $999</li>
+      </ul>
+
+      <h3>Key Features to Compare</h3>
+      <table>
+        <tr><td>Feature</td><td>Essential</td><td>Important</td></tr>
+        <tr><td>Fast POS checkout</td><td>Yes</td><td>-</td></tr>
+        <tr><td>Inventory tracking</td><td>Yes</td><td>-</td></tr>
+        <tr><td>Expiry management</td><td>Yes</td><td>-</td></tr>
+        <tr><td>Offline capability</td><td>Yes</td><td>-</td></tr>
+        <tr><td>Mobile money</td><td>-</td><td>Yes</td></tr>
+        <tr><td>Multi-branch</td><td>-</td><td>Yes</td></tr>
+        <tr><td>Prescription tracking</td><td>-</td><td>Yes</td></tr>
+      </table>
+
+      <h2>Why African Pharmacies Need Local Software</h2>
+      <p>International pharmacy software often fails in Africa because:</p>
+      <ul>
+        <li>Designed for reliable internet (we have outages)</li>
+        <li>Missing mobile money payment options</li>
+        <li>No NHIS/insurance integration</li>
+        <li>Priced in USD with monthly subscriptions</li>
+        <li>Support in different time zones</li>
+        <li>Don't understand local pharmacy workflows</li>
+      </ul>
+
+      <h2>Essential Features for 2026</h2>
+
+      <h3>1. Smart Inventory Management</h3>
+      <ul>
+        <li>Real-time stock levels</li>
+        <li>Automatic reorder points</li>
+        <li>FIFO (First In, First Out) enforcement</li>
+        <li>Batch and lot tracking</li>
+        <li>Expiry date monitoring with alerts</li>
+      </ul>
+
+      <h3>2. Fast Point of Sale</h3>
+      <ul>
+        <li>Barcode scanning</li>
+        <li>Quick product search</li>
+        <li>Multiple payment methods</li>
+        <li>Receipt printing</li>
+        <li>Returns and exchanges</li>
+      </ul>
+
+      <h3>3. Customer Management</h3>
+      <ul>
+        <li>Customer profiles and history</li>
+        <li>Credit sales tracking</li>
+        <li>Loyalty programs</li>
+        <li>Prescription records</li>
+        <li>SMS reminders for refills</li>
+      </ul>
+
+      <h2>Pricing Comparison 2026</h2>
+      <ul>
+        <li><strong>PharmaPOS:</strong> $999 - $2,499 one-time (best value)</li>
+        <li><strong>International Cloud:</strong> $50 - $200/month subscription</li>
+        <li><strong>Basic Local:</strong> $200 - $500 one-time</li>
+        <li><strong>Enterprise:</strong> $5,000+ one-time</li>
+      </ul>
+
+      <h2>Implementation Tips</h2>
+      <ol>
+        <li><strong>Stock Take:</strong> Do complete inventory count before starting</li>
+        <li><strong>Data Entry:</strong> Enter all products with correct details</li>
+        <li><strong>Training:</strong> Train all staff thoroughly</li>
+        <li><strong>Parallel Run:</strong> Use both systems for 1-2 weeks</li>
+        <li><strong>Go Live:</strong> Switch fully with support available</li>
+      </ol>
+
+      <h2>Conclusion</h2>
+      <p>The best pharmacy management software for 2026 combines powerful features with local market understanding. PharmaPOS offers African pharmacies the ideal solution with offline capability, mobile money integration, and affordable one-time pricing. Request a demo today to see how it can transform your pharmacy operations.</p>
+    `,
+  },
+  {
+    id: 28,
+    slug: 'pharmacy-pos-system-africa-guide',
+    title: 'Complete Guide to Pharmacy POS Systems in Africa 2026',
+    excerpt: 'Everything you need to know about pharmacy POS systems in Africa. Features, benefits, pricing, and how to choose the right point of sale system for your pharmacy.',
+    category: 'industry',
+    date: '2026-01-04',
+    readTime: '9 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
+    content: `
+      <p>A pharmacy Point of Sale (POS) system is the backbone of modern pharmacy operations. In Africa, where unique challenges like power outages, connectivity issues, and mobile money payments exist, choosing the right POS is critical for success.</p>
+
+      <h2>What is a Pharmacy POS System?</h2>
+      <p>A pharmacy POS system is specialized software and hardware that handles:</p>
+      <ul>
+        <li>Sales transactions and payment processing</li>
+        <li>Inventory tracking and management</li>
+        <li>Customer records and prescriptions</li>
+        <li>Receipt generation and printing</li>
+        <li>Sales reporting and analytics</li>
+        <li>Integration with accounting systems</li>
+      </ul>
+
+      <h2>Why African Pharmacies Need Specialized POS</h2>
+
+      <h3>Unique African Challenges</h3>
+      <ul>
+        <li><strong>Power Instability:</strong> Systems must handle outages gracefully</li>
+        <li><strong>Internet Reliability:</strong> Offline operation is essential</li>
+        <li><strong>Mobile Money:</strong> MTN MoMo, M-Pesa, Airtel Money are primary payment methods</li>
+        <li><strong>Multi-Currency:</strong> Some regions deal in multiple currencies</li>
+        <li><strong>NHIS Integration:</strong> Insurance claim processing requirements</li>
+      </ul>
+
+      <h3>Generic POS Limitations</h3>
+      <p>Standard retail POS systems fail pharmacies because they lack:</p>
+      <ul>
+        <li>Drug-specific inventory features (expiry dates, batch numbers)</li>
+        <li>Prescription tracking and controlled substance management</li>
+        <li>NHIS/insurance claim processing</li>
+        <li>Pharmacy regulatory compliance features</li>
+      </ul>
+
+      <h2>Essential POS Features for African Pharmacies</h2>
+
+      <h3>1. Offline Capability</h3>
+      <p>Your POS must work without internet:</p>
+      <ul>
+        <li>Process sales during outages</li>
+        <li>Store data locally</li>
+        <li>Sync automatically when connection returns</li>
+        <li>No lost transactions or data</li>
+      </ul>
+
+      <h3>2. Mobile Money Integration</h3>
+      <p>Accept all major mobile money providers:</p>
+      <ul>
+        <li>MTN Mobile Money</li>
+        <li>Vodafone Cash</li>
+        <li>M-Pesa</li>
+        <li>Airtel Money</li>
+        <li>Orange Money</li>
+        <li>Wave</li>
+      </ul>
+
+      <h3>3. Drug Expiry Management</h3>
+      <ul>
+        <li>Track expiry dates for all products</li>
+        <li>FIFO enforcement (sell oldest first)</li>
+        <li>Automatic expiry alerts</li>
+        <li>Expiring stock reports</li>
+      </ul>
+
+      <h3>4. Fast Checkout</h3>
+      <ul>
+        <li>Barcode scanning for speed</li>
+        <li>Quick product search</li>
+        <li>Favorite/frequent items</li>
+        <li>Multiple payment split</li>
+      </ul>
+
+      <h2>Hardware Requirements</h2>
+      <ul>
+        <li><strong>Computer:</strong> Windows PC or laptop (minimum 4GB RAM)</li>
+        <li><strong>Receipt Printer:</strong> Thermal printer recommended</li>
+        <li><strong>Barcode Scanner:</strong> USB or wireless</li>
+        <li><strong>Cash Drawer:</strong> Optional but recommended</li>
+        <li><strong>UPS:</strong> Battery backup for power outages</li>
+      </ul>
+
+      <h2>PharmaPOS: Built for Africa</h2>
+      <p>PharmaPOS by MedSoftwares addresses every African pharmacy challenge:</p>
+      <ul>
+        <li>Works 100% offline with automatic sync</li>
+        <li>All major mobile money providers integrated</li>
+        <li>NHIS Ghana and other insurance support</li>
+        <li>Complete expiry and batch tracking</li>
+        <li>Multi-branch capable</li>
+        <li>One-time purchase (no monthly fees)</li>
+        <li>Local support teams</li>
+      </ul>
+
+      <h2>Pricing Guide</h2>
+      <ul>
+        <li><strong>PharmaPOS Standard:</strong> $999 (single location)</li>
+        <li><strong>PharmaPOS Professional:</strong> $1,499 (multi-user)</li>
+        <li><strong>PharmaPOS Enterprise:</strong> $2,499 (multi-branch)</li>
+        <li><strong>Hardware Bundle:</strong> $400-800 (PC, printer, scanner)</li>
+      </ul>
+
+      <h2>ROI Calculation</h2>
+      <p>Typical pharmacy savings with POS:</p>
+      <ul>
+        <li><strong>Reduced theft:</strong> 5-10% of revenue saved</li>
+        <li><strong>Less expired stock:</strong> 3-5% savings</li>
+        <li><strong>Faster checkout:</strong> Serve more customers</li>
+        <li><strong>Better purchasing:</strong> Avoid overstocking</li>
+        <li><strong>Payback period:</strong> Usually 2-4 months</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Investing in the right pharmacy POS system transforms your operations, reduces losses, and improves customer service. For African pharmacies, PharmaPOS offers the ideal combination of features, reliability, and affordability. Contact MedSoftwares for a free demo today.</p>
+    `,
+  },
+  {
+    id: 29,
+    slug: 'hospital-software-small-hospitals-clinics',
+    title: 'Hospital Software Solutions for Small Hospitals and Clinics',
+    excerpt: 'Affordable hospital management software designed for small hospitals, clinics, and health centers. Find the right solution for facilities with limited budgets and staff.',
+    category: 'product',
+    date: '2026-01-03',
+    readTime: '8 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80',
+    content: `
+      <p>Small hospitals and clinics face unique challenges when implementing hospital management software. Budget constraints, limited IT staff, and simpler workflows require solutions tailored to their specific needs rather than complex enterprise systems.</p>
+
+      <h2>Who is This Guide For?</h2>
+      <ul>
+        <li>Small private hospitals (10-50 beds)</li>
+        <li>Community health centers</li>
+        <li>Outpatient clinics</li>
+        <li>Maternity homes</li>
+        <li>Diagnostic centers</li>
+        <li>Specialist clinics</li>
+        <li>Rural health facilities</li>
+      </ul>
+
+      <h2>Why Small Facilities Need Different Software</h2>
+      <p>Enterprise hospital systems designed for 500+ bed facilities are:</p>
+      <ul>
+        <li><strong>Too expensive:</strong> $50,000+ licensing fees</li>
+        <li><strong>Too complex:</strong> Months of implementation</li>
+        <li><strong>Over-featured:</strong> Pay for modules you'll never use</li>
+        <li><strong>Resource heavy:</strong> Require dedicated IT teams</li>
+      </ul>
+
+      <h2>Essential Features for Small Facilities</h2>
+
+      <h3>1. Patient Management</h3>
+      <ul>
+        <li>Simple registration process</li>
+        <li>Patient search and records</li>
+        <li>Visit history tracking</li>
+        <li>Basic medical records</li>
+      </ul>
+
+      <h3>2. OPD Module</h3>
+      <ul>
+        <li>Queue management</li>
+        <li>Doctor consultation notes</li>
+        <li>Prescription generation</li>
+        <li>Referral management</li>
+      </ul>
+
+      <h3>3. Billing</h3>
+      <ul>
+        <li>Service charges</li>
+        <li>Multiple payment methods</li>
+        <li>Receipt printing</li>
+        <li>Outstanding tracking</li>
+        <li>Insurance claims (if applicable)</li>
+      </ul>
+
+      <h3>4. Basic Reporting</h3>
+      <ul>
+        <li>Daily collection reports</li>
+        <li>Patient statistics</li>
+        <li>Revenue summaries</li>
+        <li>Outstanding payments</li>
+      </ul>
+
+      <h2>Optional Modules to Add Later</h2>
+      <p>Start simple and add as you grow:</p>
+      <ul>
+        <li><strong>Laboratory:</strong> Test ordering and results</li>
+        <li><strong>Pharmacy:</strong> In-house dispensing</li>
+        <li><strong>Inpatient:</strong> Bed and ward management</li>
+        <li><strong>Radiology:</strong> X-ray and ultrasound</li>
+        <li><strong>Inventory:</strong> Medical supplies tracking</li>
+      </ul>
+
+      <h2>HospitalOS Clinic Edition</h2>
+      <p>MedSoftwares offers HospitalOS Clinic specifically for small facilities:</p>
+
+      <h3>What's Included</h3>
+      <ul>
+        <li>Patient registration and records</li>
+        <li>Appointment scheduling</li>
+        <li>OPD consultation module</li>
+        <li>Basic EMR capabilities</li>
+        <li>Billing and receipts</li>
+        <li>Essential reports</li>
+        <li>Up to 3 workstations</li>
+      </ul>
+
+      <h3>Pricing</h3>
+      <ul>
+        <li><strong>License:</strong> $799 one-time</li>
+        <li><strong>Support:</strong> 3 months free, then $50/month optional</li>
+        <li><strong>Training:</strong> Included</li>
+        <li><strong>Updates:</strong> Free for life</li>
+      </ul>
+
+      <h3>Add-On Modules</h3>
+      <ul>
+        <li>Laboratory: +$199</li>
+        <li>Pharmacy: +$199</li>
+        <li>Inpatient: +$299</li>
+        <li>Additional workstations: +$99 each</li>
+      </ul>
+
+      <h2>Implementation for Small Facilities</h2>
+
+      <h3>Timeline</h3>
+      <ul>
+        <li><strong>Day 1:</strong> Software installation</li>
+        <li><strong>Day 2:</strong> Configuration and setup</li>
+        <li><strong>Day 3-4:</strong> Staff training</li>
+        <li><strong>Day 5:</strong> Go-live with support</li>
+      </ul>
+
+      <h3>Hardware Needs</h3>
+      <ul>
+        <li>1-3 computers (Windows)</li>
+        <li>Receipt printer</li>
+        <li>Optional: barcode scanner</li>
+        <li>Basic network (if multiple PCs)</li>
+        <li>UPS for power backup</li>
+      </ul>
+
+      <h2>Success Story</h2>
+      <p>Grace Medical Center, a 20-bed hospital in Kumasi:</p>
+      <ul>
+        <li>Implemented HospitalOS Clinic in 5 days</li>
+        <li>Total investment: $1,200 (software + hardware)</li>
+        <li>Reduced billing errors by 80%</li>
+        <li>Cut patient wait times by 40%</li>
+        <li>ROI achieved in 4 months</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Small hospitals and clinics don't need expensive enterprise software. HospitalOS Clinic provides exactly what you need at a price you can afford. Contact MedSoftwares for a demonstration tailored to your facility's needs.</p>
+    `,
+  },
+  {
+    id: 30,
+    slug: 'emr-ehr-software-africa-2026',
+    title: 'EMR and EHR Software for African Healthcare Facilities 2026',
+    excerpt: 'Complete guide to Electronic Medical Records (EMR) and Electronic Health Records (EHR) software for hospitals and clinics in Africa. Features, benefits, and implementation.',
+    category: 'industry',
+    date: '2026-01-02',
+    readTime: '10 min read',
+    author: 'Junior Fonte',
+    authorRole: 'CTO',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+    content: `
+      <p>Electronic Medical Records (EMR) and Electronic Health Records (EHR) are transforming healthcare delivery across Africa. This guide explains what they are, why they matter, and how to implement them in your facility.</p>
+
+      <h2>EMR vs EHR: What's the Difference?</h2>
+
+      <h3>Electronic Medical Records (EMR)</h3>
+      <ul>
+        <li>Digital version of paper charts</li>
+        <li>Used within a single practice or hospital</li>
+        <li>Contains medical and treatment history</li>
+        <li>Not designed to be shared externally</li>
+      </ul>
+
+      <h3>Electronic Health Records (EHR)</h3>
+      <ul>
+        <li>Comprehensive patient health information</li>
+        <li>Designed to be shared across organizations</li>
+        <li>Includes data from multiple providers</li>
+        <li>Follows interoperability standards</li>
+      </ul>
+
+      <h2>Benefits of Digital Records</h2>
+
+      <h3>For Patients</h3>
+      <ul>
+        <li>No lost medical records</li>
+        <li>Faster service at each visit</li>
+        <li>Reduced medical errors</li>
+        <li>Better coordinated care</li>
+        <li>Access to own health information</li>
+      </ul>
+
+      <h3>For Healthcare Providers</h3>
+      <ul>
+        <li>Complete patient history at fingertips</li>
+        <li>Legible notes (no handwriting issues)</li>
+        <li>Clinical decision support alerts</li>
+        <li>Reduced duplicate tests</li>
+        <li>Easier compliance and reporting</li>
+      </ul>
+
+      <h3>For Facilities</h3>
+      <ul>
+        <li>Improved operational efficiency</li>
+        <li>Better revenue cycle management</li>
+        <li>Reduced paper and storage costs</li>
+        <li>Enhanced data security</li>
+        <li>Quality improvement insights</li>
+      </ul>
+
+      <h2>Key EMR Features for Africa</h2>
+
+      <h3>1. Offline Capability</h3>
+      <p>Critical for African healthcare settings:</p>
+      <ul>
+        <li>Work without internet connectivity</li>
+        <li>Sync when connection available</li>
+        <li>No lost data during outages</li>
+      </ul>
+
+      <h3>2. Simple Interface</h3>
+      <ul>
+        <li>Easy for all staff levels</li>
+        <li>Minimal training required</li>
+        <li>Fast data entry</li>
+        <li>Works on basic computers</li>
+      </ul>
+
+      <h3>3. Local Language Support</h3>
+      <ul>
+        <li>Interface in local languages</li>
+        <li>Local diagnosis codes</li>
+        <li>Culturally appropriate templates</li>
+      </ul>
+
+      <h3>4. Integration Ready</h3>
+      <ul>
+        <li>Laboratory systems</li>
+        <li>Pharmacy management</li>
+        <li>Billing and insurance</li>
+        <li>Government reporting systems</li>
+      </ul>
+
+      <h2>EMR Components in HospitalOS</h2>
+      <p>HospitalOS includes comprehensive EMR functionality:</p>
+
+      <h3>Patient Demographics</h3>
+      <ul>
+        <li>Complete patient profiles</li>
+        <li>Photo identification</li>
+        <li>Contact and emergency information</li>
+        <li>Insurance details</li>
+      </ul>
+
+      <h3>Clinical Documentation</h3>
+      <ul>
+        <li>Chief complaints and history</li>
+        <li>Physical examination findings</li>
+        <li>Diagnosis with ICD codes</li>
+        <li>Treatment plans</li>
+        <li>Progress notes</li>
+      </ul>
+
+      <h3>Orders and Results</h3>
+      <ul>
+        <li>Laboratory test ordering</li>
+        <li>Radiology requests</li>
+        <li>Electronic results</li>
+        <li>Critical value alerts</li>
+      </ul>
+
+      <h3>Medications</h3>
+      <ul>
+        <li>Prescription management</li>
+        <li>Drug interaction checking</li>
+        <li>Allergy alerts</li>
+        <li>Medication history</li>
+      </ul>
+
+      <h2>Implementation Steps</h2>
+      <ol>
+        <li><strong>Assessment:</strong> Evaluate current workflows</li>
+        <li><strong>Planning:</strong> Define scope and timeline</li>
+        <li><strong>Configuration:</strong> Customize for your facility</li>
+        <li><strong>Data Migration:</strong> Import existing records</li>
+        <li><strong>Training:</strong> Educate all users</li>
+        <li><strong>Go-Live:</strong> Phased rollout recommended</li>
+        <li><strong>Optimization:</strong> Continuous improvement</li>
+      </ol>
+
+      <h2>Common Challenges and Solutions</h2>
+      <ul>
+        <li><strong>Staff Resistance:</strong> Involve staff early, show benefits</li>
+        <li><strong>Computer Skills:</strong> Provide basic IT training</li>
+        <li><strong>Data Entry Time:</strong> Use templates and shortcuts</li>
+        <li><strong>Power Issues:</strong> UPS backup essential</li>
+        <li><strong>Internet:</strong> Choose offline-capable system</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>EMR/EHR adoption is essential for modern healthcare in Africa. HospitalOS provides a practical, affordable solution designed for African healthcare realities. Contact MedSoftwares to learn how we can help digitize your patient records.</p>
+    `,
+  },
+  {
+    id: 31,
+    slug: 'cloud-vs-on-premise-hospital-software',
+    title: 'Cloud vs On-Premise Hospital Software: Which is Right for Africa?',
+    excerpt: 'Compare cloud-based and on-premise hospital management software. Understand the pros, cons, and best choice for African healthcare facilities.',
+    category: 'industry',
+    date: '2025-12-28',
+    readTime: '9 min read',
+    author: 'Junior Fonte',
+    authorRole: 'CTO',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80',
+    content: `
+      <p>When choosing hospital management software, one of the biggest decisions is whether to go cloud-based or on-premise. Each approach has distinct advantages and challenges, especially in the African context.</p>
+
+      <h2>Understanding the Options</h2>
+
+      <h3>Cloud-Based (SaaS)</h3>
+      <p>Software runs on vendor's servers, accessed via internet:</p>
+      <ul>
+        <li>No local server required</li>
+        <li>Access from anywhere with internet</li>
+        <li>Vendor handles updates and maintenance</li>
+        <li>Monthly or annual subscription fees</li>
+      </ul>
+
+      <h3>On-Premise</h3>
+      <p>Software installed on your own servers/computers:</p>
+      <ul>
+        <li>Data stored locally in your facility</li>
+        <li>Works without internet</li>
+        <li>One-time purchase (usually)</li>
+        <li>You control updates and security</li>
+      </ul>
+
+      <h2>Comparison for African Hospitals</h2>
+
+      <h3>Internet Reliability</h3>
+      <ul>
+        <li><strong>Cloud:</strong> Requires stable internet; outages = downtime</li>
+        <li><strong>On-Premise:</strong> Works offline; no internet dependency</li>
+        <li><strong>Winner for Africa:</strong> On-Premise</li>
+      </ul>
+
+      <h3>Cost Structure</h3>
+      <ul>
+        <li><strong>Cloud:</strong> $200-2,000/month ongoing</li>
+        <li><strong>On-Premise:</strong> $2,000-10,000 one-time</li>
+        <li><strong>Winner:</strong> On-Premise (lower total cost over 3+ years)</li>
+      </ul>
+
+      <h3>Data Security</h3>
+      <ul>
+        <li><strong>Cloud:</strong> Data on foreign servers; privacy concerns</li>
+        <li><strong>On-Premise:</strong> Data stays in your facility</li>
+        <li><strong>Winner for Africa:</strong> On-Premise (data sovereignty)</li>
+      </ul>
+
+      <h3>IT Requirements</h3>
+      <ul>
+        <li><strong>Cloud:</strong> Minimal IT needed</li>
+        <li><strong>On-Premise:</strong> Basic IT support helpful</li>
+        <li><strong>Winner:</strong> Cloud (but gap is small)</li>
+      </ul>
+
+      <h3>Accessibility</h3>
+      <ul>
+        <li><strong>Cloud:</strong> Access from any device, anywhere</li>
+        <li><strong>On-Premise:</strong> Access within facility network</li>
+        <li><strong>Winner:</strong> Cloud</li>
+      </ul>
+
+      <h2>The Hybrid Approach</h2>
+      <p>HospitalOS offers the best of both worlds:</p>
+      <ul>
+        <li>Runs locally (on-premise) for reliability</li>
+        <li>Optional cloud sync for remote access</li>
+        <li>Works offline during internet outages</li>
+        <li>Data backed up to cloud automatically</li>
+        <li>One-time purchase with optional cloud add-on</li>
+      </ul>
+
+      <h2>When to Choose Cloud</h2>
+      <ul>
+        <li>Reliable fiber internet connection</li>
+        <li>Multi-location with need for real-time sync</li>
+        <li>Limited capital for upfront investment</li>
+        <li>No IT staff available</li>
+        <li>Short-term project or clinic</li>
+      </ul>
+
+      <h2>When to Choose On-Premise</h2>
+      <ul>
+        <li>Unreliable or expensive internet</li>
+        <li>Data privacy and sovereignty concerns</li>
+        <li>Want to own your software outright</li>
+        <li>Prefer predictable costs (no subscriptions)</li>
+        <li>Long-term operation planned</li>
+      </ul>
+
+      <h2>Total Cost Comparison (5 Years)</h2>
+      <ul>
+        <li><strong>Cloud:</strong> $500/month × 60 = $30,000</li>
+        <li><strong>On-Premise:</strong> $4,999 + $1,000 support = $5,999</li>
+        <li><strong>Savings with On-Premise:</strong> $24,000+</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>For most African hospitals, on-premise or hybrid solutions offer better value and reliability. HospitalOS provides the flexibility to start on-premise and add cloud features as your needs evolve. Contact MedSoftwares to discuss the best approach for your facility.</p>
+    `,
+  },
+  {
+    id: 32,
+    slug: 'pharmacy-inventory-software-expiry-tracking',
+    title: 'Pharmacy Inventory Software with Expiry Date Tracking',
+    excerpt: 'Stop losing money to expired drugs. Learn how pharmacy inventory software with expiry tracking helps you manage stock, reduce waste, and improve profitability.',
+    category: 'product',
+    date: '2025-12-25',
+    readTime: '8 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80',
+    content: `
+      <p>Drug expiry is one of the biggest profit killers for pharmacies. Without proper tracking, pharmacies lose 3-8% of inventory value annually to expired medications. Modern pharmacy inventory software with expiry tracking solves this problem.</p>
+
+      <h2>The Cost of Expired Drugs</h2>
+      <ul>
+        <li><strong>Direct loss:</strong> Cost of expired products written off</li>
+        <li><strong>Disposal costs:</strong> Proper pharmaceutical waste disposal</li>
+        <li><strong>Regulatory risk:</strong> Fines for selling expired medications</li>
+        <li><strong>Reputation damage:</strong> Customer trust issues</li>
+        <li><strong>Typical loss:</strong> 3-8% of annual inventory value</li>
+      </ul>
+
+      <h2>How Expiry Tracking Software Works</h2>
+
+      <h3>1. Entry at Receipt</h3>
+      <ul>
+        <li>Record expiry date when receiving stock</li>
+        <li>Batch number tracking</li>
+        <li>Manufacturer information</li>
+        <li>Barcode linking for quick lookup</li>
+      </ul>
+
+      <h3>2. Automatic Monitoring</h3>
+      <ul>
+        <li>Continuous expiry date checking</li>
+        <li>Configurable alert thresholds</li>
+        <li>Dashboard visibility of at-risk stock</li>
+        <li>Daily/weekly expiry reports</li>
+      </ul>
+
+      <h3>3. FIFO Enforcement</h3>
+      <ul>
+        <li>First In, First Out selling</li>
+        <li>System prompts oldest stock first</li>
+        <li>Prevents newer stock selling before older</li>
+        <li>Reduces expiry likelihood</li>
+      </ul>
+
+      <h3>4. Alerts and Actions</h3>
+      <ul>
+        <li>90-day alerts: Plan return to supplier</li>
+        <li>60-day alerts: Consider discounting</li>
+        <li>30-day alerts: Urgent action needed</li>
+        <li>Expired: Block from sale</li>
+      </ul>
+
+      <h2>PharmaPOS Expiry Management Features</h2>
+
+      <h3>Smart Alerts</h3>
+      <ul>
+        <li>Customizable warning periods</li>
+        <li>Email and SMS notifications</li>
+        <li>Dashboard warnings</li>
+        <li>POS alerts during sale</li>
+      </ul>
+
+      <h3>Expiry Reports</h3>
+      <ul>
+        <li>Products expiring in 30/60/90 days</li>
+        <li>Value of at-risk inventory</li>
+        <li>Historical expiry losses</li>
+        <li>Supplier return candidates</li>
+      </ul>
+
+      <h3>Sale Prevention</h3>
+      <ul>
+        <li>Block sale of expired products</li>
+        <li>Warning for near-expiry items</li>
+        <li>Manager override option</li>
+        <li>Audit trail maintained</li>
+      </ul>
+
+      <h2>Best Practices for Expiry Management</h2>
+      <ol>
+        <li><strong>Accurate Entry:</strong> Always enter correct expiry dates</li>
+        <li><strong>Regular Reviews:</strong> Check expiry reports weekly</li>
+        <li><strong>Supplier Returns:</strong> Negotiate return policies</li>
+        <li><strong>Discount Early:</strong> Sell near-expiry at reduced price</li>
+        <li><strong>Order Smart:</strong> Don't overstock slow-moving items</li>
+        <li><strong>Shelf Organization:</strong> Oldest items front of shelf</li>
+      </ol>
+
+      <h2>ROI of Expiry Tracking</h2>
+      <p>Example: Pharmacy with $50,000 monthly inventory:</p>
+      <ul>
+        <li><strong>Before:</strong> 5% annual expiry loss = $30,000/year</li>
+        <li><strong>After:</strong> 1% expiry loss = $6,000/year</li>
+        <li><strong>Savings:</strong> $24,000/year</li>
+        <li><strong>PharmaPOS cost:</strong> $999 one-time</li>
+        <li><strong>Payback:</strong> Less than 2 weeks</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Pharmacy inventory software with expiry tracking is essential for profitability. PharmaPOS provides comprehensive expiry management that pays for itself almost immediately. Request a demo to see how it can reduce your losses.</p>
+    `,
+  },
+  {
+    id: 33,
+    slug: 'hospital-billing-software-insurance-claims',
+    title: 'Hospital Billing Software with Insurance Claims Processing',
+    excerpt: 'Streamline hospital billing and insurance claims with integrated software. Reduce claim rejections, speed up reimbursements, and improve revenue cycle management.',
+    category: 'product',
+    date: '2025-12-22',
+    readTime: '10 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
+    content: `
+      <p>Hospital billing is complex, especially when dealing with insurance claims. Integrated billing software that handles both cash and insurance patients streamlines revenue collection and reduces claim denials.</p>
+
+      <h2>Challenges of Hospital Billing in Africa</h2>
+      <ul>
+        <li>Multiple insurance schemes (NHIS, private, corporate)</li>
+        <li>Different claim formats for each insurer</li>
+        <li>Manual claim submission prone to errors</li>
+        <li>Long reimbursement cycles</li>
+        <li>High claim rejection rates</li>
+        <li>Difficulty tracking outstanding claims</li>
+      </ul>
+
+      <h2>Benefits of Integrated Billing Software</h2>
+
+      <h3>For Billing Staff</h3>
+      <ul>
+        <li>Single system for all billing tasks</li>
+        <li>Automatic charge capture from clinical modules</li>
+        <li>Correct insurance tariff application</li>
+        <li>Reduced data entry errors</li>
+        <li>Faster billing process</li>
+      </ul>
+
+      <h3>For Finance Department</h3>
+      <ul>
+        <li>Real-time revenue tracking</li>
+        <li>Claim status monitoring</li>
+        <li>Aging reports for follow-up</li>
+        <li>Reconciliation with payments</li>
+        <li>Financial analytics</li>
+      </ul>
+
+      <h3>For Hospital Management</h3>
+      <ul>
+        <li>Improved cash flow</li>
+        <li>Reduced claim denials</li>
+        <li>Better revenue cycle metrics</li>
+        <li>Compliance assurance</li>
+        <li>Strategic insights</li>
+      </ul>
+
+      <h2>Key Features of Hospital Billing Software</h2>
+
+      <h3>1. Patient Billing</h3>
+      <ul>
+        <li>Automatic charge capture from OPD, IPD, Lab, Pharmacy</li>
+        <li>Multiple payment method support</li>
+        <li>Partial payment handling</li>
+        <li>Deposit management</li>
+        <li>Discount and waiver controls</li>
+      </ul>
+
+      <h3>2. Insurance Management</h3>
+      <ul>
+        <li>Insurance verification at registration</li>
+        <li>Coverage limit checking</li>
+        <li>Pre-authorization workflows</li>
+        <li>Co-pay calculation</li>
+        <li>Claim form generation</li>
+      </ul>
+
+      <h3>3. NHIS Integration</h3>
+      <ul>
+        <li>NHIS tariff database</li>
+        <li>Capitation management</li>
+        <li>Claim batch submission</li>
+        <li>Vetting response tracking</li>
+        <li>Resubmission handling</li>
+      </ul>
+
+      <h3>4. Reporting</h3>
+      <ul>
+        <li>Daily collection summary</li>
+        <li>Outstanding receivables aging</li>
+        <li>Insurance claim status</li>
+        <li>Revenue by department/doctor</li>
+        <li>Denial analysis</li>
+      </ul>
+
+      <h2>HospitalOS Billing Module</h2>
+      <p>Comprehensive billing solution included with HospitalOS:</p>
+      <ul>
+        <li>Full cash billing functionality</li>
+        <li>NHIS Ghana integration</li>
+        <li>Multiple private insurance support</li>
+        <li>Corporate billing</li>
+        <li>Automatic claim generation</li>
+        <li>Payment tracking and reconciliation</li>
+        <li>Financial reports and analytics</li>
+      </ul>
+
+      <h2>Reducing Claim Denials</h2>
+      <p>Common denial reasons and how software helps:</p>
+      <ul>
+        <li><strong>Missing information:</strong> Required field validation</li>
+        <li><strong>Wrong codes:</strong> Auto-suggest correct codes</li>
+        <li><strong>Duplicate claims:</strong> Duplicate detection</li>
+        <li><strong>Expired coverage:</strong> Real-time eligibility check</li>
+        <li><strong>Exceeded limits:</strong> Balance tracking</li>
+      </ul>
+
+      <h2>Implementation Success Tips</h2>
+      <ol>
+        <li>Load all insurance contracts and tariffs</li>
+        <li>Train billing staff thoroughly</li>
+        <li>Set up approval workflows</li>
+        <li>Configure report schedules</li>
+        <li>Establish claim follow-up procedures</li>
+      </ol>
+
+      <h2>Conclusion</h2>
+      <p>Hospital billing software with insurance claims processing is essential for financial health. HospitalOS provides integrated billing that reduces denials and speeds up reimbursements. Contact MedSoftwares for a demonstration.</p>
+    `,
+  },
+  {
+    id: 34,
+    slug: 'how-to-choose-pharmacy-software',
+    title: 'How to Choose the Right Pharmacy Software: Complete Buyer\'s Guide',
+    excerpt: 'A comprehensive guide to selecting pharmacy management software. Key features to look for, questions to ask vendors, and mistakes to avoid.',
+    category: 'industry',
+    date: '2025-12-20',
+    readTime: '11 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80',
+    content: `
+      <p>Choosing pharmacy software is a significant decision that affects daily operations, staff productivity, and profitability. This guide walks you through the selection process step by step.</p>
+
+      <h2>Step 1: Assess Your Needs</h2>
+
+      <h3>Business Size</h3>
+      <ul>
+        <li>Single pharmacy or chain?</li>
+        <li>Number of daily transactions?</li>
+        <li>Number of staff users?</li>
+        <li>Current inventory size?</li>
+      </ul>
+
+      <h3>Current Pain Points</h3>
+      <ul>
+        <li>What problems are you trying to solve?</li>
+        <li>Where do you lose the most money?</li>
+        <li>What takes too much time?</li>
+        <li>What do customers complain about?</li>
+      </ul>
+
+      <h3>Required Features</h3>
+      <ul>
+        <li>Point of Sale</li>
+        <li>Inventory management</li>
+        <li>Expiry tracking</li>
+        <li>Customer records</li>
+        <li>Prescription management</li>
+        <li>Reporting</li>
+        <li>Insurance/NHIS claims</li>
+      </ul>
+
+      <h2>Step 2: Essential Features Checklist</h2>
+
+      <h3>Must-Have Features</h3>
+      <ul>
+        <li><strong>Offline operation:</strong> Works without internet</li>
+        <li><strong>Fast POS:</strong> Quick checkout process</li>
+        <li><strong>Inventory tracking:</strong> Real-time stock levels</li>
+        <li><strong>Expiry management:</strong> Alerts and FIFO</li>
+        <li><strong>Barcode scanning:</strong> Speed and accuracy</li>
+        <li><strong>Basic reporting:</strong> Sales and inventory reports</li>
+      </ul>
+
+      <h3>Important Features</h3>
+      <ul>
+        <li><strong>Mobile money:</strong> MTN MoMo, M-Pesa, etc.</li>
+        <li><strong>Customer management:</strong> Profiles and credit</li>
+        <li><strong>Prescription tracking:</strong> Record and refills</li>
+        <li><strong>Multi-user:</strong> Role-based access</li>
+        <li><strong>Supplier management:</strong> Purchase orders</li>
+      </ul>
+
+      <h3>Nice-to-Have Features</h3>
+      <ul>
+        <li>Multi-branch support</li>
+        <li>Advanced analytics</li>
+        <li>SMS notifications</li>
+        <li>Loyalty programs</li>
+        <li>Accounting integration</li>
+      </ul>
+
+      <h2>Step 3: Questions to Ask Vendors</h2>
+
+      <h3>About the Software</h3>
+      <ul>
+        <li>Does it work offline?</li>
+        <li>What mobile money providers are supported?</li>
+        <li>Can it handle NHIS claims?</li>
+        <li>How are updates delivered?</li>
+        <li>Is there a free trial?</li>
+      </ul>
+
+      <h3>About Support</h3>
+      <ul>
+        <li>What training is provided?</li>
+        <li>How do I get help when needed?</li>
+        <li>What are support hours?</li>
+        <li>Is support included or extra?</li>
+        <li>Do you have local support team?</li>
+      </ul>
+
+      <h3>About Pricing</h3>
+      <ul>
+        <li>One-time or subscription?</li>
+        <li>What's included in the price?</li>
+        <li>Are updates free?</li>
+        <li>Hidden costs?</li>
+        <li>Payment terms?</li>
+      </ul>
+
+      <h2>Step 4: Common Mistakes to Avoid</h2>
+      <ul>
+        <li><strong>Choosing on price alone:</strong> Cheap software may cost more long-term</li>
+        <li><strong>Ignoring offline needs:</strong> Internet will fail at some point</li>
+        <li><strong>Not testing first:</strong> Always do a demo or trial</li>
+        <li><strong>Overbuying features:</strong> Pay for what you'll actually use</li>
+        <li><strong>Forgetting training:</strong> Software is only as good as users</li>
+        <li><strong>No migration plan:</strong> Consider data transfer from old system</li>
+      </ul>
+
+      <h2>Step 5: Implementation Planning</h2>
+      <ul>
+        <li>When will you implement?</li>
+        <li>Who will lead the project?</li>
+        <li>How will staff be trained?</li>
+        <li>Will you run parallel systems?</li>
+        <li>What data needs migration?</li>
+      </ul>
+
+      <h2>Why PharmaPOS?</h2>
+      <p>PharmaPOS checks all the boxes:</p>
+      <ul>
+        <li>100% offline capable</li>
+        <li>All major mobile money supported</li>
+        <li>NHIS ready</li>
+        <li>Comprehensive expiry tracking</li>
+        <li>One-time purchase (no subscriptions)</li>
+        <li>Local support teams</li>
+        <li>Free training included</li>
+        <li>14-day free trial</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Choosing pharmacy software requires careful evaluation of your needs, vendor capabilities, and long-term value. Use this guide to make an informed decision. Ready to see PharmaPOS in action? Request a free demo today.</p>
+    `,
+  },
+  {
+    id: 35,
+    slug: 'laboratory-information-management-system-2026',
+    title: 'Laboratory Information Management System (LIMS) for African Hospitals 2026',
+    excerpt: 'Complete guide to Laboratory Information Management Systems for hospitals and diagnostic centers in Africa. Features, benefits, and implementation.',
+    category: 'product',
+    date: '2025-12-18',
+    readTime: '10 min read',
+    author: 'Junior Fonte',
+    authorRole: 'CTO',
+    image: 'https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=800&q=80',
+    content: `
+      <p>A Laboratory Information Management System (LIMS) is essential for modern hospital laboratories. It automates workflows, reduces errors, and improves turnaround times for test results.</p>
+
+      <h2>What is a LIMS?</h2>
+      <p>A LIMS manages laboratory operations including:</p>
+      <ul>
+        <li>Sample registration and tracking</li>
+        <li>Test ordering and workflow</li>
+        <li>Result entry and validation</li>
+        <li>Report generation</li>
+        <li>Quality control</li>
+        <li>Inventory management</li>
+        <li>Billing integration</li>
+      </ul>
+
+      <h2>Benefits of LIMS</h2>
+
+      <h3>For Laboratory Staff</h3>
+      <ul>
+        <li>Clear worklists and priorities</li>
+        <li>Reduced manual data entry</li>
+        <li>Automatic calculations</li>
+        <li>Easy result verification</li>
+        <li>Fewer transcription errors</li>
+      </ul>
+
+      <h3>For Clinicians</h3>
+      <ul>
+        <li>Faster result turnaround</li>
+        <li>Electronic result delivery</li>
+        <li>Historical results access</li>
+        <li>Critical value alerts</li>
+        <li>Better patient care decisions</li>
+      </ul>
+
+      <h3>For Hospital Administration</h3>
+      <ul>
+        <li>Improved efficiency metrics</li>
+        <li>Accurate billing capture</li>
+        <li>Quality assurance data</li>
+        <li>Regulatory compliance</li>
+        <li>Cost control</li>
+      </ul>
+
+      <h2>Key LIMS Features</h2>
+
+      <h3>1. Sample Management</h3>
+      <ul>
+        <li>Unique sample ID generation</li>
+        <li>Barcode labeling</li>
+        <li>Sample tracking throughout process</li>
+        <li>Rejection handling</li>
+        <li>Sample storage location</li>
+      </ul>
+
+      <h3>2. Test Ordering</h3>
+      <ul>
+        <li>Electronic order receipt</li>
+        <li>Panel and profile management</li>
+        <li>Priority flagging</li>
+        <li>Order modification</li>
+        <li>Add-on tests</li>
+      </ul>
+
+      <h3>3. Result Management</h3>
+      <ul>
+        <li>Direct analyzer interface</li>
+        <li>Manual result entry</li>
+        <li>Automatic normal range flagging</li>
+        <li>Delta check alerts</li>
+        <li>Result validation workflow</li>
+      </ul>
+
+      <h3>4. Reporting</h3>
+      <ul>
+        <li>Customizable report formats</li>
+        <li>Electronic delivery to EMR</li>
+        <li>Print on demand</li>
+        <li>Cumulative reports</li>
+        <li>Critical value notification</li>
+      </ul>
+
+      <h2>HospitalOS Laboratory Module</h2>
+      <p>Complete LIMS functionality integrated with HospitalOS:</p>
+      <ul>
+        <li>Full sample tracking</li>
+        <li>Common test catalog included</li>
+        <li>Analyzer interfaces available</li>
+        <li>Automatic billing integration</li>
+        <li>Results to patient EMR</li>
+        <li>Turnaround time monitoring</li>
+        <li>QC management</li>
+        <li>Works offline</li>
+      </ul>
+
+      <h2>Implementation Considerations</h2>
+      <ul>
+        <li><strong>Test Catalog:</strong> Define all tests, panels, prices</li>
+        <li><strong>Workflow Mapping:</strong> Document current processes</li>
+        <li><strong>Analyzer Integration:</strong> Plan equipment connections</li>
+        <li><strong>Training:</strong> All lab staff need training</li>
+        <li><strong>Go-Live:</strong> Consider phased approach</li>
+      </ul>
+
+      <h2>ROI of Laboratory Software</h2>
+      <ul>
+        <li>Reduced turnaround time: 30-50%</li>
+        <li>Fewer transcription errors: 90% reduction</li>
+        <li>Improved billing capture: 10-15% more</li>
+        <li>Staff productivity increase: 20-30%</li>
+        <li>Patient satisfaction improvement</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>A Laboratory Information Management System is essential for efficient, accurate laboratory operations. HospitalOS includes a comprehensive laboratory module designed for African hospital settings. Contact MedSoftwares for a demonstration.</p>
+    `,
+  },
+  {
+    id: 36,
+    slug: 'hospital-management-system-modules-explained',
+    title: 'Hospital Management System Modules Explained: Complete Overview',
+    excerpt: 'Understand all the modules in a hospital management system. From patient registration to billing, learn what each module does and why you need it.',
+    category: 'industry',
+    date: '2025-12-15',
+    readTime: '12 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80',
+    content: `
+      <p>A Hospital Management System (HMS) consists of multiple integrated modules that work together to manage all aspects of hospital operations. This guide explains each module and its functions.</p>
+
+      <h2>Core Modules</h2>
+
+      <h3>1. Patient Registration</h3>
+      <p>The foundation of the HMS:</p>
+      <ul>
+        <li>Patient demographics entry</li>
+        <li>Unique ID generation</li>
+        <li>Photo capture</li>
+        <li>Insurance/NHIS registration</li>
+        <li>Emergency contact details</li>
+        <li>Visit type selection</li>
+      </ul>
+
+      <h3>2. Outpatient (OPD) Module</h3>
+      <p>Manages outpatient visits:</p>
+      <ul>
+        <li>Queue management</li>
+        <li>Token generation</li>
+        <li>Doctor consultation</li>
+        <li>Clinical notes</li>
+        <li>Prescription generation</li>
+        <li>Investigation orders</li>
+        <li>Referrals</li>
+      </ul>
+
+      <h3>3. Inpatient (IPD) Module</h3>
+      <p>Manages admitted patients:</p>
+      <ul>
+        <li>Bed assignment</li>
+        <li>Ward management</li>
+        <li>Nursing notes</li>
+        <li>Treatment charts</li>
+        <li>Transfer management</li>
+        <li>Discharge summary</li>
+      </ul>
+
+      <h3>4. Emergency Module</h3>
+      <p>For emergency department:</p>
+      <ul>
+        <li>Rapid registration</li>
+        <li>Triage system</li>
+        <li>Emergency protocols</li>
+        <li>Resuscitation documentation</li>
+        <li>Admission/discharge workflow</li>
+      </ul>
+
+      <h2>Clinical Modules</h2>
+
+      <h3>5. Laboratory Module</h3>
+      <ul>
+        <li>Test ordering</li>
+        <li>Sample tracking</li>
+        <li>Result entry</li>
+        <li>Result validation</li>
+        <li>Report generation</li>
+        <li>Analyzer integration</li>
+      </ul>
+
+      <h3>6. Radiology Module</h3>
+      <ul>
+        <li>Imaging requests</li>
+        <li>Scheduling</li>
+        <li>Report dictation</li>
+        <li>Image storage (PACS)</li>
+        <li>Result distribution</li>
+      </ul>
+
+      <h3>7. Pharmacy Module</h3>
+      <ul>
+        <li>Drug dispensing</li>
+        <li>Inventory management</li>
+        <li>Expiry tracking</li>
+        <li>Drug interactions</li>
+        <li>Prescription verification</li>
+      </ul>
+
+      <h3>8. Operation Theatre</h3>
+      <ul>
+        <li>Surgery scheduling</li>
+        <li>OT availability</li>
+        <li>Pre-op checklist</li>
+        <li>Surgical notes</li>
+        <li>Post-op monitoring</li>
+      </ul>
+
+      <h2>Support Modules</h2>
+
+      <h3>9. Billing Module</h3>
+      <ul>
+        <li>Charge capture</li>
+        <li>Invoice generation</li>
+        <li>Payment collection</li>
+        <li>Insurance claims</li>
+        <li>Receipt printing</li>
+        <li>Outstanding tracking</li>
+      </ul>
+
+      <h3>10. Inventory Module</h3>
+      <ul>
+        <li>Stock management</li>
+        <li>Purchase orders</li>
+        <li>Supplier management</li>
+        <li>Consumption tracking</li>
+        <li>Reorder alerts</li>
+      </ul>
+
+      <h3>11. HR & Payroll</h3>
+      <ul>
+        <li>Employee records</li>
+        <li>Attendance tracking</li>
+        <li>Leave management</li>
+        <li>Salary processing</li>
+        <li>Duty rosters</li>
+      </ul>
+
+      <h3>12. Reports & Analytics</h3>
+      <ul>
+        <li>Operational reports</li>
+        <li>Financial reports</li>
+        <li>Clinical statistics</li>
+        <li>Custom report builder</li>
+        <li>Dashboard analytics</li>
+      </ul>
+
+      <h2>HospitalOS Module Packages</h2>
+      <ul>
+        <li><strong>Essential:</strong> Registration, OPD, Billing, Basic Reports</li>
+        <li><strong>Professional:</strong> + IPD, Laboratory, Pharmacy</li>
+        <li><strong>Enterprise:</strong> + All modules, unlimited users</li>
+      </ul>
+
+      <h2>Choosing the Right Modules</h2>
+      <p>Start with modules you need most:</p>
+      <ol>
+        <li>Identify your biggest pain points</li>
+        <li>Start with core modules</li>
+        <li>Add clinical modules as needed</li>
+        <li>Expand to support modules later</li>
+      </ol>
+
+      <h2>Conclusion</h2>
+      <p>Understanding HMS modules helps you choose the right solution for your hospital. HospitalOS offers flexible module packages that grow with your needs. Contact MedSoftwares to discuss which modules are right for your facility.</p>
+    `,
+  },
+  {
+    id: 37,
+    slug: 'pharmacy-software-nigeria-2026',
+    title: 'Best Pharmacy Software for Nigeria 2026: Complete Market Guide',
+    excerpt: 'Find the best pharmacy management software for Nigerian pharmacies. Compare features, pricing, and NAFDAC compliance for pharmacy POS systems in Nigeria.',
+    category: 'industry',
+    date: '2025-12-12',
+    readTime: '9 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&q=80',
+    content: `
+      <p>Nigeria's pharmacy sector is rapidly digitalizing. With over 5,000 registered pharmacies and growing, the demand for pharmacy management software has never been higher. This guide covers the best options for Nigerian pharmacies in 2026.</p>
+
+      <h2>Nigerian Pharmacy Market Overview</h2>
+      <ul>
+        <li>5,000+ registered community pharmacies</li>
+        <li>Growing pharmaceutical market ($2B+)</li>
+        <li>Increasing NAFDAC digitalization requirements</li>
+        <li>Mobile money adoption expanding</li>
+        <li>NHIS coverage expanding</li>
+      </ul>
+
+      <h2>Key Requirements for Nigerian Pharmacies</h2>
+
+      <h3>Regulatory Compliance</h3>
+      <ul>
+        <li>NAFDAC drug tracking capability</li>
+        <li>Controlled substance registers</li>
+        <li>Prescription documentation</li>
+        <li>Audit trail maintenance</li>
+      </ul>
+
+      <h3>Payment Integration</h3>
+      <ul>
+        <li>Bank transfers (NIBSS)</li>
+        <li>POS card payments</li>
+        <li>Mobile money (OPay, PalmPay, Paga)</li>
+        <li>Cash handling</li>
+      </ul>
+
+      <h3>NHIS Support</h3>
+      <ul>
+        <li>NHIS drug list compliance</li>
+        <li>Claim submission</li>
+        <li>HMO integration</li>
+        <li>Capitation tracking</li>
+      </ul>
+
+      <h2>Top Pharmacy Software for Nigeria</h2>
+
+      <h3>PharmaPOS by MedSoftwares</h3>
+      <p>Leading choice for Nigerian pharmacies:</p>
+      <ul>
+        <li>Works offline (essential for PHCN issues)</li>
+        <li>Nigerian mobile money integration</li>
+        <li>NHIS/HMO claim support</li>
+        <li>Naira pricing</li>
+        <li>Local support in Lagos</li>
+        <li>One-time purchase (no subscription)</li>
+      </ul>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li>Fast POS checkout</li>
+        <li>Complete inventory management</li>
+        <li>Expiry date tracking</li>
+        <li>Customer credit management</li>
+        <li>Multi-branch support</li>
+        <li>Comprehensive reporting</li>
+      </ul>
+
+      <h2>Pricing in Nigeria</h2>
+      <ul>
+        <li><strong>PharmaPOS Standard:</strong> ₦750,000 one-time</li>
+        <li><strong>PharmaPOS Professional:</strong> ₦1,200,000 one-time</li>
+        <li><strong>PharmaPOS Enterprise:</strong> ₦2,000,000 one-time</li>
+      </ul>
+
+      <h2>Nigerian Success Stories</h2>
+
+      <h3>HealthPlus Pharmacy Chain</h3>
+      <ul>
+        <li>20+ branches using PharmaPOS</li>
+        <li>Centralized inventory management</li>
+        <li>Reduced stock-outs by 60%</li>
+        <li>Improved expiry management</li>
+      </ul>
+
+      <h3>Medplus Pharmacy, Lagos</h3>
+      <ul>
+        <li>Single location implementation</li>
+        <li>30% faster checkout times</li>
+        <li>Better customer credit tracking</li>
+        <li>Accurate daily reports</li>
+      </ul>
+
+      <h2>Implementation in Nigeria</h2>
+      <ul>
+        <li>Installation by local team</li>
+        <li>Training at your pharmacy</li>
+        <li>Data migration assistance</li>
+        <li>Ongoing phone/WhatsApp support</li>
+        <li>Site visits when needed</li>
+      </ul>
+
+      <h2>Power Backup Recommendations</h2>
+      <p>Essential for Nigerian conditions:</p>
+      <ul>
+        <li>UPS for computers (minimum 1 hour)</li>
+        <li>Generator backup recommended</li>
+        <li>Solar inverter systems popular</li>
+        <li>PharmaPOS saves data during outages</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Nigerian pharmacies need software built for local conditions. PharmaPOS offers the reliability, features, and support Nigerian pharmacists need. Contact our Lagos office for a demonstration.</p>
+    `,
+  },
+  {
+    id: 38,
+    slug: 'hospital-software-kenya-east-africa',
+    title: 'Hospital Software Solutions for Kenya and East Africa',
+    excerpt: 'Comprehensive guide to hospital management software for Kenya, Tanzania, Uganda, and East Africa. NHIF integration, M-Pesa payments, and local support.',
+    category: 'industry',
+    date: '2025-12-10',
+    readTime: '10 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    content: `
+      <p>East Africa's healthcare sector is experiencing rapid digital transformation. Kenya, Tanzania, and Uganda are leading the way in hospital software adoption. This guide covers the best solutions for the region.</p>
+
+      <h2>East African Healthcare Market</h2>
+      <ul>
+        <li><strong>Kenya:</strong> 7,000+ health facilities</li>
+        <li><strong>Tanzania:</strong> 5,000+ health facilities</li>
+        <li><strong>Uganda:</strong> 3,500+ health facilities</li>
+        <li>Growing private healthcare sector</li>
+        <li>Expanding insurance coverage</li>
+      </ul>
+
+      <h2>Regional Requirements</h2>
+
+      <h3>Insurance Integration</h3>
+      <ul>
+        <li><strong>Kenya:</strong> NHIF, SHA, private insurers</li>
+        <li><strong>Tanzania:</strong> NHIF, private HMOs</li>
+        <li><strong>Uganda:</strong> Private insurance schemes</li>
+      </ul>
+
+      <h3>Payment Methods</h3>
+      <ul>
+        <li>M-Pesa (Kenya, Tanzania)</li>
+        <li>Airtel Money (all countries)</li>
+        <li>MTN Mobile Money (Uganda)</li>
+        <li>Bank transfers</li>
+        <li>Cash and cards</li>
+      </ul>
+
+      <h3>Language Support</h3>
+      <ul>
+        <li>English (primary)</li>
+        <li>Swahili interface option</li>
+        <li>Local language reports</li>
+      </ul>
+
+      <h2>HospitalOS for East Africa</h2>
+      <p>MedSoftwares offers HospitalOS with East African features:</p>
+      <ul>
+        <li>NHIF Kenya integration</li>
+        <li>M-Pesa payment processing</li>
+        <li>Works offline (power issues common)</li>
+        <li>Kenya Shilling/Tanzania Shilling/Uganda Shilling</li>
+        <li>Local support teams in Nairobi</li>
+        <li>On-site implementation available</li>
+      </ul>
+
+      <h2>Module Highlights</h2>
+
+      <h3>For Kenyan Hospitals</h3>
+      <ul>
+        <li>SHA (Social Health Authority) ready</li>
+        <li>NHIF claim submission</li>
+        <li>Linda Mama integration</li>
+        <li>County health reporting</li>
+      </ul>
+
+      <h3>For All East African Facilities</h3>
+      <ul>
+        <li>Complete OPD/IPD management</li>
+        <li>Laboratory and pharmacy</li>
+        <li>Billing with mobile money</li>
+        <li>EMR capabilities</li>
+        <li>Reporting and analytics</li>
+      </ul>
+
+      <h2>Pricing for East Africa</h2>
+      <ul>
+        <li><strong>Clinic Package:</strong> KES 120,000 ($900)</li>
+        <li><strong>Hospital Standard:</strong> KES 400,000 ($3,000)</li>
+        <li><strong>Hospital Enterprise:</strong> KES 1,000,000 ($7,500)</li>
+      </ul>
+
+      <h2>Success Stories</h2>
+
+      <h3>Nairobi Women's Hospital</h3>
+      <ul>
+        <li>Multi-branch implementation</li>
+        <li>NHIF claims automated</li>
+        <li>50% reduction in billing time</li>
+      </ul>
+
+      <h3>AAR Healthcare Uganda</h3>
+      <ul>
+        <li>Outpatient clinic digitized</li>
+        <li>Insurance claim accuracy improved</li>
+        <li>Better patient experience</li>
+      </ul>
+
+      <h2>Getting Started</h2>
+      <ol>
+        <li>Contact MedSoftwares Nairobi office</li>
+        <li>Schedule demonstration</li>
+        <li>Facility assessment</li>
+        <li>Proposal and quotation</li>
+        <li>Implementation planning</li>
+        <li>Go-live and support</li>
+      </ol>
+
+      <h2>Conclusion</h2>
+      <p>East African hospitals need software that understands regional requirements. HospitalOS provides the features, integrations, and support needed for success. Contact our Nairobi team today.</p>
+    `,
+  },
+  {
+    id: 39,
+    slug: 'patient-management-system-features',
+    title: 'Essential Patient Management System Features for Modern Healthcare',
+    excerpt: 'Discover the must-have features of a patient management system. From registration to follow-up, learn what makes a PMS effective for hospitals and clinics.',
+    category: 'industry',
+    date: '2025-12-08',
+    readTime: '9 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80',
+    content: `
+      <p>A Patient Management System (PMS) is the core of any healthcare facility's digital infrastructure. It manages patient information throughout their healthcare journey. This guide covers essential features every PMS should have.</p>
+
+      <h2>What is a Patient Management System?</h2>
+      <p>A PMS is software that manages:</p>
+      <ul>
+        <li>Patient registration and demographics</li>
+        <li>Appointment scheduling</li>
+        <li>Visit tracking and history</li>
+        <li>Medical records</li>
+        <li>Communication and follow-up</li>
+        <li>Reporting and analytics</li>
+      </ul>
+
+      <h2>Essential Features</h2>
+
+      <h3>1. Patient Registration</h3>
+      <ul>
+        <li>Quick demographic entry</li>
+        <li>Unique patient ID generation</li>
+        <li>Photo capture</li>
+        <li>Emergency contact details</li>
+        <li>Insurance/billing information</li>
+        <li>Duplicate detection</li>
+      </ul>
+
+      <h3>2. Appointment Scheduling</h3>
+      <ul>
+        <li>Visual calendar interface</li>
+        <li>Multi-provider scheduling</li>
+        <li>Time slot management</li>
+        <li>Appointment reminders (SMS)</li>
+        <li>Waitlist management</li>
+        <li>No-show tracking</li>
+      </ul>
+
+      <h3>3. Queue Management</h3>
+      <ul>
+        <li>Digital check-in</li>
+        <li>Token/queue number</li>
+        <li>Wait time display</li>
+        <li>Priority handling</li>
+        <li>Queue analytics</li>
+      </ul>
+
+      <h3>4. Medical Records</h3>
+      <ul>
+        <li>Visit history</li>
+        <li>Clinical notes</li>
+        <li>Diagnosis records</li>
+        <li>Prescription history</li>
+        <li>Lab and radiology results</li>
+        <li>Allergies and alerts</li>
+      </ul>
+
+      <h3>5. Communication Tools</h3>
+      <ul>
+        <li>SMS appointment reminders</li>
+        <li>Follow-up notifications</li>
+        <li>Lab result alerts</li>
+        <li>Bulk messaging</li>
+        <li>WhatsApp integration (optional)</li>
+      </ul>
+
+      <h3>6. Reporting</h3>
+      <ul>
+        <li>Patient statistics</li>
+        <li>Visit trends</li>
+        <li>No-show rates</li>
+        <li>Provider productivity</li>
+        <li>Custom reports</li>
+      </ul>
+
+      <h2>Advanced Features</h2>
+      <ul>
+        <li>Patient portal access</li>
+        <li>Telemedicine integration</li>
+        <li>Mobile app for patients</li>
+        <li>Chronic disease management</li>
+        <li>Population health analytics</li>
+      </ul>
+
+      <h2>HospitalOS Patient Management</h2>
+      <p>Complete patient management included:</p>
+      <ul>
+        <li>All essential features above</li>
+        <li>Works offline</li>
+        <li>Fast search and retrieval</li>
+        <li>SMS integration available</li>
+        <li>Comprehensive reporting</li>
+        <li>Scalable to any size facility</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>A robust patient management system improves patient experience and operational efficiency. HospitalOS provides comprehensive patient management designed for African healthcare facilities. Request a demo today.</p>
+    `,
+  },
+  {
+    id: 40,
+    slug: 'pharmacy-software-mobile-money-integration',
+    title: 'Pharmacy Software with Mobile Money Integration: Complete Guide',
+    excerpt: 'Accept MTN MoMo, M-Pesa, Airtel Money, and more in your pharmacy. Learn how mobile money integration in pharmacy software increases sales and convenience.',
+    category: 'product',
+    date: '2025-12-05',
+    readTime: '8 min read',
+    author: 'Junior Fonte',
+    authorRole: 'CTO',
+    image: 'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&q=80',
+    content: `
+      <p>Mobile money has transformed payments in Africa. With over 500 million mobile money accounts on the continent, pharmacies that accept mobile payments have a significant advantage. This guide covers mobile money integration in pharmacy software.</p>
+
+      <h2>Why Mobile Money Matters</h2>
+      <ul>
+        <li>500+ million mobile money accounts in Africa</li>
+        <li>Many customers don't carry cash</li>
+        <li>Safer than cash (no theft risk)</li>
+        <li>Instant payment confirmation</li>
+        <li>Automatic record keeping</li>
+        <li>Customer convenience drives loyalty</li>
+      </ul>
+
+      <h2>Major Mobile Money Providers</h2>
+
+      <h3>West Africa</h3>
+      <ul>
+        <li>MTN Mobile Money (Ghana, Nigeria, Cameroon)</li>
+        <li>Vodafone Cash (Ghana)</li>
+        <li>Orange Money (Senegal, Ivory Coast)</li>
+        <li>Wave (Senegal, Ivory Coast)</li>
+      </ul>
+
+      <h3>East Africa</h3>
+      <ul>
+        <li>M-Pesa (Kenya, Tanzania)</li>
+        <li>Airtel Money (Kenya, Uganda, Tanzania)</li>
+        <li>MTN Mobile Money (Uganda)</li>
+      </ul>
+
+      <h3>Central Africa</h3>
+      <ul>
+        <li>MTN Mobile Money (Cameroon)</li>
+        <li>Orange Money (Cameroon, DRC)</li>
+        <li>Airtel Money (DRC)</li>
+      </ul>
+
+      <h2>How Integration Works</h2>
+      <ol>
+        <li>Customer total shown on POS</li>
+        <li>Cashier selects mobile money payment</li>
+        <li>Customer number entered or scanned</li>
+        <li>Payment request sent to customer</li>
+        <li>Customer approves on their phone</li>
+        <li>Confirmation received instantly</li>
+        <li>Receipt printed with transaction ID</li>
+      </ol>
+
+      <h2>PharmaPOS Mobile Money Features</h2>
+      <ul>
+        <li>All major providers supported</li>
+        <li>Push and pull payments</li>
+        <li>QR code payments</li>
+        <li>Automatic reconciliation</li>
+        <li>Daily settlement reports</li>
+        <li>Split payments (cash + mobile)</li>
+        <li>Refund capability</li>
+      </ul>
+
+      <h2>Business Benefits</h2>
+      <ul>
+        <li><strong>Increased sales:</strong> 15-25% more transactions</li>
+        <li><strong>Faster checkout:</strong> No cash counting</li>
+        <li><strong>Reduced theft:</strong> Less cash on premises</li>
+        <li><strong>Better records:</strong> Every transaction tracked</li>
+        <li><strong>Customer preference:</strong> Meet their needs</li>
+      </ul>
+
+      <h2>Setup Requirements</h2>
+      <ul>
+        <li>Merchant account with provider(s)</li>
+        <li>API credentials (we help obtain)</li>
+        <li>Internet connection (for processing)</li>
+        <li>Staff training on process</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Mobile money integration is essential for modern African pharmacies. PharmaPOS makes it easy to accept all major providers. Contact MedSoftwares to enable mobile payments in your pharmacy.</p>
+    `,
+  },
+  {
+    id: 41,
+    slug: 'ai-healthcare-software-2026-trends',
+    title: 'AI in Healthcare Software: 2026 Trends and Opportunities',
+    excerpt: 'Explore how artificial intelligence is transforming healthcare software in 2026. From diagnosis support to predictive analytics, discover AI opportunities for African healthcare.',
+    category: 'industry',
+    date: '2025-12-03',
+    readTime: '10 min read',
+    author: 'Junior Fonte',
+    authorRole: 'CTO',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
+    content: `
+      <p>Artificial Intelligence is revolutionizing healthcare worldwide. In 2026, AI capabilities are becoming more accessible and practical for healthcare facilities of all sizes. This guide explores AI trends and their application in African healthcare.</p>
+
+      <h2>AI in Healthcare Today</h2>
+      <p>AI is already being used for:</p>
+      <ul>
+        <li>Medical image analysis (X-ray, CT, MRI)</li>
+        <li>Drug discovery and development</li>
+        <li>Clinical decision support</li>
+        <li>Administrative automation</li>
+        <li>Predictive analytics</li>
+        <li>Natural language processing</li>
+      </ul>
+
+      <h2>2026 AI Trends in Healthcare</h2>
+
+      <h3>1. Predictive Analytics</h3>
+      <ul>
+        <li>Inventory demand forecasting</li>
+        <li>Patient no-show prediction</li>
+        <li>Disease outbreak early warning</li>
+        <li>Revenue cycle optimization</li>
+        <li>Staff scheduling optimization</li>
+      </ul>
+
+      <h3>2. Clinical Decision Support</h3>
+      <ul>
+        <li>Drug interaction alerts</li>
+        <li>Diagnosis suggestions</li>
+        <li>Treatment recommendations</li>
+        <li>Dosage calculations</li>
+        <li>Risk assessment</li>
+      </ul>
+
+      <h3>3. Administrative Automation</h3>
+      <ul>
+        <li>Appointment scheduling optimization</li>
+        <li>Claims processing automation</li>
+        <li>Document processing</li>
+        <li>Coding assistance</li>
+        <li>Report generation</li>
+      </ul>
+
+      <h3>4. Patient Engagement</h3>
+      <ul>
+        <li>Chatbots for patient queries</li>
+        <li>Personalized health reminders</li>
+        <li>Symptom checkers</li>
+        <li>Medication adherence support</li>
+      </ul>
+
+      <h2>AI in MedSoftwares Products</h2>
+
+      <h3>PharmaPOS AI Features</h3>
+      <ul>
+        <li>Smart inventory predictions</li>
+        <li>Expiry risk scoring</li>
+        <li>Sales trend analysis</li>
+        <li>Reorder recommendations</li>
+      </ul>
+
+      <h3>HospitalOS AI Features</h3>
+      <ul>
+        <li>Patient flow optimization</li>
+        <li>Appointment scheduling AI</li>
+        <li>Clinical documentation assistance</li>
+        <li>Revenue analytics</li>
+      </ul>
+
+      <h2>AI Readiness for African Healthcare</h2>
+      <p>Considerations for AI adoption:</p>
+      <ul>
+        <li><strong>Data quality:</strong> AI needs good data to work</li>
+        <li><strong>Internet needs:</strong> Some AI requires connectivity</li>
+        <li><strong>Training:</strong> Staff need to understand AI tools</li>
+        <li><strong>Local context:</strong> AI models must fit local patterns</li>
+        <li><strong>Cost:</strong> Start with affordable AI features</li>
+      </ul>
+
+      <h2>Getting Started with AI</h2>
+      <ol>
+        <li>Use software with built-in AI features</li>
+        <li>Ensure quality data collection</li>
+        <li>Start with simple predictions</li>
+        <li>Build staff confidence gradually</li>
+        <li>Expand to more advanced features</li>
+      </ol>
+
+      <h2>Conclusion</h2>
+      <p>AI is becoming practical and affordable for African healthcare. MedSoftwares is incorporating AI features into our products to help you work smarter. Contact us to learn about AI capabilities in our software.</p>
+    `,
+  },
+  {
+    id: 42,
+    slug: 'opd-ipd-management-software-hospitals',
+    title: 'OPD and IPD Management Software for Hospitals',
+    excerpt: 'Complete guide to Outpatient (OPD) and Inpatient (IPD) management software. Features, workflows, and benefits for hospital patient care.',
+    category: 'product',
+    date: '2025-12-01',
+    readTime: '11 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&q=80',
+    content: `
+      <p>OPD (Outpatient Department) and IPD (Inpatient Department) are the two primary patient care settings in hospitals. Effective software management of both is essential for quality care and operational efficiency.</p>
+
+      <h2>OPD Management</h2>
+
+      <h3>What is OPD?</h3>
+      <p>Outpatient department handles patients who:</p>
+      <ul>
+        <li>Visit for consultation only</li>
+        <li>Don't require overnight stay</li>
+        <li>Need minor procedures</li>
+        <li>Require follow-up care</li>
+      </ul>
+
+      <h3>OPD Software Features</h3>
+      <ul>
+        <li><strong>Registration:</strong> Quick patient check-in</li>
+        <li><strong>Queue Management:</strong> Token system, wait times</li>
+        <li><strong>Consultation:</strong> Doctor notes, diagnosis</li>
+        <li><strong>Prescription:</strong> Drug orders, printing</li>
+        <li><strong>Investigations:</strong> Lab and radiology orders</li>
+        <li><strong>Billing:</strong> Immediate payment processing</li>
+      </ul>
+
+      <h3>OPD Workflow in HospitalOS</h3>
+      <ol>
+        <li>Patient registration or retrieval</li>
+        <li>Queue assignment to doctor</li>
+        <li>Doctor consultation and notes</li>
+        <li>Order investigations if needed</li>
+        <li>Prescribe medications</li>
+        <li>Billing and payment</li>
+        <li>Pharmacy dispensing</li>
+      </ol>
+
+      <h2>IPD Management</h2>
+
+      <h3>What is IPD?</h3>
+      <p>Inpatient department handles patients who:</p>
+      <ul>
+        <li>Require hospital admission</li>
+        <li>Need overnight monitoring</li>
+        <li>Undergo surgery</li>
+        <li>Need intensive care</li>
+      </ul>
+
+      <h3>IPD Software Features</h3>
+      <ul>
+        <li><strong>Admission:</strong> Bed assignment, admission notes</li>
+        <li><strong>Ward Management:</strong> Bed status, transfers</li>
+        <li><strong>Nursing:</strong> Vitals, medication administration</li>
+        <li><strong>Treatment Charts:</strong> Daily care documentation</li>
+        <li><strong>Discharge:</strong> Summary, instructions</li>
+        <li><strong>Billing:</strong> Cumulative charges</li>
+      </ul>
+
+      <h3>IPD Workflow in HospitalOS</h3>
+      <ol>
+        <li>Admission decision from OPD or Emergency</li>
+        <li>Bed selection and assignment</li>
+        <li>Admission documentation</li>
+        <li>Daily rounds and treatment</li>
+        <li>Nursing documentation</li>
+        <li>Investigation orders and results</li>
+        <li>Discharge planning</li>
+        <li>Final billing and settlement</li>
+        <li>Discharge summary generation</li>
+      </ol>
+
+      <h2>Integration Between OPD and IPD</h2>
+      <p>HospitalOS seamlessly connects both:</p>
+      <ul>
+        <li>Single patient record across settings</li>
+        <li>Easy admission from OPD</li>
+        <li>Post-discharge OPD follow-up</li>
+        <li>Unified billing</li>
+        <li>Complete patient history</li>
+      </ul>
+
+      <h2>Benefits of Integrated OPD/IPD Software</h2>
+      <ul>
+        <li>Reduced documentation time</li>
+        <li>Fewer medical errors</li>
+        <li>Better care coordination</li>
+        <li>Accurate billing capture</li>
+        <li>Comprehensive reporting</li>
+        <li>Improved patient experience</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Effective OPD and IPD management requires integrated software that supports clinical workflows. HospitalOS provides comprehensive modules for both settings. Contact MedSoftwares for a demonstration.</p>
+    `,
+  },
+  {
+    id: 43,
+    slug: 'prescription-management-software-pharmacies',
+    title: 'Prescription Management Software for Pharmacies',
+    excerpt: 'Streamline prescription handling with dedicated software. Track prescriptions, manage refills, ensure compliance, and improve patient safety.',
+    category: 'product',
+    date: '2025-11-28',
+    readTime: '8 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=800&q=80',
+    content: `
+      <p>Prescription management is a critical function for pharmacies. Proper handling of prescriptions ensures patient safety, regulatory compliance, and efficient operations. This guide covers prescription management software features.</p>
+
+      <h2>Why Prescription Management Matters</h2>
+      <ul>
+        <li>Legal requirement to maintain records</li>
+        <li>Patient safety assurance</li>
+        <li>Controlled substance tracking</li>
+        <li>Refill management</li>
+        <li>Insurance claim documentation</li>
+        <li>Audit trail maintenance</li>
+      </ul>
+
+      <h2>Key Features</h2>
+
+      <h3>1. Prescription Entry</h3>
+      <ul>
+        <li>Doctor and patient details</li>
+        <li>Drug information capture</li>
+        <li>Dosage and frequency</li>
+        <li>Quantity and refill count</li>
+        <li>Date validation</li>
+        <li>Image capture of prescription</li>
+      </ul>
+
+      <h3>2. Verification</h3>
+      <ul>
+        <li>Drug interaction checking</li>
+        <li>Allergy alerts</li>
+        <li>Dosage validation</li>
+        <li>Duplicate prescription detection</li>
+        <li>Prescriber verification</li>
+      </ul>
+
+      <h3>3. Dispensing</h3>
+      <ul>
+        <li>Link to inventory</li>
+        <li>Batch selection</li>
+        <li>Label printing</li>
+        <li>Patient counseling notes</li>
+        <li>Dispensing confirmation</li>
+      </ul>
+
+      <h3>4. Refill Management</h3>
+      <ul>
+        <li>Refill count tracking</li>
+        <li>Refill due reminders</li>
+        <li>Patient notification</li>
+        <li>Authorization workflow</li>
+        <li>History maintenance</li>
+      </ul>
+
+      <h2>Controlled Substance Handling</h2>
+      <ul>
+        <li>Special registers for controlled drugs</li>
+        <li>Enhanced verification requirements</li>
+        <li>Detailed audit trails</li>
+        <li>Regulatory reporting</li>
+        <li>Stock reconciliation</li>
+      </ul>
+
+      <h2>PharmaPOS Prescription Features</h2>
+      <ul>
+        <li>Full prescription capture and storage</li>
+        <li>Drug interaction database</li>
+        <li>Refill tracking and reminders</li>
+        <li>Controlled substance register</li>
+        <li>Prescription history by patient</li>
+        <li>Label printing</li>
+        <li>Regulatory compliance reports</li>
+      </ul>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li><strong>Safety:</strong> Reduce dispensing errors</li>
+        <li><strong>Compliance:</strong> Meet regulatory requirements</li>
+        <li><strong>Efficiency:</strong> Faster prescription processing</li>
+        <li><strong>Revenue:</strong> Capture refill opportunities</li>
+        <li><strong>Trust:</strong> Build patient confidence</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Prescription management software is essential for modern pharmacies. PharmaPOS provides comprehensive prescription handling to improve safety and compliance. Contact MedSoftwares for a demonstration.</p>
+    `,
+  },
+  {
+    id: 44,
+    slug: 'hospital-revenue-cycle-management-software',
+    title: 'Hospital Revenue Cycle Management Software Guide',
+    excerpt: 'Optimize hospital revenue with dedicated RCM software. From patient registration to final payment, manage the complete revenue cycle effectively.',
+    category: 'industry',
+    date: '2025-11-25',
+    readTime: '11 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+    content: `
+      <p>Revenue Cycle Management (RCM) is the financial process that healthcare facilities use to track patient care episodes from registration to final payment. Effective RCM software is crucial for hospital financial health.</p>
+
+      <h2>What is Revenue Cycle Management?</h2>
+      <p>RCM encompasses all administrative and clinical functions that contribute to capturing, managing, and collecting patient service revenue:</p>
+      <ul>
+        <li>Patient scheduling and registration</li>
+        <li>Insurance verification</li>
+        <li>Charge capture</li>
+        <li>Claim submission</li>
+        <li>Payment posting</li>
+        <li>Denial management</li>
+        <li>Collections</li>
+      </ul>
+
+      <h2>RCM Software Components</h2>
+
+      <h3>1. Front-End Functions</h3>
+      <ul>
+        <li>Patient scheduling</li>
+        <li>Pre-registration</li>
+        <li>Insurance eligibility verification</li>
+        <li>Prior authorization</li>
+        <li>Financial counseling</li>
+        <li>Point-of-service collections</li>
+      </ul>
+
+      <h3>2. Mid-Cycle Functions</h3>
+      <ul>
+        <li>Charge capture from clinical systems</li>
+        <li>Medical coding (ICD, CPT)</li>
+        <li>Charge review and editing</li>
+        <li>Claim generation</li>
+        <li>Claim scrubbing</li>
+        <li>Electronic claim submission</li>
+      </ul>
+
+      <h3>3. Back-End Functions</h3>
+      <ul>
+        <li>Payment posting</li>
+        <li>Remittance processing</li>
+        <li>Denial management</li>
+        <li>Appeals processing</li>
+        <li>Patient billing</li>
+        <li>Collections</li>
+      </ul>
+
+      <h2>Key Performance Indicators</h2>
+      <ul>
+        <li><strong>Days in A/R:</strong> Target under 40 days</li>
+        <li><strong>Clean claim rate:</strong> Target over 95%</li>
+        <li><strong>Denial rate:</strong> Target under 5%</li>
+        <li><strong>Net collection rate:</strong> Target over 95%</li>
+        <li><strong>Cost to collect:</strong> Target under 4%</li>
+      </ul>
+
+      <h2>HospitalOS Revenue Cycle Features</h2>
+      <ul>
+        <li>Integrated patient registration and billing</li>
+        <li>Automatic charge capture from clinical modules</li>
+        <li>Insurance verification workflow</li>
+        <li>NHIS and private insurance claims</li>
+        <li>Payment posting and reconciliation</li>
+        <li>Aging reports and follow-up tools</li>
+        <li>Revenue analytics dashboard</li>
+      </ul>
+
+      <h2>Benefits of RCM Software</h2>
+      <ul>
+        <li>Reduced claim denials</li>
+        <li>Faster reimbursement</li>
+        <li>Improved cash flow</li>
+        <li>Lower administrative costs</li>
+        <li>Better financial visibility</li>
+        <li>Compliance assurance</li>
+      </ul>
+
+      <h2>Implementation Best Practices</h2>
+      <ol>
+        <li>Assess current revenue cycle performance</li>
+        <li>Define improvement targets</li>
+        <li>Configure workflows properly</li>
+        <li>Train all relevant staff</li>
+        <li>Monitor KPIs regularly</li>
+        <li>Continuously optimize processes</li>
+      </ol>
+
+      <h2>Conclusion</h2>
+      <p>Effective revenue cycle management is essential for hospital financial sustainability. HospitalOS provides integrated RCM capabilities designed for African healthcare facilities. Contact MedSoftwares to learn more.</p>
+    `,
+  },
+  {
+    id: 45,
+    slug: 'controlled-substance-tracking-pharmacy-software',
+    title: 'Controlled Substance Tracking in Pharmacy Software',
+    excerpt: 'Ensure compliance with controlled substance regulations. Learn how pharmacy software helps track, document, and report controlled medications properly.',
+    category: 'product',
+    date: '2025-11-22',
+    readTime: '9 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1585435557343-3b092031a831?w=800&q=80',
+    content: `
+      <p>Controlled substances require special handling, documentation, and reporting. Pharmacy software with dedicated controlled substance tracking helps ensure compliance and prevent diversion.</p>
+
+      <h2>What are Controlled Substances?</h2>
+      <p>Medications with potential for abuse or dependence:</p>
+      <ul>
+        <li>Opioid pain medications</li>
+        <li>Benzodiazepines</li>
+        <li>Stimulants</li>
+        <li>Certain cough medications</li>
+        <li>Anabolic steroids</li>
+      </ul>
+
+      <h2>Regulatory Requirements</h2>
+      <ul>
+        <li>Separate register maintenance</li>
+        <li>Detailed transaction records</li>
+        <li>Regular stock reconciliation</li>
+        <li>Secure storage documentation</li>
+        <li>Prescriber verification</li>
+        <li>Government reporting</li>
+      </ul>
+
+      <h2>Software Tracking Features</h2>
+
+      <h3>1. Inventory Control</h3>
+      <ul>
+        <li>Separate controlled substance inventory</li>
+        <li>Perpetual inventory tracking</li>
+        <li>Automatic balance updates</li>
+        <li>Discrepancy alerts</li>
+        <li>Physical count reconciliation</li>
+      </ul>
+
+      <h3>2. Prescription Verification</h3>
+      <ul>
+        <li>Prescriber license verification</li>
+        <li>DEA/regulatory number checking</li>
+        <li>Patient history review</li>
+        <li>Early refill detection</li>
+        <li>Multiple prescriber alerts</li>
+      </ul>
+
+      <h3>3. Documentation</h3>
+      <ul>
+        <li>Digital controlled substance register</li>
+        <li>Receipt documentation</li>
+        <li>Dispensing records</li>
+        <li>Return and destruction logs</li>
+        <li>Audit trail maintenance</li>
+      </ul>
+
+      <h3>4. Reporting</h3>
+      <ul>
+        <li>Regulatory submission reports</li>
+        <li>Usage trend analysis</li>
+        <li>Discrepancy reports</li>
+        <li>Audit support documentation</li>
+      </ul>
+
+      <h2>PharmaPOS Controlled Substance Features</h2>
+      <ul>
+        <li>Dedicated controlled substance module</li>
+        <li>Automatic register maintenance</li>
+        <li>Real-time balance tracking</li>
+        <li>Prescription validation checks</li>
+        <li>Regulatory compliant reports</li>
+        <li>Secure access controls</li>
+        <li>Complete audit trails</li>
+      </ul>
+
+      <h2>Best Practices</h2>
+      <ol>
+        <li>Daily balance verification</li>
+        <li>Regular physical counts</li>
+        <li>Staff training on procedures</li>
+        <li>Secure storage compliance</li>
+        <li>Prompt discrepancy investigation</li>
+        <li>Regular report reviews</li>
+      </ol>
+
+      <h2>Conclusion</h2>
+      <p>Controlled substance tracking is essential for pharmacy compliance and patient safety. PharmaPOS provides comprehensive tools to manage these requirements. Contact MedSoftwares for more information.</p>
+    `,
+  },
+  {
+    id: 46,
+    slug: 'telemedicine-software-african-hospitals',
+    title: 'Telemedicine Software for African Hospitals and Clinics',
+    excerpt: 'Expand healthcare access with telemedicine. Learn how telemedicine software enables remote consultations for African healthcare facilities.',
+    category: 'industry',
+    date: '2025-11-20',
+    readTime: '10 min read',
+    author: 'Junior Fonte',
+    authorRole: 'CTO',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+    content: `
+      <p>Telemedicine is transforming healthcare delivery in Africa, enabling patients in remote areas to access specialist care. This guide covers telemedicine software options and implementation considerations.</p>
+
+      <h2>Why Telemedicine in Africa?</h2>
+      <ul>
+        <li>Limited specialists in rural areas</li>
+        <li>Long distances to healthcare facilities</li>
+        <li>Growing smartphone penetration</li>
+        <li>COVID-19 accelerated adoption</li>
+        <li>Cost savings for patients</li>
+        <li>Reduced healthcare facility burden</li>
+      </ul>
+
+      <h2>Types of Telemedicine</h2>
+
+      <h3>1. Synchronous (Real-time)</h3>
+      <ul>
+        <li>Video consultations</li>
+        <li>Audio calls</li>
+        <li>Live chat</li>
+        <li>Remote examinations</li>
+      </ul>
+
+      <h3>2. Asynchronous (Store-and-Forward)</h3>
+      <ul>
+        <li>Image sharing for diagnosis</li>
+        <li>Lab result review</li>
+        <li>Specialist consultations</li>
+        <li>Second opinions</li>
+      </ul>
+
+      <h3>3. Remote Patient Monitoring</h3>
+      <ul>
+        <li>Vital signs monitoring</li>
+        <li>Chronic disease management</li>
+        <li>Post-discharge follow-up</li>
+        <li>Medication adherence</li>
+      </ul>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>Video calling:</strong> HD video with low bandwidth options</li>
+        <li><strong>Scheduling:</strong> Online appointment booking</li>
+        <li><strong>EMR integration:</strong> Access patient records</li>
+        <li><strong>Prescriptions:</strong> Electronic prescription generation</li>
+        <li><strong>Payments:</strong> Mobile money integration</li>
+        <li><strong>Recording:</strong> Consent-based session recording</li>
+      </ul>
+
+      <h2>Challenges in Africa</h2>
+      <ul>
+        <li><strong>Internet:</strong> Variable connectivity</li>
+        <li><strong>Devices:</strong> Patient access to smartphones</li>
+        <li><strong>Regulations:</strong> Evolving telemedicine laws</li>
+        <li><strong>Privacy:</strong> Data security concerns</li>
+        <li><strong>Adoption:</strong> Patient and provider comfort</li>
+      </ul>
+
+      <h2>HospitalOS Telemedicine</h2>
+      <p>Optional telemedicine module features:</p>
+      <ul>
+        <li>Video consultations</li>
+        <li>Integrated with patient records</li>
+        <li>Appointment scheduling</li>
+        <li>Prescription generation</li>
+        <li>Mobile money payments</li>
+        <li>Works on basic smartphones</li>
+        <li>Low bandwidth optimized</li>
+      </ul>
+
+      <h2>Implementation Tips</h2>
+      <ol>
+        <li>Start with specific use cases</li>
+        <li>Train providers thoroughly</li>
+        <li>Educate patients on usage</li>
+        <li>Ensure reliable internet</li>
+        <li>Establish clear workflows</li>
+        <li>Monitor and improve</li>
+      </ol>
+
+      <h2>Conclusion</h2>
+      <p>Telemedicine can dramatically expand healthcare access in Africa. HospitalOS offers integrated telemedicine capabilities suitable for African conditions. Contact MedSoftwares to learn more.</p>
+    `,
+  },
+  {
+    id: 47,
+    slug: 'pharmacy-chain-management-software',
+    title: 'Multi-Branch Pharmacy Chain Management Software',
+    excerpt: 'Manage multiple pharmacy locations from one system. Centralized inventory, unified reporting, and branch-level controls for pharmacy chains.',
+    category: 'product',
+    date: '2025-11-18',
+    readTime: '9 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80',
+    content: `
+      <p>Managing multiple pharmacy locations presents unique challenges. Pharmacy chain management software provides centralized control while allowing branch-level operations. This guide covers essential features for multi-location pharmacies.</p>
+
+      <h2>Challenges of Multi-Branch Operations</h2>
+      <ul>
+        <li>Inventory visibility across locations</li>
+        <li>Consistent pricing and promotions</li>
+        <li>Staff management and access control</li>
+        <li>Consolidated reporting</li>
+        <li>Stock transfers between branches</li>
+        <li>Centralized purchasing</li>
+      </ul>
+
+      <h2>Key Features</h2>
+
+      <h3>1. Centralized Inventory</h3>
+      <ul>
+        <li>Real-time stock visibility all branches</li>
+        <li>Inter-branch transfer management</li>
+        <li>Central warehouse support</li>
+        <li>Consolidated reorder planning</li>
+        <li>Branch-level stock controls</li>
+      </ul>
+
+      <h3>2. Unified Product Management</h3>
+      <ul>
+        <li>Central product catalog</li>
+        <li>Consistent pricing across branches</li>
+        <li>Branch-specific pricing options</li>
+        <li>Promotion management</li>
+        <li>Product category management</li>
+      </ul>
+
+      <h3>3. Consolidated Reporting</h3>
+      <ul>
+        <li>Company-wide sales reports</li>
+        <li>Branch comparison analytics</li>
+        <li>Inventory across all locations</li>
+        <li>Staff performance by branch</li>
+        <li>Financial consolidation</li>
+      </ul>
+
+      <h3>4. Access Control</h3>
+      <ul>
+        <li>Role-based permissions</li>
+        <li>Branch-level access</li>
+        <li>Manager override controls</li>
+        <li>Audit trails</li>
+        <li>Centralized user management</li>
+      </ul>
+
+      <h2>PharmaPOS Enterprise Features</h2>
+      <ul>
+        <li>Unlimited branches</li>
+        <li>Real-time data synchronization</li>
+        <li>Central and branch dashboards</li>
+        <li>Inter-branch transfers</li>
+        <li>Consolidated purchasing</li>
+        <li>Chain-wide reporting</li>
+        <li>Head office controls</li>
+        <li>Works offline at branches</li>
+      </ul>
+
+      <h2>Pricing</h2>
+      <ul>
+        <li><strong>PharmaPOS Enterprise:</strong> $2,499 base</li>
+        <li><strong>Additional branches:</strong> $499 each</li>
+        <li><strong>Central server:</strong> Optional cloud hosting</li>
+      </ul>
+
+      <h2>Success Story</h2>
+      <p>MedPharm Pharmacy Chain, Ghana:</p>
+      <ul>
+        <li>8 branches across Greater Accra</li>
+        <li>Centralized inventory management</li>
+        <li>40% reduction in stock-outs</li>
+        <li>Real-time sales visibility</li>
+        <li>Consolidated supplier negotiations</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Pharmacy chain management requires purpose-built software. PharmaPOS Enterprise provides the tools to efficiently manage multiple locations. Contact MedSoftwares for a demonstration.</p>
+    `,
+  },
+  {
+    id: 48,
+    slug: 'hospital-queue-management-system',
+    title: 'Hospital Queue Management System: Reduce Patient Wait Times',
+    excerpt: 'Improve patient experience with digital queue management. Token systems, wait time displays, and smart scheduling for hospitals and clinics.',
+    category: 'product',
+    date: '2025-11-15',
+    readTime: '8 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80',
+    content: `
+      <p>Long wait times are a major source of patient dissatisfaction. A hospital queue management system digitizes and optimizes patient flow, reducing actual and perceived wait times.</p>
+
+      <h2>Problems with Manual Queuing</h2>
+      <ul>
+        <li>No visibility of wait times</li>
+        <li>Queue jumping and disputes</li>
+        <li>Inefficient resource allocation</li>
+        <li>No data for improvement</li>
+        <li>Patient frustration</li>
+        <li>Staff stress</li>
+      </ul>
+
+      <h2>Queue Management System Features</h2>
+
+      <h3>1. Token/Ticket Generation</h3>
+      <ul>
+        <li>Self-service kiosks</li>
+        <li>Reception-issued tokens</li>
+        <li>Mobile check-in</li>
+        <li>Appointment integration</li>
+        <li>Priority categorization</li>
+      </ul>
+
+      <h3>2. Wait Time Display</h3>
+      <ul>
+        <li>Digital signage boards</li>
+        <li>Current token number</li>
+        <li>Estimated wait times</li>
+        <li>Room/counter directions</li>
+        <li>Multi-language support</li>
+      </ul>
+
+      <h3>3. Smart Routing</h3>
+      <ul>
+        <li>Direct to appropriate service</li>
+        <li>Load balancing</li>
+        <li>Priority handling</li>
+        <li>Service point optimization</li>
+      </ul>
+
+      <h3>4. Analytics</h3>
+      <ul>
+        <li>Wait time statistics</li>
+        <li>Service time analysis</li>
+        <li>Peak hour identification</li>
+        <li>Staff productivity</li>
+        <li>Patient flow patterns</li>
+      </ul>
+
+      <h2>HospitalOS Queue Management</h2>
+      <ul>
+        <li>Integrated with patient registration</li>
+        <li>Multiple queue support</li>
+        <li>Digital display integration</li>
+        <li>SMS notifications</li>
+        <li>Appointment queue priority</li>
+        <li>Real-time dashboard</li>
+        <li>Wait time reports</li>
+      </ul>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li><strong>Reduced wait times:</strong> 20-40% improvement</li>
+        <li><strong>Patient satisfaction:</strong> Significant increase</li>
+        <li><strong>Staff efficiency:</strong> Better workload distribution</li>
+        <li><strong>Data insights:</strong> Evidence for improvement</li>
+        <li><strong>Fair service:</strong> Transparent queuing</li>
+      </ul>
+
+      <h2>Implementation</h2>
+      <ol>
+        <li>Analyze current patient flow</li>
+        <li>Define service points and queues</li>
+        <li>Install display screens</li>
+        <li>Configure system</li>
+        <li>Train staff</li>
+        <li>Go live and monitor</li>
+      </ol>
+
+      <h2>Conclusion</h2>
+      <p>Queue management systems significantly improve patient experience. HospitalOS includes integrated queue management to help you reduce wait times. Contact MedSoftwares for details.</p>
+    `,
+  },
+  {
+    id: 49,
+    slug: 'drug-interaction-checker-software',
+    title: 'Drug Interaction Checker Software for Pharmacies',
+    excerpt: 'Prevent dangerous drug interactions with integrated checking software. Protect patients and reduce liability with automated interaction alerts.',
+    category: 'product',
+    date: '2025-11-12',
+    readTime: '7 min read',
+    author: 'Junior Fonte',
+    authorRole: 'CTO',
+    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80',
+    content: `
+      <p>Drug interactions can cause serious harm. Integrated drug interaction checking in pharmacy software provides an essential safety net, alerting pharmacists to potential problems before dispensing.</p>
+
+      <h2>Why Drug Interaction Checking Matters</h2>
+      <ul>
+        <li>Patient safety protection</li>
+        <li>Professional liability reduction</li>
+        <li>Regulatory compliance</li>
+        <li>Improved care quality</li>
+        <li>Customer trust building</li>
+      </ul>
+
+      <h2>Types of Interactions</h2>
+      <ul>
+        <li><strong>Drug-Drug:</strong> Interactions between medications</li>
+        <li><strong>Drug-Food:</strong> Food affecting drug action</li>
+        <li><strong>Drug-Disease:</strong> Conditions affecting drug safety</li>
+        <li><strong>Drug-Allergy:</strong> Known patient allergies</li>
+        <li><strong>Duplicate Therapy:</strong> Same drug class prescribed twice</li>
+      </ul>
+
+      <h2>How It Works in PharmaPOS</h2>
+      <ol>
+        <li>Prescription entered in system</li>
+        <li>System checks against patient profile</li>
+        <li>All medications cross-checked</li>
+        <li>Alert displayed if interaction found</li>
+        <li>Severity level indicated</li>
+        <li>Pharmacist reviews and decides</li>
+        <li>Override requires documentation</li>
+      </ol>
+
+      <h2>Alert Severity Levels</h2>
+      <ul>
+        <li><strong>Critical:</strong> Block dispensing, contact prescriber</li>
+        <li><strong>Serious:</strong> Strong warning, review required</li>
+        <li><strong>Moderate:</strong> Caution advised, monitor patient</li>
+        <li><strong>Minor:</strong> Information only</li>
+      </ul>
+
+      <h2>PharmaPOS Features</h2>
+      <ul>
+        <li>Comprehensive interaction database</li>
+        <li>Regular database updates</li>
+        <li>Patient allergy checking</li>
+        <li>Duplicate therapy detection</li>
+        <li>Customizable alert levels</li>
+        <li>Override documentation</li>
+        <li>Interaction reports</li>
+      </ul>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li>Prevent patient harm</li>
+        <li>Reduce liability exposure</li>
+        <li>Improve professional practice</li>
+        <li>Build customer confidence</li>
+        <li>Meet regulatory standards</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Drug interaction checking is essential for modern pharmacy practice. PharmaPOS includes comprehensive interaction checking to protect your patients. Contact MedSoftwares for details.</p>
+    `,
+  },
+  {
+    id: 50,
+    slug: 'hospital-bed-management-software',
+    title: 'Hospital Bed Management Software: Optimize Capacity',
+    excerpt: 'Maximize bed utilization with digital bed management. Real-time visibility, discharge planning, and housekeeping coordination for hospitals.',
+    category: 'product',
+    date: '2025-11-10',
+    readTime: '8 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80',
+    content: `
+      <p>Efficient bed management is crucial for hospital operations. Bed management software provides real-time visibility of bed status, optimizes patient flow, and maximizes capacity utilization.</p>
+
+      <h2>Bed Management Challenges</h2>
+      <ul>
+        <li>No real-time bed visibility</li>
+        <li>Delayed discharges</li>
+        <li>Housekeeping coordination</li>
+        <li>Emergency bed availability</li>
+        <li>Capacity planning</li>
+        <li>Elective admission scheduling</li>
+      </ul>
+
+      <h2>Key Features</h2>
+
+      <h3>1. Real-Time Bed Board</h3>
+      <ul>
+        <li>Visual ward layout</li>
+        <li>Current bed status</li>
+        <li>Patient information</li>
+        <li>Expected discharge dates</li>
+        <li>Pending admissions</li>
+      </ul>
+
+      <h3>2. Admission Management</h3>
+      <ul>
+        <li>Bed requests from OPD/Emergency</li>
+        <li>Bed assignment workflow</li>
+        <li>Special requirements matching</li>
+        <li>Waitlist management</li>
+      </ul>
+
+      <h3>3. Discharge Planning</h3>
+      <ul>
+        <li>Expected discharge tracking</li>
+        <li>Discharge delay alerts</li>
+        <li>Pre-discharge checklist</li>
+        <li>Discharge summary integration</li>
+      </ul>
+
+      <h3>4. Housekeeping Integration</h3>
+      <ul>
+        <li>Automatic cleaning alerts</li>
+        <li>Turnaround time tracking</li>
+        <li>Ready status updates</li>
+        <li>Performance metrics</li>
+      </ul>
+
+      <h2>HospitalOS Bed Management</h2>
+      <ul>
+        <li>Visual bed board dashboard</li>
+        <li>Real-time status updates</li>
+        <li>Integrated with admissions/discharges</li>
+        <li>Ward and bed type management</li>
+        <li>Housekeeping workflow</li>
+        <li>Occupancy reports</li>
+        <li>Capacity analytics</li>
+      </ul>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li><strong>Increased capacity:</strong> 10-15% more effective beds</li>
+        <li><strong>Faster turnaround:</strong> Reduced bed wait times</li>
+        <li><strong>Better planning:</strong> Visibility for decisions</li>
+        <li><strong>Staff efficiency:</strong> Automated coordination</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Bed management software is essential for optimizing hospital capacity. HospitalOS provides comprehensive bed management integrated with patient care. Contact MedSoftwares for details.</p>
+    `,
+  },
+  {
+    id: 51,
+    slug: 'pharmacy-software-barcode-scanning',
+    title: 'Pharmacy Software with Barcode Scanning Integration',
+    excerpt: 'Speed up pharmacy operations with barcode scanning. Faster checkout, accurate inventory, and reduced errors with barcode-enabled pharmacy software.',
+    category: 'product',
+    date: '2025-11-08',
+    readTime: '7 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    content: `
+      <p>Barcode scanning transforms pharmacy operations. Instead of manually searching for products or entering quantities, staff simply scan barcodes for instant accuracy and speed.</p>
+
+      <h2>Benefits of Barcode Scanning</h2>
+      <ul>
+        <li><strong>Speed:</strong> Instant product lookup</li>
+        <li><strong>Accuracy:</strong> Eliminate selection errors</li>
+        <li><strong>Efficiency:</strong> Faster checkout</li>
+        <li><strong>Inventory:</strong> Accurate stock counts</li>
+        <li><strong>Verification:</strong> Confirm right product</li>
+      </ul>
+
+      <h2>Barcode Uses in Pharmacy</h2>
+
+      <h3>Point of Sale</h3>
+      <ul>
+        <li>Scan product to add to sale</li>
+        <li>Instant price lookup</li>
+        <li>Quantity adjustment</li>
+        <li>Batch/expiry verification</li>
+      </ul>
+
+      <h3>Inventory Management</h3>
+      <ul>
+        <li>Stock take with scanner</li>
+        <li>Receiving verification</li>
+        <li>Stock movement tracking</li>
+        <li>Expiry date capture</li>
+      </ul>
+
+      <h3>Dispensing Verification</h3>
+      <ul>
+        <li>Match prescription to product</li>
+        <li>Confirm correct medication</li>
+        <li>Document dispensing</li>
+      </ul>
+
+      <h2>PharmaPOS Barcode Features</h2>
+      <ul>
+        <li>Works with any USB barcode scanner</li>
+        <li>Wireless scanner support</li>
+        <li>Built-in barcode database</li>
+        <li>Custom barcode generation</li>
+        <li>Batch barcode assignment</li>
+        <li>Label printing</li>
+        <li>2D barcode support</li>
+      </ul>
+
+      <h2>Getting Started</h2>
+      <ul>
+        <li><strong>Scanner:</strong> $50-150 USB scanner</li>
+        <li><strong>Setup:</strong> Plug and play</li>
+        <li><strong>Training:</strong> Minimal needed</li>
+        <li><strong>Labels:</strong> Print your own if needed</li>
+      </ul>
+
+      <h2>ROI</h2>
+      <ul>
+        <li>50% faster checkout</li>
+        <li>90% fewer selection errors</li>
+        <li>Accurate inventory counts</li>
+        <li>Scanner pays for itself quickly</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Barcode scanning is an essential feature for modern pharmacies. PharmaPOS fully supports barcode operations out of the box. Contact MedSoftwares to learn more.</p>
+    `,
+  },
+  {
+    id: 52,
+    slug: 'radiology-information-system-ris',
+    title: 'Radiology Information System (RIS) for African Hospitals',
+    excerpt: 'Manage radiology workflows with dedicated RIS software. From scheduling to reporting, streamline your imaging department operations.',
+    category: 'product',
+    date: '2025-11-05',
+    readTime: '9 min read',
+    author: 'Junior Fonte',
+    authorRole: 'CTO',
+    image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&q=80',
+    content: `
+      <p>A Radiology Information System (RIS) is specialized software that manages radiology department workflows. It handles everything from scheduling imaging procedures to delivering reports to clinicians.</p>
+
+      <h2>What is RIS?</h2>
+      <p>RIS manages the business and clinical workflow of radiology:</p>
+      <ul>
+        <li>Patient scheduling</li>
+        <li>Exam tracking</li>
+        <li>Image documentation</li>
+        <li>Report generation</li>
+        <li>Results distribution</li>
+        <li>Billing integration</li>
+      </ul>
+
+      <h2>Key Features</h2>
+
+      <h3>1. Scheduling</h3>
+      <ul>
+        <li>Modality calendars</li>
+        <li>Patient preparation instructions</li>
+        <li>Appointment reminders</li>
+        <li>Walk-in management</li>
+      </ul>
+
+      <h3>2. Worklist Management</h3>
+      <ul>
+        <li>Technologist worklists</li>
+        <li>Radiologist reading lists</li>
+        <li>Priority flagging</li>
+        <li>Status tracking</li>
+      </ul>
+
+      <h3>3. Reporting</h3>
+      <ul>
+        <li>Structured report templates</li>
+        <li>Voice dictation support</li>
+        <li>Preliminary and final reports</li>
+        <li>Report distribution</li>
+      </ul>
+
+      <h3>4. Integration</h3>
+      <ul>
+        <li>Hospital information system</li>
+        <li>PACS (image storage)</li>
+        <li>Billing system</li>
+        <li>EMR for results</li>
+      </ul>
+
+      <h2>HospitalOS Radiology Module</h2>
+      <ul>
+        <li>Integrated radiology ordering</li>
+        <li>Exam scheduling</li>
+        <li>Worklist management</li>
+        <li>Report entry and templates</li>
+        <li>Result delivery to EMR</li>
+        <li>Billing integration</li>
+        <li>Basic image viewing</li>
+        <li>PACS integration available</li>
+      </ul>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li>Faster exam turnaround</li>
+        <li>Reduced lost studies</li>
+        <li>Better resource utilization</li>
+        <li>Improved reporting accuracy</li>
+        <li>Complete audit trail</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>RIS is essential for efficient radiology department operations. HospitalOS includes radiology management capabilities. Contact MedSoftwares for details.</p>
+    `,
+  },
+  {
+    id: 53,
+    slug: 'pharmacy-software-credit-sales-management',
+    title: 'Pharmacy Software with Credit Sales Management',
+    excerpt: 'Manage customer credit accounts effectively. Track outstanding balances, set credit limits, and improve collections with pharmacy credit management software.',
+    category: 'product',
+    date: '2025-11-02',
+    readTime: '8 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
+    content: `
+      <p>Credit sales are common in African pharmacies, especially for regular customers and corporate accounts. Managing credit effectively is essential for cash flow and profitability.</p>
+
+      <h2>Credit Sales Challenges</h2>
+      <ul>
+        <li>Tracking who owes what</li>
+        <li>Setting appropriate credit limits</li>
+        <li>Following up on overdue accounts</li>
+        <li>Managing corporate accounts</li>
+        <li>Cash flow impact</li>
+      </ul>
+
+      <h2>PharmaPOS Credit Features</h2>
+
+      <h3>1. Customer Accounts</h3>
+      <ul>
+        <li>Individual customer profiles</li>
+        <li>Credit limit setting</li>
+        <li>Balance tracking</li>
+        <li>Transaction history</li>
+        <li>Contact information</li>
+      </ul>
+
+      <h3>2. Credit Sale Processing</h3>
+      <ul>
+        <li>Credit balance check at sale</li>
+        <li>Credit limit enforcement</li>
+        <li>Manager override for exceptions</li>
+        <li>Credit receipt printing</li>
+      </ul>
+
+      <h3>3. Payment Collection</h3>
+      <ul>
+        <li>Receive payments against balance</li>
+        <li>Partial payment handling</li>
+        <li>Multiple payment methods</li>
+        <li>Receipt generation</li>
+      </ul>
+
+      <h3>4. Reporting</h3>
+      <ul>
+        <li>Outstanding balances report</li>
+        <li>Aging analysis</li>
+        <li>Customer statement</li>
+        <li>Collection tracking</li>
+      </ul>
+
+      <h2>Best Practices</h2>
+      <ul>
+        <li>Set realistic credit limits</li>
+        <li>Review limits regularly</li>
+        <li>Follow up promptly</li>
+        <li>Send regular statements</li>
+        <li>Limit credit to known customers</li>
+      </ul>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li>Better cash flow visibility</li>
+        <li>Reduced bad debts</li>
+        <li>Improved customer relationships</li>
+        <li>Easier collections</li>
+        <li>Professional account management</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Effective credit management is crucial for pharmacy profitability. PharmaPOS provides comprehensive credit sales tools. Contact MedSoftwares to learn more.</p>
+    `,
+  },
+  {
+    id: 54,
+    slug: 'hospital-appointment-scheduling-software',
+    title: 'Hospital Appointment Scheduling Software',
+    excerpt: 'Streamline patient appointments with digital scheduling. Online booking, reminders, and calendar management for hospitals and clinics.',
+    category: 'product',
+    date: '2025-10-30',
+    readTime: '8 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=800&q=80',
+    content: `
+      <p>Efficient appointment scheduling improves patient access and reduces no-shows. Digital scheduling software replaces paper diaries with smart, integrated calendar management.</p>
+
+      <h2>Benefits of Digital Scheduling</h2>
+      <ul>
+        <li>24/7 online booking option</li>
+        <li>Reduced phone call volume</li>
+        <li>Automatic reminders</li>
+        <li>No double-bookings</li>
+        <li>Better resource utilization</li>
+      </ul>
+
+      <h2>Key Features</h2>
+
+      <h3>1. Calendar Management</h3>
+      <ul>
+        <li>Visual calendar view</li>
+        <li>Multiple provider schedules</li>
+        <li>Resource scheduling</li>
+        <li>Blocked time handling</li>
+      </ul>
+
+      <h3>2. Booking Options</h3>
+      <ul>
+        <li>Reception booking</li>
+        <li>Online self-booking</li>
+        <li>Phone booking</li>
+        <li>Walk-in management</li>
+      </ul>
+
+      <h3>3. Reminders</h3>
+      <ul>
+        <li>SMS reminders</li>
+        <li>WhatsApp notifications</li>
+        <li>Confirmation requests</li>
+        <li>Reschedule links</li>
+      </ul>
+
+      <h3>4. Analytics</h3>
+      <ul>
+        <li>Booking patterns</li>
+        <li>No-show rates</li>
+        <li>Provider utilization</li>
+        <li>Peak time analysis</li>
+      </ul>
+
+      <h2>HospitalOS Scheduling</h2>
+      <ul>
+        <li>Integrated with patient records</li>
+        <li>Multi-provider support</li>
+        <li>SMS reminder integration</li>
+        <li>Queue integration</li>
+        <li>Booking reports</li>
+        <li>Works offline</li>
+      </ul>
+
+      <h2>Reducing No-Shows</h2>
+      <ul>
+        <li>Send reminders 24-48 hours before</li>
+        <li>Request confirmation</li>
+        <li>Easy rescheduling option</li>
+        <li>Waitlist for cancelled slots</li>
+        <li>Track and address patterns</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Digital appointment scheduling improves efficiency and patient experience. HospitalOS includes comprehensive scheduling tools. Contact MedSoftwares for details.</p>
+    `,
+  },
+  {
+    id: 55,
+    slug: 'nhis-nhif-integration-healthcare-software',
+    title: 'NHIS and NHIF Integration in Healthcare Software',
+    excerpt: 'Seamlessly integrate with national health insurance schemes. NHIS Ghana, NHIF Kenya, and other African insurance system integration for hospitals and pharmacies.',
+    category: 'industry',
+    date: '2025-10-28',
+    readTime: '10 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    content: `
+      <p>National health insurance schemes like Ghana's NHIS and Kenya's NHIF cover millions of patients. Healthcare software must integrate with these systems for efficient claim processing and reimbursement.</p>
+
+      <h2>Major African Health Insurance Schemes</h2>
+      <ul>
+        <li><strong>NHIS Ghana:</strong> National Health Insurance Scheme</li>
+        <li><strong>NHIF Kenya:</strong> National Hospital Insurance Fund</li>
+        <li><strong>SHA Kenya:</strong> Social Health Authority (new)</li>
+        <li><strong>NHIS Nigeria:</strong> National Health Insurance Scheme</li>
+        <li><strong>NHIF Tanzania:</strong> National Health Insurance Fund</li>
+      </ul>
+
+      <h2>Integration Requirements</h2>
+
+      <h3>Patient Verification</h3>
+      <ul>
+        <li>Insurance ID validation</li>
+        <li>Coverage status check</li>
+        <li>Dependant verification</li>
+        <li>Benefit balance inquiry</li>
+      </ul>
+
+      <h3>Claim Submission</h3>
+      <ul>
+        <li>Claim form generation</li>
+        <li>Service code mapping</li>
+        <li>Supporting documentation</li>
+        <li>Electronic submission</li>
+      </ul>
+
+      <h3>Claim Tracking</h3>
+      <ul>
+        <li>Submission status</li>
+        <li>Vetting results</li>
+        <li>Rejection reasons</li>
+        <li>Resubmission handling</li>
+      </ul>
+
+      <h2>MedSoftwares Insurance Integration</h2>
+
+      <h3>HospitalOS</h3>
+      <ul>
+        <li>NHIS Ghana full integration</li>
+        <li>NHIF Kenya support</li>
+        <li>Multiple private insurers</li>
+        <li>Corporate insurance schemes</li>
+        <li>Automatic claim generation</li>
+        <li>Vetting response tracking</li>
+      </ul>
+
+      <h3>PharmaPOS</h3>
+      <ul>
+        <li>NHIS drug claims</li>
+        <li>Insurance price lists</li>
+        <li>Co-pay calculation</li>
+        <li>Claim batch submission</li>
+      </ul>
+
+      <h2>Benefits of Integration</h2>
+      <ul>
+        <li>Faster claim submission</li>
+        <li>Reduced claim rejections</li>
+        <li>Better cash flow</li>
+        <li>Less manual work</li>
+        <li>Accurate documentation</li>
+      </ul>
+
+      <h2>Implementation</h2>
+      <ol>
+        <li>Obtain insurance credentials</li>
+        <li>Configure price lists</li>
+        <li>Map service codes</li>
+        <li>Train billing staff</li>
+        <li>Go live with support</li>
+      </ol>
+
+      <h2>Conclusion</h2>
+      <p>Insurance integration is essential for healthcare facilities serving insured patients. MedSoftwares provides comprehensive NHIS and NHIF integration. Contact us for details.</p>
+    `,
+  },
+  {
+    id: 56,
+    slug: 'pharmacy-supplier-management-purchase-orders',
+    title: 'Pharmacy Supplier Management and Purchase Orders',
+    excerpt: 'Streamline purchasing with supplier management software. Create purchase orders, track deliveries, and manage supplier relationships effectively.',
+    category: 'product',
+    date: '2025-10-25',
+    readTime: '8 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80',
+    content: `
+      <p>Effective supplier management ensures you always have the right products at the right prices. Pharmacy software with purchasing features streamlines the entire procurement process.</p>
+
+      <h2>Purchasing Challenges</h2>
+      <ul>
+        <li>Managing multiple suppliers</li>
+        <li>Tracking orders and deliveries</li>
+        <li>Comparing prices</li>
+        <li>Maintaining optimal stock levels</li>
+        <li>Managing returns</li>
+      </ul>
+
+      <h2>Key Features</h2>
+
+      <h3>1. Supplier Management</h3>
+      <ul>
+        <li>Supplier profiles</li>
+        <li>Contact information</li>
+        <li>Product catalogs</li>
+        <li>Price agreements</li>
+        <li>Payment terms</li>
+      </ul>
+
+      <h3>2. Purchase Orders</h3>
+      <ul>
+        <li>Create POs from reorder alerts</li>
+        <li>Manual PO creation</li>
+        <li>PO approval workflow</li>
+        <li>Send to suppliers</li>
+        <li>Track order status</li>
+      </ul>
+
+      <h3>3. Receiving</h3>
+      <ul>
+        <li>Receive against PO</li>
+        <li>Quantity verification</li>
+        <li>Expiry date entry</li>
+        <li>Discrepancy handling</li>
+        <li>Automatic stock update</li>
+      </ul>
+
+      <h3>4. Returns</h3>
+      <ul>
+        <li>Supplier return notes</li>
+        <li>Expiry returns</li>
+        <li>Damaged goods</li>
+        <li>Credit tracking</li>
+      </ul>
+
+      <h2>PharmaPOS Purchasing</h2>
+      <ul>
+        <li>Full supplier management</li>
+        <li>Purchase order creation</li>
+        <li>Smart reorder suggestions</li>
+        <li>Receiving with verification</li>
+        <li>Supplier performance reports</li>
+        <li>Purchase history analysis</li>
+      </ul>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li>Better supplier relationships</li>
+        <li>Reduced stock-outs</li>
+        <li>Cost savings through comparison</li>
+        <li>Accurate receiving</li>
+        <li>Complete purchase history</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Supplier management is essential for efficient pharmacy operations. PharmaPOS includes comprehensive purchasing features. Contact MedSoftwares to learn more.</p>
+    `,
+  },
+  {
+    id: 57,
+    slug: 'hospital-hr-payroll-management-software',
+    title: 'Hospital HR and Payroll Management Software',
+    excerpt: 'Manage hospital staff effectively with integrated HR software. Employee records, attendance, leave management, and payroll processing for healthcare facilities.',
+    category: 'product',
+    date: '2025-10-22',
+    readTime: '9 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
+    content: `
+      <p>Managing hospital staff is complex with various roles, shifts, and compliance requirements. Integrated HR and payroll software simplifies workforce management.</p>
+
+      <h2>HR Challenges in Hospitals</h2>
+      <ul>
+        <li>Multiple staff categories</li>
+        <li>Complex shift scheduling</li>
+        <li>Leave management</li>
+        <li>Professional credentials</li>
+        <li>Payroll complexity</li>
+      </ul>
+
+      <h2>Key Features</h2>
+
+      <h3>1. Employee Records</h3>
+      <ul>
+        <li>Personal information</li>
+        <li>Employment history</li>
+        <li>Professional qualifications</li>
+        <li>License tracking</li>
+        <li>Document storage</li>
+      </ul>
+
+      <h3>2. Attendance</h3>
+      <ul>
+        <li>Time tracking</li>
+        <li>Shift management</li>
+        <li>Overtime calculation</li>
+        <li>Absence tracking</li>
+        <li>Biometric integration</li>
+      </ul>
+
+      <h3>3. Leave Management</h3>
+      <ul>
+        <li>Leave balance tracking</li>
+        <li>Leave requests</li>
+        <li>Approval workflow</li>
+        <li>Leave calendar</li>
+        <li>Accrual management</li>
+      </ul>
+
+      <h3>4. Payroll</h3>
+      <ul>
+        <li>Salary calculation</li>
+        <li>Deductions handling</li>
+        <li>Tax computation</li>
+        <li>Payslip generation</li>
+        <li>Bank file creation</li>
+      </ul>
+
+      <h2>HospitalOS HR Module</h2>
+      <ul>
+        <li>Complete employee management</li>
+        <li>Duty roster creation</li>
+        <li>Leave tracking</li>
+        <li>Basic payroll processing</li>
+        <li>Staff reports</li>
+        <li>Department management</li>
+      </ul>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li>Streamlined HR processes</li>
+        <li>Accurate payroll</li>
+        <li>Better scheduling</li>
+        <li>Compliance assurance</li>
+        <li>Reduced administrative work</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>HR and payroll software improves hospital workforce management. HospitalOS includes essential HR features. Contact MedSoftwares for details.</p>
+    `,
+  },
+  {
+    id: 58,
+    slug: 'pharmacy-analytics-sales-reports',
+    title: 'Pharmacy Analytics and Sales Reports',
+    excerpt: 'Make data-driven decisions with pharmacy analytics. Sales trends, inventory insights, and business intelligence for pharmacy owners and managers.',
+    category: 'product',
+    date: '2025-10-20',
+    readTime: '8 min read',
+    author: 'Junior Fonte',
+    authorRole: 'CTO',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    content: `
+      <p>Data-driven decision making separates successful pharmacies from struggling ones. Analytics and reporting tools turn your transaction data into actionable insights.</p>
+
+      <h2>Why Analytics Matter</h2>
+      <ul>
+        <li>Understand sales patterns</li>
+        <li>Identify top products</li>
+        <li>Spot slow-moving inventory</li>
+        <li>Track staff performance</li>
+        <li>Monitor profitability</li>
+      </ul>
+
+      <h2>Essential Reports</h2>
+
+      <h3>Sales Reports</h3>
+      <ul>
+        <li>Daily/weekly/monthly sales</li>
+        <li>Sales by product category</li>
+        <li>Sales by payment method</li>
+        <li>Hourly sales patterns</li>
+        <li>Comparative analysis</li>
+      </ul>
+
+      <h3>Inventory Reports</h3>
+      <ul>
+        <li>Current stock levels</li>
+        <li>Stock valuation</li>
+        <li>Expiring products</li>
+        <li>Slow-moving items</li>
+        <li>Reorder needs</li>
+      </ul>
+
+      <h3>Financial Reports</h3>
+      <ul>
+        <li>Profit margins</li>
+        <li>Revenue trends</li>
+        <li>Cost of goods sold</li>
+        <li>Outstanding receivables</li>
+        <li>Payables aging</li>
+      </ul>
+
+      <h3>Customer Reports</h3>
+      <ul>
+        <li>Top customers</li>
+        <li>Customer purchase patterns</li>
+        <li>Credit balances</li>
+        <li>New vs returning</li>
+      </ul>
+
+      <h2>PharmaPOS Analytics</h2>
+      <ul>
+        <li>Real-time dashboard</li>
+        <li>Customizable reports</li>
+        <li>Export to Excel</li>
+        <li>Scheduled reports</li>
+        <li>Trend visualization</li>
+        <li>Comparison tools</li>
+      </ul>
+
+      <h2>Using Analytics</h2>
+      <ul>
+        <li>Review reports regularly</li>
+        <li>Set performance targets</li>
+        <li>Act on insights quickly</li>
+        <li>Share with staff</li>
+        <li>Track improvement</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Analytics turn data into profits. PharmaPOS provides comprehensive reporting to help you run a smarter pharmacy. Contact MedSoftwares for a demo.</p>
+    `,
+  },
+  {
+    id: 59,
+    slug: 'hospital-pharmacy-management-system',
+    title: 'Hospital Pharmacy Management System',
+    excerpt: 'Specialized pharmacy management for hospital settings. Integration with clinical systems, ward supply, and inpatient medication management.',
+    category: 'product',
+    date: '2025-10-18',
+    readTime: '10 min read',
+    author: 'Marbel Nfor',
+    authorRole: 'Program Manager',
+    image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80',
+    content: `
+      <p>Hospital pharmacies have unique requirements compared to retail pharmacies. They dispense to inpatients, manage ward supplies, and integrate with clinical systems for medication orders.</p>
+
+      <h2>Hospital Pharmacy Functions</h2>
+      <ul>
+        <li>Outpatient dispensing</li>
+        <li>Inpatient medication supply</li>
+        <li>Ward stock management</li>
+        <li>Controlled substance handling</li>
+        <li>Clinical pharmacy services</li>
+        <li>Drug information</li>
+      </ul>
+
+      <h2>Key Differences from Retail</h2>
+      <ul>
+        <li>Prescriptions from electronic orders</li>
+        <li>Ward/floor stock systems</li>
+        <li>Unit dose dispensing</li>
+        <li>IV admixture preparation</li>
+        <li>Clinical integration required</li>
+      </ul>
+
+      <h2>Essential Features</h2>
+
+      <h3>1. Order Integration</h3>
+      <ul>
+        <li>Receive orders from doctors electronically</li>
+        <li>Order verification workflow</li>
+        <li>Drug interaction checking</li>
+        <li>Formulary compliance</li>
+      </ul>
+
+      <h3>2. Dispensing</h3>
+      <ul>
+        <li>Outpatient window</li>
+        <li>Ward deliveries</li>
+        <li>Patient-specific dispensing</li>
+        <li>Batch dispensing</li>
+      </ul>
+
+      <h3>3. Inventory</h3>
+      <ul>
+        <li>Central pharmacy stock</li>
+        <li>Ward stock management</li>
+        <li>Replenishment workflows</li>
+        <li>Expiry management</li>
+      </ul>
+
+      <h3>4. Billing</h3>
+      <ul>
+        <li>Patient charging</li>
+        <li>Insurance claims</li>
+        <li>Ward consumption costing</li>
+        <li>Revenue tracking</li>
+      </ul>
+
+      <h2>HospitalOS Pharmacy Module</h2>
+      <ul>
+        <li>Integrated with clinical orders</li>
+        <li>Outpatient and inpatient dispensing</li>
+        <li>Ward stock management</li>
+        <li>Controlled substance register</li>
+        <li>Automatic patient charging</li>
+        <li>Inventory management</li>
+        <li>Pharmacy reports</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Hospital pharmacy requires specialized software integrated with clinical systems. HospitalOS provides comprehensive hospital pharmacy management. Contact MedSoftwares for details.</p>
+    `,
+  },
+  {
+    id: 60,
+    slug: 'digital-health-transformation-africa-2026',
+    title: 'Digital Health Transformation in Africa: 2026 Outlook',
+    excerpt: 'Explore the state of digital health in Africa. Trends, challenges, and opportunities for healthcare technology adoption across the continent.',
+    category: 'industry',
+    date: '2025-10-15',
+    readTime: '12 min read',
+    author: 'Charles Bah',
+    authorRole: 'CEO',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+    content: `
+      <p>Africa's healthcare sector is undergoing rapid digital transformation. From telemedicine to electronic records, technology is changing how care is delivered across the continent.</p>
+
+      <h2>Current State of Digital Health</h2>
+      <ul>
+        <li>Growing adoption of EMR systems</li>
+        <li>Mobile money revolutionizing payments</li>
+        <li>Telemedicine expanding access</li>
+        <li>mHealth apps proliferating</li>
+        <li>Government digitalization initiatives</li>
+      </ul>
+
+      <h2>Key Trends for 2026</h2>
+
+      <h3>1. Electronic Health Records</h3>
+      <ul>
+        <li>Increasing hospital adoption</li>
+        <li>National health record initiatives</li>
+        <li>Interoperability improvements</li>
+        <li>Cloud-based solutions growing</li>
+      </ul>
+
+      <h3>2. Telemedicine</h3>
+      <ul>
+        <li>Post-COVID sustained growth</li>
+        <li>Specialist access expansion</li>
+        <li>Rural healthcare improvement</li>
+        <li>Regulatory frameworks developing</li>
+      </ul>
+
+      <h3>3. Mobile Health</h3>
+      <ul>
+        <li>Patient engagement apps</li>
+        <li>Chronic disease management</li>
+        <li>Health information access</li>
+        <li>Community health worker tools</li>
+      </ul>
+
+      <h3>4. Artificial Intelligence</h3>
+      <ul>
+        <li>Diagnostic support tools</li>
+        <li>Predictive analytics</li>
+        <li>Administrative automation</li>
+        <li>Drug discovery applications</li>
+      </ul>
+
+      <h2>Challenges to Address</h2>
+      <ul>
+        <li><strong>Infrastructure:</strong> Internet and power reliability</li>
+        <li><strong>Skills:</strong> Digital literacy among staff</li>
+        <li><strong>Cost:</strong> Affordability of solutions</li>
+        <li><strong>Regulation:</strong> Policy frameworks needed</li>
+        <li><strong>Interoperability:</strong> System integration</li>
+      </ul>
+
+      <h2>Opportunities</h2>
+      <ul>
+        <li>Leapfrog legacy systems</li>
+        <li>Mobile-first solutions</li>
+        <li>Offline-capable technology</li>
+        <li>Local solution development</li>
+        <li>Public-private partnerships</li>
+      </ul>
+
+      <h2>MedSoftwares' Role</h2>
+      <p>We're committed to African digital health:</p>
+      <ul>
+        <li>Solutions designed for African conditions</li>
+        <li>Affordable pricing models</li>
+        <li>Offline-first architecture</li>
+        <li>Local support teams</li>
+        <li>Continuous innovation</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Digital health transformation offers immense potential for Africa. MedSoftwares is proud to be part of this journey, providing practical solutions for healthcare facilities across the continent. Contact us to learn how we can support your digital health journey.</p>
+    `,
+  },
 ];
 
 const getCategoryColor = (categoryId: string) => {

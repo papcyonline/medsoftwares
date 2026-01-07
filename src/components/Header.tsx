@@ -204,7 +204,7 @@ export default function Header() {
         <nav
           className={`w-full flex items-center justify-between pl-2 pr-1.5 lg:pl-3 lg:pr-2 py-2 bg-white/80 backdrop-blur-md border border-gray-200/50 shadow-lg shadow-gray-900/5 transition-all duration-300 ${
             isScrolled || activeMegaMenu
-              ? 'bg-white/95 shadow-xl shadow-gray-900/10 rounded-none border-t-0 border-x-0 pl-4 pr-3 lg:pl-6 lg:pr-4'
+              ? 'bg-white/95 shadow-xl shadow-gray-900/10 rounded-b-[20px] border-t-0 border-x-0 pl-4 pr-3 lg:pl-6 lg:pr-4'
               : 'rounded-[2rem]'
           }`}
         >

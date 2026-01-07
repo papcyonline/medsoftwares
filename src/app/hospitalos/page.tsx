@@ -13,14 +13,14 @@ const screenshots = [
     title: 'Admin Dashboard',
     description: 'Real-time hospital metrics, department workload, revenue analytics, and bed occupancy at a glance.',
     badge: 'Administrator View',
-    badgeColor: 'text-[#166534]',
+    badgeColor: 'text-[#1e40af]',
   },
   {
     src: '/screenshots/hospitalos/analytics.png',
     title: 'Analytics & Reports',
     description: 'Revenue tracking, patient flow charts, appointment status, and recent activity logs.',
     badge: 'Analytics',
-    badgeColor: 'text-[#166534]',
+    badgeColor: 'text-[#1e40af]',
   },
   {
     src: '/screenshots/hospitalos/patients.png',
@@ -197,7 +197,7 @@ export default function HospitalOSPage() {
         <meta itemProp="name" content="HospitalOS" />
         <meta itemProp="applicationCategory" content="Hospital Management Software" />
         {/* Hero Section */}
-        <section className="min-h-[70vh] flex items-center justify-center bg-[#166534] pt-24 md:pt-32 pb-20 md:pb-32 relative overflow-hidden">
+        <section className="min-h-[70vh] flex items-center justify-center bg-[#1e40af] pt-24 md:pt-32 pb-20 md:pb-32 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -206,19 +206,19 @@ export default function HospitalOSPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <span className="inline-block px-4 py-1.5 bg-white/20 text-green-100 text-sm font-semibold rounded-full mb-6">
+                <span className="inline-block px-4 py-1.5 bg-white/20 text-blue-100 text-sm font-semibold rounded-full mb-6">
                   Complete Hospital Management System
                 </span>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold text-white mb-6">
                   HospitalOS
                 </h1>
-                <p className="text-xl text-green-100 mb-8 leading-relaxed">
+                <p className="text-xl text-blue-100 mb-8 leading-relaxed">
                   The complete operating system for modern hospitals. Manage every department, streamline operations, and deliver exceptional patient care with 25+ integrated modules.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/contact"
-                    className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#166534] text-lg font-bold rounded-full shadow-lg hover:bg-green-50 hover:-translate-y-0.5 transition-all duration-200"
+                    className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#1e40af] text-lg font-bold rounded-full shadow-lg hover:bg-blue-50 hover:-translate-y-0.5 transition-all duration-200"
                   >
                     Book a Free Demo
                     <ArrowOutwardIcon className="w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -237,12 +237,12 @@ export default function HospitalOSPage() {
                     {clinicalModules.slice(0, 4).map((module, index) => (
                       <div key={index} className="bg-white/10 rounded-xl p-4">
                         <h4 className="text-white font-semibold text-sm mb-1">{module.name}</h4>
-                        <p className="text-green-200 text-xs">{module.description}</p>
+                        <p className="text-blue-200 text-xs">{module.description}</p>
                       </div>
                     ))}
                   </div>
                   <div className="mt-4 text-center">
-                    <span className="text-green-200 text-sm">+ 20 more modules</span>
+                    <span className="text-blue-200 text-sm">+ 20 more modules</span>
                   </div>
                 </div>
               </div>
@@ -255,19 +255,19 @@ export default function HospitalOSPage() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-4xl font-heading font-extrabold text-[#166534] mb-2">25+</div>
+                <div className="text-4xl font-heading font-extrabold text-[#1e40af] mb-2">25+</div>
                 <div className="text-gray-600 font-medium">Integrated Modules</div>
               </div>
               <div>
-                <div className="text-4xl font-heading font-extrabold text-[#166534] mb-2">11+</div>
+                <div className="text-4xl font-heading font-extrabold text-[#1e40af] mb-2">11+</div>
                 <div className="text-gray-600 font-medium">User Roles</div>
               </div>
               <div>
-                <div className="text-4xl font-heading font-extrabold text-[#166534] mb-2">100%</div>
+                <div className="text-4xl font-heading font-extrabold text-[#1e40af] mb-2">100%</div>
                 <div className="text-gray-600 font-medium">Offline Capable</div>
               </div>
               <div>
-                <div className="text-4xl font-heading font-extrabold text-[#166534] mb-2">24/7</div>
+                <div className="text-4xl font-heading font-extrabold text-[#1e40af] mb-2">24/7</div>
                 <div className="text-gray-600 font-medium">Support Available</div>
               </div>
             </div>
@@ -290,9 +290,9 @@ export default function HospitalOSPage() {
               {coreFeatures.map((feature, index) => (
                 <div
                   key={index}
-                  className="group p-6 bg-white rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl transition-all duration-300"
+                  className="group p-6 bg-white rounded-2xl border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-[#166534] mb-4 group-hover:bg-[#166534] group-hover:text-white transition-colors">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-[#1e40af] mb-4 group-hover:bg-[#1e40af] group-hover:text-white transition-colors">
                     {feature.icon}
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
@@ -304,10 +304,10 @@ export default function HospitalOSPage() {
         </section>
 
         {/* Workflow Section */}
-        <section className="py-16 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-green-50/50 overflow-hidden">
+        <section className="py-16 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-blue-50/50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-10 md:mb-16">
-              <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 bg-[#166534]/10 text-[#166534] text-xs md:text-sm font-semibold rounded-full mb-3 md:mb-4">
+              <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 bg-[#1e40af]/10 text-[#1e40af] text-xs md:text-sm font-semibold rounded-full mb-3 md:mb-4">
                 Seamless Integration
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-extrabold text-gray-900 mb-4 md:mb-6">
@@ -322,9 +322,9 @@ export default function HospitalOSPage() {
             <div className="hidden lg:block">
               <div className="relative max-w-6xl mx-auto" style={{minHeight: '700px'}}>
                 {/* Central Connection Hub with Logo */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[#166534]/5 rounded-full flex items-center justify-center" style={{zIndex: 5}}>
-                  <div className="w-24 h-24 bg-[#166534]/10 rounded-full flex items-center justify-center">
-                    <div className="w-16 h-16 bg-white rounded-full shadow-lg shadow-[#166534]/20 flex items-center justify-center p-2">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[#1e40af]/5 rounded-full flex items-center justify-center" style={{zIndex: 5}}>
+                  <div className="w-24 h-24 bg-[#1e40af]/10 rounded-full flex items-center justify-center">
+                    <div className="w-16 h-16 bg-white rounded-full shadow-lg shadow-[#1e40af]/20 flex items-center justify-center p-2">
                       <Image
                         src="/logo.png"
                         alt="HospitalOS"
@@ -526,49 +526,49 @@ export default function HospitalOSPage() {
                   </circle>
 
                   {/* Return path animations */}
-                  <circle r="4" fill="#166534">
+                  <circle r="4" fill="#1e40af">
                     <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="2.5s" keyPoints="1;0" keyTimes="0;1">
                       <mpath href="#path-reception" />
                     </animateMotion>
                     <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3s" repeatCount="indefinite" begin="2.5s" />
                   </circle>
-                  <circle r="4" fill="#166534">
+                  <circle r="4" fill="#1e40af">
                     <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="2.8s" keyPoints="1;0" keyTimes="0;1">
                       <mpath href="#path-nurse" />
                     </animateMotion>
                     <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3s" repeatCount="indefinite" begin="2.8s" />
                   </circle>
-                  <circle r="4" fill="#166534">
+                  <circle r="4" fill="#1e40af">
                     <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="3.1s" keyPoints="1;0" keyTimes="0;1">
                       <mpath href="#path-doctor" />
                     </animateMotion>
                     <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3s" repeatCount="indefinite" begin="3.1s" />
                   </circle>
-                  <circle r="4" fill="#166534">
+                  <circle r="4" fill="#1e40af">
                     <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="3.4s" keyPoints="1;0" keyTimes="0;1">
                       <mpath href="#path-radiology" />
                     </animateMotion>
                     <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3s" repeatCount="indefinite" begin="3.4s" />
                   </circle>
-                  <circle r="4" fill="#166534">
+                  <circle r="4" fill="#1e40af">
                     <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="3.7s" keyPoints="1;0" keyTimes="0;1">
                       <mpath href="#path-admission" />
                     </animateMotion>
                     <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3s" repeatCount="indefinite" begin="3.7s" />
                   </circle>
-                  <circle r="4" fill="#166534">
+                  <circle r="4" fill="#1e40af">
                     <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="4.0s" keyPoints="1;0" keyTimes="0;1">
                       <mpath href="#path-lab" />
                     </animateMotion>
                     <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3s" repeatCount="indefinite" begin="4.0s" />
                   </circle>
-                  <circle r="4" fill="#166534">
+                  <circle r="4" fill="#1e40af">
                     <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="4.3s" keyPoints="1;0" keyTimes="0;1">
                       <mpath href="#path-pharmacy" />
                     </animateMotion>
                     <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3s" repeatCount="indefinite" begin="4.3s" />
                   </circle>
-                  <circle r="4" fill="#166534">
+                  <circle r="4" fill="#1e40af">
                     <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" begin="4.6s" keyPoints="1;0" keyTimes="0;1">
                       <mpath href="#path-billing" />
                     </animateMotion>
@@ -864,16 +864,16 @@ export default function HospitalOSPage() {
         </section>
 
         {/* Screenshots Carousel */}
-        <section className="py-16 md:py-24 bg-[#166534] overflow-hidden">
+        <section className="py-16 md:py-24 bg-[#1e40af] overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 md:mb-12">
             <div className="text-center">
-              <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 bg-white/20 text-green-100 text-xs md:text-sm font-semibold rounded-full mb-3 md:mb-4">
+              <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 bg-white/20 text-blue-100 text-xs md:text-sm font-semibold rounded-full mb-3 md:mb-4">
                 See It In Action
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-4 md:mb-6">
                 Software Screenshots
               </h2>
-              <p className="text-base md:text-xl text-green-100 max-w-2xl mx-auto px-4">
+              <p className="text-base md:text-xl text-blue-100 max-w-2xl mx-auto px-4">
                 Explore the intuitive interface designed for healthcare professionals.
               </p>
             </div>
@@ -882,8 +882,8 @@ export default function HospitalOSPage() {
           {/* Full Width Carousel */}
           <div className="relative">
             {/* Gradient Overlays for edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-r from-[#166534] to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-l from-[#166534] to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-r from-[#1e40af] to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-l from-[#1e40af] to-transparent z-10 pointer-events-none"></div>
 
             {/* Carousel Container */}
             <div className="relative h-[280px] sm:h-[350px] md:h-[500px] lg:h-[600px]">
@@ -914,7 +914,7 @@ export default function HospitalOSPage() {
                             <div className="flex gap-1 md:gap-2">
                               <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-red-400"></div>
                               <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-yellow-400"></div>
-                              <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-green-400"></div>
+                              <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-blue-400"></div>
                             </div>
                             <div className="flex-1 flex justify-center">
                               <div className="bg-[#2d4a6f] rounded px-2 py-0.5 md:rounded-lg md:px-4 md:py-1 text-xs md:text-sm text-gray-300 font-medium">
@@ -939,7 +939,7 @@ export default function HospitalOSPage() {
                         {/* Caption */}
                         <div className={`text-center mt-4 md:mt-6 transition-opacity duration-500 ${isCurrent ? 'opacity-100' : 'opacity-0'}`}>
                           <h3 className="text-white font-bold text-lg md:text-2xl mb-2">{slide.title}</h3>
-                          <p className="text-green-100 text-sm md:text-base max-w-xl mx-auto">{slide.description}</p>
+                          <p className="text-blue-100 text-sm md:text-base max-w-xl mx-auto">{slide.description}</p>
                         </div>
                       </div>
                     </div>
@@ -990,19 +990,19 @@ export default function HospitalOSPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div className="p-4 rounded-xl bg-white/10">
                 <div className="text-2xl font-bold text-white">20+</div>
-                <div className="text-sm text-green-100">Module Screens</div>
+                <div className="text-sm text-blue-100">Module Screens</div>
               </div>
               <div className="p-4 rounded-xl bg-white/10">
                 <div className="text-2xl font-bold text-white">11+</div>
-                <div className="text-sm text-green-100">User Dashboards</div>
+                <div className="text-sm text-blue-100">User Dashboards</div>
               </div>
               <div className="p-4 rounded-xl bg-white/10">
                 <div className="text-2xl font-bold text-white">Dark</div>
-                <div className="text-sm text-green-100">Sidebar Theme</div>
+                <div className="text-sm text-blue-100">Sidebar Theme</div>
               </div>
               <div className="p-4 rounded-xl bg-white/10">
                 <div className="text-2xl font-bold text-white">Clean</div>
-                <div className="text-sm text-green-100">Modern UI</div>
+                <div className="text-sm text-blue-100">Modern UI</div>
               </div>
             </div>
           </div>
@@ -1024,9 +1024,9 @@ export default function HospitalOSPage() {
               {clinicalModules.map((module, index) => (
                 <div
                   key={index}
-                  className="group p-6 bg-gradient-to-br from-green-50 to-white rounded-2xl border border-green-100 hover:shadow-xl transition-all duration-300"
+                  className="group p-6 bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 hover:shadow-xl transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-[#166534] rounded-xl flex items-center justify-center text-white mb-4 font-bold text-lg">
+                  <div className="w-12 h-12 bg-[#1e40af] rounded-xl flex items-center justify-center text-white mb-4 font-bold text-lg">
                     {String(index + 1).padStart(2, '0')}
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{module.name}</h3>
@@ -1084,9 +1084,9 @@ export default function HospitalOSPage() {
               {supportModules.map((module, index) => (
                 <div
                   key={index}
-                  className="group p-6 bg-white rounded-2xl border border-green-100 hover:border-green-300 hover:shadow-xl transition-all duration-300"
+                  className="group p-6 bg-white rounded-2xl border border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600 mb-4 font-bold text-lg group-hover:bg-green-600 group-hover:text-white transition-colors">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4 font-bold text-lg group-hover:bg-blue-600 group-hover:text-white transition-colors">
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                     </svg>
@@ -1111,12 +1111,12 @@ export default function HospitalOSPage() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-green-100/50 rounded-3xl p-8 md:p-12">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-3xl p-8 md:p-12">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {userRoles.map((role, index) => (
                   <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm hover:shadow-md transition-shadow">
-                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <svg className="w-5 h-5 text-[#1e40af]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                       </svg>
                     </div>
@@ -1129,9 +1129,9 @@ export default function HospitalOSPage() {
         </section>
 
         {/* Desktop Software Highlight */}
-        <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-green-100/50">
+        <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-blue-100/50">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-block px-4 py-1.5 bg-[#166534] text-white text-sm font-semibold rounded-full mb-6">
+            <div className="inline-block px-4 py-1.5 bg-[#1e40af] text-white text-sm font-semibold rounded-full mb-6">
               Desktop Application
             </div>
             <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-gray-900 mb-6">
@@ -1141,27 +1141,27 @@ export default function HospitalOSPage() {
               Unlike web-based systems, HospitalOS is a native desktop application built for speed, reliability, and offline operation. Works perfectly even without internet connection.
             </p>
             <div className="grid md:grid-cols-3 gap-6 text-left">
-              <div className="bg-white rounded-2xl p-6 border border-green-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#1e40af]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Lightning Fast</h3>
                 <p className="text-gray-600 text-sm">Native performance, no browser lag, instant response times</p>
               </div>
-              <div className="bg-white rounded-2xl p-6 border border-green-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#1e40af]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z" />
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Offline Ready</h3>
                 <p className="text-gray-600 text-sm">Full functionality without internet, auto-sync when online</p>
               </div>
-              <div className="bg-white rounded-2xl p-6 border border-green-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#1e40af]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
                   </svg>
                 </div>
@@ -1175,13 +1175,13 @@ export default function HospitalOSPage() {
         {/* Integration Section */}
         <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-[#166534] to-green-700 rounded-3xl p-8 md:p-12 lg:p-16">
+            <div className="bg-gradient-to-br from-[#1e40af] to-blue-700 rounded-3xl p-8 md:p-12 lg:p-16">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-white mb-4">
                     Seamless PharmaPOS Integration
                   </h2>
-                  <p className="text-green-100 text-lg mb-6">
+                  <p className="text-blue-100 text-lg mb-6">
                     Connect your hospital pharmacy with HospitalOS for automated prescription fulfillment, real-time inventory sync, and unified billing.
                   </p>
                   <Link
@@ -1195,7 +1195,7 @@ export default function HospitalOSPage() {
                 <div className="flex items-center justify-center">
                   <div className="flex items-center gap-4">
                     <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-lg">
-                      <span className="text-2xl font-bold text-[#166534]">H</span>
+                      <span className="text-2xl font-bold text-[#1e40af]">H</span>
                     </div>
                     <div className="flex flex-col gap-1">
                       <div className="w-8 h-1 bg-white/50 rounded"></div>
@@ -1203,7 +1203,7 @@ export default function HospitalOSPage() {
                       <div className="w-8 h-1 bg-white/50 rounded"></div>
                     </div>
                     <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-lg">
-                      <span className="text-2xl font-bold text-[#166534]">P</span>
+                      <span className="text-2xl font-bold text-[#1e40af]">P</span>
                     </div>
                   </div>
                 </div>
@@ -1213,18 +1213,18 @@ export default function HospitalOSPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-[#166534]">
+        <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-[#1e40af]">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-white mb-6">
               Ready to Transform Your Hospital?
             </h2>
-            <p className="text-xl text-green-100 mb-10">
+            <p className="text-xl text-blue-100 mb-10">
               Book a demo and see how HospitalOS can revolutionize your healthcare facility operations.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-[#166534] text-lg font-bold rounded-full shadow-lg hover:bg-green-50 hover:-translate-y-0.5 transition-all duration-200"
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-[#1e40af] text-lg font-bold rounded-full shadow-lg hover:bg-blue-50 hover:-translate-y-0.5 transition-all duration-200"
               >
                 Book a Free Demo
                 <ArrowOutwardIcon className="w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

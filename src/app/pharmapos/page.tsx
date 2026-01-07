@@ -2,9 +2,55 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState, useEffect, useCallback } from 'react';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Footer from '@/components/Footer';
 import { pharmaPOSJsonLd } from './metadata';
+
+const screenshots = [
+  {
+    src: '/screenshots/dashboard.png',
+    title: 'Dashboard',
+    description: 'Real-time overview of sales, inventory, and key metrics at a glance.',
+    badge: 'Admin View',
+    badgeColor: 'text-[#166534]',
+  },
+  {
+    src: '/screenshots/sales.png',
+    title: 'Point of Sale',
+    description: 'Lightning-fast checkout with barcode scanning and keyboard shortcuts.',
+    badge: 'Cashier View',
+    badgeColor: 'text-[#166534]',
+  },
+  {
+    src: '/screenshots/inventory.png',
+    title: 'Inventory Management',
+    description: 'Complete stock control with batch tracking and expiry alerts.',
+    badge: 'Store Keeper',
+    badgeColor: 'text-teal-600',
+  },
+  {
+    src: '/screenshots/reports.png',
+    title: 'Sales Reports',
+    description: 'Detailed analytics, profit margins, and business insights.',
+    badge: 'Analytics',
+    badgeColor: 'text-violet-600',
+  },
+  {
+    src: '/screenshots/mobilemoney.png',
+    title: 'Mobile Money',
+    description: 'Accept payments from MTN, Vodafone, Airtel, M-Pesa, and more.',
+    badge: 'Payments',
+    badgeColor: 'text-orange-600',
+  },
+  {
+    src: '/screenshots/currency.png',
+    title: 'Multi-Currency',
+    description: 'Support for multiple currencies with automatic conversion.',
+    badge: 'Global',
+    badgeColor: 'text-rose-600',
+  },
+];
 
 // All features from the actual PharmaPOS software
 const salesFeatures = [
@@ -238,6 +284,29 @@ function FeatureSection({
 }
 
 export default function PharmaPOSPage() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % screenshots.length);
+  }, []);
+
+  const prevSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev - 1 + screenshots.length) % screenshots.length);
+  }, []);
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 5000);
+  };
+
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    const interval = setInterval(nextSlide, 4000);
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, nextSlide]);
+
   return (
     <>
       {/* JSON-LD Structured Data */}
@@ -344,110 +413,146 @@ export default function PharmaPOSPage() {
           </div>
         </section>
 
-        {/* Screenshot Showcase */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-14">
-              <span className="inline-block px-4 py-1.5 bg-[#166534]/10 text-[#166534] text-sm font-semibold rounded-full mb-4">
+        {/* Screenshots Carousel */}
+        <section className="py-16 md:py-24 bg-[#166534] overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 md:mb-12">
+            <div className="text-center">
+              <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 bg-white/20 text-green-100 text-xs md:text-sm font-semibold rounded-full mb-3 md:mb-4">
                 See It In Action
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-gray-900 mb-4">
-                Powerful Yet Simple Interface
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-4 md:mb-6">
+                Software Screenshots
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-base md:text-xl text-green-100 max-w-2xl mx-auto px-4">
                 Designed for speed and ease of use. Every screen optimized for pharmacy workflows.
               </p>
             </div>
+          </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                <Image
-                  src="/screenshots/dashboard.png"
-                  alt="PharmaPOS Dashboard - Overview of sales, inventory, and key metrics"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+          {/* Full Width Carousel */}
+          <div className="relative">
+            {/* Gradient Overlays for edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-r from-[#166534] to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-l from-[#166534] to-transparent z-10 pointer-events-none"></div>
+
+            {/* Carousel Container */}
+            <div className="relative h-[280px] sm:h-[350px] md:h-[500px] lg:h-[600px]">
+              {screenshots.map((slide, index) => {
+                const isPrev = index === (currentSlide - 1 + screenshots.length) % screenshots.length;
+                const isNext = index === (currentSlide + 1) % screenshots.length;
+                const isCurrent = index === currentSlide;
+
+                return (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+                      isCurrent
+                        ? 'opacity-100 scale-100 z-[5]'
+                        : isPrev
+                        ? 'opacity-30 scale-90 sm:scale-95 -translate-x-[15%] sm:-translate-x-[20%] z-[1]'
+                        : isNext
+                        ? 'opacity-30 scale-90 sm:scale-95 translate-x-[15%] sm:translate-x-[20%] z-[1]'
+                        : 'opacity-0 scale-90 z-0'
+                    }`}
+                  >
+                    <div className="h-full flex items-center justify-center px-8 sm:px-12 md:px-16 lg:px-20">
+                      <div className="relative w-full max-w-6xl">
+                        {/* Browser Frame */}
+                        <div className="relative rounded-lg md:rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
+                          {/* Browser Header */}
+                          <div className="bg-[#14532d] px-2 py-2 md:px-4 md:py-3 flex items-center gap-2 md:gap-3 border-b border-[#166534]">
+                            <div className="flex gap-1 md:gap-2">
+                              <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-red-400"></div>
+                              <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-yellow-400"></div>
+                              <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-green-400"></div>
+                            </div>
+                            <div className="flex-1 flex justify-center">
+                              <div className="bg-[#166534] rounded px-2 py-0.5 md:rounded-lg md:px-4 md:py-1 text-xs md:text-sm text-gray-300 font-medium">
+                                PharmaPOS - {slide.title}
+                              </div>
+                            </div>
+                            <div className={`hidden sm:block px-2 py-0.5 bg-white/10 rounded text-xs font-medium ${slide.badgeColor}`}>
+                              {slide.badge}
+                            </div>
+                          </div>
+                          {/* Screenshot */}
+                          <div className="relative aspect-[16/9] bg-gray-100">
+                            <Image
+                              src={slide.src}
+                              alt={slide.title}
+                              fill
+                              className="object-cover object-top"
+                              priority={index === 0}
+                            />
+                          </div>
+                        </div>
+                        {/* Caption */}
+                        <div className={`text-center mt-4 md:mt-6 transition-opacity duration-500 ${isCurrent ? 'opacity-100' : 'opacity-0'}`}>
+                          <h3 className="text-white font-bold text-lg md:text-2xl mb-2">{slide.title}</h3>
+                          <p className="text-green-100 text-sm md:text-base max-w-xl mx-auto">{slide.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={() => { prevSlide(); setIsAutoPlaying(false); setTimeout(() => setIsAutoPlaying(true), 5000); }}
+              className="absolute left-1 sm:left-2 md:left-8 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
+              aria-label="Previous slide"
+            >
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={() => { nextSlide(); setIsAutoPlaying(false); setTimeout(() => setIsAutoPlaying(true), 5000); }}
+              className="absolute right-1 sm:right-2 md:right-8 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
+              aria-label="Next slide"
+            >
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            {/* Dot Indicators */}
+            <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 md:gap-2">
+              {screenshots.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`transition-all duration-300 rounded-full ${
+                    index === currentSlide
+                      ? 'w-6 h-2 md:w-8 md:h-3 bg-white'
+                      : 'w-2 h-2 md:w-3 md:h-3 bg-white/30 hover:bg-white/50'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-lg font-bold text-white">Dashboard</h3>
-                  <p className="text-gray-200 text-sm">Real-time overview of your pharmacy operations</p>
-                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Feature highlights below carousel */}
+          <div className="max-w-4xl mx-auto mt-8 md:mt-12 px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div className="p-4 rounded-xl bg-white/10">
+                <div className="text-2xl font-bold text-white">15+</div>
+                <div className="text-sm text-green-100">Module Screens</div>
               </div>
-
-              <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                <Image
-                  src="/screenshots/sales.png"
-                  alt="PharmaPOS Sales Screen - Fast checkout with barcode scanning"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-lg font-bold text-white">Point of Sale</h3>
-                  <p className="text-gray-200 text-sm">Lightning-fast checkout with barcode scanning</p>
-                </div>
+              <div className="p-4 rounded-xl bg-white/10">
+                <div className="text-2xl font-bold text-white">5+</div>
+                <div className="text-sm text-green-100">User Roles</div>
               </div>
-
-              <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                <Image
-                  src="/screenshots/inventory.png"
-                  alt="PharmaPOS Inventory - Stock management with batch tracking"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-lg font-bold text-white">Inventory</h3>
-                  <p className="text-gray-200 text-sm">Complete stock control with expiry tracking</p>
-                </div>
+              <div className="p-4 rounded-xl bg-white/10">
+                <div className="text-2xl font-bold text-white">Dark</div>
+                <div className="text-sm text-green-100">Sidebar Theme</div>
               </div>
-
-              <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                <Image
-                  src="/screenshots/reports.png"
-                  alt="PharmaPOS Reports - Sales analytics and business insights"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-lg font-bold text-white">Reports</h3>
-                  <p className="text-gray-200 text-sm">Detailed analytics and business insights</p>
-                </div>
-              </div>
-
-              <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                <Image
-                  src="/screenshots/mobilemoney.png"
-                  alt="PharmaPOS Mobile Money - Accept MTN, Vodafone, and more"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-lg font-bold text-white">Mobile Money</h3>
-                  <p className="text-gray-200 text-sm">Accept payments from all major providers</p>
-                </div>
-              </div>
-
-              <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                <Image
-                  src="/screenshots/currency.png"
-                  alt="PharmaPOS Multi-Currency - Support for multiple currencies"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-lg font-bold text-white">Multi-Currency</h3>
-                  <p className="text-gray-200 text-sm">Support for multiple currencies worldwide</p>
-                </div>
+              <div className="p-4 rounded-xl bg-white/10">
+                <div className="text-2xl font-bold text-white">Clean</div>
+                <div className="text-sm text-green-100">Modern UI</div>
               </div>
             </div>
           </div>

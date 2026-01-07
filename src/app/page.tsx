@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { useState, useEffect, useCallback } from 'react';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Footer from '@/components/Footer';
-import DemoForm from '@/components/DemoForm';
 
 const testimonials = [
   // Row 1 - Left to Right
@@ -473,7 +472,7 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-[#166534] to-green-700 pt-24 md:pt-32 pb-20 md:pb-32 relative overflow-hidden">
+      <section className="min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-[#166534] to-green-700 pt-24 md:pt-32 pb-20 md:pb-32 relative overflow-hidden rounded-b-[40px] md:rounded-b-[60px]">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
@@ -1090,16 +1089,22 @@ export default function Home() {
       </section>
 
       {/* Product Showcase Section - Full Width Carousel */}
-      <section className="py-16 md:py-24 bg-[#166534] overflow-hidden">
+      <section className={`py-16 md:py-24 overflow-hidden transition-colors duration-500 ${
+        activeProduct === 'pharmapos' ? 'bg-[#166534]' : 'bg-[#1e40af]'
+      }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 md:mb-12">
           <div className="text-center">
-            <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 bg-white/20 text-green-100 text-xs md:text-sm font-semibold rounded-full mb-3 md:mb-4">
+            <span className={`inline-block px-3 py-1 md:px-4 md:py-1.5 bg-white/20 text-xs md:text-sm font-semibold rounded-full mb-3 md:mb-4 ${
+              activeProduct === 'pharmapos' ? 'text-green-100' : 'text-blue-100'
+            }`}>
               See It In Action
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-4 md:mb-6">
               Powerful Yet Simple
             </h2>
-            <p className="text-base md:text-xl text-green-100 max-w-2xl mx-auto px-4 mb-8">
+            <p className={`text-base md:text-xl max-w-2xl mx-auto px-4 mb-8 ${
+              activeProduct === 'pharmapos' ? 'text-green-100' : 'text-blue-100'
+            }`}>
               Clean, intuitive interfaces designed for busy healthcare professionals.
             </p>
 
@@ -1124,7 +1129,7 @@ export default function Home() {
                 onClick={() => switchProduct('hospitalos')}
                 className={`px-4 py-2 md:px-6 md:py-2.5 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${
                   activeProduct === 'hospitalos'
-                    ? 'bg-white text-[#166534] shadow-lg'
+                    ? 'bg-white text-[#1e40af] shadow-lg'
                     : 'text-white/80 hover:text-white hover:bg-white/10'
                 }`}
               >
@@ -1142,8 +1147,12 @@ export default function Home() {
         {/* Full Width Carousel */}
         <div className="relative">
           {/* Gradient Overlays for edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-r from-[#166534] to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-l from-[#166534] to-transparent z-10 pointer-events-none"></div>
+          <div className={`absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-r to-transparent z-10 pointer-events-none transition-colors duration-500 ${
+            activeProduct === 'pharmapos' ? 'from-[#166534]' : 'from-[#1e40af]'
+          }`}></div>
+          <div className={`absolute right-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-l to-transparent z-10 pointer-events-none transition-colors duration-500 ${
+            activeProduct === 'pharmapos' ? 'from-[#166534]' : 'from-[#1e40af]'
+          }`}></div>
 
           {/* Carousel Container */}
           <div className="relative h-[280px] sm:h-[350px] md:h-[500px] lg:h-[600px]">
@@ -1503,7 +1512,7 @@ export default function Home() {
           <div className="mt-10 md:mt-12 text-center p-6 md:p-8 bg-white rounded-2xl border border-gray-200">
             <p className="text-gray-600 mb-4">Still have questions?</p>
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 text-[#166534] font-semibold hover:underline"
             >
               Contact our support team
@@ -1513,74 +1522,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA / Contact Section */}
-      <section id="contact" className="py-16 md:py-32 px-4 sm:px-6 lg:px-8 bg-[#166534] relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Left Content */}
-            <div>
-              <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 bg-white/20 text-green-100 text-xs md:text-sm font-semibold rounded-full mb-4 md:mb-6">
-                Get Started Today
-              </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-6">
-                Ready to Transform Your Pharmacy?
-              </h2>
-              <p className="text-lg md:text-xl text-green-100 mb-8 md:mb-10">
-                Book a free demo and see how PharmaPOS can streamline your operations, boost sales, and save you time.
-              </p>
-
-              {/* Contact Info */}
-              <div className="space-y-4 md:space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-green-200 text-sm">Email us</p>
-                    <a href="mailto:contact@medsoftwares.com" className="text-white font-semibold hover:underline">contact@medsoftwares.com</a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-green-200 text-sm">Call us</p>
-                    <a href="tel:+9715677266520" className="text-white font-semibold hover:underline">+971 567 726 6520</a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-green-200 text-sm">Visit us</p>
-                    <p className="text-white font-semibold">Frinton-On-Sea, England</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right - Demo Form */}
-            <DemoForm />
-          </div>
-        </div>
-      </section>
+      {/* Hidden anchor for any external #contact links */}
+      <div id="contact" className="hidden"></div>
 
       <Footer />
     </main>

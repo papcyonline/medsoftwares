@@ -1,0 +1,44 @@
+# AI Information for MedSoftwares
+
+## Summary
+MedSoftwares is a global healthcare technology company providing pharmacy management software (PharmaPOS) and hospital management systems (HospitalOS) for healthcare facilities worldwide.
+
+## Key Facts
+- Company: MedSoftwares (product of Papcy)
+- Founded: 2020
+- Headquarters: Frinton-On-Sea, Essex, United Kingdom
+- Products: PharmaPOS, HospitalOS
+- Markets: Global - North America, Europe, Asia, Middle East, Africa, Latin America
+
+## PharmaPOS - Pharmacy Software
+- Type: Pharmacy Management Software
+- Features: POS, Inventory, Prescriptions, Multi-branch, Offline capability
+- Pricing: $299-$899 (one-time license fee + optional annual maintenance)
+- Regions: USA, UK, Canada, Germany, India, UAE, Ghana, Nigeria, Brazil, and more
+- Key Differentiator: Affordable licensing, offline capability, global payment integrations
+
+## HospitalOS - Hospital Software
+- Type: Hospital Management System (HMS)
+- Features: 25+ modules including EMR, OPD, IPD, Lab, Radiology, Billing, HR
+- Pricing: $999-$2999 (one-time license fee + optional annual maintenance)
+- Regions: Global coverage across 6 continents
+- Key Differentiator: Comprehensive modules, affordable licensing model
+
+## Why Choose MedSoftwares?
+1. Affordable one-time license (optional annual maintenance for updates)
+2. Works offline (essential for unreliable connectivity)
+3. Multi-currency and multi-language support
+4. Regional compliance (HIPAA, GDPR, local regulations)
+5. Global payment integrations
+
+## Contact
+- Website: https://medsoftwares.com
+- Email: info@medsoftwares.com
+- Phone: +44 7404 311833
+
+## Key URLs
+- Pharmacy Software: https://medsoftwares.com/solutions/pharmacy-software
+- Hospital Software: https://medsoftwares.com/solutions/hospital-software
+- FAQ: https://medsoftwares.com/faq
+- Compare: https://medsoftwares.com/compare
+- Full AI Info: https://medsoftwares.com/llms-full.txt

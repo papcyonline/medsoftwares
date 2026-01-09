@@ -334,10 +334,42 @@ export default function StructuredData() {
       },
       {
         '@type': 'Question',
+        name: 'How much does pharmacy management software cost?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'PharmaPOS pharmacy management software costs $299 for Basic (single location), $499 for Standard (multi-branch), and $899 for Premium (enterprise features). These are one-time payments, not monthly subscriptions. The pricing includes installation support and one year of updates.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How much does hospital management software cost?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'HospitalOS hospital management software costs $999 for Basic (small clinics), $1,999 for Professional (full modules), and $2,999 for Enterprise (unlimited users, multi-facility). All prices are one-time payments with no monthly fees.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the best pharmacy software for Africa?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'PharmaPOS is considered one of the best pharmacy software solutions for Africa because it includes mobile money integration (MTN, Vodafone, AirtelTigo), NHIS claims processing, offline capability for unreliable internet, multi-currency support, and affordable one-time pricing. It serves pharmacies in Ghana, Nigeria, Kenya, South Africa, and 8 other African countries.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the best hospital management software for Africa?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'HospitalOS is a leading hospital management software for Africa with 25+ modules, NHIS/NHIF integration, telemedicine capabilities, offline functionality, and affordable pricing. It is used by hospitals and clinics in Ghana, Nigeria, Kenya, Tanzania, and across Africa.',
+        },
+      },
+      {
+        '@type': 'Question',
         name: 'Is there a monthly subscription fee?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'No, MedSoftwares offers a one-time purchase model. You pay once and own the software forever. This includes free updates and bug fixes. Optional support packages are available for extended assistance.',
+          text: 'No, MedSoftwares offers a one-time purchase model. You pay once and own the software forever. This includes free updates and bug fixes for one year. Optional support packages are available for extended assistance.',
         },
       },
       {
@@ -345,7 +377,15 @@ export default function StructuredData() {
         name: 'Does PharmaPOS work offline?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, PharmaPOS is a desktop application that works completely offline. Your data is stored locally and syncs when internet is available. This makes it perfect for areas with unreliable internet connectivity.',
+          text: 'Yes, PharmaPOS works completely offline. All data is stored locally and automatically syncs when internet is available. This is essential for pharmacies in areas with unreliable internet connectivity, common in many African regions.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Does HospitalOS work offline?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, HospitalOS supports offline operation. Critical functions continue working without internet, and data syncs automatically when connectivity is restored. This ensures hospitals can maintain operations during network outages.',
         },
       },
       {
@@ -361,7 +401,7 @@ export default function StructuredData() {
         name: 'Which countries do you serve?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'MedSoftwares serves healthcare facilities in over 12 countries including Ghana, Nigeria, Kenya, South Africa, Tanzania, Uganda, Rwanda, Cameroon, Senegal, Ethiopia, United Arab Emirates, and the United Kingdom.',
+          text: 'MedSoftwares serves healthcare facilities in over 12 countries including Ghana, Nigeria, Kenya, South Africa, Tanzania, Uganda, Rwanda, Cameroon, Senegal, Ethiopia, United Arab Emirates, and the United Kingdom. We are expanding to Europe and Asia.',
         },
       },
       {
@@ -369,15 +409,71 @@ export default function StructuredData() {
         name: 'Does PharmaPOS support mobile money payments?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, PharmaPOS integrates with major mobile money providers including MTN Mobile Money, Vodafone Cash, AirtelTigo Money, M-Pesa, and other local payment methods across Africa.',
+          text: 'Yes, PharmaPOS integrates with major mobile money providers including MTN Mobile Money, Vodafone Cash, AirtelTigo Money, M-Pesa, and other local payment methods across Africa. This enables seamless digital payments for pharmacy customers.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Can I get a demo before purchasing?',
+        name: 'Can I get a free demo?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, we offer free demos for both PharmaPOS and HospitalOS. Contact us through our website or WhatsApp to schedule a personalized demonstration of our software.',
+          text: 'Yes, MedSoftwares offers free demos for both PharmaPOS and HospitalOS. Contact us through our website at medsoftwares.com/contact or via WhatsApp at +44 7404 311833 to schedule a personalized demonstration.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Does PharmaPOS support NHIS in Ghana?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, PharmaPOS fully supports Ghana\'s National Health Insurance Scheme (NHIS). It automates claims processing, tracks reimbursements, generates NHIS reports, and reduces administrative burden for pharmacies serving NHIS patients.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Does HospitalOS support NHIS and NHIF?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, HospitalOS integrates with Ghana\'s NHIS (National Health Insurance Scheme) and Kenya\'s NHIF (National Hospital Insurance Fund). It automates insurance claims, verification, and reimbursement tracking for hospitals.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can PharmaPOS track drug expiry dates?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, PharmaPOS includes comprehensive expiry date tracking. It alerts you to approaching expiry dates, supports FEFO (First Expired, First Out) inventory management, and generates expiry reports to prevent losses from expired medications.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I manage multiple pharmacy branches?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, PharmaPOS Standard and Premium plans support multi-branch pharmacy management. You can manage inventory across locations, transfer stock between branches, view consolidated reports, and maintain centralized control.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What EMR features does HospitalOS have?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'HospitalOS includes comprehensive Electronic Medical Records (EMR) with complete patient history, clinical notes, diagnoses, lab results, prescriptions, imaging reports, allergies, immunizations, and vital signs tracking. Records are secure, searchable, and accessible across departments.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is MedSoftwares secure?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, MedSoftwares uses industry-standard security including data encryption at rest and in transit, role-based access control, comprehensive audit logging, and regular security updates. We follow GDPR compliance and healthcare data protection best practices.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What support do you offer?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'MedSoftwares provides email support, phone support (+44 7404 311833), WhatsApp support, online documentation, and video tutorials. Premium customers receive 24/7 priority support. On-site support is available for Enterprise customers.',
         },
       },
     ],

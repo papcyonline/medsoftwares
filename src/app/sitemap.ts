@@ -2,6 +2,17 @@ import { MetadataRoute } from 'next';
 
 // News articles - keep in sync with src/app/news/page.tsx
 const newsArticles = [
+  // 2026 Competitor-Focused SEO Articles
+  { slug: 'mckesson-pharmacy-software-alternatives-2026', date: '2026-01-09' },
+  { slug: 'best-pharmacy-software-developing-countries-2026', date: '2026-01-09' },
+  { slug: 'hospital-emr-software-comparison-2026', date: '2026-01-09' },
+  { slug: 'pharmacy-inventory-management-software-2026', date: '2026-01-09' },
+  { slug: 'pioneerrx-alternatives-2026', date: '2026-01-08' },
+  { slug: 'epic-alternatives-small-hospitals-2026', date: '2026-01-08' },
+  { slug: 'pharmacy-software-offline-mode-2026', date: '2026-01-08' },
+  { slug: 'pharmacy-software-no-monthly-fees-2026', date: '2026-01-07' },
+  { slug: 'cerner-alternatives-2026', date: '2026-01-07' },
+  { slug: 'affordable-hospital-management-software-2026', date: '2026-01-06' },
   // 2026 SEO-Optimized Articles
   { slug: 'best-hospital-management-software-2026', date: '2026-01-07' },
   { slug: 'free-hospital-management-software-download', date: '2026-01-06' },
@@ -173,6 +184,44 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/faq`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/compare`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    // Best of comparison pages (high SEO value)
+    {
+      url: `${baseUrl}/best-pharmacy-software`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/best-hospital-software`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    // Global solution pages
+    {
+      url: `${baseUrl}/solutions/pharmacy-software`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/solutions/hospital-software`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/pricing`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -297,6 +346,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
+    },
+    // AI/LLM discovery files
+    {
+      url: `${baseUrl}/llms.txt`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/llms-full.txt`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/ai.txt`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/.well-known/llms.txt`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
     },
   ];
 

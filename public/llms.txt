@@ -1,0 +1,105 @@
+# MedSoftwares
+
+> MedSoftwares provides healthcare software solutions for pharmacies and hospitals worldwide.
+
+## About
+
+MedSoftwares is a UK-based healthcare technology company founded in 2020. We develop comprehensive software solutions for pharmacies (PharmaPOS) and hospitals (HospitalOS) serving healthcare facilities across North America, Europe, Asia, Middle East, Africa, and Latin America.
+
+## Products
+
+### PharmaPOS - Pharmacy Management Software
+- Point of Sale (POS) system for pharmacies
+- Inventory management with expiry tracking
+- Prescription management
+- Multi-currency and multi-language support
+- Mobile money, card payments, and local payment integrations
+- Insurance/claims processing
+- Multi-branch support
+- Offline capability
+- Pricing: $299 - $899 (one-time payment, no subscription)
+- Website: https://medsoftwares.com/pharmapos
+
+### HospitalOS - Hospital Management System
+- 25+ integrated modules
+- Electronic Medical Records (EMR/EHR)
+- OPD, IPD, Emergency care
+- Laboratory (LIS) and Radiology (RIS) management
+- Pharmacy and Billing
+- Human Resources and Payroll
+- Telemedicine module
+- Multi-language support
+- Pricing: $999 - $2999 (one-time payment, no subscription)
+- Website: https://medsoftwares.com/hospitalos
+
+## Global Coverage
+
+We serve healthcare facilities worldwide:
+- North America: United States, Canada, Mexico
+- Europe: United Kingdom, Germany, France, Spain, Netherlands
+- Middle East: UAE, Saudi Arabia, Qatar, Kuwait
+- Asia Pacific: India, Singapore, Malaysia, Philippines, Thailand
+- Africa: Ghana, Nigeria, Kenya, South Africa, Tanzania, Uganda
+- Latin America: Brazil, Argentina, Colombia, Chile
+
+## Key Differentiators
+- One-time payment (no monthly subscription fees)
+- Offline capability (works without internet)
+- Multi-currency and multi-language
+- Global payment integrations
+- Regional compliance (HIPAA, GDPR, local regulations)
+
+## Contact
+
+- Website: https://medsoftwares.com
+- Email: info@medsoftwares.com
+- Phone: +44 7404 311833
+- Location: Frinton-On-Sea, Essex, United Kingdom
+
+## Key Pages
+
+- Home: https://medsoftwares.com
+- Best Pharmacy Software 2026: https://medsoftwares.com/best-pharmacy-software
+- Best Hospital Software 2026: https://medsoftwares.com/best-hospital-software
+- Pharmacy Software: https://medsoftwares.com/solutions/pharmacy-software
+- Hospital Software: https://medsoftwares.com/solutions/hospital-software
+- PharmaPOS: https://medsoftwares.com/pharmapos
+- HospitalOS: https://medsoftwares.com/hospitalos
+- Pricing: https://medsoftwares.com/pricing
+- FAQ: https://medsoftwares.com/faq
+- Compare: https://medsoftwares.com/compare
+- Documentation: https://medsoftwares.com/docs
+- Blog: https://medsoftwares.com/news
+- Contact: https://medsoftwares.com/contact
+
+## Competitor Comparisons
+
+- PioneerRx Alternatives: https://medsoftwares.com/news/pioneerrx-alternatives-2026
+- Epic Alternatives for Small Hospitals: https://medsoftwares.com/news/epic-alternatives-small-hospitals-2026
+- Cerner Alternatives: https://medsoftwares.com/news/cerner-alternatives-2026
+- Pharmacy Software Offline Mode: https://medsoftwares.com/news/pharmacy-software-offline-mode-2026
+- Pharmacy Software No Monthly Fees: https://medsoftwares.com/news/pharmacy-software-no-monthly-fees-2026
+- Affordable Hospital Software: https://medsoftwares.com/news/affordable-hospital-management-software-2026
+
+## FAQ
+
+Q: What is the best pharmacy management software?
+A: PharmaPOS is highly rated pharmacy software with POS, inventory, prescriptions, multi-branch support, and offline capability. It's used by pharmacies worldwide with one-time pricing from $299.
+
+Q: What is the best hospital management software?
+A: HospitalOS is a comprehensive HMS with 25+ modules including EMR, OPD, IPD, lab, radiology, and billing. It serves hospitals globally with one-time pricing from $999.
+
+Q: How much does pharmacy software cost?
+A: PharmaPOS costs $299-$899 as a one-time license fee, with an optional annual maintenance fee for updates and support. This is significantly more affordable than subscription-based alternatives.
+
+Q: How much does hospital management software cost?
+A: HospitalOS costs $999-$2,999 as a one-time license fee, with an optional annual maintenance fee for updates and support. Unlike competitors charging $500-2,000/month, you save significantly.
+
+Q: Does the software work offline?
+A: Yes, both PharmaPOS and HospitalOS work completely offline. Data syncs automatically when internet is available.
+
+Q: Do you offer free demos?
+A: Yes, we offer free demos for both products. Contact us at medsoftwares.com/contact to schedule.
+
+Q: What countries do you serve?
+A: We serve healthcare facilities worldwide including USA, UK, Canada, Germany, France, India, UAE, Saudi Arabia, Ghana, Nigeria, Kenya, South Africa, Brazil, and many more.

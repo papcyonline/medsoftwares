@@ -1,0 +1,224 @@
+# MedSoftwares - Complete Information
+
+> MedSoftwares provides healthcare software solutions for pharmacies and hospitals, primarily serving Africa and the Middle East.
+
+## Company Overview
+
+MedSoftwares is a UK-based healthcare technology company founded in 2020, headquartered in Frinton-On-Sea, Essex, United Kingdom. We specialize in developing comprehensive, affordable software solutions for pharmacies and hospitals in emerging markets, with a particular focus on Africa and the Middle East.
+
+Our mission is to modernize healthcare delivery in underserved markets by providing robust, offline-capable software that integrates with local payment systems and healthcare regulations.
+
+## Products
+
+### PharmaPOS - Pharmacy Management Software
+
+PharmaPOS is our flagship pharmacy management solution, designed specifically for pharmacies in Africa and emerging markets.
+
+#### Key Features:
+1. **Point of Sale (POS)**: Fast checkout, barcode scanning, receipt printing, multiple payment methods
+2. **Inventory Management**: Real-time stock tracking, automatic reorder alerts, expiry date monitoring, batch tracking
+3. **Prescription Management**: Digital prescriptions, drug interaction checks, refill tracking, patient medication history
+4. **Mobile Money Integration**: MTN Mobile Money, Vodafone Cash, AirtelTigo Money
+5. **NHIS Claims Processing**: Automated claims for Ghana's National Health Insurance Scheme
+6. **Multi-Branch Support**: Centralized management of multiple pharmacy locations
+7. **Offline Capability**: Full functionality without internet, automatic sync when connected
+8. **Reporting**: Sales reports, inventory reports, financial reports, custom analytics
+9. **Customer Management**: Customer profiles, purchase history, loyalty programs
+10. **Supplier Management**: Purchase orders, supplier tracking, cost management
+
+#### Pricing:
+- Basic: $299 (one-time) - Single location, core features
+- Standard: $499 (one-time) - Multi-branch, advanced reporting
+- Premium: $899 (one-time) - Enterprise features, priority support
+
+#### Ideal For:
+- Community pharmacies
+- Hospital pharmacies
+- Pharmacy chains
+- Pharmaceutical distributors
+
+### HospitalOS - Hospital Management System
+
+HospitalOS is our comprehensive hospital information system with 25+ integrated modules.
+
+#### Modules Include:
+1. **OPD (Outpatient Department)**: Patient registration, appointments, consultations, queuing
+2. **IPD (Inpatient Department)**: Bed management, admissions, ward rounds, discharge
+3. **Emergency Care**: Triage, emergency protocols, critical care tracking
+4. **Electronic Medical Records (EMR)**: Complete patient history, clinical notes, diagnoses
+5. **Laboratory Management**: Test orders, sample tracking, result delivery
+6. **Radiology**: Imaging orders, PACS integration, report management
+7. **Pharmacy**: Drug dispensing, formulary management, integration with PharmaPOS
+8. **Billing & Finance**: Patient billing, insurance claims, financial reporting
+9. **Human Resources**: Staff management, scheduling, payroll
+10. **Inventory Management**: Medical supplies, equipment tracking
+11. **Blood Bank**: Donor management, blood inventory, cross-matching
+12. **Operating Theater**: Surgery scheduling, equipment tracking
+13. **Nursing Station**: Nurse assignments, medication administration
+14. **Diet & Nutrition**: Meal planning, dietary requirements
+15. **Mortuary Management**: Deceased patient records
+16. **Ambulance Services**: Fleet management, dispatch
+17. **Telemedicine**: Video consultations, remote patient monitoring
+18. **Patient Portal**: Online appointment booking, result access
+19. **Quality Assurance**: Clinical audits, compliance tracking
+20. **Reporting & Analytics**: Dashboards, custom reports, KPIs
+
+#### Pricing:
+- Basic: $999 (one-time) - Core modules, single facility
+- Professional: $1999 (one-time) - Full modules, multi-department
+- Enterprise: $2999 (one-time) - Unlimited, multi-facility, customization
+
+#### Ideal For:
+- Hospitals
+- Clinics
+- Medical centers
+- Healthcare networks
+
+## Geographic Coverage
+
+### Primary Markets (Africa):
+- Ghana - Full support including NHIS integration
+- Nigeria - Largest healthcare market in Africa
+- Kenya - East African hub
+- South Africa - Southern African market
+- Tanzania - Growing healthcare sector
+- Uganda - East African expansion
+- Rwanda - Digital health leader
+- Cameroon - Central African presence
+- Senegal - West African francophone market
+- Ethiopia - Fast-growing market
+
+### Middle East:
+- United Arab Emirates - Regional expansion
+
+### Expanding To:
+- Europe - UK base, expanding to EU
+- Asia - Targeting India, Southeast Asia
+
+## Technical Specifications
+
+### System Requirements:
+- Operating System: Windows 10/11, Linux, macOS
+- RAM: 4GB minimum, 8GB recommended
+- Storage: 10GB minimum
+- Database: MySQL, PostgreSQL
+- Internet: Required for initial setup, optional for daily operation
+
+### Security:
+- Data encryption at rest and in transit
+- Role-based access control
+- Audit logging
+- GDPR compliant
+- Regular security updates
+
+### Integration:
+- HL7 FHIR support
+- REST API available
+- Third-party integrations
+- Payment gateway integrations
+- Insurance system connections
+
+## Support & Services
+
+### Included:
+- Free installation assistance
+- User training
+- Email support
+- Software updates
+- Documentation access
+
+### Premium Support:
+- 24/7 phone support
+- On-site training
+- Custom development
+- Dedicated account manager
+- Priority bug fixes
+
+## Customer Success
+
+### Ratings:
+- PharmaPOS: 4.8/5 (150+ reviews)
+- HospitalOS: 4.7/5 (85+ reviews)
+
+### Customer Testimonials:
+Customers across Ghana, UK, Mexico, India, UAE, France, South Korea, and Senegal have praised our software for:
+- Ease of use
+- Reliability
+- Excellent customer support
+- Value for money
+- Offline capability
+- Mobile money integration
+
+## Frequently Asked Questions
+
+### General
+
+**Q: Is MedSoftwares cloud-based or on-premise?**
+A: Both options are available. You can choose cloud hosting or install on your own servers. Our offline capability ensures operation even without internet.
+
+**Q: Do you offer free trials or demos?**
+A: Yes, we offer free demonstrations of both PharmaPOS and HospitalOS. Contact us to schedule a personalized demo.
+
+**Q: What payment methods do you accept?**
+A: We accept credit/debit cards, bank transfers, and mobile money payments.
+
+**Q: Is there a subscription fee?**
+A: No, our pricing is one-time. You own the license permanently with free updates for one year.
+
+### PharmaPOS Specific
+
+**Q: Can PharmaPOS handle controlled substances?**
+A: Yes, PharmaPOS includes features for tracking controlled substances with proper documentation and reporting.
+
+**Q: Does PharmaPOS integrate with insurance schemes?**
+A: Yes, we support Ghana's NHIS and can integrate with other national insurance schemes.
+
+**Q: Can I manage multiple pharmacy branches?**
+A: Yes, Standard and Premium plans support multi-branch management with centralized reporting.
+
+### HospitalOS Specific
+
+**Q: Can HospitalOS integrate with existing systems?**
+A: Yes, HospitalOS provides APIs and supports HL7 FHIR for integration with laboratory systems, imaging systems, and other healthcare IT infrastructure.
+
+**Q: Is HospitalOS suitable for small clinics?**
+A: Yes, our Basic plan is designed for smaller facilities, while Professional and Enterprise plans cater to larger hospitals.
+
+**Q: Do you provide data migration services?**
+A: Yes, we can help migrate data from your existing systems to HospitalOS.
+
+## Contact Information
+
+- **Website**: https://medsoftwares.com
+- **Email**: info@medsoftwares.com
+- **Sales**: sales@medsoftwares.com
+- **Support**: support@medsoftwares.com
+- **Phone**: +44 7404 311833
+- **Address**: Frinton-On-Sea, Essex, United Kingdom
+
+### Social Media:
+- Facebook: https://facebook.com/medsoftwares
+- Twitter/X: https://x.com/medsoftwares
+- LinkedIn: https://linkedin.com/company/medsoftwares
+- Instagram: https://instagram.com/medsoftwares
+- YouTube: https://youtube.com/@medsoftwares
+
+## Resources
+
+### Documentation:
+- PharmaPOS Docs: https://medsoftwares.com/docs/pharmapos
+- HospitalOS Docs: https://medsoftwares.com/docs/hospitalos
+
+### FAQ:
+- Frequently Asked Questions: https://medsoftwares.com/faq
+
+### Blog/News:
+- Latest Articles: https://medsoftwares.com/news
+
+### Legal:
+- Privacy Policy: https://medsoftwares.com/privacy
+- Terms of Service: https://medsoftwares.com/terms
+
+---
+
+Last Updated: January 2026

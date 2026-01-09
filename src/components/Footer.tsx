@@ -16,6 +16,7 @@ const footerSections: FooterSection[] = [
     title: 'PharmaPOS',
     links: [
       { label: 'Overview', href: '/pharmapos' },
+      { label: 'Pharmacy Software', href: '/solutions/pharmacy-software' },
       { label: 'Features', href: '/pharmapos#features' },
       { label: 'Documentation', href: '/docs/pharmapos' },
       { label: 'Request Demo', href: '/contact' },
@@ -25,7 +26,7 @@ const footerSections: FooterSection[] = [
     title: 'HospitalOS',
     links: [
       { label: 'Overview', href: '/hospitalos' },
-      { label: 'Features', href: '/hospitalos#features' },
+      { label: 'Hospital Software', href: '/solutions/hospital-software' },
       { label: 'Modules', href: '/hospitalos#modules' },
       { label: 'Documentation', href: '/docs/hospitalos' },
       { label: 'Request Demo', href: '/contact' },
@@ -37,12 +38,14 @@ const footerSections: FooterSection[] = [
       { label: 'About Us', href: '/about' },
       { label: 'News', href: '/news' },
       { label: 'Contact', href: '/contact' },
+      { label: 'Compare', href: '/compare' },
     ],
   },
   {
     title: 'Support',
     links: [
       { label: 'Documentation', href: '/docs' },
+      { label: 'FAQ', href: '/faq' },
       { label: 'Contact Support', href: '/contact' },
       { label: 'WhatsApp', href: 'https://wa.me/9715677266520', external: true },
     ],

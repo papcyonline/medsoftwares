@@ -44,15 +44,8 @@ const formatDate = (dateString: string) => {
 export default function NewsPage() {
   const allArticles = getAllArticles();
 
-  // Get featured articles (most recent ones from key categories)
-  const featuredArticles = allArticles
-    .filter(article => {
-      // Feature articles that are recent or in key categories
-      const isRecent = new Date(article.date) > new Date('2025-12-01');
-      const isKeyCategory = ['product', 'company'].includes(article.category);
-      return isRecent || isKeyCategory;
-    })
-    .slice(0, 8);
+  // Get featured articles (most recent 15 for 3-column layout)
+  const featuredArticles = allArticles.slice(0, 15);
 
   return (
     <main>

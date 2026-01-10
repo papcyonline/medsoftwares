@@ -20,10 +20,15 @@ interface NewsClientProps {
 
 export default function NewsClient({ articles, featuredArticles }: NewsClientProps) {
   const [activeCategory, setActiveCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const filteredArticles = activeCategory === 'all'
-    ? articles
-    : articles.filter(article => article.category === activeCategory);
+  const filteredArticles = articles.filter(article => {
+    const matchesCategory = activeCategory === 'all' || article.category === activeCategory;
+    const matchesSearch = searchQuery === '' ||
+      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -105,6 +110,38 @@ export default function NewsClient({ articles, featuredArticles }: NewsClientPro
       {/* Category Filter & Articles */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
+          {/* Search Bar */}
+          <div className="mb-8">
+            <div className="relative max-w-md">
+              <svg
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <input
+                type="text"
+                placeholder="Search articles..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 bg-white rounded-xl border border-gray-200 text-gray-900 placeholder-gray-500 focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/20 outline-none transition-all"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              )}
+            </div>
+          </div>
+
           {/* Category Tabs */}
           <div className="flex flex-wrap gap-2 mb-12">
             {categories.map((category) => (
@@ -122,7 +159,31 @@ export default function NewsClient({ articles, featuredArticles }: NewsClientPro
             ))}
           </div>
 
+          {/* Results Count */}
+          {(searchQuery || activeCategory !== 'all') && (
+            <div className="mb-6 text-sm text-gray-600">
+              Showing {filteredArticles.length} {filteredArticles.length === 1 ? 'article' : 'articles'}
+              {searchQuery && <span> for &quot;{searchQuery}&quot;</span>}
+              {activeCategory !== 'all' && <span> in {categories.find(c => c.id === activeCategory)?.label}</span>}
+            </div>
+          )}
+
           {/* Articles Grid */}
+          {filteredArticles.length === 0 ? (
+            <div className="text-center py-12">
+              <svg className="w-16 h-16 mx-auto text-gray-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">No articles found</h3>
+              <p className="text-gray-600 mb-4">Try adjusting your search or filter criteria</p>
+              <button
+                onClick={() => { setSearchQuery(''); setActiveCategory('all'); }}
+                className="text-[#166534] font-semibold hover:underline"
+              >
+                Clear filters
+              </button>
+            </div>
+          ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredArticles.map((article) => (
               <article
@@ -157,6 +218,7 @@ export default function NewsClient({ articles, featuredArticles }: NewsClientPro
               </article>
             ))}
           </div>
+          )}
         </div>
       </section>
     </>

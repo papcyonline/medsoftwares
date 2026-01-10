@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Footer from '@/components/Footer';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ArticleSchema from '@/components/ArticleSchema';
 import { getArticleBySlug, getAllArticleSlugs, getRelatedArticles } from '@/lib/articles';
 
 interface PageProps {
@@ -90,18 +92,28 @@ export default async function ArticlePage({ params }: PageProps) {
 
   return (
     <main>
+      {/* Article Schema for SEO */}
+      <ArticleSchema
+        title={article.title}
+        description={article.excerpt}
+        image={article.image}
+        datePublished={article.date}
+        author={article.author}
+        authorRole={article.authorRole}
+        slug={slug}
+      />
+
       {/* Hero Section */}
       <section className="pt-32 pb-8 md:pt-40 md:pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-4xl mx-auto">
-          <Link
-            href="/news"
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-[#166534] transition-colors mb-8"
-          >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Back to News
-          </Link>
+          {/* Breadcrumbs */}
+          <Breadcrumbs
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'News', href: '/news' },
+              { label: article.title },
+            ]}
+          />
 
           <div className="flex items-center gap-3 mb-6">
             <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getCategoryColor(article.category)}`}>

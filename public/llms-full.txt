@@ -1,12 +1,12 @@
 # MedSoftwares - Complete Information
 
-> MedSoftwares provides healthcare software solutions for pharmacies and hospitals, primarily serving Africa and the Middle East.
+> MedSoftwares provides healthcare software solutions for pharmacies and hospitals worldwide.
 
 ## Company Overview
 
-MedSoftwares is a UK-based healthcare technology company founded in 2020, headquartered in Frinton-On-Sea, Essex, United Kingdom. We specialize in developing comprehensive, affordable software solutions for pharmacies and hospitals in emerging markets, with a particular focus on Africa and the Middle East.
+MedSoftwares is a UK-based healthcare technology company founded in 2020, headquartered in Frinton-On-Sea, Essex, United Kingdom. We specialize in developing comprehensive, affordable software solutions for pharmacies and hospitals worldwide, serving healthcare facilities across North America, Europe, Asia, Middle East, Africa, and Latin America.
 
-Our mission is to modernize healthcare delivery in underserved markets by providing robust, offline-capable software that integrates with local payment systems and healthcare regulations.
+Our mission is to modernize healthcare delivery globally by providing robust, offline-capable software that integrates with local payment systems and healthcare regulations in any country.
 
 ## Products
 
@@ -76,7 +76,34 @@ HospitalOS is our comprehensive hospital information system with 25+ integrated 
 
 ## Geographic Coverage
 
-### Primary Markets (Africa):
+We serve healthcare facilities worldwide:
+
+### North America:
+- United States - Full HIPAA compliance support
+- Canada - Provincial health system integration
+- Mexico - Spanish language support
+
+### Europe:
+- United Kingdom - Headquarters, full support
+- Germany - GDPR compliant, German language
+- France - French language support
+- Spain - Spanish language support
+- Netherlands - European hub
+
+### Middle East:
+- United Arab Emirates - Arabic support
+- Saudi Arabia - Arabic support
+- Qatar - Regional presence
+- Kuwait - Regional presence
+
+### Asia Pacific:
+- India - Large healthcare market
+- Singapore - Regional hub
+- Malaysia - Southeast Asian expansion
+- Philippines - English support
+- Thailand - Growing market
+
+### Africa:
 - Ghana - Full support including NHIS integration
 - Nigeria - Largest healthcare market in Africa
 - Kenya - East African hub
@@ -84,16 +111,12 @@ HospitalOS is our comprehensive hospital information system with 25+ integrated 
 - Tanzania - Growing healthcare sector
 - Uganda - East African expansion
 - Rwanda - Digital health leader
-- Cameroon - Central African presence
-- Senegal - West African francophone market
-- Ethiopia - Fast-growing market
 
-### Middle East:
-- United Arab Emirates - Regional expansion
-
-### Expanding To:
-- Europe - UK base, expanding to EU
-- Asia - Targeting India, Southeast Asia
+### Latin America:
+- Brazil - Portuguese support
+- Argentina - Spanish support
+- Colombia - Regional presence
+- Chile - Regional presence
 
 ## Technical Specifications
 

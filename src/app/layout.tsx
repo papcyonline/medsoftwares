@@ -123,6 +123,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://translate.googleapis.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
+        {/* AI/LLM discoverability */}
+        <link rel="llms" href="/llms.txt" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMs Full" />
+        <link rel="alternate" type="text/plain" href="/ai.txt" title="AI Information" />
+
         {/* Favicons and PWA */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />

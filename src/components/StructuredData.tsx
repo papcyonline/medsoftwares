@@ -13,7 +13,7 @@ export default function StructuredData() {
       height: 512,
     },
     image: 'https://medsoftwares.com/og.png',
-    description: 'AI-powered healthcare software solutions for pharmacies and hospitals worldwide. Serving 25+ healthcare facilities across 12 countries.',
+    description: 'AI-powered healthcare software solutions for pharmacies and hospitals worldwide. Serving 50+ healthcare facilities across 30+ countries in North America, Europe, Asia, Middle East, Africa, and Latin America.',
     foundingDate: '2020',
     numberOfEmployees: {
       '@type': 'QuantitativeValue',
@@ -39,8 +39,8 @@ export default function StructuredData() {
         telephone: '+971-567-726-6520',
         contactType: 'sales',
         email: 'sales@medsoftwares.com',
-        availableLanguage: ['English', 'French', 'Arabic'],
-        areaServed: ['Africa', 'Middle East', 'Europe', 'Asia'],
+        availableLanguage: ['English', 'French', 'Arabic', 'Spanish', 'Portuguese'],
+        areaServed: ['North America', 'Europe', 'Asia', 'Middle East', 'Africa', 'Latin America'],
       },
       {
         '@type': 'ContactPoint',
@@ -64,18 +64,40 @@ export default function StructuredData() {
       url: 'https://papcy.com',
     },
     areaServed: [
+      // North America
+      { '@type': 'Country', name: 'United States' },
+      { '@type': 'Country', name: 'Canada' },
+      { '@type': 'Country', name: 'Mexico' },
+      // Europe
+      { '@type': 'Country', name: 'United Kingdom' },
+      { '@type': 'Country', name: 'Germany' },
+      { '@type': 'Country', name: 'France' },
+      { '@type': 'Country', name: 'Spain' },
+      { '@type': 'Country', name: 'Netherlands' },
+      // Middle East
+      { '@type': 'Country', name: 'United Arab Emirates' },
+      { '@type': 'Country', name: 'Saudi Arabia' },
+      { '@type': 'Country', name: 'Qatar' },
+      { '@type': 'Country', name: 'Kuwait' },
+      // Asia Pacific
+      { '@type': 'Country', name: 'India' },
+      { '@type': 'Country', name: 'Singapore' },
+      { '@type': 'Country', name: 'Malaysia' },
+      { '@type': 'Country', name: 'Philippines' },
+      { '@type': 'Country', name: 'Thailand' },
+      // Africa
       { '@type': 'Country', name: 'Ghana' },
       { '@type': 'Country', name: 'Nigeria' },
       { '@type': 'Country', name: 'Kenya' },
       { '@type': 'Country', name: 'South Africa' },
-      { '@type': 'Country', name: 'United Arab Emirates' },
-      { '@type': 'Country', name: 'United Kingdom' },
       { '@type': 'Country', name: 'Tanzania' },
       { '@type': 'Country', name: 'Uganda' },
       { '@type': 'Country', name: 'Rwanda' },
-      { '@type': 'Country', name: 'Cameroon' },
-      { '@type': 'Country', name: 'Senegal' },
-      { '@type': 'Country', name: 'Ethiopia' },
+      // Latin America
+      { '@type': 'Country', name: 'Brazil' },
+      { '@type': 'Country', name: 'Argentina' },
+      { '@type': 'Country', name: 'Colombia' },
+      { '@type': 'Country', name: 'Chile' },
     ],
     knowsAbout: [
       'Pharmacy Management Software',
@@ -228,7 +250,7 @@ export default function StructuredData() {
     applicationCategory: 'BusinessApplication',
     applicationSubCategory: 'Hospital Management System',
     operatingSystem: 'Windows, Web Browser',
-    description: 'Comprehensive hospital management system with patient records, OPD/IPD, billing, laboratory, radiology, pharmacy, emergency care, and 25+ integrated modules. Serving hospitals and clinics across Africa and Middle East.',
+    description: 'Comprehensive hospital management system with patient records, OPD/IPD, billing, laboratory, radiology, pharmacy, emergency care, and 25+ integrated modules. Serving hospitals and clinics worldwide with one-time pricing.',
     url: 'https://medsoftwares.com/hospitalos',
     downloadUrl: 'https://medsoftwares.com/contact',
     softwareVersion: '2.5',
@@ -321,7 +343,7 @@ export default function StructuredData() {
         name: 'What is PharmaPOS?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'PharmaPOS is a comprehensive pharmacy management software that includes Point of Sale, inventory management, prescription tracking, drug interaction checking, NHIS/insurance claims processing, and mobile money integration. It is designed for pharmacies in Africa and worldwide.',
+          text: 'PharmaPOS is a comprehensive pharmacy management software that includes Point of Sale, inventory management, prescription tracking, drug interaction checking, insurance claims processing, and global payment integration. It serves pharmacies worldwide across North America, Europe, Asia, Middle East, Africa, and Latin America.',
         },
       },
       {
@@ -329,7 +351,7 @@ export default function StructuredData() {
         name: 'What is HospitalOS?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'HospitalOS is a complete hospital management system with 25+ integrated modules including patient management, OPD, IPD, emergency care, laboratory, radiology, pharmacy, billing, and more. It serves hospitals and clinics across Africa and the Middle East.',
+          text: 'HospitalOS is a complete hospital management system with 25+ integrated modules including patient management, OPD, IPD, emergency care, laboratory, radiology, pharmacy, billing, and more. It serves hospitals and clinics worldwide with one-time pricing and no monthly fees.',
         },
       },
       {
@@ -350,18 +372,18 @@ export default function StructuredData() {
       },
       {
         '@type': 'Question',
-        name: 'What is the best pharmacy software for Africa?',
+        name: 'What is the best pharmacy software with no monthly fees?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'PharmaPOS is considered one of the best pharmacy software solutions for Africa because it includes mobile money integration (MTN, Vodafone, AirtelTigo), NHIS claims processing, offline capability for unreliable internet, multi-currency support, and affordable one-time pricing. It serves pharmacies in Ghana, Nigeria, Kenya, South Africa, and 8 other African countries.',
+          text: 'PharmaPOS is a top-rated pharmacy software with one-time pricing from $299 (no monthly subscription). It includes POS, inventory management, prescription tracking, multi-currency support, global payment integration, and offline capability. Used by pharmacies in USA, UK, Canada, India, UAE, Ghana, Nigeria, and 25+ countries worldwide.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What is the best hospital management software for Africa?',
+        name: 'What is the best affordable hospital management software?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'HospitalOS is a leading hospital management software for Africa with 25+ modules, NHIS/NHIF integration, telemedicine capabilities, offline functionality, and affordable pricing. It is used by hospitals and clinics in Ghana, Nigeria, Kenya, Tanzania, and across Africa.',
+          text: 'HospitalOS is a comprehensive hospital management software with one-time pricing from $999 (no monthly fees). It includes 25+ modules, EMR, OPD, IPD, laboratory, radiology, billing, telemedicine, and offline capability. Used by hospitals in USA, UK, India, UAE, Ghana, Nigeria, Kenya, and 25+ countries worldwide.',
         },
       },
       {
@@ -401,7 +423,7 @@ export default function StructuredData() {
         name: 'Which countries do you serve?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'MedSoftwares serves healthcare facilities in over 12 countries including Ghana, Nigeria, Kenya, South Africa, Tanzania, Uganda, Rwanda, Cameroon, Senegal, Ethiopia, United Arab Emirates, and the United Kingdom. We are expanding to Europe and Asia.',
+          text: 'MedSoftwares serves healthcare facilities in 30+ countries worldwide including: USA, Canada, Mexico (North America); UK, Germany, France, Spain, Netherlands (Europe); UAE, Saudi Arabia, Qatar, Kuwait (Middle East); India, Singapore, Malaysia, Philippines, Thailand (Asia); Ghana, Nigeria, Kenya, South Africa, Tanzania, Uganda, Rwanda (Africa); Brazil, Argentina, Colombia, Chile (Latin America).',
         },
       },
       {
@@ -492,6 +514,77 @@ export default function StructuredData() {
     ],
   };
 
+  // Speakable schema for voice assistants (Google Assistant, Siri, Alexa)
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://medsoftwares.com/#speakable',
+    name: 'MedSoftwares - Healthcare Software Solutions',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', '.speakable', '[data-speakable]'],
+    },
+    mainEntity: [
+      {
+        '@type': 'SoftwareApplication',
+        name: 'PharmaPOS',
+        description: 'PharmaPOS is pharmacy management software with point of sale, inventory tracking, prescription management, and offline capability. Pricing starts at $299 one-time with no monthly fees.',
+        applicationCategory: 'BusinessApplication',
+      },
+      {
+        '@type': 'SoftwareApplication',
+        name: 'HospitalOS',
+        description: 'HospitalOS is hospital management software with 25 plus modules including electronic medical records, outpatient, inpatient, laboratory, radiology, and billing. Pricing starts at $999 one-time with no monthly fees.',
+        applicationCategory: 'BusinessApplication',
+      },
+    ],
+  };
+
+  // Voice-optimized FAQ for voice assistants
+  const voiceFaqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': 'https://medsoftwares.com/#voice-faq',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.faq-answer', '[data-speakable]'],
+    },
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the best pharmacy software without monthly fees?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'PharmaPOS by MedSoftwares offers one-time pricing starting at $299 with no monthly subscription fees. It includes point of sale, inventory management, prescription tracking, and works offline.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the best hospital software for small hospitals?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'HospitalOS by MedSoftwares is an affordable hospital management system starting at $999 one-time. It includes 25 modules like electronic medical records, outpatient, inpatient, lab, and billing.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How much does pharmacy software cost?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'PharmaPOS pharmacy software costs $299 for Basic, $499 for Standard, or $899 for Premium. These are one-time payments with no monthly fees.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How much does hospital management software cost?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'HospitalOS hospital management software costs $999 for Clinic, $1999 for Hospital, or $2999 for Enterprise. These are one-time payments with no monthly fees.',
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -521,6 +614,14 @@ export default function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(voiceFaqSchema) }}
       />
     </>
   );

@@ -1,0 +1,23 @@
+# MedSoftwares Security Policy
+# https://medsoftwares.com
+
+Contact: mailto:security@medsoftwares.com
+Contact: mailto:info@medsoftwares.com
+Contact: https://medsoftwares.com/contact
+
+Expires: 2027-01-01T00:00:00.000Z
+
+Preferred-Languages: en, fr, es, ar, pt
+
+Canonical: https://medsoftwares.com/.well-known/security.txt
+
+# Policy
+Policy: https://medsoftwares.com/privacy
+
+# About MedSoftwares
+# We are a UK-based healthcare technology company providing pharmacy and hospital
+# management software to healthcare facilities worldwide. We take security seriously
+# and appreciate responsible disclosure of any security vulnerabilities.
+
+# Acknowledgments
+# We thank security researchers who help keep our systems and customers safe.

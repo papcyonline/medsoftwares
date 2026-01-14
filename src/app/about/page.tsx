@@ -45,8 +45,8 @@ const values = [
 ];
 
 const stats = [
-  { value: '25+', label: 'Healthcare Facilities' },
-  { value: '12', label: 'Countries Served' },
+  { value: '50+', label: 'Healthcare Facilities' },
+  { value: '30+', label: 'Countries Served' },
   { value: '10M+', label: 'Monthly Transactions' },
   { value: '24/7', label: 'Customer Support' },
 ];
@@ -139,7 +139,7 @@ export default function AboutPage() {
                     Leveraging our expertise in AI and software development, we built MedSoftwares to be not only powerful and reliable but also intelligent and affordable—designed for diverse healthcare contexts with support for local payment methods, multiple currencies, and languages.
                   </p>
                   <p>
-                    Today, MedSoftwares powers pharmacies and hospitals across 12 countries, processing transactions every month with AI-driven insights and automation.
+                    Today, MedSoftwares powers pharmacies and hospitals across 30+ countries worldwide, processing millions of transactions every month with AI-driven insights and automation.
                   </p>
                 </div>
               </div>

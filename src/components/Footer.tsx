@@ -47,7 +47,7 @@ const footerSections: FooterSection[] = [
       { label: 'Documentation', href: '/docs' },
       { label: 'FAQ', href: '/faq' },
       { label: 'Contact Support', href: '/contact' },
-      { label: 'WhatsApp', href: 'https://wa.me/9715677266520', external: true },
+      { label: 'WhatsApp', href: 'https://wa.me/971567726520', external: true },
     ],
   },
 ];
@@ -268,7 +268,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/9715677266520"
+                href="https://wa.me/971567726520"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white border border-gray-200 hover:border-[#25D366] hover:bg-[#25D366] text-gray-500 hover:text-white rounded-full flex items-center justify-center transition-all duration-200"

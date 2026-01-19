@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import { useProduct } from '@/context/ProductContext';
 
 type Feature = {
   icon: React.ReactNode;
@@ -144,6 +145,8 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMegaMenu, setActiveMegaMenu] = useState<'pharmapos' | 'hospitalos' | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const { primaryColor, primaryColorDark, activeProduct } = useProduct();
+  const isPharmaPOS = activeProduct === 'pharmapos';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -273,7 +276,13 @@ export default function Header() {
           <div className="hidden lg:flex items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#166534] text-white text-sm font-semibold rounded-full shadow-md shadow-green-900/20 hover:bg-[#14532d] hover:shadow-lg hover:-translate-y-0.5 transition-all group"
+              className="inline-flex items-center gap-2 px-6 py-2.5 text-white text-sm font-semibold rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all group"
+              style={{
+                backgroundColor: primaryColor,
+                boxShadow: `0 4px 6px -1px ${primaryColor}33`
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = primaryColorDark}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = primaryColor}
             >
               Book a Demo
               <ArrowOutwardIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -543,7 +552,11 @@ export default function Header() {
           <Link
             href="/contact"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="flex items-center justify-center gap-2 w-full px-5 py-3.5 bg-[#166534] text-white text-base font-semibold rounded-xl shadow-lg shadow-green-900/20 hover:bg-[#14532d] transition-all"
+            className="flex items-center justify-center gap-2 w-full px-5 py-3.5 text-white text-base font-semibold rounded-xl shadow-lg transition-all"
+            style={{
+              backgroundColor: primaryColor,
+              boxShadow: `0 10px 15px -3px ${primaryColor}33`
+            }}
           >
             Book a Demo
             <ArrowOutwardIcon className="w-5 h-5" />

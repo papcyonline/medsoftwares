@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useState, useEffect, useCallback } from 'react';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Footer from '@/components/Footer';
+import { useProduct } from '@/context/ProductContext';
 
 const testimonials = [
   // Row 1 - Left to Right
@@ -342,7 +343,18 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const [activeProduct, setActiveProduct] = useState<ProductType>('pharmapos');
+  const {
+    activeProduct,
+    setActiveProduct,
+    primaryColor,
+    primaryColorLight,
+    primaryColorDark,
+    primaryColorBg,
+    primaryColorBgLight,
+    primaryColorBorder,
+    primaryGradientFrom,
+    primaryGradientTo
+  } = useProduct();
 
   const activeScreenshots = productScreenshots[activeProduct];
 
@@ -472,8 +484,20 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-[#166534] to-green-700 pt-24 md:pt-32 pb-20 md:pb-32 relative overflow-hidden rounded-b-[40px] md:rounded-b-[60px]">
-        {/* Background Pattern */}
+      <section
+        className="min-h-[90vh] flex items-center justify-center pt-24 md:pt-32 pb-20 md:pb-32 relative overflow-hidden rounded-b-[40px] md:rounded-b-[60px] transition-colors duration-500"
+        style={{ background: `linear-gradient(to bottom right, ${primaryGradientFrom}, ${primaryGradientTo})` }}
+      >
+        {/* Background Pattern Image */}
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage: 'url(/images/bg-icons.webp)',
+            backgroundSize: '800px',
+            backgroundRepeat: 'repeat',
+          }}
+        />
+        {/* Background Blur Effects */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -483,9 +507,9 @@ export default function Home() {
           <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold text-white tracking-tight mb-6">
               Healthcare Management
-              <span className="block text-green-200">Made Simple</span>
+              <span className="block" style={{ color: activeProduct === 'pharmapos' ? '#bbf7d0' : '#bfdbfe' }}>Made Simple</span>
             </h1>
-            <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8" style={{ color: activeProduct === 'pharmapos' ? '#dcfce7' : '#dbeafe' }}>
               Complete software solutions for pharmacies and hospitals worldwide. One-time purchase, lifetime value.
             </p>
           </div>
@@ -495,7 +519,7 @@ export default function Home() {
             {/* PharmaPOS Card */}
             <div className="group bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#166534] to-green-700 rounded-2xl flex items-center justify-center">
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center transition-colors duration-500" style={{ background: `linear-gradient(to bottom right, ${primaryGradientFrom}, ${primaryGradientTo})` }}>
                   <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                   </svg>
@@ -510,25 +534,25 @@ export default function Home() {
               </p>
               <div className="space-y-3 mb-8">
                 <div className="flex items-center gap-2 text-sm text-gray-700">
-                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   Point of Sale & Inventory
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-700">
-                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   Mobile Money Integration
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-700">
-                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   Multi-Branch Support
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-700">
-                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   Reports & Analytics
@@ -537,7 +561,10 @@ export default function Home() {
               <div className="flex justify-center pt-6 border-t border-gray-200">
                 <a
                   href="/pharmapos"
-                  className="group/btn inline-flex items-center gap-2 px-8 py-3 bg-[#166534] text-white font-semibold rounded-full hover:bg-[#14532d] transition-all duration-200"
+                  className="group/btn inline-flex items-center gap-2 px-8 py-3 text-white font-semibold rounded-full transition-all duration-200"
+                  style={{ backgroundColor: primaryColor }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = primaryColorDark}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = primaryColor}
                 >
                   Learn More
                   <ArrowOutwardIcon className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
@@ -548,7 +575,7 @@ export default function Home() {
             {/* HospitalOS Card */}
             <div className="group bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#166534] to-green-700 rounded-2xl flex items-center justify-center">
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center transition-colors duration-500" style={{ background: `linear-gradient(to bottom right, ${primaryGradientFrom}, ${primaryGradientTo})` }}>
                   <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
@@ -563,25 +590,25 @@ export default function Home() {
               </p>
               <div className="space-y-3 mb-8">
                 <div className="flex items-center gap-2 text-sm text-gray-700">
-                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   25+ Integrated Modules
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-700">
-                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   Patient Queue Management
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-700">
-                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   Lab & Radiology Integration
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-700">
-                  <svg className="w-5 h-5 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   11+ User Roles & Permissions
@@ -590,7 +617,10 @@ export default function Home() {
               <div className="flex justify-center pt-6 border-t border-gray-200">
                 <a
                   href="/hospitalos"
-                  className="group/btn inline-flex items-center gap-2 px-8 py-3 bg-[#166534] text-white font-semibold rounded-full hover:bg-[#14532d] transition-all duration-200"
+                  className="group/btn inline-flex items-center gap-2 px-8 py-3 text-white font-semibold rounded-full transition-all duration-200"
+                  style={{ backgroundColor: primaryColor }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = primaryColorDark}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = primaryColor}
                 >
                   Learn More
                   <ArrowOutwardIcon className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
@@ -601,10 +631,11 @@ export default function Home() {
 
           {/* Bottom CTA */}
           <div className="text-center mt-12">
-            <p className="text-green-100 mb-4 text-lg">Not sure which solution you need?</p>
+            <p className="mb-4 text-lg transition-colors duration-500" style={{ color: activeProduct === 'pharmapos' ? '#dcfce7' : '#dbeafe' }}>Not sure which solution you need?</p>
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#166534] font-bold rounded-full shadow-lg hover:bg-green-50 hover:-translate-y-0.5 transition-all duration-200"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white font-bold rounded-full shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+              style={{ color: primaryColor }}
             >
               Talk to Our Team
               <ArrowOutwardIcon className="w-5 h-5" />
@@ -618,19 +649,19 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-heading font-extrabold text-[#166534] mb-2">25+</div>
+              <div className="text-4xl md:text-5xl font-heading font-extrabold mb-2 transition-colors duration-500" style={{ color: primaryColor }}>25+</div>
               <div className="text-gray-600 font-medium">Healthcare Facilities</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-heading font-extrabold text-[#166534] mb-2">12</div>
+              <div className="text-4xl md:text-5xl font-heading font-extrabold mb-2 transition-colors duration-500" style={{ color: primaryColor }}>12</div>
               <div className="text-gray-600 font-medium">Countries Served</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-heading font-extrabold text-[#166534] mb-2">98%</div>
+              <div className="text-4xl md:text-5xl font-heading font-extrabold mb-2 transition-colors duration-500" style={{ color: primaryColor }}>98%</div>
               <div className="text-gray-600 font-medium">Customer Satisfaction</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-heading font-extrabold text-[#166534] mb-2">24/7</div>
+              <div className="text-4xl md:text-5xl font-heading font-extrabold mb-2 transition-colors duration-500" style={{ color: primaryColor }}>24/7</div>
               <div className="text-gray-600 font-medium">Support Available</div>
             </div>
           </div>
@@ -651,8 +682,8 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
-              <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors duration-500" style={{ backgroundColor: primaryColorBg }}>
+                <svg className="w-7 h-7 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                 </svg>
               </div>
@@ -663,8 +694,8 @@ export default function Home() {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
-              <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors duration-500" style={{ backgroundColor: primaryColorBg }}>
+                <svg className="w-7 h-7 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
               </div>
@@ -675,8 +706,8 @@ export default function Home() {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
-              <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors duration-500" style={{ backgroundColor: primaryColorBg }}>
+                <svg className="w-7 h-7 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z" />
                 </svg>
               </div>
@@ -687,8 +718,8 @@ export default function Home() {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
-              <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors duration-500" style={{ backgroundColor: primaryColorBg }}>
+                <svg className="w-7 h-7 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                 </svg>
               </div>
@@ -787,7 +818,7 @@ export default function Home() {
       </section>
 
       {/* What It Can Do Section */}
-      <section id="features" className="py-16 md:py-32 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="features" className="py-16 md:py-32 px-4 sm:px-6 lg:px-8 bg-white" style={{ '--primary-color': primaryColor, '--primary-bg': primaryColorBgLight, '--primary-bg-hover': primaryColorBg, '--primary-border': primaryColorBorder } as React.CSSProperties}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-20">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-extrabold text-gray-900 mb-4 md:mb-6">
@@ -800,14 +831,14 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {/* Feature 1 - POS */}
-            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-green-100 transition-all duration-300 cursor-pointer overflow-hidden">
+            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl feature-card transition-all duration-300 cursor-pointer overflow-hidden">
               <div className="flex items-start justify-between mb-4 md:mb-6">
-                <div className="w-12 h-12 md:w-14 md:h-14 bg-green-50 rounded-xl md:rounded-2xl flex items-center justify-center group-hover:bg-green-100 transition-colors duration-300">
-                  <svg className="w-6 h-6 md:w-7 md:h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center feature-icon-bg transition-colors duration-300" style={{ backgroundColor: primaryColorBgLight }}>
+                  <svg className="w-6 h-6 md:w-7 md:h-7 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-[#166534] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300" style={{ backgroundColor: primaryColor }}>
                   <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
@@ -818,14 +849,14 @@ export default function Home() {
             </div>
 
             {/* Feature 2 - Mobile Money */}
-            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-green-100 transition-all duration-300 cursor-pointer overflow-hidden">
+            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl feature-card transition-all duration-300 cursor-pointer overflow-hidden">
               <div className="flex items-start justify-between mb-4 md:mb-6">
-                <div className="w-12 h-12 md:w-14 md:h-14 bg-green-50 rounded-xl md:rounded-2xl flex items-center justify-center group-hover:bg-green-100 transition-colors duration-300">
-                  <svg className="w-6 h-6 md:w-7 md:h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center feature-icon-bg transition-colors duration-300" style={{ backgroundColor: primaryColorBgLight }}>
+                  <svg className="w-6 h-6 md:w-7 md:h-7 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-[#166534] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300" style={{ backgroundColor: primaryColor }}>
                   <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
@@ -836,14 +867,14 @@ export default function Home() {
             </div>
 
             {/* Feature 3 - Inventory */}
-            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-green-100 transition-all duration-300 cursor-pointer overflow-hidden">
+            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl feature-card transition-all duration-300 cursor-pointer overflow-hidden">
               <div className="flex items-start justify-between mb-4 md:mb-6">
-                <div className="w-12 h-12 md:w-14 md:h-14 bg-green-50 rounded-xl md:rounded-2xl flex items-center justify-center group-hover:bg-green-100 transition-colors duration-300">
-                  <svg className="w-6 h-6 md:w-7 md:h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center feature-icon-bg transition-colors duration-300" style={{ backgroundColor: primaryColorBgLight }}>
+                  <svg className="w-6 h-6 md:w-7 md:h-7 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                   </svg>
                 </div>
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-[#166534] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300" style={{ backgroundColor: primaryColor }}>
                   <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
@@ -854,14 +885,14 @@ export default function Home() {
             </div>
 
             {/* Feature 4 - Patient Management */}
-            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-green-100 transition-all duration-300 cursor-pointer overflow-hidden">
+            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl feature-card transition-all duration-300 cursor-pointer overflow-hidden">
               <div className="flex items-start justify-between mb-4 md:mb-6">
-                <div className="w-12 h-12 md:w-14 md:h-14 bg-green-50 rounded-xl md:rounded-2xl flex items-center justify-center group-hover:bg-green-100 transition-colors duration-300">
-                  <svg className="w-6 h-6 md:w-7 md:h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center feature-icon-bg transition-colors duration-300" style={{ backgroundColor: primaryColorBgLight }}>
+                  <svg className="w-6 h-6 md:w-7 md:h-7 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </div>
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-[#166534] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300" style={{ backgroundColor: primaryColor }}>
                   <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
@@ -872,14 +903,14 @@ export default function Home() {
             </div>
 
             {/* Feature 5 - Lab & Radiology */}
-            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-green-100 transition-all duration-300 cursor-pointer overflow-hidden">
+            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl feature-card transition-all duration-300 cursor-pointer overflow-hidden">
               <div className="flex items-start justify-between mb-4 md:mb-6">
-                <div className="w-12 h-12 md:w-14 md:h-14 bg-green-50 rounded-xl md:rounded-2xl flex items-center justify-center group-hover:bg-green-100 transition-colors duration-300">
-                  <svg className="w-6 h-6 md:w-7 md:h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center feature-icon-bg transition-colors duration-300" style={{ backgroundColor: primaryColorBgLight }}>
+                  <svg className="w-6 h-6 md:w-7 md:h-7 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
                   </svg>
                 </div>
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-[#166534] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300" style={{ backgroundColor: primaryColor }}>
                   <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
@@ -890,14 +921,14 @@ export default function Home() {
             </div>
 
             {/* Feature 6 - Reports */}
-            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-green-100 transition-all duration-300 cursor-pointer overflow-hidden">
+            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl feature-card transition-all duration-300 cursor-pointer overflow-hidden">
               <div className="flex items-start justify-between mb-4 md:mb-6">
-                <div className="w-12 h-12 md:w-14 md:h-14 bg-green-50 rounded-xl md:rounded-2xl flex items-center justify-center group-hover:bg-green-100 transition-colors duration-300">
-                  <svg className="w-6 h-6 md:w-7 md:h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center feature-icon-bg transition-colors duration-300" style={{ backgroundColor: primaryColorBgLight }}>
+                  <svg className="w-6 h-6 md:w-7 md:h-7 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-[#166534] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300" style={{ backgroundColor: primaryColor }}>
                   <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
@@ -908,14 +939,14 @@ export default function Home() {
             </div>
 
             {/* Feature 7 - Multi-Branch */}
-            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-green-100 transition-all duration-300 cursor-pointer overflow-hidden">
+            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl feature-card transition-all duration-300 cursor-pointer overflow-hidden">
               <div className="flex items-start justify-between mb-4 md:mb-6">
-                <div className="w-12 h-12 md:w-14 md:h-14 bg-green-50 rounded-xl md:rounded-2xl flex items-center justify-center group-hover:bg-green-100 transition-colors duration-300">
-                  <svg className="w-6 h-6 md:w-7 md:h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center feature-icon-bg transition-colors duration-300" style={{ backgroundColor: primaryColorBgLight }}>
+                  <svg className="w-6 h-6 md:w-7 md:h-7 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-[#166534] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300" style={{ backgroundColor: primaryColor }}>
                   <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
@@ -926,14 +957,14 @@ export default function Home() {
             </div>
 
             {/* Feature 8 - User Roles */}
-            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-green-100 transition-all duration-300 cursor-pointer overflow-hidden">
+            <div className="group relative bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl feature-card transition-all duration-300 cursor-pointer overflow-hidden">
               <div className="flex items-start justify-between mb-4 md:mb-6">
-                <div className="w-12 h-12 md:w-14 md:h-14 bg-green-50 rounded-xl md:rounded-2xl flex items-center justify-center group-hover:bg-green-100 transition-colors duration-300">
-                  <svg className="w-6 h-6 md:w-7 md:h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center feature-icon-bg transition-colors duration-300" style={{ backgroundColor: primaryColorBgLight }}>
+                  <svg className="w-6 h-6 md:w-7 md:h-7 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-[#166534] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300" style={{ backgroundColor: primaryColor }}>
                   <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
@@ -945,13 +976,24 @@ export default function Home() {
 
           </div>
         </div>
+        <style jsx>{`
+          .feature-card:hover {
+            border-color: var(--primary-border);
+          }
+          .group:hover .feature-icon-bg {
+            background-color: var(--primary-bg-hover);
+          }
+        `}</style>
       </section>
 
       {/* Before vs After Comparison Section */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
-            <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 bg-[#166534]/10 text-[#166534] text-xs md:text-sm font-semibold rounded-full mb-3 md:mb-4">
+            <span
+              className="inline-block px-3 py-1 md:px-4 md:py-1.5 text-xs md:text-sm font-semibold rounded-full mb-3 md:mb-4 transition-colors duration-500"
+              style={{ backgroundColor: `${primaryColor}1a`, color: primaryColor }}
+            >
               The Difference
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-gray-900 mb-4 md:mb-6">
@@ -1015,49 +1057,52 @@ export default function Home() {
             </div>
 
             {/* After Card */}
-            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 border-2 border-green-200 relative overflow-hidden shadow-lg shadow-green-100/50">
+            <div
+              className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 border-2 relative overflow-hidden shadow-lg transition-colors duration-500"
+              style={{ borderColor: primaryColorBorder, boxShadow: `0 10px 15px -3px ${primaryColorBg}80` }}
+            >
               <div className="absolute top-4 right-4 md:top-6 md:right-6">
-                <span className="px-3 py-1 bg-green-100 text-[#166534] text-xs font-bold rounded-full">AFTER</span>
+                <span className="px-3 py-1 text-xs font-bold rounded-full transition-colors duration-500" style={{ backgroundColor: primaryColorBg, color: primaryColor }}>AFTER</span>
               </div>
-              <div className="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-[#166534]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-500" style={{ backgroundColor: primaryColorBg }}>
+                <svg className="w-7 h-7 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">With MedSoftwares</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#166534] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 mt-0.5 flex-shrink-0 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-gray-600">Digital records with automatic cloud backup</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#166534] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 mt-0.5 flex-shrink-0 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-gray-600">Real-time inventory tracking with barcode scanning</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#166534] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 mt-0.5 flex-shrink-0 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-gray-600">Automatic expiry alerts 90, 60, 30 days ahead</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#166534] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 mt-0.5 flex-shrink-0 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-gray-600">Complete sales reports and profit analytics</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#166534] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 mt-0.5 flex-shrink-0 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-gray-600">Credit management with payment reminders</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#166534] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 mt-0.5 flex-shrink-0 transition-colors duration-500" style={{ color: primaryColor }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-gray-600">User roles with audit trail for every action</span>
@@ -1069,19 +1114,19 @@ export default function Home() {
           {/* Results Stats */}
           <div className="mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 text-center border border-gray-100">
-              <div className="text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold text-[#166534] mb-1">60%</div>
+              <div className="text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold mb-1 transition-colors duration-500" style={{ color: primaryColor }}>60%</div>
               <p className="text-xs md:text-sm text-gray-600">Faster Checkout</p>
             </div>
             <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 text-center border border-gray-100">
-              <div className="text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold text-[#166534] mb-1">80%</div>
+              <div className="text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold mb-1 transition-colors duration-500" style={{ color: primaryColor }}>80%</div>
               <p className="text-xs md:text-sm text-gray-600">Less Inventory Loss</p>
             </div>
             <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 text-center border border-gray-100">
-              <div className="text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold text-[#166534] mb-1">5hrs</div>
+              <div className="text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold mb-1 transition-colors duration-500" style={{ color: primaryColor }}>5hrs</div>
               <p className="text-xs md:text-sm text-gray-600">Saved Per Week</p>
             </div>
             <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 text-center border border-gray-100">
-              <div className="text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold text-[#166534] mb-1">100%</div>
+              <div className="text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold mb-1 transition-colors duration-500" style={{ color: primaryColor }}>100%</div>
               <p className="text-xs md:text-sm text-gray-600">Transaction Accuracy</p>
             </div>
           </div>
@@ -1089,22 +1134,34 @@ export default function Home() {
       </section>
 
       {/* Product Showcase Section - Full Width Carousel */}
-      <section className={`py-16 md:py-24 overflow-hidden transition-colors duration-500 ${
-        activeProduct === 'pharmapos' ? 'bg-[#166534]' : 'bg-[#1e40af]'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 md:mb-12">
+      <section
+        className="py-16 md:py-24 overflow-hidden transition-colors duration-500 relative"
+        style={{ backgroundColor: primaryColor }}
+      >
+        {/* Background Pattern Image */}
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage: 'url(/images/bg-icons.webp)',
+            backgroundSize: '800px',
+            backgroundRepeat: 'repeat',
+          }}
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 md:mb-12 relative z-10">
           <div className="text-center">
-            <span className={`inline-block px-3 py-1 md:px-4 md:py-1.5 bg-white/20 text-xs md:text-sm font-semibold rounded-full mb-3 md:mb-4 ${
-              activeProduct === 'pharmapos' ? 'text-green-100' : 'text-blue-100'
-            }`}>
+            <span
+              className="inline-block px-3 py-1 md:px-4 md:py-1.5 bg-white/20 text-xs md:text-sm font-semibold rounded-full mb-3 md:mb-4 transition-colors duration-500"
+              style={{ color: primaryColorBg }}
+            >
               See It In Action
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-4 md:mb-6">
               Powerful Yet Simple
             </h2>
-            <p className={`text-base md:text-xl max-w-2xl mx-auto px-4 mb-8 ${
-              activeProduct === 'pharmapos' ? 'text-green-100' : 'text-blue-100'
-            }`}>
+            <p
+              className="text-base md:text-xl max-w-2xl mx-auto px-4 mb-8 transition-colors duration-500"
+              style={{ color: primaryColorBg }}
+            >
               Clean, intuitive interfaces designed for busy healthcare professionals.
             </p>
 
@@ -1114,9 +1171,10 @@ export default function Home() {
                 onClick={() => switchProduct('pharmapos')}
                 className={`px-4 py-2 md:px-6 md:py-2.5 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${
                   activeProduct === 'pharmapos'
-                    ? 'bg-white text-[#166534] shadow-lg'
+                    ? 'bg-white shadow-lg'
                     : 'text-white/80 hover:text-white hover:bg-white/10'
                 }`}
+                style={activeProduct === 'pharmapos' ? { color: '#166534' } : undefined}
               >
                 <span className="flex items-center gap-2">
                   <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -1129,9 +1187,10 @@ export default function Home() {
                 onClick={() => switchProduct('hospitalos')}
                 className={`px-4 py-2 md:px-6 md:py-2.5 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${
                   activeProduct === 'hospitalos'
-                    ? 'bg-white text-[#1e40af] shadow-lg'
+                    ? 'bg-white shadow-lg'
                     : 'text-white/80 hover:text-white hover:bg-white/10'
                 }`}
+                style={activeProduct === 'hospitalos' ? { color: '#1e40af' } : undefined}
               >
                 <span className="flex items-center gap-2">
                   <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -1145,14 +1204,16 @@ export default function Home() {
         </div>
 
         {/* Full Width Carousel */}
-        <div className="relative">
+        <div className="relative z-10">
           {/* Gradient Overlays for edges */}
-          <div className={`absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-r to-transparent z-10 pointer-events-none transition-colors duration-500 ${
-            activeProduct === 'pharmapos' ? 'from-[#166534]' : 'from-[#1e40af]'
-          }`}></div>
-          <div className={`absolute right-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-l to-transparent z-10 pointer-events-none transition-colors duration-500 ${
-            activeProduct === 'pharmapos' ? 'from-[#166534]' : 'from-[#1e40af]'
-          }`}></div>
+          <div
+            className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 z-10 pointer-events-none transition-colors duration-500"
+            style={{ background: `linear-gradient(to right, ${primaryColor}, transparent)` }}
+          />
+          <div
+            className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 z-10 pointer-events-none transition-colors duration-500"
+            style={{ background: `linear-gradient(to left, ${primaryColor}, transparent)` }}
+          />
 
           {/* Carousel Container */}
           <div className="relative h-[280px] sm:h-[350px] md:h-[500px] lg:h-[600px]">

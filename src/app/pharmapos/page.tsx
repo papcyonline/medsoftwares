@@ -558,6 +558,45 @@ export default function PharmaPOSPage() {
           </div>
         </section>
 
+        {/* Video Demo Section */}
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10 md:mb-14">
+              <span className="inline-block px-4 py-1.5 bg-[#166534]/10 text-[#166534] text-sm font-semibold rounded-full mb-4">
+                Watch Demo
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-gray-900 mb-4">
+                See PharmaPOS in Action
+              </h2>
+              <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                Watch how PharmaPOS streamlines pharmacy operations from sales to inventory management.
+              </p>
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900">
+              <div className="aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/MufbRP7jO-Q?rel=0"
+                  title="PharmaPOS Demo Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#166534] text-white font-semibold rounded-full hover:bg-[#14532d] transition-colors"
+              >
+                Request a Personalized Demo
+                <ArrowOutwardIcon className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Quick Navigation */}
         <section id="features" className="py-8 px-4 sm:px-6 lg:px-8 bg-gray-50 border-b border-gray-200 sticky top-[72px] z-30">
           <div className="max-w-7xl mx-auto">

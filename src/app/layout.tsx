@@ -3,8 +3,10 @@ import "./globals.css";
 import Header from "@/components/Header";
 import FloatingContact from "@/components/FloatingContact";
 import CookiesBanner from "@/components/CookiesBanner";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 import StructuredData from "@/components/StructuredData";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { ProductProvider } from "@/context/ProductContext";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://medsoftwares.com'),
@@ -154,11 +156,14 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body className="font-sans antialiased">
-        <GoogleAnalytics />
-        <Header />
-        {children}
-        <FloatingContact />
-        <CookiesBanner />
+        <ProductProvider>
+          <GoogleAnalytics />
+          <Header />
+          {children}
+          <FloatingContact />
+          <CookiesBanner />
+          <ExitIntentPopup />
+        </ProductProvider>
       </body>
     </html>
   );

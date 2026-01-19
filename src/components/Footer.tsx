@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import LanguageSelector from './LanguageSelector';
 import { EmailLink } from './ObfuscatedEmail';
+import { useProduct } from '@/context/ProductContext';
 
 interface FooterSection {
   title: string;
@@ -85,14 +86,14 @@ function FooterAccordion({ section, isOpen, onToggle }: { section: FooterSection
               {link.href.startsWith('/') || link.href.startsWith('#') ? (
                 <Link
                   href={link.href}
-                  className="text-gray-600 hover:text-[#166534] transition-colors text-sm"
+                  className="text-gray-600 footer-link transition-colors text-sm"
                 >
                   {link.label}
                 </Link>
               ) : (
                 <a
                   href={link.href}
-                  className="text-gray-600 hover:text-[#166534] transition-colors text-sm"
+                  className="text-gray-600 footer-link transition-colors text-sm"
                   {...(link.external && { target: '_blank', rel: 'noopener noreferrer' })}
                 >
                   {link.label}
@@ -108,6 +109,7 @@ function FooterAccordion({ section, isOpen, onToggle }: { section: FooterSection
 
 export default function Footer() {
   const [openSections, setOpenSections] = useState<Set<string>>(new Set());
+  const { primaryColor } = useProduct();
 
   const toggleSection = (title: string) => {
     setOpenSections((prev) => {
@@ -122,7 +124,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-50 border-t border-gray-200">
+    <footer className="bg-gray-50 border-t border-gray-200" style={{ '--primary-color': primaryColor } as React.CSSProperties}>
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         {/* Desktop Layout */}
@@ -141,7 +143,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed mb-5">
-              AI-powered healthcare software by <a href="https://papcy.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-700 hover:text-[#166534] transition-colors">Papcy</a>. Serving pharmacies and hospitals worldwide.
+              AI-powered healthcare software by <a href="https://papcy.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-700 footer-link transition-colors">Papcy</a>. Serving pharmacies and hospitals worldwide.
             </p>
             {/* Contact Info */}
             <div className="space-y-2 text-sm">
@@ -168,14 +170,14 @@ export default function Footer() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-600 hover:text-[#166534] transition-colors text-sm"
+                        className="text-gray-600 footer-link transition-colors text-sm"
                       >
                         {link.label}
                       </a>
                     ) : (
                       <Link
                         href={link.href}
-                        className="text-gray-600 hover:text-[#166534] transition-colors text-sm"
+                        className="text-gray-600 footer-link transition-colors text-sm"
                       >
                         {link.label}
                       </Link>
@@ -203,7 +205,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed mb-5">
-              AI-powered healthcare software by <a href="https://papcy.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-700 hover:text-[#166534] transition-colors">Papcy</a>. Serving pharmacies and hospitals worldwide.
+              AI-powered healthcare software by <a href="https://papcy.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-700 footer-link transition-colors">Papcy</a>. Serving pharmacies and hospitals worldwide.
             </p>
             {/* Contact Info */}
             <div className="space-y-2 text-sm">
@@ -238,7 +240,7 @@ export default function Footer() {
                 href="https://facebook.com/medsoftwares"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white border border-gray-200 hover:border-[#166534] hover:bg-[#166534] text-gray-500 hover:text-white rounded-full flex items-center justify-center transition-all duration-200"
+                className="w-10 h-10 bg-white border border-gray-200 social-primary text-gray-500 hover:text-white rounded-full flex items-center justify-center transition-all duration-200"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -249,7 +251,7 @@ export default function Footer() {
                 href="https://x.com/medsoftwares"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white border border-gray-200 hover:border-[#166534] hover:bg-[#166534] text-gray-500 hover:text-white rounded-full flex items-center justify-center transition-all duration-200"
+                className="w-10 h-10 bg-white border border-gray-200 social-primary text-gray-500 hover:text-white rounded-full flex items-center justify-center transition-all duration-200"
                 aria-label="Twitter/X"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -260,7 +262,7 @@ export default function Footer() {
                 href="https://linkedin.com/company/medsoftwares"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white border border-gray-200 hover:border-[#166534] hover:bg-[#166534] text-gray-500 hover:text-white rounded-full flex items-center justify-center transition-all duration-200"
+                className="w-10 h-10 bg-white border border-gray-200 social-primary text-gray-500 hover:text-white rounded-full flex items-center justify-center transition-all duration-200"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -310,17 +312,26 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-500 text-sm text-center md:text-left">
-              &copy; {new Date().getFullYear()} <a href="https://papcy.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#166534] transition-colors">Papcy</a>. All rights reserved.
+              &copy; {new Date().getFullYear()} <a href="https://papcy.com" target="_blank" rel="noopener noreferrer" className="footer-link transition-colors">Papcy</a>. All rights reserved.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-              <Link href="/privacy" className="text-gray-500 hover:text-[#166534] transition-colors text-sm">Privacy Policy</Link>
-              <Link href="/terms" className="text-gray-500 hover:text-[#166534] transition-colors text-sm">Terms of Service</Link>
+              <Link href="/privacy" className="text-gray-500 footer-link transition-colors text-sm">Privacy Policy</Link>
+              <Link href="/terms" className="text-gray-500 footer-link transition-colors text-sm">Terms of Service</Link>
               <div className="border-l border-gray-300 h-5 hidden md:block" />
               <LanguageSelector />
             </div>
           </div>
         </div>
       </div>
+      <style jsx>{`
+        footer :global(.footer-link:hover) {
+          color: var(--primary-color);
+        }
+        footer :global(.social-primary:hover) {
+          border-color: var(--primary-color);
+          background-color: var(--primary-color);
+        }
+      `}</style>
     </footer>
   );
 }

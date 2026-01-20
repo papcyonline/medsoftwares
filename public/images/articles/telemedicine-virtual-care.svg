@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f0fdf4"/>
+
+  <!-- Laptop -->
+  <rect x="200" y="200" width="400" height="250" rx="10" fill="#1f2937"/>
+  <rect x="215" y="215" width="370" height="220" rx="5" fill="#16a34a"/>
+
+  <!-- Screen content - Doctor -->
+  <circle cx="400" cy="300" r="50" fill="#fef3c7"/>
+  <circle cx="385" cy="290" r="5" fill="#1f2937"/>
+  <circle cx="415" cy="290" r="5" fill="#1f2937"/>
+  <path d="M385 315 Q400 330 415 315" stroke="#1f2937" stroke-width="3" fill="none"/>
+
+  <!-- Stethoscope on doctor -->
+  <circle cx="400" cy="360" r="15" stroke="#ef4444" stroke-width="3" fill="none"/>
+  <path d="M400 345 L400 320" stroke="#ef4444" stroke-width="3"/>
+
+  <!-- Video call icons -->
+  <circle cx="280" cy="400" r="15" fill="#22c55e"/>
+  <rect x="335" y="390" width="30" height="20" rx="3" fill="#ef4444"/>
+  <circle cx="520" cy="400" r="15" fill="#3b82f6"/>
+
+  <!-- Laptop base -->
+  <rect x="150" y="450" width="500" height="20" rx="5" fill="#374151"/>
+  <rect x="350" y="450" width="100" height="10" rx="2" fill="#4b5563"/>
+
+  <!-- Patient side - Phone -->
+  <rect x="620" y="280" width="120" height="200" rx="15" fill="#1f2937"/>
+  <rect x="630" y="300" width="100" height="160" rx="5" fill="#16a34a"/>
+
+  <!-- Patient on phone -->
+  <circle cx="680" cy="360" r="30" fill="#fef3c7"/>
+  <circle cx="670" cy="355" r="3" fill="#1f2937"/>
+  <circle cx="690" cy="355" r="3" fill="#1f2937"/>
+  <path d="M670 370 Q680 380 690 370" stroke="#1f2937" stroke-width="2" fill="none"/>
+
+  <!-- Connection lines -->
+  <path d="M585 325 Q600 300 620 325" stroke="#16a34a" stroke-width="3" stroke-dasharray="5,5"/>
+  <path d="M585 350 Q600 325 620 350" stroke="#16a34a" stroke-width="3" stroke-dasharray="5,5"/>
+  <path d="M585 375 Q600 350 620 375" stroke="#16a34a" stroke-width="3" stroke-dasharray="5,5"/>
+
+  <!-- WiFi symbol -->
+  <g transform="translate(90, 250)">
+    <path d="M30 60 Q30 40 50 40 Q70 40 70 60" stroke="#16a34a" stroke-width="4" fill="none"/>
+    <path d="M20 45 Q20 20 50 20 Q80 20 80 45" stroke="#16a34a" stroke-width="4" fill="none"/>
+    <path d="M10 30 Q10 0 50 0 Q90 0 90 30" stroke="#16a34a" stroke-width="4" fill="none"/>
+    <circle cx="50" cy="70" r="8" fill="#16a34a"/>
+  </g>
+
+  <!-- Title text area -->
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="24" fill="#166534" text-anchor="middle" font-weight="bold">Virtual Healthcare Connection</text>
+</svg>

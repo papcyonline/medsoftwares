@@ -334,173 +334,6 @@ export default function StructuredData() {
     inLanguage: 'en',
   };
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What is PharmaPOS?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'PharmaPOS is a comprehensive pharmacy management software that includes Point of Sale, inventory management, prescription tracking, drug interaction checking, insurance claims processing, and global payment integration. It serves pharmacies worldwide across North America, Europe, Asia, Middle East, Africa, and Latin America.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is HospitalOS?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'HospitalOS is a complete hospital management system with 25+ integrated modules including patient management, OPD, IPD, emergency care, laboratory, radiology, pharmacy, billing, and more. It serves hospitals and clinics worldwide with one-time pricing and no monthly fees.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How much does pharmacy management software cost?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'PharmaPOS pharmacy management software costs $299 for Basic (single location), $499 for Standard (multi-branch), and $899 for Premium (enterprise features). These are one-time payments, not monthly subscriptions. The pricing includes installation support and one year of updates.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How much does hospital management software cost?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'HospitalOS hospital management software costs $999 for Basic (small clinics), $1,999 for Professional (full modules), and $2,999 for Enterprise (unlimited users, multi-facility). All prices are one-time payments with no monthly fees.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is the best pharmacy software with no monthly fees?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'PharmaPOS is a top-rated pharmacy software with one-time pricing from $299 (no monthly subscription). It includes POS, inventory management, prescription tracking, multi-currency support, global payment integration, and offline capability. Used by pharmacies in USA, UK, Canada, India, UAE, Ghana, Nigeria, and 25+ countries worldwide.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is the best affordable hospital management software?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'HospitalOS is a comprehensive hospital management software with one-time pricing from $999 (no monthly fees). It includes 25+ modules, EMR, OPD, IPD, laboratory, radiology, billing, telemedicine, and offline capability. Used by hospitals in USA, UK, India, UAE, Ghana, Nigeria, Kenya, and 25+ countries worldwide.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Is there a monthly subscription fee?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'No, MedSoftwares offers a one-time purchase model. You pay once and own the software forever. This includes free updates and bug fixes for one year. Optional support packages are available for extended assistance.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Does PharmaPOS work offline?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, PharmaPOS works completely offline. All data is stored locally and automatically syncs when internet is available. This is essential for pharmacies in areas with unreliable internet connectivity, common in many African regions.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Does HospitalOS work offline?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, HospitalOS supports offline operation. Critical functions continue working without internet, and data syncs automatically when connectivity is restored. This ensures hospitals can maintain operations during network outages.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you offer installation and training?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, all packages include free installation assistance. Standard and Premium packages include comprehensive training for your staff. We also offer on-site installation and training for Premium and Enterprise packages.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Which countries do you serve?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'MedSoftwares serves healthcare facilities in 30+ countries worldwide including: USA, Canada, Mexico (North America); UK, Germany, France, Spain, Netherlands (Europe); UAE, Saudi Arabia, Qatar, Kuwait (Middle East); India, Singapore, Malaysia, Philippines, Thailand (Asia); Ghana, Nigeria, Kenya, South Africa, Tanzania, Uganda, Rwanda (Africa); Brazil, Argentina, Colombia, Chile (Latin America).',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Does PharmaPOS support mobile money payments?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, PharmaPOS integrates with major mobile money providers including MTN Mobile Money, Vodafone Cash, AirtelTigo Money, M-Pesa, and other local payment methods across Africa. This enables seamless digital payments for pharmacy customers.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can I get a free demo?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, MedSoftwares offers free demos for both PharmaPOS and HospitalOS. Contact us through our website at medsoftwares.com/contact or via WhatsApp at +44 7404 311833 to schedule a personalized demonstration.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Does PharmaPOS support NHIS in Ghana?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, PharmaPOS fully supports Ghana\'s National Health Insurance Scheme (NHIS). It automates claims processing, tracks reimbursements, generates NHIS reports, and reduces administrative burden for pharmacies serving NHIS patients.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Does HospitalOS support NHIS and NHIF?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, HospitalOS integrates with Ghana\'s NHIS (National Health Insurance Scheme) and Kenya\'s NHIF (National Hospital Insurance Fund). It automates insurance claims, verification, and reimbursement tracking for hospitals.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can PharmaPOS track drug expiry dates?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, PharmaPOS includes comprehensive expiry date tracking. It alerts you to approaching expiry dates, supports FEFO (First Expired, First Out) inventory management, and generates expiry reports to prevent losses from expired medications.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can I manage multiple pharmacy branches?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, PharmaPOS Standard and Premium plans support multi-branch pharmacy management. You can manage inventory across locations, transfer stock between branches, view consolidated reports, and maintain centralized control.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What EMR features does HospitalOS have?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'HospitalOS includes comprehensive Electronic Medical Records (EMR) with complete patient history, clinical notes, diagnoses, lab results, prescriptions, imaging reports, allergies, immunizations, and vital signs tracking. Records are secure, searchable, and accessible across departments.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Is MedSoftwares secure?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, MedSoftwares uses industry-standard security including data encryption at rest and in transit, role-based access control, comprehensive audit logging, and regular security updates. We follow GDPR compliance and healthcare data protection best practices.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What support do you offer?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'MedSoftwares provides email support, phone support (+44 7404 311833), WhatsApp support, online documentation, and video tutorials. Premium customers receive 24/7 priority support. On-site support is available for Enterprise customers.',
-        },
-      },
-    ],
-  };
-
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -540,51 +373,6 @@ export default function StructuredData() {
     ],
   };
 
-  // Voice-optimized FAQ for voice assistants
-  const voiceFaqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    '@id': 'https://medsoftwares.com/#voice-faq',
-    speakable: {
-      '@type': 'SpeakableSpecification',
-      cssSelector: ['.faq-answer', '[data-speakable]'],
-    },
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What is the best pharmacy software without monthly fees?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'PharmaPOS by MedSoftwares offers one-time pricing starting at $299 with no monthly subscription fees. It includes point of sale, inventory management, prescription tracking, and works offline.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is the best hospital software for small hospitals?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'HospitalOS by MedSoftwares is an affordable hospital management system starting at $999 one-time. It includes 25 modules like electronic medical records, outpatient, inpatient, lab, and billing.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How much does pharmacy software cost?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'PharmaPOS pharmacy software costs $299 for Basic, $499 for Standard, or $899 for Premium. These are one-time payments with no monthly fees.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How much does hospital management software cost?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'HospitalOS hospital management software costs $999 for Clinic, $1999 for Hospital, or $2999 for Enterprise. These are one-time payments with no monthly fees.',
-        },
-      },
-    ],
-  };
-
   return (
     <>
       <script
@@ -609,19 +397,11 @@ export default function StructuredData() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(voiceFaqSchema) }}
       />
     </>
   );

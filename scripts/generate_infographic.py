@@ -35,8 +35,8 @@ Examples:
         """
     )
 
-    parser.add_argument('type', choices=['stats', 'features', 'compare', 'chart', 'timeline', 'quote'],
-                       help='Type of infographic to generate')
+    parser.add_argument('type', choices=['stats', 'elegant', 'features', 'compare', 'chart', 'timeline', 'quote'],
+                       help='Type of infographic to generate (elegant = gradient style with big fonts)')
     parser.add_argument('output', help='Output filename (will be saved in public/infographics/)')
     parser.add_argument('--title', help='Main title for the infographic')
     parser.add_argument('--subtitle', help='Subtitle (for stats type)')
@@ -61,6 +61,20 @@ Examples:
                 sys.exit(1)
             data = json.loads(args.data)
             path = generator.generate_statistics_infographic(
+                title=args.title,
+                stats=data,
+                subtitle=args.subtitle,
+                filename=args.output,
+                theme=args.theme
+            )
+
+        elif args.type == 'elegant':
+            if not args.data or not args.title:
+                print("Error: elegant type requires --title and --data")
+                print("Data format: [{\"value\": \"60%\", \"label\": \"Time Saved\"}, ...]")
+                sys.exit(1)
+            data = json.loads(args.data)
+            path = generator.generate_elegant_stats_infographic(
                 title=args.title,
                 stats=data,
                 subtitle=args.subtitle,

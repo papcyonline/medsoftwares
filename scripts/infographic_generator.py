@@ -30,6 +30,17 @@ COLORS = {
     'accent_orange': '#f97316',
     'accent_teal': '#14b8a6',
     'accent_purple': '#8b5cf6',
+    # New gradient colors
+    'gradient_start_green': '#0f4c35',
+    'gradient_end_green': '#22c55e',
+    'gradient_start_blue': '#1e3a5f',
+    'gradient_end_blue': '#60a5fa',
+    'gradient_start_purple': '#4c1d95',
+    'gradient_end_purple': '#a78bfa',
+    'gradient_start_teal': '#134e4a',
+    'gradient_end_teal': '#5eead4',
+    'gold': '#fbbf24',
+    'coral': '#f87171',
 }
 
 def hex_to_rgb(hex_color: str) -> Tuple[int, int, int]:
@@ -256,6 +267,150 @@ class InfographicGenerator:
 
         # Add branding
         self._add_branding(img, draw)
+
+        # Save
+        output_path = os.path.join(self.output_dir, filename)
+        img.save(output_path, 'PNG', quality=95)
+        return output_path
+
+    def generate_elegant_stats_infographic(
+        self,
+        title: str,
+        stats: List[Dict[str, str]],
+        subtitle: Optional[str] = None,
+        filename: str = "elegant_stats.png",
+        theme: str = "pharmacy",
+        style: str = "dark"  # dark, light, gradient
+    ) -> str:
+        """
+        Generate an elegant statistics infographic with bold gradients and large fonts.
+        """
+        # Choose gradient colors based on theme
+        if theme == 'pharmacy':
+            grad_start = COLORS['gradient_start_green']
+            grad_end = COLORS['gradient_end_green']
+            accent = COLORS['gold']
+        else:  # hospital
+            grad_start = COLORS['gradient_start_blue']
+            grad_end = COLORS['gradient_end_blue']
+            accent = COLORS['coral']
+
+        # Create diagonal gradient
+        img = Image.new('RGB', (self.width, self.height))
+        draw = ImageDraw.Draw(img)
+
+        for y in range(self.height):
+            for x in range(self.width):
+                # Diagonal gradient
+                ratio = (x + y) / (self.width + self.height)
+                c1 = hex_to_rgb(grad_start)
+                c2 = hex_to_rgb(grad_end)
+                r = int(c1[0] * (1 - ratio) + c2[0] * ratio)
+                g = int(c1[1] * (1 - ratio) + c2[1] * ratio)
+                b = int(c1[2] * (1 - ratio) + c2[2] * ratio)
+                draw.point((x, y), fill=(r, g, b))
+
+        # Add subtle pattern overlay
+        for i in range(0, self.width, 60):
+            draw.line([(i, 0), (i + self.height, self.height)],
+                     fill=(255, 255, 255, 15), width=1)
+
+        # Title - LARGE and BOLD
+        title_font = get_font(64, bold=True)
+        title_lines = self._wrap_text(title, title_font, self.width - 100)
+        y_offset = 50
+
+        for line in title_lines:
+            bbox = draw.textbbox((0, 0), line, font=title_font)
+            text_width = bbox[2] - bbox[0]
+            x = (self.width - text_width) // 2
+            # Shadow effect
+            draw.text((x + 2, y_offset + 2), line, fill=(0, 0, 0), font=title_font)
+            draw.text((x, y_offset), line, fill=hex_to_rgb(COLORS['white']), font=title_font)
+            y_offset += 75
+
+        # Subtitle
+        if subtitle:
+            subtitle_font = get_font(28)
+            bbox = draw.textbbox((0, 0), subtitle, font=subtitle_font)
+            text_width = bbox[2] - bbox[0]
+            x = (self.width - text_width) // 2
+            draw.text((x, y_offset + 5), subtitle, fill=hex_to_rgb(accent), font=subtitle_font)
+            y_offset += 50
+
+        # Statistics - circular/card style with larger fonts
+        num_stats = min(len(stats), 4)
+        card_width = 240
+        card_height = 200
+        total_width = num_stats * card_width + (num_stats - 1) * 30
+        start_x = (self.width - total_width) // 2
+        start_y = y_offset + 40
+
+        for i, stat in enumerate(stats[:4]):
+            x = start_x + i * (card_width + 30)
+            center_x = x + card_width // 2
+            center_y = start_y + card_height // 2
+
+            # Glowing circle effect
+            for r in range(80, 60, -5):
+                alpha = int(50 * (80 - r) / 20)
+                draw.ellipse(
+                    [center_x - r, center_y - 30 - r, center_x + r, center_y - 30 + r],
+                    fill=(255, 255, 255, alpha),
+                    outline=None
+                )
+
+            # Main circle
+            draw.ellipse(
+                [center_x - 60, center_y - 90, center_x + 60, center_y + 30],
+                fill=hex_to_rgb(COLORS['white']),
+                outline=hex_to_rgb(accent),
+                width=4
+            )
+
+            # Value - HUGE font
+            value_font = get_font(48, bold=True)
+            value = stat.get('value', '0')
+            bbox = draw.textbbox((0, 0), value, font=value_font)
+            text_width = bbox[2] - bbox[0]
+            text_height = bbox[3] - bbox[1]
+            draw.text(
+                (center_x - text_width // 2, center_y - 50),
+                value,
+                fill=hex_to_rgb(grad_start),
+                font=value_font
+            )
+
+            # Label - below circle
+            label_font = get_font(20, bold=True)
+            label = stat.get('label', '')
+            label_lines = self._wrap_text(label, label_font, card_width - 10)
+
+            label_y = center_y + 45
+            for line in label_lines[:2]:
+                bbox = draw.textbbox((0, 0), line, font=label_font)
+                text_width = bbox[2] - bbox[0]
+                draw.text(
+                    (center_x - text_width // 2, label_y),
+                    line,
+                    fill=hex_to_rgb(COLORS['white']),
+                    font=label_font
+                )
+                label_y += 26
+
+        # Elegant branding bar at bottom
+        draw.rectangle([0, self.height - 50, self.width, self.height],
+                      fill=(0, 0, 0, 100))
+        brand_font = get_font(22, bold=True)
+        brand_text = "medsoftwares.com"
+        bbox = draw.textbbox((0, 0), brand_text, font=brand_font)
+        text_width = bbox[2] - bbox[0]
+        draw.text(
+            ((self.width - text_width) // 2, self.height - 38),
+            brand_text,
+            fill=hex_to_rgb(COLORS['white']),
+            font=brand_font
+        )
 
         # Save
         output_path = os.path.join(self.output_dir, filename)

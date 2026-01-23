@@ -2,6 +2,22 @@ import { MetadataRoute } from 'next';
 
 // News articles - keep in sync with src/app/news/page.tsx
 const newsArticles = [
+  // 2026 January - New Articles with Infographics
+  { slug: 'pharmacy-software-roi-statistics-2026', date: '2026-01-24' },
+  { slug: 'pharmapos-vs-traditional-software-comparison-2026', date: '2026-01-24' },
+  { slug: 'hospital-software-implementation-guide-2026', date: '2026-01-24' },
+  { slug: 'healthcare-software-market-growth-2026', date: '2026-01-24' },
+  { slug: 'pharmapos-key-features-guide-2026', date: '2026-01-24' },
+  // 2026 January - AI & Trending Keyword Articles
+  { slug: 'ai-pharmacy-inventory-prediction-2026', date: '2026-01-24' },
+  { slug: 'free-pharmacy-software-vs-paid-comparison-2026', date: '2026-01-24' },
+  { slug: 'pharmacy-pos-system-barcode-mobile-payments-2026', date: '2026-01-24' },
+  { slug: 'emr-software-small-clinics-affordable-2026', date: '2026-01-24' },
+  { slug: 'healthcare-ai-chatbot-trends-2026', date: '2026-01-24' },
+  { slug: 'independent-pharmacy-software-guide-2026', date: '2026-01-24' },
+  { slug: 'pharmacy-automation-dispensing-trends-2026', date: '2026-01-24' },
+  { slug: 'hospital-billing-software-complete-guide-2026', date: '2026-01-24' },
+  { slug: 'drug-shortage-management-pharmacy-software-2026', date: '2026-01-24' },
   // 2026 Latin America & New Articles
   { slug: 'best-pharmacy-hospital-software-mexico-2026', date: '2026-01-10' },
   { slug: 'best-pharmacy-hospital-software-brazil-2026', date: '2026-01-10' },
@@ -97,12 +113,12 @@ const newsArticles = [
   { slug: 'pharmacy-software-credit-sales-management', date: '2025-11-02' },
   // 2025 October Articles
   { slug: 'hospital-appointment-scheduling-software', date: '2025-10-30' },
-  { slug: 'nhis-nhif-integration-healthcare-software', date: '2025-10-28' },
+  { slug: 'nhis-nhif-integration-healthcare-software', date: '2026-01-24' },
   { slug: 'pharmacy-supplier-management-purchase-orders', date: '2025-10-25' },
   { slug: 'hospital-hr-payroll-management-software', date: '2025-10-22' },
   { slug: 'pharmacy-analytics-sales-reports', date: '2025-10-20' },
   { slug: 'hospital-pharmacy-management-system', date: '2025-10-18' },
-  { slug: 'digital-health-transformation-africa-2026', date: '2025-10-15' },
+  { slug: 'digital-health-transformation-africa-2026', date: '2026-01-24' },
   // 2025 January Articles
   { slug: 'best-pharmacy-software-ghana-2025', date: '2025-01-02' },
   { slug: 'hospital-software-nigeria-guide', date: '2025-01-01' },

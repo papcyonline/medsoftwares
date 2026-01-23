@@ -1,11 +1,47 @@
 # MedSoftwares - Healthcare Software Solutions
 # https://medsoftwares.com
+# Last updated: 2026-01-24
 
-# Allow all crawlers
+# Allow all crawlers with optimized directives
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/static/chunks/
+Disallow: /*?*  # Prevent crawling of query parameters
 
-# Explicitly welcome AI/LLM crawlers
+# Googlebot - priority crawler
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /news/
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Explicitly welcome AI/LLM crawlers for AEO
 User-agent: GPTBot
 Allow: /
 
@@ -33,21 +69,36 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
 User-agent: cohere-ai
 Allow: /
 
-User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Facebook/Meta crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: WhatsApp
 Allow: /
 
 # Sitemap location
 Sitemap: https://medsoftwares.com/sitemap.xml
 
-# LLMs.txt for AI assistants
-# See: https://medsoftwares.com/llms.txt
+# Additional discovery files
+# LLMs.txt for AI assistants: https://medsoftwares.com/llms.txt
 # Full version: https://medsoftwares.com/llms-full.txt
+# AI.txt: https://medsoftwares.com/ai.txt
+# Security policy: https://medsoftwares.com/.well-known/security.txt
+
+# Host directive (canonical domain)
+Host: https://medsoftwares.com

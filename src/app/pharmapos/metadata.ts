@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'PharmaPOS - Complete Pharmacy Management Software | Point of Sale, Inventory & Prescriptions',
   description: 'PharmaPOS is a comprehensive pharmacy management system featuring Point of Sale, inventory tracking, prescription management, drug interactions checker, controlled substances tracking, NHIS/insurance claims, mobile money payments, and multi-branch support. Perfect for pharmacies in Africa.',
   keywords: [
+    // Core product keywords
     'pharmacy management software',
     'pharmacy POS system',
     'pharmacy point of sale',
@@ -11,22 +12,50 @@ export const metadata: Metadata = {
     'prescription management software',
     'drug interaction checker',
     'controlled substances tracking',
+    // Insurance & Claims
     'NHIS pharmacy software',
+    'NHIF pharmacy software',
     'pharmacy insurance claims',
+    // Payment integration
     'mobile money pharmacy',
-    'MTN mobile money',
+    'MTN mobile money pharmacy',
+    'M-Pesa pharmacy integration',
+    'Vodafone Cash pharmacy',
+    // Geographic targeting - Africa
     'pharmacy software Africa',
     'pharmacy software Ghana',
     'pharmacy software Nigeria',
     'pharmacy software Kenya',
+    'pharmacy software South Africa',
+    'pharmacy software Tanzania',
+    'pharmacy software Uganda',
+    'pharmacy software Rwanda',
+    'pharmacy software Senegal',
+    'pharmacy software Ethiopia',
+    // Geographic - Middle East
+    'pharmacy software UAE',
+    'pharmacy software Dubai',
+    'pharmacy software Saudi Arabia',
+    // Geographic - Asia
+    'pharmacy software India',
+    'pharmacy software Philippines',
+    // Feature keywords
     'retail pharmacy software',
     'pharmacy billing system',
     'pharmacy stock management',
     'pharmacy expiry tracking',
     'pharmacy batch management',
     'multi-branch pharmacy software',
+    'chain pharmacy management',
     'offline pharmacy software',
     'desktop pharmacy application',
+    // Long-tail keywords
+    'best pharmacy software for small business',
+    'pharmacy software with offline mode',
+    'pharmacy software without subscription',
+    'one-time payment pharmacy software',
+    'affordable pharmacy management system',
+    'pharmacy software for developing countries',
   ],
   openGraph: {
     title: 'PharmaPOS - Complete Pharmacy Management Software',

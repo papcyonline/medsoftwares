@@ -101,6 +101,8 @@ export default async function ArticlePage({ params }: PageProps) {
         author={article.author}
         authorRole={article.authorRole}
         slug={slug}
+        category={article.category}
+        readTime={article.readTime}
       />
 
       {/* Hero Section */}

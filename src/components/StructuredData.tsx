@@ -332,6 +332,15 @@ export default function StructuredData() {
       '@id': 'https://medsoftwares.com/#organization',
     },
     inLanguage: 'en',
+    // SearchAction for Google Sitelinks Searchbox
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://medsoftwares.com/news?q={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
   };
 
   const breadcrumbSchema = {
@@ -343,6 +352,133 @@ export default function StructuredData() {
         position: 1,
         name: 'Home',
         item: 'https://medsoftwares.com',
+      },
+    ],
+  };
+
+  // Product ItemList schema for rich snippets
+  const productListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': 'https://medsoftwares.com/#products',
+    name: 'MedSoftwares Healthcare Products',
+    description: 'Complete suite of healthcare management software solutions',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'PharmaPOS',
+        url: 'https://medsoftwares.com/pharmapos',
+        description: 'Complete pharmacy management software with POS, inventory tracking, and offline capability',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'HospitalOS',
+        url: 'https://medsoftwares.com/hospitalos',
+        description: 'Comprehensive hospital management system with 25+ integrated modules',
+      },
+    ],
+    numberOfItems: 2,
+  };
+
+  // Service schema for better local/service SEO
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': 'https://medsoftwares.com/#service',
+    name: 'Healthcare Software Solutions',
+    provider: {
+      '@id': 'https://medsoftwares.com/#organization',
+    },
+    serviceType: 'Healthcare IT Solutions',
+    description: 'Comprehensive pharmacy and hospital management software solutions with installation, training, and 24/7 support.',
+    areaServed: {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: '0',
+        longitude: '20',
+      },
+      geoRadius: '10000',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Healthcare Software Catalog',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'PharmaPOS Installation & Training',
+            description: 'Complete pharmacy software setup, data migration, and staff training',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'HospitalOS Implementation',
+            description: 'Full hospital management system deployment with custom module configuration',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: '24/7 Technical Support',
+            description: 'Round-the-clock technical assistance for premium customers',
+          },
+        },
+      ],
+    },
+  };
+
+  // HowTo schema for getting started (AEO optimization)
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    '@id': 'https://medsoftwares.com/#howto',
+    name: 'How to Get Started with MedSoftwares',
+    description: 'Step-by-step guide to implementing pharmacy or hospital management software',
+    totalTime: 'P1D',
+    estimatedCost: {
+      '@type': 'MonetaryAmount',
+      currency: 'USD',
+      value: '299',
+    },
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Request a Demo',
+        text: 'Contact us through our website or call +971-567-726-6520 to schedule a free personalized demo of PharmaPOS or HospitalOS.',
+        url: 'https://medsoftwares.com/contact',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Choose Your Plan',
+        text: 'Select the pricing plan that fits your facility size. PharmaPOS starts at $299, HospitalOS starts at $799.',
+        url: 'https://medsoftwares.com/pricing',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Installation & Setup',
+        text: 'Our team will install the software, configure settings, and migrate your existing data within 1-2 days.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Training',
+        text: 'Receive comprehensive training for all staff members on how to use the system effectively.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 5,
+        name: 'Go Live',
+        text: 'Start using your new healthcare management software with ongoing support from our team.',
       },
     ],
   };
@@ -402,6 +538,18 @@ export default function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
     </>
   );

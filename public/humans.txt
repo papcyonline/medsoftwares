@@ -1,0 +1,24 @@
+/* TEAM */
+Company: MedSoftwares
+Contact: info@medsoftwares.com
+Twitter: @medsoftwares
+Location: Frinton-On-Sea, Essex, United Kingdom
+
+/* SITE */
+Software: Next.js 16, React 19, TypeScript
+Standards: HTML5, CSS3, ES6+
+Components: Material-UI, Tailwind CSS
+IDE: Visual Studio Code
+
+/* THANKS */
+Frameworks: Next.js, React
+UI Libraries: Material-UI, Tailwind CSS
+Hosting: Vercel
+Analytics: Google Analytics
+Icons: Material Icons, Heroicons
+
+/* PRODUCTS */
+PharmaPOS: Pharmacy Management Software
+HospitalOS: Hospital Management System
+Serving: 50+ Healthcare Facilities
+Countries: 30+ Worldwide

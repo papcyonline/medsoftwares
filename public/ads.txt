@@ -1,0 +1,4 @@
+# MedSoftwares - ads.txt
+# This file declares authorized digital sellers for advertising inventory.
+# Currently, MedSoftwares does not participate in programmatic advertising.
+# Contact: advertising@medsoftwares.com

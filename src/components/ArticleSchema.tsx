@@ -7,6 +7,8 @@ interface ArticleSchemaProps {
   author: string;
   authorRole: string;
   slug: string;
+  category?: string;
+  readTime?: string;
 }
 
 export default function ArticleSchema({
@@ -18,7 +20,14 @@ export default function ArticleSchema({
   author,
   authorRole,
   slug,
+  category,
+  readTime,
 }: ArticleSchemaProps) {
+  // Estimate word count from read time (average 200 words per minute)
+  const estimatedWordCount = readTime
+    ? parseInt(readTime) * 200
+    : 1000;
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -64,6 +73,18 @@ export default function ArticleSchema({
       name: 'MedSoftwares',
     },
     copyrightYear: new Date(datePublished).getFullYear(),
+    // Additional properties for AEO
+    wordCount: estimatedWordCount,
+    articleSection: category || 'Healthcare Technology',
+    keywords: ['pharmacy software', 'hospital management', 'healthcare technology', 'medical software'],
+    // Speakable for voice search optimization
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', '.article-summary', 'p:first-of-type'],
+    },
+    // Accessibility
+    accessMode: ['textual', 'visual'],
+    accessModeSufficient: [{ '@type': 'ItemList', itemListElement: ['textual'] }],
   };
 
   return (

@@ -59,6 +59,29 @@ export const metadata: Metadata = {
     "pharmacy software MTN mobile money",
     "NHIS pharmacy software Ghana",
     "healthcare technology Africa",
+    // Additional geo-targeted keywords - Asia
+    "pharmacy software India",
+    "hospital software Philippines",
+    "healthcare software Bangladesh",
+    "pharmacy software Pakistan",
+    // Latin America
+    "pharmacy software Mexico",
+    "hospital software Brazil",
+    "pharmacy software Colombia",
+    // Francophone Africa
+    "logiciel de pharmacie",
+    "logiciel de gestion hospitalière",
+    // Intent-based keywords
+    "best pharmacy software 2026",
+    "best hospital software 2026",
+    "pharmacy software free trial",
+    "hospital software demo",
+    "pharmacy software no monthly fees",
+    "one-time payment hospital software",
+    // Competitor alternatives
+    "McKesson alternative",
+    "Epic alternative for small hospitals",
+    "PioneerRx alternative Africa",
   ],
   authors: [{ name: "MedSoftwares" }],
   creator: "MedSoftwares",
@@ -107,6 +130,20 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://medsoftwares.com",
+    languages: {
+      'en': 'https://medsoftwares.com',
+      'x-default': 'https://medsoftwares.com',
+    },
+  },
+  category: 'healthcare software',
+  classification: 'Business Software',
+  other: {
+    'mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
+    'format-detection': 'telephone=no',
+    'msapplication-TileColor': '#166534',
+    'msapplication-config': '/browserconfig.xml',
   },
 };
 

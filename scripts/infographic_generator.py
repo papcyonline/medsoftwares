@@ -15,7 +15,7 @@ from io import BytesIO
 from typing import List, Dict, Optional, Tuple
 from datetime import datetime
 
-# Brand Colors
+# Brand Colors - Extensive palette for variety
 COLORS = {
     'primary': '#166534',      # Green
     'primary_light': '#22c55e',
@@ -30,7 +30,7 @@ COLORS = {
     'accent_orange': '#f97316',
     'accent_teal': '#14b8a6',
     'accent_purple': '#8b5cf6',
-    # New gradient colors
+    # Gradient colors
     'gradient_start_green': '#0f4c35',
     'gradient_end_green': '#22c55e',
     'gradient_start_blue': '#1e3a5f',
@@ -41,6 +41,87 @@ COLORS = {
     'gradient_end_teal': '#5eead4',
     'gold': '#fbbf24',
     'coral': '#f87171',
+    # New diverse color schemes
+    'sunset_start': '#ff6b6b',
+    'sunset_end': '#feca57',
+    'ocean_start': '#0077b6',
+    'ocean_end': '#00b4d8',
+    'forest_start': '#1a4d2e',
+    'forest_end': '#4ade80',
+    'royal_start': '#5b21b6',
+    'royal_end': '#c084fc',
+    'midnight_start': '#0f172a',
+    'midnight_end': '#334155',
+    'rose_start': '#be123c',
+    'rose_end': '#fda4af',
+    'amber_start': '#b45309',
+    'amber_end': '#fbbf24',
+    'emerald': '#10b981',
+    'cyan': '#06b6d4',
+    'indigo': '#6366f1',
+    'pink': '#ec4899',
+    'lime': '#84cc16',
+    'sky': '#0ea5e9',
+}
+
+# Style presets for different looks
+STYLE_PRESETS = {
+    'modern_dark': {
+        'bg_start': '#0f172a',
+        'bg_end': '#1e293b',
+        'accent': '#3b82f6',
+        'text': '#f1f5f9',
+        'highlight': '#fbbf24'
+    },
+    'vibrant': {
+        'bg_start': '#7c3aed',
+        'bg_end': '#db2777',
+        'accent': '#fbbf24',
+        'text': '#ffffff',
+        'highlight': '#22d3ee'
+    },
+    'nature': {
+        'bg_start': '#065f46',
+        'bg_end': '#059669',
+        'accent': '#fcd34d',
+        'text': '#ffffff',
+        'highlight': '#a7f3d0'
+    },
+    'ocean': {
+        'bg_start': '#0c4a6e',
+        'bg_end': '#0891b2',
+        'accent': '#fef3c7',
+        'text': '#ffffff',
+        'highlight': '#67e8f9'
+    },
+    'sunset': {
+        'bg_start': '#9a3412',
+        'bg_end': '#ea580c',
+        'accent': '#fef08a',
+        'text': '#ffffff',
+        'highlight': '#fed7aa'
+    },
+    'royal': {
+        'bg_start': '#4c1d95',
+        'bg_end': '#7c3aed',
+        'accent': '#fcd34d',
+        'text': '#ffffff',
+        'highlight': '#c4b5fd'
+    },
+    'minimal': {
+        'bg_start': '#ffffff',
+        'bg_end': '#f1f5f9',
+        'accent': '#0f172a',
+        'text': '#1e293b',
+        'highlight': '#3b82f6'
+    },
+    'tech': {
+        'bg_start': '#18181b',
+        'bg_end': '#27272a',
+        'accent': '#22d3ee',
+        'text': '#fafafa',
+        'highlight': '#a855f7'
+    }
 }
 
 def hex_to_rgb(hex_color: str) -> Tuple[int, int, int]:
@@ -413,6 +494,498 @@ class InfographicGenerator:
         )
 
         # Save
+        output_path = os.path.join(self.output_dir, filename)
+        img.save(output_path, 'PNG', quality=95)
+        return output_path
+
+    def generate_bold_cards_infographic(
+        self,
+        title: str,
+        stats: List[Dict[str, str]],
+        subtitle: Optional[str] = None,
+        filename: str = "bold_cards.png",
+        style: str = "vibrant"  # vibrant, ocean, sunset, royal, tech
+    ) -> str:
+        """
+        Generate a bold card-style infographic with large typography and vibrant colors.
+        """
+        preset = STYLE_PRESETS.get(style, STYLE_PRESETS['vibrant'])
+
+        # Create radial-like gradient
+        img = Image.new('RGB', (self.width, self.height))
+        draw = ImageDraw.Draw(img)
+
+        c1 = hex_to_rgb(preset['bg_start'])
+        c2 = hex_to_rgb(preset['bg_end'])
+
+        # Diagonal sweep gradient
+        for y in range(self.height):
+            for x in range(self.width):
+                ratio = ((x / self.width) * 0.7 + (y / self.height) * 0.3)
+                r = int(c1[0] * (1 - ratio) + c2[0] * ratio)
+                g = int(c1[1] * (1 - ratio) + c2[1] * ratio)
+                b = int(c1[2] * (1 - ratio) + c2[2] * ratio)
+                draw.point((x, y), fill=(r, g, b))
+
+        # Add geometric shapes for visual interest
+        accent_rgb = hex_to_rgb(preset['accent'])
+        # Large circle in background
+        draw.ellipse([-200, -200, 400, 400], fill=(accent_rgb[0], accent_rgb[1], accent_rgb[2]), outline=None)
+        draw.ellipse([self.width-300, self.height-300, self.width+100, self.height+100],
+                    fill=(accent_rgb[0], accent_rgb[1], accent_rgb[2]), outline=None)
+
+        # Title with bold styling
+        title_font = get_font(72, bold=True)
+        title_lines = self._wrap_text(title, title_font, self.width - 120)
+        y_offset = 40
+
+        for line in title_lines:
+            bbox = draw.textbbox((0, 0), line, font=title_font)
+            text_width = bbox[2] - bbox[0]
+            x = (self.width - text_width) // 2
+            # Glow effect
+            for offset in range(3, 0, -1):
+                glow_color = (255, 255, 255, 30 * offset)
+                draw.text((x - offset, y_offset - offset), line, fill=glow_color, font=title_font)
+            draw.text((x, y_offset), line, fill=hex_to_rgb(preset['text']), font=title_font)
+            y_offset += 85
+
+        # Subtitle
+        if subtitle:
+            subtitle_font = get_font(28)
+            bbox = draw.textbbox((0, 0), subtitle, font=subtitle_font)
+            text_width = bbox[2] - bbox[0]
+            x = (self.width - text_width) // 2
+            draw.text((x, y_offset), subtitle, fill=hex_to_rgb(preset['highlight']), font=subtitle_font)
+            y_offset += 50
+
+        # Bold cards
+        num_stats = min(len(stats), 4)
+        card_width = 260
+        card_height = 180
+        gap = 25
+        total_width = num_stats * card_width + (num_stats - 1) * gap
+        start_x = (self.width - total_width) // 2
+        start_y = y_offset + 30
+
+        card_colors = [
+            hex_to_rgb(preset['accent']),
+            hex_to_rgb(preset['highlight']),
+            hex_to_rgb(COLORS['emerald']),
+            hex_to_rgb(COLORS['pink']),
+        ]
+
+        for i, stat in enumerate(stats[:4]):
+            x = start_x + i * (card_width + gap)
+            card_color = card_colors[i % len(card_colors)]
+
+            # Card with rounded corners simulation
+            draw.rectangle([x, start_y, x + card_width, start_y + card_height],
+                          fill=card_color)
+
+            # Value - HUGE
+            value_font = get_font(56, bold=True)
+            value = stat.get('value', '0')
+            bbox = draw.textbbox((0, 0), value, font=value_font)
+            text_width = bbox[2] - bbox[0]
+            draw.text(
+                (x + (card_width - text_width) // 2, start_y + 30),
+                value,
+                fill=(255, 255, 255),
+                font=value_font
+            )
+
+            # Label
+            label_font = get_font(18, bold=True)
+            label = stat.get('label', '')
+            label_lines = self._wrap_text(label, label_font, card_width - 30)
+
+            label_y = start_y + 110
+            for line in label_lines[:2]:
+                bbox = draw.textbbox((0, 0), line, font=label_font)
+                text_width = bbox[2] - bbox[0]
+                draw.text(
+                    (x + (card_width - text_width) // 2, label_y),
+                    line,
+                    fill=(255, 255, 255, 220),
+                    font=label_font
+                )
+                label_y += 24
+
+        # Bottom branding bar
+        draw.rectangle([0, self.height - 45, self.width, self.height],
+                      fill=(0, 0, 0, 80))
+        brand_font = get_font(24, bold=True)
+        brand_text = "medsoftwares.com"
+        bbox = draw.textbbox((0, 0), brand_text, font=brand_font)
+        text_width = bbox[2] - bbox[0]
+        draw.text(
+            ((self.width - text_width) // 2, self.height - 35),
+            brand_text,
+            fill=hex_to_rgb(COLORS['white']),
+            font=brand_font
+        )
+
+        output_path = os.path.join(self.output_dir, filename)
+        img.save(output_path, 'PNG', quality=95)
+        return output_path
+
+    def generate_split_infographic(
+        self,
+        title: str,
+        left_items: List[Dict[str, str]],
+        right_items: List[Dict[str, str]],
+        left_title: str = "Before",
+        right_title: str = "After",
+        filename: str = "split_compare.png",
+        style: str = "modern_dark"
+    ) -> str:
+        """
+        Generate a split comparison infographic (left vs right).
+        """
+        preset = STYLE_PRESETS.get(style, STYLE_PRESETS['modern_dark'])
+
+        img = Image.new('RGB', (self.width, self.height), hex_to_rgb(preset['bg_start']))
+        draw = ImageDraw.Draw(img)
+
+        # Split the background
+        left_color = hex_to_rgb(COLORS['rose_start'])
+        right_color = hex_to_rgb(COLORS['emerald'])
+
+        # Left side gradient
+        for x in range(self.width // 2):
+            ratio = x / (self.width // 2)
+            for y in range(self.height):
+                c1 = hex_to_rgb(preset['bg_start'])
+                r = int(c1[0] * (1 - ratio * 0.3) + left_color[0] * ratio * 0.3)
+                g = int(c1[1] * (1 - ratio * 0.3) + left_color[1] * ratio * 0.3)
+                b = int(c1[2] * (1 - ratio * 0.3) + left_color[2] * ratio * 0.3)
+                draw.point((x, y), fill=(r, g, b))
+
+        # Right side gradient
+        for x in range(self.width // 2, self.width):
+            ratio = (x - self.width // 2) / (self.width // 2)
+            for y in range(self.height):
+                c1 = hex_to_rgb(preset['bg_end'])
+                r = int(c1[0] + (right_color[0] - c1[0]) * ratio * 0.3)
+                g = int(c1[1] + (right_color[1] - c1[1]) * ratio * 0.3)
+                b = int(c1[2] + (right_color[2] - c1[2]) * ratio * 0.3)
+                draw.point((x, y), fill=(r, g, b))
+
+        # Center divider
+        draw.rectangle([self.width // 2 - 3, 0, self.width // 2 + 3, self.height],
+                      fill=hex_to_rgb(preset['accent']))
+
+        # Main title at top
+        title_font = get_font(48, bold=True)
+        bbox = draw.textbbox((0, 0), title, font=title_font)
+        text_width = bbox[2] - bbox[0]
+        draw.text(
+            ((self.width - text_width) // 2, 25),
+            title,
+            fill=hex_to_rgb(preset['text']),
+            font=title_font
+        )
+
+        # Left title
+        section_font = get_font(36, bold=True)
+        bbox = draw.textbbox((0, 0), left_title, font=section_font)
+        text_width = bbox[2] - bbox[0]
+        draw.text(
+            ((self.width // 4) - text_width // 2, 90),
+            left_title,
+            fill=left_color,
+            font=section_font
+        )
+
+        # Right title
+        bbox = draw.textbbox((0, 0), right_title, font=section_font)
+        text_width = bbox[2] - bbox[0]
+        draw.text(
+            ((3 * self.width // 4) - text_width // 2, 90),
+            right_title,
+            fill=right_color,
+            font=section_font
+        )
+
+        # Left items
+        item_font = get_font(20, bold=True)
+        y_offset = 160
+        for item in left_items[:5]:
+            value = item.get('value', '')
+            label = item.get('label', '')
+
+            # Value
+            draw.text((60, y_offset), value, fill=left_color, font=item_font)
+            # Label
+            label_font = get_font(16)
+            draw.text((60, y_offset + 28), label, fill=hex_to_rgb(preset['text']), font=label_font)
+            y_offset += 75
+
+        # Right items
+        y_offset = 160
+        for item in right_items[:5]:
+            value = item.get('value', '')
+            label = item.get('label', '')
+
+            x_start = self.width // 2 + 60
+            draw.text((x_start, y_offset), value, fill=right_color, font=item_font)
+            label_font = get_font(16)
+            draw.text((x_start, y_offset + 28), label, fill=hex_to_rgb(preset['text']), font=label_font)
+            y_offset += 75
+
+        # Branding
+        brand_font = get_font(20, bold=True)
+        brand_text = "medsoftwares.com"
+        bbox = draw.textbbox((0, 0), brand_text, font=brand_font)
+        text_width = bbox[2] - bbox[0]
+        draw.text(
+            ((self.width - text_width) // 2, self.height - 35),
+            brand_text,
+            fill=hex_to_rgb(preset['accent']),
+            font=brand_font
+        )
+
+        output_path = os.path.join(self.output_dir, filename)
+        img.save(output_path, 'PNG', quality=95)
+        return output_path
+
+    def generate_minimal_stats_infographic(
+        self,
+        title: str,
+        stats: List[Dict[str, str]],
+        subtitle: Optional[str] = None,
+        filename: str = "minimal_stats.png",
+        accent_color: str = "#3b82f6"
+    ) -> str:
+        """
+        Generate a clean, minimal white-background infographic with colored accents.
+        """
+        img = Image.new('RGB', (self.width, self.height), (255, 255, 255))
+        draw = ImageDraw.Draw(img)
+
+        accent = hex_to_rgb(accent_color)
+
+        # Top accent bar
+        draw.rectangle([0, 0, self.width, 10], fill=accent)
+
+        # Title
+        title_font = get_font(52, bold=True)
+        title_lines = self._wrap_text(title, title_font, self.width - 100)
+        y_offset = 50
+
+        for line in title_lines:
+            bbox = draw.textbbox((0, 0), line, font=title_font)
+            text_width = bbox[2] - bbox[0]
+            x = (self.width - text_width) // 2
+            draw.text((x, y_offset), line, fill=hex_to_rgb(COLORS['black']), font=title_font)
+            y_offset += 60
+
+        # Subtitle
+        if subtitle:
+            subtitle_font = get_font(22)
+            bbox = draw.textbbox((0, 0), subtitle, font=subtitle_font)
+            text_width = bbox[2] - bbox[0]
+            x = (self.width - text_width) // 2
+            draw.text((x, y_offset + 5), subtitle, fill=hex_to_rgb(COLORS['gray']), font=subtitle_font)
+            y_offset += 50
+
+        # Horizontal line
+        draw.line([(100, y_offset + 20), (self.width - 100, y_offset + 20)],
+                 fill=hex_to_rgb(COLORS['gray_light']), width=2)
+
+        # Stats in a row with underline accent
+        num_stats = min(len(stats), 4)
+        stat_width = (self.width - 100) // num_stats
+        start_x = 50
+        start_y = y_offset + 60
+
+        for i, stat in enumerate(stats[:4]):
+            x = start_x + i * stat_width
+            center_x = x + stat_width // 2
+
+            # Value
+            value_font = get_font(64, bold=True)
+            value = stat.get('value', '0')
+            bbox = draw.textbbox((0, 0), value, font=value_font)
+            text_width = bbox[2] - bbox[0]
+            draw.text(
+                (center_x - text_width // 2, start_y),
+                value,
+                fill=accent,
+                font=value_font
+            )
+
+            # Underline
+            draw.rectangle(
+                [center_x - 30, start_y + 75, center_x + 30, start_y + 79],
+                fill=accent
+            )
+
+            # Label
+            label_font = get_font(16)
+            label = stat.get('label', '')
+            label_lines = self._wrap_text(label, label_font, stat_width - 20)
+
+            label_y = start_y + 95
+            for line in label_lines[:2]:
+                bbox = draw.textbbox((0, 0), line, font=label_font)
+                text_width = bbox[2] - bbox[0]
+                draw.text(
+                    (center_x - text_width // 2, label_y),
+                    line,
+                    fill=hex_to_rgb(COLORS['gray_dark']),
+                    font=label_font
+                )
+                label_y += 22
+
+        # Bottom accent bar
+        draw.rectangle([0, self.height - 10, self.width, self.height], fill=accent)
+
+        # Branding
+        brand_font = get_font(18, bold=True)
+        brand_text = "medsoftwares.com"
+        bbox = draw.textbbox((0, 0), brand_text, font=brand_font)
+        text_width = bbox[2] - bbox[0]
+        draw.text(
+            (self.width - text_width - 30, self.height - 40),
+            brand_text,
+            fill=accent,
+            font=brand_font
+        )
+
+        output_path = os.path.join(self.output_dir, filename)
+        img.save(output_path, 'PNG', quality=95)
+        return output_path
+
+    def generate_circle_stats_infographic(
+        self,
+        title: str,
+        stats: List[Dict[str, str]],
+        subtitle: Optional[str] = None,
+        filename: str = "circle_stats.png",
+        style: str = "nature"
+    ) -> str:
+        """
+        Generate an infographic with stats displayed in large circles.
+        """
+        preset = STYLE_PRESETS.get(style, STYLE_PRESETS['nature'])
+
+        # Gradient background
+        img = Image.new('RGB', (self.width, self.height))
+        draw = ImageDraw.Draw(img)
+
+        c1 = hex_to_rgb(preset['bg_start'])
+        c2 = hex_to_rgb(preset['bg_end'])
+
+        for y in range(self.height):
+            ratio = y / self.height
+            r = int(c1[0] * (1 - ratio) + c2[0] * ratio)
+            g = int(c1[1] * (1 - ratio) + c2[1] * ratio)
+            b = int(c1[2] * (1 - ratio) + c2[2] * ratio)
+            draw.line([(0, y), (self.width, y)], fill=(r, g, b))
+
+        # Title
+        title_font = get_font(56, bold=True)
+        title_lines = self._wrap_text(title, title_font, self.width - 100)
+        y_offset = 35
+
+        for line in title_lines:
+            bbox = draw.textbbox((0, 0), line, font=title_font)
+            text_width = bbox[2] - bbox[0]
+            x = (self.width - text_width) // 2
+            draw.text((x, y_offset), line, fill=hex_to_rgb(preset['text']), font=title_font)
+            y_offset += 65
+
+        # Subtitle
+        if subtitle:
+            subtitle_font = get_font(24)
+            bbox = draw.textbbox((0, 0), subtitle, font=subtitle_font)
+            text_width = bbox[2] - bbox[0]
+            x = (self.width - text_width) // 2
+            draw.text((x, y_offset), subtitle, fill=hex_to_rgb(preset['highlight']), font=subtitle_font)
+            y_offset += 45
+
+        # Large circles with stats
+        num_stats = min(len(stats), 4)
+        circle_radius = 85
+        gap = 40
+        total_width = num_stats * (circle_radius * 2) + (num_stats - 1) * gap
+        start_x = (self.width - total_width) // 2 + circle_radius
+        center_y = y_offset + 100 + circle_radius
+
+        circle_fills = [
+            hex_to_rgb(preset['accent']),
+            hex_to_rgb(preset['highlight']),
+            hex_to_rgb(COLORS['cyan']),
+            hex_to_rgb(COLORS['pink']),
+        ]
+
+        for i, stat in enumerate(stats[:4]):
+            center_x = start_x + i * (circle_radius * 2 + gap)
+            fill_color = circle_fills[i % len(circle_fills)]
+
+            # Outer glow
+            for r in range(circle_radius + 20, circle_radius, -2):
+                alpha = int(40 * (circle_radius + 20 - r) / 20)
+                glow = (fill_color[0], fill_color[1], fill_color[2])
+                draw.ellipse(
+                    [center_x - r, center_y - r, center_x + r, center_y + r],
+                    fill=glow,
+                    outline=None
+                )
+
+            # Main circle
+            draw.ellipse(
+                [center_x - circle_radius, center_y - circle_radius,
+                 center_x + circle_radius, center_y + circle_radius],
+                fill=(255, 255, 255),
+                outline=fill_color,
+                width=5
+            )
+
+            # Value
+            value_font = get_font(42, bold=True)
+            value = stat.get('value', '0')
+            bbox = draw.textbbox((0, 0), value, font=value_font)
+            text_width = bbox[2] - bbox[0]
+            text_height = bbox[3] - bbox[1]
+            draw.text(
+                (center_x - text_width // 2, center_y - text_height // 2 - 10),
+                value,
+                fill=fill_color,
+                font=value_font
+            )
+
+            # Label below circle
+            label_font = get_font(16, bold=True)
+            label = stat.get('label', '')
+            label_lines = self._wrap_text(label, label_font, circle_radius * 2 + 20)
+
+            label_y = center_y + circle_radius + 15
+            for line in label_lines[:2]:
+                bbox = draw.textbbox((0, 0), line, font=label_font)
+                text_width = bbox[2] - bbox[0]
+                draw.text(
+                    (center_x - text_width // 2, label_y),
+                    line,
+                    fill=hex_to_rgb(preset['text']),
+                    font=label_font
+                )
+                label_y += 22
+
+        # Branding
+        brand_font = get_font(22, bold=True)
+        brand_text = "medsoftwares.com"
+        bbox = draw.textbbox((0, 0), brand_text, font=brand_font)
+        text_width = bbox[2] - bbox[0]
+        draw.text(
+            ((self.width - text_width) // 2, self.height - 40),
+            brand_text,
+            fill=hex_to_rgb(preset['text']),
+            font=brand_font
+        )
+
         output_path = os.path.join(self.output_dir, filename)
         img.save(output_path, 'PNG', quality=95)
         return output_path

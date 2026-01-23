@@ -35,14 +35,17 @@ Examples:
         """
     )
 
-    parser.add_argument('type', choices=['stats', 'elegant', 'features', 'compare', 'chart', 'timeline', 'quote'],
-                       help='Type of infographic to generate (elegant = gradient style with big fonts)')
+    parser.add_argument('type', choices=['stats', 'elegant', 'bold', 'minimal', 'circles', 'features', 'compare', 'chart', 'timeline', 'quote'],
+                       help='Type of infographic: stats (cards), elegant (gradient circles), bold (vibrant cards), minimal (clean white), circles (large circles), features, compare, chart, timeline, quote')
     parser.add_argument('output', help='Output filename (will be saved in public/infographics/)')
     parser.add_argument('--title', help='Main title for the infographic')
     parser.add_argument('--subtitle', help='Subtitle (for stats type)')
     parser.add_argument('--data', help='JSON data for the infographic')
     parser.add_argument('--theme', choices=['pharmacy', 'hospital'], default='pharmacy',
                        help='Color theme (default: pharmacy)')
+    parser.add_argument('--style', choices=['vibrant', 'ocean', 'sunset', 'royal', 'tech', 'nature', 'modern_dark', 'minimal'],
+                       default='vibrant', help='Style preset for bold/circles types')
+    parser.add_argument('--accent', default='#3b82f6', help='Accent color for minimal type (hex color)')
     parser.add_argument('--chart-type', choices=['bar', 'horizontal_bar', 'pie'], default='bar',
                        help='Chart type (for chart infographics)')
     parser.add_argument('--quote', help='Quote text (for quote type)')
@@ -80,6 +83,48 @@ Examples:
                 subtitle=args.subtitle,
                 filename=args.output,
                 theme=args.theme
+            )
+
+        elif args.type == 'bold':
+            if not args.data or not args.title:
+                print("Error: bold type requires --title and --data")
+                print("Data format: [{\"value\": \"60%\", \"label\": \"Time Saved\"}, ...]")
+                sys.exit(1)
+            data = json.loads(args.data)
+            path = generator.generate_bold_cards_infographic(
+                title=args.title,
+                stats=data,
+                subtitle=args.subtitle,
+                filename=args.output,
+                style=args.style
+            )
+
+        elif args.type == 'minimal':
+            if not args.data or not args.title:
+                print("Error: minimal type requires --title and --data")
+                print("Data format: [{\"value\": \"60%\", \"label\": \"Time Saved\"}, ...]")
+                sys.exit(1)
+            data = json.loads(args.data)
+            path = generator.generate_minimal_stats_infographic(
+                title=args.title,
+                stats=data,
+                subtitle=args.subtitle,
+                filename=args.output,
+                accent_color=args.accent
+            )
+
+        elif args.type == 'circles':
+            if not args.data or not args.title:
+                print("Error: circles type requires --title and --data")
+                print("Data format: [{\"value\": \"60%\", \"label\": \"Time Saved\"}, ...]")
+                sys.exit(1)
+            data = json.loads(args.data)
+            path = generator.generate_circle_stats_infographic(
+                title=args.title,
+                stats=data,
+                subtitle=args.subtitle,
+                filename=args.output,
+                style=args.style
             )
 
         elif args.type == 'features':

@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import { useProduct } from '@/context/ProductContext';
 
 type Feature = {
@@ -354,7 +355,8 @@ export default function Header() {
                   <ul className="space-y-3">
                     {items.map((feature) => (
                       <li key={feature}>
-                        <span className="text-sm text-gray-600 hover:text-green-600 cursor-default block">
+                        <span className="text-sm text-gray-600 hover:text-green-600 cursor-default flex items-center gap-2">
+                          <CheckCircleRoundedIcon sx={{ fontSize: 16 }} className="text-green-500" />
                           {feature}
                         </span>
                       </li>
@@ -427,7 +429,8 @@ export default function Header() {
                   <ul className="space-y-3">
                     {items.map((feature) => (
                       <li key={feature}>
-                        <span className="text-sm text-gray-600 hover:text-blue-600 cursor-default block">
+                        <span className="text-sm text-gray-600 hover:text-blue-600 cursor-default flex items-center gap-2">
+                          <CheckCircleRoundedIcon sx={{ fontSize: 16 }} className="text-blue-500" />
                           {feature}
                         </span>
                       </li>

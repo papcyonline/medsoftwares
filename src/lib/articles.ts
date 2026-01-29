@@ -14,6 +14,7 @@ export interface ArticleMeta {
   author: string;
   authorRole: string;
   image: string;
+  keywords: string[];
 }
 
 export interface Article extends ArticleMeta {
@@ -50,6 +51,7 @@ export function getArticleBySlug(slug: string): Article | null {
     author: data.author,
     authorRole: data.authorRole,
     image: data.image,
+    keywords: data.keywords || [],
     content,
   };
 }
@@ -78,8 +80,46 @@ export function getRelatedArticles(currentSlug: string, limit: number = 3): Arti
   const currentArticle = getArticleBySlug(currentSlug);
   if (!currentArticle) return [];
 
+  const currentKeywords = currentArticle.keywords.map((k) => k.toLowerCase());
+  const currentWords = currentSlug.split('-').filter((w) => w.length > 2);
+
   return getAllArticles()
     .filter((article) => article.slug !== currentSlug)
-    .filter((article) => article.category === currentArticle.category)
-    .slice(0, limit);
+    .map((article) => {
+      let score = 0;
+
+      // Keyword overlap scoring (strongest signal)
+      if (currentKeywords.length > 0 && article.keywords.length > 0) {
+        const articleKeywords = article.keywords.map((k) => k.toLowerCase());
+        for (const kw of currentKeywords) {
+          for (const akw of articleKeywords) {
+            if (kw === akw) score += 5;
+            else if (kw.includes(akw) || akw.includes(kw)) score += 2;
+          }
+        }
+      }
+
+      // Same category bonus
+      if (article.category === currentArticle.category) {
+        score += 3;
+      }
+
+      // Recency bonus (prefer newer articles)
+      const articleDate = new Date(article.date).getTime();
+      const daysSincePublish = (Date.now() - articleDate) / (1000 * 60 * 60 * 24);
+      if (daysSincePublish < 90) score += 2;
+      else if (daysSincePublish < 180) score += 1;
+
+      // Penalize near-duplicate slugs
+      const articleWords = article.slug.split('-').filter((w) => w.length > 2);
+      const commonWords = currentWords.filter((w) => articleWords.includes(w));
+      if (commonWords.length > articleWords.length * 0.7) {
+        score -= 3;
+      }
+
+      return { article, score };
+    })
+    .sort((a, b) => b.score - a.score || new Date(b.article.date).getTime() - new Date(a.article.date).getTime())
+    .slice(0, limit)
+    .map(({ article }) => article);
 }

@@ -1,0 +1,135 @@
+---
+title: "How a Rural Uganda Hospital Network Connected 4 Facilities with HospitalOS"
+excerpt: "Busoga Health Network deployed HospitalOS across 4 rural facilities in eastern Uganda, enabling centralized patient records, reducing drug stockouts by 82%, and improving maternal care outcomes."
+category: "company"
+date: "2026-01-24"
+readTime: "8 min read"
+author: "MedSoftwares Team"
+authorRole: "Healthcare Technology Experts"
+image: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80"
+keywords: ["hospital software Uganda", "HospitalOS case study", "rural hospital network", "Kampala hospital", "healthcare software Africa", "offline hospital software"]
+---
+
+Delivering healthcare across rural Uganda presents challenges that most hospital software was never designed to handle — intermittent power, unreliable internet, staff who rotate between facilities, and patients who seek care at whichever location is closest. Busoga Health Network's deployment of HospitalOS across 4 facilities in eastern Uganda demonstrates what purpose-built software can achieve.
+
+## Network Profile
+
+- **Name**: Busoga Health Network
+- **Headquarters**: Jinja, Uganda
+- **Facilities**: 4 (1 district hospital, 3 health centres)
+- **Total beds**: 180 across all facilities
+- **Staff**: 120 (including 8 physicians who rotate between sites)
+- **Catchment population**: ~95,000 people
+- **Key services**: General medicine, maternal care, pediatrics, HIV/TB programs, outreach clinics
+
+## The Challenge
+
+Before HospitalOS, each facility operated independently with paper records:
+
+- **No shared patient records** — A patient treated at one facility was unknown at another
+- **Drug stockouts**: Essential medicines were unavailable 19% of the time across the network
+- **Maternal care gaps**: No way to track high-risk pregnancies across facilities when mothers delivered at a different location than where they received antenatal care
+- **Donor reporting**: NGO and government funding reports required 2 weeks of manual data compilation per quarter
+- **Supply chain waste**: Facility A might have surplus stock of a medicine that Facility B desperately needed
+- **Staff coordination**: Rotating physicians had no access to patient history when moving between sites
+
+The most critical issue was maternal health. With mothers receiving antenatal care at one health centre but often delivering at the district hospital (or a different health centre), critical pregnancy risk information was frequently lost.
+
+## Why They Chose HospitalOS
+
+Busoga Health Network required capabilities that eliminated most commercial hospital systems:
+
+1. **Full offline operation** — Some facilities have electricity only 8-12 hours per day via solar
+2. **Cross-facility patient records** — Sync when connectivity is available, work independently when not
+3. **Low-bandwidth sync** — Works on 2G/3G mobile connections when available
+4. **Maternal care tracking** — Antenatal visit records follow the patient across facilities
+5. **Donor-compatible reporting** — Generate PEPFAR, Global Fund, and MoH Uganda reports
+6. **Affordable for NGO budgets** — One-time fee, no per-facility monthly costs
+
+## Implementation
+
+Given the infrastructure challenges, implementation was carefully staged:
+
+| Phase | Duration | Scope |
+|-------|----------|-------|
+| Phase 1 | Weeks 1-3 | District hospital (Jinja) — full deployment |
+| Phase 2 | Weeks 4-6 | Health Centre III (Iganga) — outpatient, maternal care |
+| Phase 3 | Weeks 7-9 | Health Centre III (Kamuli) — outpatient, HIV/TB |
+| Phase 4 | Weeks 10-12 | Health Centre II (Bugiri) — outpatient, pharmacy |
+
+Each facility received solar-charged tablets for data entry and a local server (Raspberry Pi-based) running HospitalOS. Sync occurs via mobile data when available, typically 2-3 times daily.
+
+## Results After 8 Months
+
+### Patient Record Continuity
+
+| Metric | Before | After | Change |
+|--------|--------|-------|--------|
+| Patients with unified records | 0% | 78% | From zero |
+| Cross-facility record access | Never | Every synced visit | Complete |
+| Duplicate patient files | ~40% | 6% | **-85%** |
+| Average record retrieval | 15-30 min (paper) | 30 seconds | **-97%** |
+
+### Drug Supply Chain
+
+| Metric | Before | After | Change |
+|--------|--------|-------|--------|
+| Essential medicine stockouts | 19% | 3.4% | **-82%** |
+| Cross-facility stock transfers | 0/month | 12/month | New capability |
+| Expired medicine waste | UGX 8.2M/quarter | UGX 1.8M/quarter | **-78%** |
+| Emergency procurement orders | 15/month | 3/month | **-80%** |
+
+### Maternal Health Outcomes
+
+| Metric | Before | After | Change |
+|--------|--------|-------|--------|
+| Antenatal visits tracked across facilities | 0% | 91% | From zero |
+| High-risk pregnancies identified at delivery | 34% | 89% | **+162%** |
+| Facility deliveries (vs. home births) | 52% | 71% | **+37%** |
+| Maternal complications with prior warning | 28% | 76% | **+171%** |
+
+The most significant clinical impact has been in maternal care. When a high-risk mother arrives at the district hospital in labor, the attending midwife can immediately see her full antenatal history — previous complications, blood type, HIV status, and risk factors — even if all her antenatal visits were at a different health centre.
+
+### Reporting and Compliance
+
+| Metric | Before | After | Change |
+|--------|--------|-------|--------|
+| Quarterly donor report preparation | 2 weeks | 2 hours | **-96%** |
+| MoH HMIS report accuracy | ~65% | 94% | **+45%** |
+| Data available for program evaluation | Minimal | Comprehensive | Transformed |
+
+## Network Director Testimonial
+
+<blockquote>
+"The maternal care tracking has been life-saving — literally. Last month, a mother with a history of pre-eclampsia arrived at Jinja District Hospital in active labor. Because her antenatal records from Iganga Health Centre were in the system, the team was prepared with magnesium sulfate before she even reached the delivery room. Under our old paper system, that history would have been unknown."
+<footer>— Dr. Moses Kamya, Network Medical Director, Busoga Health Network</footer>
+</blockquote>
+
+## Facility Manager Perspective
+
+<blockquote>
+"The stock transfer feature changed everything for our pharmacy. Last week, Kamuli had excess amoxicillin while Bugiri was running low. I could see both inventories on my screen, arranged the transfer, and it was done the same day. Before, we would not have known about the surplus until the medicines expired."
+<footer>— Sarah Nabirye, Facility Manager, Iganga Health Centre</footer>
+</blockquote>
+
+## Overcoming Infrastructure Challenges
+
+The deployment addressed several unique challenges:
+
+- **Power**: Each facility uses solar-charged tablets (8-hour battery life) with a Raspberry Pi server connected to the solar system
+- **Connectivity**: Data syncs via MTN Uganda 3G when available; facilities operate fully offline between syncs
+- **Training**: Community health workers received simplified tablet training (2 hours) for patient registration at outreach clinics
+- **Durability**: Ruggedized tablets selected for dusty, humid conditions
+
+## Key Takeaways
+
+1. **Offline-first design enables rural deployment** — HospitalOS runs on solar-powered hardware with no internet dependency
+2. **Cross-facility records improve clinical outcomes** — Maternal care tracking demonstrates measurable health impact
+3. **Centralized inventory prevents waste** — Stock visibility across facilities reduced both stockouts and expiry
+4. **Affordable architecture scales** — Raspberry Pi servers and tablets make deployment feasible on NGO budgets
+
+## What's Next for Busoga Health Network
+
+The network plans to add 2 more health centres in 2026 and is working with the Uganda Ministry of Health to share de-identified data for district health planning. They are also piloting community health worker mobile data collection using PharmaPOS tablets at outreach clinics.
+
+[Learn about HospitalOS for rural health networks →](/contact)

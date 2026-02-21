@@ -176,3 +176,53 @@ export const hospitalOSJsonLd = {
     url: 'https://medsoftwares.com',
   },
 };
+
+// FAQ data for HospitalOS page
+export const hospitalOSFaqs = [
+  {
+    question: 'What is HospitalOS?',
+    answer: 'HospitalOS is a comprehensive hospital management system (HMS) with 25+ integrated modules including Electronic Medical Records (EMR), OPD, IPD, Emergency Triage, Laboratory Information System, Radiology, Pharmacy, Billing, HR & Payroll, Maternity, Blood Bank, and more. It is built for hospitals and clinics worldwide with one-time pricing.',
+  },
+  {
+    question: 'How much does HospitalOS cost?',
+    answer: 'HospitalOS starts at $799 for the Clinic plan (up to 3 workstations), $1,499 for the Hospital plan (up to 10 workstations), and $2,999 for the Enterprise plan (unlimited workstations). All plans are one-time payments with no monthly subscription fees.',
+  },
+  {
+    question: 'Does HospitalOS work offline?',
+    answer: 'Yes, HospitalOS is a native desktop application that operates fully offline. All patient records, billing, laboratory results, and clinical data are stored locally. This makes it ideal for hospitals in areas with unreliable internet connectivity. Data syncs automatically when online.',
+  },
+  {
+    question: 'What departments does HospitalOS cover?',
+    answer: 'HospitalOS covers all major hospital departments: OPD (Outpatient), IPD (Inpatient), Emergency/Triage, Laboratory, Radiology & Imaging, Pharmacy, Billing & Cashier, HR & Payroll, Maternity, Pediatrics, Dental, Physiotherapy, Dialysis, Blood Bank, Operation Theatre, ICU/CCU, Kitchen Management, Mortuary, Ambulance Fleet, and Equipment Maintenance.',
+  },
+  {
+    question: 'Can HospitalOS process insurance claims and NHIS?',
+    answer: 'Yes, HospitalOS includes comprehensive insurance and NHIS integration. It supports claim submission, eligibility verification, reimbursement tracking, and co-pay calculations for Ghana NHIS, Kenya NHIF, and private insurance plans.',
+  },
+  {
+    question: 'Does HospitalOS integrate with PharmaPOS?',
+    answer: 'Yes, HospitalOS integrates seamlessly with PharmaPOS for automated prescription fulfillment, real-time pharmacy inventory synchronization, and unified billing across your healthcare facility. Doctor prescriptions flow directly to the pharmacy module.',
+  },
+  {
+    question: 'How many user roles does HospitalOS support?',
+    answer: 'HospitalOS supports 11+ specialized user roles including Super Admin, Doctor, Nurse, Lab Technician, Radiologist, Pharmacist, Cashier, Receptionist, HR Manager, Kitchen Staff, and Store Keeper. Each role has custom dashboards and granular permissions.',
+  },
+  {
+    question: 'Is HospitalOS suitable for small clinics?',
+    answer: 'Yes, HospitalOS is designed to scale from small clinics to large hospitals. The Clinic plan ($799) is specifically tailored for small healthcare facilities with up to 3 workstations. You only activate the modules you need, keeping the system simple and focused.',
+  },
+];
+
+// FAQ JSON-LD schema
+export const hospitalOSFaqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: hospitalOSFaqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};

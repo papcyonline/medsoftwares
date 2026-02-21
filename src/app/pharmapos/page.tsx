@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useState, useEffect, useCallback } from 'react';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Footer from '@/components/Footer';
-import { pharmaPOSJsonLd } from './metadata';
+import { pharmaPOSJsonLd, pharmaPOSFaqJsonLd, pharmaPOSFaqs } from './metadata';
 
 const screenshots = [
   {
@@ -313,6 +313,10 @@ export default function PharmaPOSPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pharmaPOSJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pharmaPOSFaqJsonLd) }}
       />
 
       <main itemScope itemType="https://schema.org/SoftwareApplication">
@@ -883,6 +887,38 @@ export default function PharmaPOSPage() {
                   <ArrowOutwardIcon className="w-4 h-4" />
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-14">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-gray-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg md:text-xl text-gray-600">
+                Common questions about PharmaPOS pharmacy management software.
+              </p>
+            </div>
+            <div className="space-y-4">
+              {pharmaPOSFaqs.map((faq, index) => (
+                <details
+                  key={index}
+                  className="group bg-white rounded-xl border border-gray-200 overflow-hidden"
+                >
+                  <summary className="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-gray-900 hover:text-[#166534] transition-colors">
+                    {faq.question}
+                    <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
             </div>
           </div>
         </section>

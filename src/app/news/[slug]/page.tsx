@@ -30,11 +30,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${article.title} | MedSoftwares News`,
     description: article.excerpt,
+    keywords: article.keywords,
+    alternates: {
+      canonical: `https://medsoftwares.com/news/${slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.excerpt,
       type: 'article',
       publishedTime: article.date,
+      modifiedTime: article.date,
       authors: [article.author],
       images: [article.image],
     },
@@ -98,11 +103,13 @@ export default async function ArticlePage({ params }: PageProps) {
         description={article.excerpt}
         image={article.image}
         datePublished={article.date}
+        dateModified={article.date}
         author={article.author}
         authorRole={article.authorRole}
         slug={slug}
         category={article.category}
         readTime={article.readTime}
+        keywords={article.keywords}
       />
 
       {/* Hero Section */}
@@ -117,13 +124,15 @@ export default async function ArticlePage({ params }: PageProps) {
             ]}
           />
 
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex flex-wrap items-center gap-3 mb-6">
             <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getCategoryColor(article.category)}`}>
               {getCategoryLabel(article.category)}
             </span>
             <span className="text-gray-500 text-sm">{formatDate(article.date)}</span>
             <span className="text-gray-400">•</span>
             <span className="text-gray-500 text-sm">{article.readTime}</span>
+            <span className="text-gray-400">•</span>
+            <span className="text-green-700 text-sm font-medium">Updated {formatDate(article.date)}</span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-gray-900 mb-6 leading-tight">

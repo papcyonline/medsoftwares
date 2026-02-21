@@ -9,6 +9,7 @@ interface ArticleSchemaProps {
   slug: string;
   category?: string;
   readTime?: string;
+  keywords?: string[];
 }
 
 export default function ArticleSchema({
@@ -22,11 +23,16 @@ export default function ArticleSchema({
   slug,
   category,
   readTime,
+  keywords,
 }: ArticleSchemaProps) {
   // Estimate word count from read time (average 200 words per minute)
   const estimatedWordCount = readTime
     ? parseInt(readTime) * 200
     : 1000;
+
+  const articleKeywords = keywords && keywords.length > 0
+    ? keywords
+    : ['pharmacy software', 'hospital management', 'healthcare technology', 'medical software'];
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -36,7 +42,7 @@ export default function ArticleSchema({
     description: description,
     image: {
       '@type': 'ImageObject',
-      url: image,
+      url: `https://medsoftwares.com${image}`,
       width: 1200,
       height: 630,
     },
@@ -47,6 +53,18 @@ export default function ArticleSchema({
       name: author,
       jobTitle: authorRole,
       url: 'https://medsoftwares.com/about',
+      worksFor: {
+        '@type': 'Organization',
+        '@id': 'https://medsoftwares.com/#organization',
+        name: 'MedSoftwares',
+      },
+      knowsAbout: [
+        'Healthcare Technology',
+        'Pharmacy Management Software',
+        'Hospital Management Systems',
+        'Electronic Health Records',
+        'Medical Software Implementation',
+      ],
     },
     publisher: {
       '@type': 'Organization',
@@ -73,16 +91,13 @@ export default function ArticleSchema({
       name: 'MedSoftwares',
     },
     copyrightYear: new Date(datePublished).getFullYear(),
-    // Additional properties for AEO
     wordCount: estimatedWordCount,
     articleSection: category || 'Healthcare Technology',
-    keywords: ['pharmacy software', 'hospital management', 'healthcare technology', 'medical software'],
-    // Speakable for voice search optimization
+    keywords: articleKeywords,
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['h1', 'h2', '.article-summary', 'p:first-of-type'],
     },
-    // Accessibility
     accessMode: ['textual', 'visual'],
     accessModeSufficient: [{ '@type': 'ItemList', itemListElement: ['textual'] }],
   };
